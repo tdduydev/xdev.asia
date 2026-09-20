@@ -1,91 +1,107 @@
-"""Generate standalone English and Vietnamese pages. Python standard library only."""
+"""Build the bilingual static site using Python's standard library."""
 from pathlib import Path
+from html import escape
+import json
+import os
+import posixpath
+import shutil
 
 ROOT = Path(__file__).resolve().parents[1]
-translations = {
-'Từ ý tưởng đến sản phẩm, cùng AI': 'From idea to product, with AI',
-'Khám phá XDev AI Studio và XDev Forge: xây dựng ứng dụng AI, kết nối tri thức và phát triển phần mềm cùng đội agent.': 'Discover XDev AI Studio and XDev Forge: build AI applications, connect knowledge, and develop software with AI teams.',
-'Hai sản phẩm. Một hướng đi: đưa AI vào công việc thực tế.': 'Two products. One purpose: bring AI into everyday work.',
-'Đến nội dung chính': 'Skip to main content',
-'xDev Asia — Trang chủ': 'xDev Asia — Home',
-'Điều hướng chính': 'Main navigation',
-'Sản phẩm': 'Products',
-'Cách tiếp cận': 'Our approach',
-'Khám phá xDev': 'Explore xDev',
-'CÔNG NGHỆ ĐỂ TẠO NÊN GIÁ TRỊ': 'TECHNOLOGY THAT CREATES VALUE',
-'Từ ý tưởng<br>đến sản phẩm,<br><span>cùng AI.</span>': 'From idea<br>to product,<br><span>with AI.</span>',
-'Biến tri thức thành ứng dụng. Biến kế hoạch thành phần mềm. xDev mang AI đến gần hơn với công việc của bạn.': 'Turn knowledge into applications. Turn plans into software. xDev brings AI closer to the work you do.',
-'Khám phá sản phẩm': 'Explore products',
-'Đọc blog xDev': 'Read the xDev blog',
-'Được xây dựng từ thực tiễn.': 'Built from real-world experience.',
-'Dành cho những người muốn tạo ra điều mới.': 'For people ready to create something new.',
-'Từ ý tưởng, XDev AI Studio giúp xây dựng ứng dụng AI và XDev Forge giúp phát triển phần mềm': 'From your idea, XDev AI Studio helps build AI applications and XDev Forge helps develop software',
-'Ý tưởng của bạn': 'Your idea',
-'Xây ứng dụng AI': 'Build AI apps',
-'Phát triển phần mềm': 'Develop software',
-'Ý TƯỞNG': 'IDEA', 'CÔNG CỤ': 'TOOLS', 'SẢN PHẨM': 'PRODUCTS',
-'HỆ SINH THÁI XDEV': 'THE XDEV ECOSYSTEM',
-'Hai sản phẩm. ': 'Two products. ',
-'Một hướng đi: đưa AI vào công việc thực tế.': 'One purpose: bring AI into everyday work.',
-'Xem hai sản phẩm': 'View both products',
-'Công cụ phù hợp.<br>Khả năng rộng mở.': 'The right tools.<br>New possibilities.',
-'Từ xây ứng dụng AI đến phát triển phần mềm,<br>chọn điểm bắt đầu phù hợp với bạn.': 'From AI applications to software development,<br>find the right place to start.',
-'Đưa tri thức của tổ chức vào ứng dụng AI. Thiết kế workflow, kết nối dữ liệu và lựa chọn mô hình trong cùng một không gian làm việc.': 'Put your organization’s knowledge to work in AI applications. Design workflows, connect data, and choose models in one workspace.',
-'Xây workflow bằng giao diện trực quan': 'Build workflows visually',
-'Kết nối kho tri thức và công cụ qua MCP': 'Connect knowledge and tools through MCP',
-'Phân quyền và kiểm soát luồng dữ liệu': 'Manage access and control data flows',
-'Dành cho đội ngũ ứng dụng AI': 'For teams putting AI to work',
-'Mở AI Studio': 'Open AI Studio',
-'Từ yêu cầu đến mã nguồn cùng đội agent AI. Tổ chức công việc, thực thi trên nhánh Git và giữ quyền duyệt ở những bước quan trọng.': 'Go from requirements to code with a team of AI agents. Organize tasks, work on Git branches, and review the steps that matter.',
-'Phân chia công việc cho đội agent': 'Assign tasks to your agent team',
-'Viết mã, chạy kiểm thử và tạo commit': 'Write code, run tests, and commit changes',
-'Theo dõi tiến độ và duyệt kết quả': 'Track progress and review results',
-'Dành cho đội ngũ phát triển': 'For software development teams',
-'Mở XDev Forge': 'Open XDev Forge',
-'CÁCH TIẾP CẬN': 'OUR APPROACH',
-'AI làm nhiều hơn.<br>Bạn vẫn nắm quyền.': 'AI does more.<br>You stay in control.',
-'Công cụ tốt giúp bạn đi xa hơn,<br>với sự rõ ràng trong từng bước.': 'Better tools take you further,<br>with clarity at every step.',
-'Bắt đầu từ công việc thật': 'Start with real work',
-'Khai thác tri thức nội bộ, tự động hóa quy trình và xây phần mềm từ nhu cầu cụ thể.': 'Use internal knowledge, automate workflows, and build software around real needs.',
-'Kết nối cách bạn làm việc': 'Connect the way you work',
-'Đưa mô hình, nguồn dữ liệu, công cụ và kho mã vào luồng công việc của đội ngũ.': 'Bring models, data sources, tools, and repositories into your team’s workflow.',
-'Giữ con người ở trung tâm': 'Keep people at the center',
-'Bạn đặt mục tiêu, quản lý quyền truy cập và xem xét kết quả trước khi đi tiếp.': 'You set the goals, manage access, and review results before moving forward.',
-'CHIA SẺ TỪ THỰC TẾ': 'LESSONS FROM REAL WORK',
-'Cùng xây dựng.<br>Cùng học hỏi.': 'Build together.<br>Learn together.',
-'Những ghi chép về lập trình, AI, DevOps và kiến trúc hệ thống. Từ điều đã học đến những gì đang làm.': 'Notes on programming, AI, DevOps, and system architecture. From what we learn to what we build.',
-'Ghé blog.xdev.asia': 'Visit blog.xdev.asia',
-'Chủ đề trên blog': 'Blog topics',
-'Lập trình & AI': 'Programming & AI',
-'Kiến trúc hệ thống': 'System architecture',
-'Series học tập': 'Learning series',
-'xDev Asia — Về đầu trang': 'xDev Asia — Back to top',
-'Từ ý tưởng đến giá trị thực.': 'From ideas to real value.',
-}
+OUT = ROOT / 'dist'
+ORIGIN = os.environ.get('SITE_URL', 'https://xdev.asia').rstrip('/')
+
+
+def route(language, path=''):
+    return ('vi/' if language == 'vi' else '') + path
+
+
+def relative(source, target):
+    return posixpath.relpath(target or '.', source or '.') + ('/' if not Path(target).suffix else '')
+
+
+def decorate(page, language, path):
+    current = route(language, path)
+    prefix = relative(current, '')
+    page = page.replace('href="assets/', f'href="{prefix}assets/').replace('src="assets/', f'src="{prefix}assets/').replace('href="styles.css"', f'href="{prefix}styles.css"')
+    page = page.replace('@home@', relative(current, route(language))).replace('@studio@', relative(current, route(language, 'ai-studio/')))
+    page = page.replace('@docs@', relative(current, route(language, 'ai-studio/docs/')))
+    page = page.replace('@quickstart@', relative(current, route(language, 'ai-studio/docs/quickstart/')))
+    switcher = '<div class="language-switch" role="group" aria-label="' + ('Language' if language == 'en' else 'Ngôn ngữ') + '">'
+    for lang, label in [('en', 'English'), ('vi', 'Tiếng Việt')]:
+        active = ' aria-current="page"' if lang == language else ''
+        switcher += f'<a href="{relative(current, route(lang, path))}" lang="{lang}" hreflang="{lang}" aria-label="{label}"{active}>{lang.upper()}</a>'
+    switcher += '</div>'
+    page = page.replace('</nav>', '</nav>' + switcher, 1)
+    canonical = ORIGIN + '/' + current
+    metadata = f'<link rel="canonical" href="{canonical}">\n'
+    for lang in ['en', 'vi', 'x-default']:
+        metadata += f'<link rel="alternate" hreflang="{lang}" href="{ORIGIN}/{route("en" if lang == "x-default" else lang, path)}">\n'
+    metadata += f'<meta property="og:locale" content="{"en_US" if language == "en" else "vi_VN"}"><meta property="og:url" content="{canonical}">'
+    page = page.replace('</head>', metadata + '</head>')
+    target = OUT / current / 'index.html'
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_text(page)
+
+
+def shell(language, title, description, body):
+    en = language == 'en'
+    return f'''<!doctype html><html lang="{language}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{escape(title)} — xDev Asia</title><meta name="description" content="{escape(description, quote=True)}"><meta property="og:title" content="{escape(title, quote=True)}"><meta property="og:description" content="{escape(description, quote=True)}"><meta property="og:type" content="website"><link rel="icon" href="assets/favicon.png"><link rel="stylesheet" href="styles.css"></head><body>
+<a class="skip" href="#main">{'Skip to content' if en else 'Đến nội dung chính'}</a>
+<header><div class="container header-inner"><a class="brand" href="@home@" aria-label="xDev Asia"><img src="assets/xdev-logo.svg" alt="xDev" width="143" height="50"><span>ASIA</span></a><nav aria-label="{'Main navigation' if en else 'Điều hướng chính'}"><a href="@studio@">AI Studio</a><a href="@docs@">{'Docs' if en else 'Tài liệu'}</a><a href="https://blog.xdev.asia">Blog ↗</a></nav></div></header>
+{body}<footer class="container"><a href="@home@">© 2026 xDev Asia</a><div class="footer-links"><a href="@studio@">AI Studio</a><a href="@docs@">{'Documentation' if en else 'Hướng dẫn sử dụng'}</a></div></footer></body></html>'''
+
 
 def build():
+    # dist is exclusively generated; this removes retired pages as well.
+    if OUT.exists():
+        shutil.rmtree(OUT)
+    OUT.mkdir()
+    shutil.copytree(ROOT / 'src/assets', OUT / 'assets')
+    shutil.copyfile(ROOT / 'src/styles.css', OUT / 'styles.css')
     template = (ROOT / 'src/index.vi.html').read_text()
     english = template
-    # Longest first so short labels cannot alter longer sentences.
-    for vi, en in sorted(translations.items(), key=lambda item: -len(item[0])):
+    for vi, en in sorted(json.loads((ROOT / 'src/home.en.json').read_text()).items(), key=lambda item: -len(item[0])):
         if vi not in template:
             raise ValueError(f'Translation source missing: {vi}')
         english = english.replace(vi, en)
     english = english.replace('lang="vi"', 'lang="en"', 1)
-    for language, page in [('en', english), ('vi', template)]:
-        prefix = './' if language == 'en' else '../'
-        page = page.replace('href="assets/', f'href="{prefix}assets/').replace('src="assets/', f'src="{prefix}assets/').replace('href="styles.css"', f'href="{prefix}styles.css"')
-        current_en = ' aria-current="page"' if language == 'en' else ''
-        current_vi = ' aria-current="page"' if language == 'vi' else ''
-        switcher = f'<div class="language-switch" role="group" aria-label="{"Language" if language == "en" else "Ngôn ngữ"}"><a href="{prefix}" lang="en" hreflang="en" aria-label="English"{current_en}>EN</a><a href="{prefix}vi/" lang="vi" hreflang="vi" aria-label="Tiếng Việt"{current_vi}>VI</a></div>'
-        page = page.replace('</nav>', '</nav>' + switcher, 1)
-        canonical = 'https://xdev.asia/' + ('vi/' if language == 'vi' else '')
-        metadata = f'<link rel="canonical" href="{canonical}">\n<link rel="alternate" hreflang="en" href="https://xdev.asia/">\n<link rel="alternate" hreflang="vi" href="https://xdev.asia/vi/">\n<link rel="alternate" hreflang="x-default" href="https://xdev.asia/">\n<meta property="og:locale" content="{"en_US" if language == "en" else "vi_VN"}">\n<meta property="og:url" content="{canonical}">\n'
-        page = page.replace('</head>', metadata + '</head>')
-        target = ROOT / 'dist' / ('index.html' if language == 'en' else 'vi/index.html')
-        target.parent.mkdir(parents=True, exist_ok=True)
-        target.write_text(page)
-    print('Generated English / and Vietnamese /vi/.')
+    decorate(english, 'en', '')
+    decorate(template, 'vi', '')
+    for language in ['en', 'vi']:
+        content = json.loads((ROOT / f'src/studio.{language}.json').read_text())
+        en = language == 'en'
+        cards = ''.join(f'<article><span class="principle-number">/ {i:02}</span><h3>{escape(item[0])}</h3><p>{escape(item[1])}</p></article>' for i, item in enumerate(content['features'], 1))
+        body = f'''<main id="main"><section class="container product-hero"><div class="eyebrow">XDEV AI STUDIO</div><h1>{content['headline']}</h1><p class="lead">{escape(content['description'])}</p><div class="hero-actions"><a class="button primary" href="@quickstart@">{content['start']} →</a><a class="text-link" href="@docs@">{content['docs']} →</a></div></section><section class="container product-features"><div class="principles">{cards}</div></section><section class="container"><div class="blog-panel studio-next"><div><div class="eyebrow">{content['next_label']}</div><h2>{content['next_title']}</h2><p>{content['next_text']}</p><a class="button white" href="@docs@">{content['docs']} →</a></div><div><p>{content['app_text']}</p><a class="button white" href="https://ai-studio.xdev.asia">{content['app_link']} ↗</a></div></div></section></main>'''
+        decorate(shell(language, 'XDev AI Studio', content['description'], body), language, 'ai-studio/')
+        pages = content['pages']
+        entries = [{'slug': '', 'title': content['docs'], 'description': content['docs_description'], 'sections': []}] + pages
+        for entry in entries:
+            path = 'ai-studio/docs/' + (entry['slug'] + '/' if entry['slug'] else '')
+            nav = ''
+            for item in entries:
+                target = 'ai-studio/docs/' + (item['slug'] + '/' if item['slug'] else '')
+                active = ' aria-current="page"' if item['slug'] == entry['slug'] else ''
+                nav += f'<a href="{relative(route(language,path),route(language,target))}"{active}>{escape(item["title"])}</a>'
+            sections = ''
+            for section in entry['sections']:
+                sections += f'<section><h2>{escape(section["title"])}</h2>'
+                if 'text' in section:
+                    sections += f'<p>{escape(section["text"])}</p>'
+                if 'steps' in section:
+                    sections += '<ol>' + ''.join(f'<li>{escape(step)}</li>' for step in section['steps']) + '</ol>'
+                sections += '</section>'
+            if not entry['slug']:
+                sections = '<div class="doc-cards">' + ''.join(f'<a href="{item["slug"]}/"><h2>{escape(item["title"])}</h2><p>{escape(item["description"])}</p><span>{"Read guide" if en else "Đọc hướng dẫn"} →</span></a>' for item in pages) + '</div>'
+            else:
+                index = pages.index(entry)
+                if index + 1 < len(pages):
+                    following = pages[index + 1]
+                    sections += f'<a class="button primary" href="../{following["slug"]}/">{escape(following["title"])} →</a>'
+            body = f'<main id="main" class="container docs-layout"><aside><div class="eyebrow">AI STUDIO / DOCS</div><nav aria-label="{"Documentation" if en else "Mục lục tài liệu"}">{nav}</nav></aside><article class="doc-content"><a class="text-link" href="@studio@">← AI Studio</a><h1>{escape(entry["title"])}</h1><p class="lead">{escape(entry["description"])}</p>{sections}</article></main>'
+            decorate(shell(language, entry['title'], entry['description'], body), language, path)
+    (OUT / '.nojekyll').touch()
+    print(f'Built {len(list(OUT.rglob("index.html")))} localized pages.')
 
 if __name__ == '__main__':
     build()

@@ -1,0 +1,152 @@
+{
+  "headline": "Tri thức của bạn.<br>Quy trình của bạn.<br><span>AI của bạn.</span>",
+  "description": "Xây ứng dụng AI từ tri thức của tổ chức. Kết nối mô hình và công cụ, thiết kế workflow và quyết định cách xuất bản ứng dụng.",
+  "start": "Bắt đầu xây dựng",
+  "docs": "Hướng dẫn sử dụng",
+  "next_label": "TỪ Ý TƯỞNG ĐẾN ỨNG DỤNG ĐẦU TIÊN",
+  "next_title": "Bắt đầu với từng bước rõ ràng.",
+  "next_text": "Chuẩn bị không gian làm việc, tạo ứng dụng, kiểm tra câu trả lời và xuất bản khi đã sẵn sàng.",
+  "app_text": "Bạn đã có tài khoản và quyền truy cập? Mở ứng dụng để tiếp tục công việc.",
+  "app_link": "Mở AI Studio",
+  "docs_description": "Hướng dẫn tạo, kiểm thử và xuất bản ứng dụng trong XDev AI Studio.",
+  "features": [
+    [
+      "Thiết kế trực quan",
+      "Kết nối đầu vào, mô hình, truy xuất tri thức và đầu ra thành workflow."
+    ],
+    [
+      "Sử dụng tri thức của bạn",
+      "Tạo kho tri thức từ tài liệu và kết nối với ứng dụng."
+    ],
+    [
+      "Giữ quyền kiểm soát",
+      "Quản lý quyền trong không gian làm việc, kiểm tra câu trả lời và xuất bản phiên bản đã lưu."
+    ]
+  ],
+  "pages": [
+    {
+      "slug": "quickstart",
+      "title": "Tạo ứng dụng đầu tiên",
+      "description": "Bắt đầu bằng chatbot đơn giản, sau đó bổ sung tri thức của tổ chức.",
+      "sections": [
+        {
+          "title": "Trước khi bắt đầu",
+          "text": "Đăng nhập ai-studio.xdev.asia bằng tài khoản có quyền tạo ứng dụng trong không gian làm việc. Quản trị viên cần cấu hình nhà cung cấp mô hình khả dụng. Nếu không thấy thao tác tạo hoặc xuất bản, hãy nhờ quản trị viên kiểm tra quyền."
+        },
+        {
+          "title": "Tạo và cấu hình",
+          "steps": [
+            "Mở trang ứng dụng và chọn thao tác tạo ứng dụng.",
+            "Chọn Chatbot trong nhóm loại ứng dụng cơ bản cho ví dụ đầu tiên. Đặt tên dễ nhận biết rồi tạo ứng dụng.",
+            "Trong trình chỉnh sửa, chọn mô hình khả dụng và nhập chỉ dẫn. Ví dụ: “Giúp đồng nghiệp hiểu quy trình được cung cấp. Nếu thiếu thông tin, hãy nói rõ.”",
+            "Lưu bản nháp trước khi kiểm thử hoặc xuất bản."
+          ]
+        },
+        {
+          "title": "Thử một tình huống cụ thể",
+          "steps": [
+            "Mở phần xem trước và đặt câu hỏi liên quan đến chỉ dẫn.",
+            "Kiểm tra câu trả lời có làm đúng chỉ dẫn không. Thử câu hỏi chưa rõ ý và câu hỏi ứng dụng không có thông tin để trả lời.",
+            "Điều chỉnh chỉ dẫn và lưu lại. Thêm kho tri thức nếu ứng dụng cần sử dụng tài liệu của bạn."
+          ]
+        },
+        {
+          "title": "Bước tiếp theo",
+          "text": "Lưu bản nháp chưa phải là xuất bản ứng dụng. Đọc hướng dẫn xuất bản sau khi kiểm thử đạt yêu cầu. Nếu cần quy trình nhiều bước, hãy tạo ứng dụng Workflow."
+        }
+      ]
+    },
+    {
+      "slug": "knowledge",
+      "title": "Kết nối kho tri thức",
+      "description": "Tạo kho tri thức và đưa tài liệu vào ứng dụng.",
+      "sections": [
+        {
+          "title": "Chuẩn bị tài liệu",
+          "text": "Bắt đầu với một nhóm nhỏ tài liệu phù hợp và còn hiệu lực. Kiểm tra quyền sử dụng tài liệu của không gian làm việc và chọn mức độ nhạy cảm phù hợp. Quản trị viên có thể cần cấu hình mô hình embedding."
+        },
+        {
+          "title": "Tạo kho tri thức",
+          "steps": [
+            "Mở phần Tri thức và bắt đầu tạo kho tri thức.",
+            "Chọn tệp có định dạng được hộp tải lên hỗ trợ. Làm theo các bước để cấu hình xử lý tài liệu và mô hình embedding.",
+            "Gửi tài liệu và chờ xử lý hoàn tất. Tải lên xong chưa có nghĩa là tài liệu đã sẵn sàng để tìm kiếm.",
+            "Kiểm tra trạng thái từng tài liệu. Nếu xử lý thất bại, đọc lỗi và sửa tệp hoặc cấu hình trước khi thử lại."
+          ]
+        },
+        {
+          "title": "Sử dụng trong ứng dụng",
+          "steps": [
+            "Mở ứng dụng và chọn kho tri thức trong phần cấu hình tri thức. Với workflow, cấu hình node truy xuất tri thức.",
+            "Lưu bản nháp rồi thử câu hỏi có câu trả lời trong tài liệu.",
+            "Đối chiếu câu trả lời với nguồn. Thử thêm câu hỏi không có thông tin trong tài liệu."
+          ]
+        },
+        {
+          "title": "Khi không tìm thấy câu trả lời",
+          "text": "Kiểm tra tài liệu đã xử lý xong, ứng dụng đang dùng đúng kho tri thức và mô hình đang khả dụng. Cải thiện nội dung nguồn hoặc cấu hình truy xuất trước khi thêm tài liệu."
+        }
+      ]
+    },
+    {
+      "slug": "workflows",
+      "title": "Xây dựng workflow",
+      "description": "Kết nối các bước thành quy trình có thể lặp lại và kiểm tra kết quả mỗi lần chạy.",
+      "sections": [
+        {
+          "title": "Bắt đầu từ luồng nhỏ",
+          "text": "Bắt đầu với đầu vào văn bản, một bước gọi mô hình và đầu ra. Ví dụ: tóm tắt một đoạn văn. Chỉ thêm công cụ và truy xuất tri thức sau khi luồng đơn giản chạy được."
+        },
+        {
+          "title": "Thiết kế và kiểm thử",
+          "steps": [
+            "Tạo ứng dụng Workflow rồi mở trình chỉnh sửa workflow.",
+            "Khai báo đầu vào ở node bắt đầu và thêm node LLM. Chọn mô hình ngay trên node này.",
+            "Viết chỉ dẫn và chèn đầu vào bằng bộ chọn biến của trình chỉnh sửa.",
+            "Nối các bước đến node kết thúc và ánh xạ kết quả mô hình vào đầu ra.",
+            "Lưu workflow và sửa các lỗi kiểm tra. Chạy thử bằng dữ liệu ngắn, kiểm tra đầu ra và các bước lỗi nếu có."
+          ]
+        },
+        {
+          "title": "Mở rộng quy trình",
+          "text": "Thêm node truy xuất tri thức khi mô hình cần tài liệu nguồn. Chỉ thêm công cụ khi quy trình cần tác động đến hệ thống bên ngoài. Kiểm tra quyền và đầu vào của công cụ trước khi chạy thử thao tác làm thay đổi dữ liệu."
+        },
+        {
+          "title": "Khi bị chặn xuất bản",
+          "text": "Sửa lỗi cấu trúc workflow và cấu hình mô hình còn thiếu. Workflow chọn mô hình trên các node LLM; không yêu cầu cùng cấu hình mô hình cấp ứng dụng như chatbot cơ bản."
+        }
+      ]
+    },
+    {
+      "slug": "publishing",
+      "title": "Xuất bản và vận hành",
+      "description": "Phân biệt lưu bản nháp và xuất bản một phiên bản ứng dụng.",
+      "sections": [
+        {
+          "title": "Kiểm tra bản nháp",
+          "steps": [
+            "Lưu các thay đổi và xác nhận đúng bản nháp cần kiểm tra.",
+            "Thử đầu vào đại diện, tình huống thiếu thông tin và lỗi. Kiểm tra nguồn tri thức và hành vi công cụ.",
+            "Kiểm tra đối tượng sử dụng và cấu hình truy cập trước khi chia sẻ."
+          ]
+        },
+        {
+          "title": "Xuất bản phiên bản",
+          "steps": [
+            "Chọn Xuất bản bằng tài khoản có quyền xuất bản ứng dụng.",
+            "Nếu bị chặn, kiểm tra thay đổi chưa lưu, cấu hình mô hình bắt buộc và lỗi kiểm tra workflow.",
+            "Sau khi xuất bản thành công, kiểm tra trạng thái phiên bản đã xuất bản. Sử dụng tùy chọn chia sẻ hoặc API hiện có theo nhu cầu của người dùng."
+          ]
+        },
+        {
+          "title": "Cập nhật ứng dụng",
+          "text": "Sửa bản nháp không tự thay thế phiên bản đã xuất bản. Hãy lưu, kiểm thử và xuất bản lại khi sẵn sàng. Ứng dụng được nhân bản cũng cần xuất bản riêng."
+        },
+        {
+          "title": "Tìm nguyên nhân lỗi",
+          "text": "Xem nhật ký và phần giám sát ứng dụng để tìm yêu cầu thất bại. Kiểm tra mô hình, xử lý tài liệu, quyền truy cập và lỗi công cụ. Không đưa thông tin xác thực nhà cung cấp hoặc nội dung tài liệu riêng tư vào tin nhắn hỗ trợ công khai."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "headline": "Your knowledge.<br>Your workflows.<br><span>Your AI.</span>",
+  "description": "Build AI applications around your organization’s knowledge. Connect models and tools, design workflows, and decide how your applications are published.",
+  "start": "Start building",
+  "docs": "Documentation",
+  "next_label": "FROM AN IDEA TO YOUR FIRST APP",
+  "next_title": "A clear path to getting started.",
+  "next_text": "Set up your workspace, create an application, test its responses, and publish when you are ready.",
+  "app_text": "Already have access to a workspace? Open the application to continue your work.",
+  "app_link": "Open AI Studio",
+  "docs_description": "Practical guides for creating, testing, and publishing applications in XDev AI Studio.",
+  "features": [
+    [
+      "Build visually",
+      "Use workflows to connect inputs, model calls, knowledge retrieval, and outputs."
+    ],
+    [
+      "Work with your knowledge",
+      "Create knowledge bases from documents and connect them to your applications."
+    ],
+    [
+      "Stay in control",
+      "Manage workspace permissions, review responses, and publish a saved version."
+    ]
+  ],
+  "pages": [
+    {
+      "slug": "quickstart",
+      "title": "Create your first application",
+      "description": "Start with a simple chatbot, then add your organization’s knowledge.",
+      "sections": [
+        {
+          "title": "Before you begin",
+          "text": "Sign in to ai-studio.xdev.asia with an account that can create applications in your workspace. A workspace administrator must configure an available model provider. If you cannot see a create or publish action, ask your administrator to check your permissions."
+        },
+        {
+          "title": "Create and configure",
+          "steps": [
+            "Open the applications page and choose the action to create an application.",
+            "Choose Chatbot under the basic application types for this first example. Give it a recognizable name and create it.",
+            "In the application editor, select an available model and enter instructions. For example: “Help colleagues understand the supplied procedure. If information is missing, say so.”",
+            "Save your draft before testing or publishing."
+          ]
+        },
+        {
+          "title": "Try a focused example",
+          "steps": [
+            "Open the preview and ask a question related to your instructions.",
+            "Check whether the answer follows the instructions. Try an unclear question and a question the application cannot answer.",
+            "Refine the instructions and save the draft again. Add a knowledge base if the application needs your documents."
+          ]
+        },
+        {
+          "title": "What comes next",
+          "text": "A saved draft is not a published application. Follow the publishing guide when your tests are satisfactory. For a multi-step process, create a Workflow application instead."
+        }
+      ]
+    },
+    {
+      "slug": "knowledge",
+      "title": "Connect your knowledge",
+      "description": "Create a knowledge base and make documents available to your application.",
+      "sections": [
+        {
+          "title": "Prepare your documents",
+          "text": "Use a small set of relevant, current documents for your first test. Confirm that your workspace is allowed to use them and choose the appropriate sensitivity level. An administrator may need to configure an embedding model."
+        },
+        {
+          "title": "Create a knowledge base",
+          "steps": [
+            "Open Knowledge and start creating a knowledge base.",
+            "Choose files supported by the upload dialog. Follow the wizard to configure document processing and the embedding model.",
+            "Submit the documents and wait for processing to finish. Upload completion alone does not mean the documents are searchable.",
+            "Inspect document status. If processing fails, read the reported error and correct the file or configuration before retrying."
+          ]
+        },
+        {
+          "title": "Use it in an application",
+          "steps": [
+            "Open your application and select the knowledge base in its knowledge configuration. For a workflow, configure a knowledge-retrieval node.",
+            "Save the draft and test a question whose answer is present in a document.",
+            "Compare the response with the source. Also test a question that is not covered by the documents."
+          ]
+        },
+        {
+          "title": "When answers are missing",
+          "text": "Check that document processing has completed, the application uses the intended knowledge base, and the chosen model is available. Improve the source content or retrieval configuration before adding more documents."
+        }
+      ]
+    },
+    {
+      "slug": "workflows",
+      "title": "Build a workflow",
+      "description": "Connect steps into a repeatable process and inspect the result of each run.",
+      "sections": [
+        {
+          "title": "Plan a small first flow",
+          "text": "Start with a text input, a model step, and an output. For example, turn a paragraph into a short summary. Add tools and knowledge retrieval after this simple flow works."
+        },
+        {
+          "title": "Build and test",
+          "steps": [
+            "Create a Workflow application and open its workflow editor.",
+            "Define the input on the start node and add an LLM node. Select the model on that node.",
+            "Write the model instructions and insert the input using the editor’s variable selector.",
+            "Connect the steps to an end node and map the model result to the output.",
+            "Save the workflow and address any validation errors. Run it with a short sample and inspect the output and any failed steps."
+          ]
+        },
+        {
+          "title": "Extend carefully",
+          "text": "Add a knowledge-retrieval node when the model needs source documents. Add tools only when the process needs an external action. Check tool permissions and inputs before a test that changes external data."
+        },
+        {
+          "title": "If publication is blocked",
+          "text": "Resolve graph validation errors and missing model configuration. A Workflow uses models on its LLM nodes; it does not require the same application-level model setting as a basic chatbot."
+        }
+      ]
+    },
+    {
+      "slug": "publishing",
+      "title": "Publish and maintain",
+      "description": "Understand the difference between saving a draft and publishing an application.",
+      "sections": [
+        {
+          "title": "Review your draft",
+          "steps": [
+            "Save pending changes and confirm that you are reviewing the intended draft.",
+            "Test representative inputs, missing information, and failure cases. Verify knowledge sources and tool behavior.",
+            "Check the audience and access configuration before sharing the application."
+          ]
+        },
+        {
+          "title": "Publish a version",
+          "steps": [
+            "Use Publish with an account that has permission to publish applications.",
+            "If publication is blocked, check unsaved changes, required model settings, and workflow validation errors.",
+            "After publication succeeds, inspect the published version state. Use the application’s available sharing or API options as appropriate for your audience."
+          ]
+        },
+        {
+          "title": "Updating an application",
+          "text": "Changes to a draft do not automatically replace the published version. Save, test, and publish again when the update is ready. A duplicated application also needs its own publication."
+        },
+        {
+          "title": "Investigate a problem",
+          "text": "Review the application’s logs and monitoring views for failed requests. Check model availability, document processing, permissions, and tool errors. Do not put provider credentials or private document contents into public support messages."
+        }
+      ]
+    }
+  ]
+}
