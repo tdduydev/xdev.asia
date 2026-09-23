@@ -1,0 +1,263 @@
+[
+  {
+    "chapter": 1,
+    "chapter_title": "Bắt đầu với AI Studio",
+    "slug": "quickstart",
+    "title": "Tạo ứng dụng đầu tiên",
+    "description": "Xây dựng chatbot, agent, chatflow hoặc workflow.",
+    "image": "apps",
+    "narration": "Chào mừng bạn đến với AI Studio. Trong video này, chúng ta đi qua bảy chương, từ xây ứng dụng, kết nối dữ liệu và tự động hóa đến vận hành và quản trị. Giao diện sử dụng dữ liệu minh họa. Các thao tác tùy thuộc quyền và cấu hình triển khai. Tạo ứng dụng đầu tiên. Xây dựng chatbot, agent, chatflow hoặc workflow. Mở Studio và tạo ứng dụng. Chọn Chatbot cho trợ lý hội thoại, Agent cho tác vụ dùng công cụ, hoặc Chatflow/Workflow cho luồng trực quan. Bạn có thể cấu hình biến, câu chào, nghiệp vụ, nhận dạng giọng nói, đọc văn bản và tạo ảnh khi có mô hình phù hợp."
+  },
+  {
+    "chapter": 1,
+    "chapter_title": "Bắt đầu với AI Studio",
+    "slug": "marketplace",
+    "title": "Khám phá nhà cung cấp mô hình",
+    "description": "So sánh danh mục nhà cung cấp trước khi cấu hình mô hình.",
+    "image": "marketplace",
+    "narration": "Khám phá nhà cung cấp mô hình. So sánh danh mục nhà cung cấp trước khi cấu hình mô hình. Mở Marketplace và tìm theo tên nhà cung cấp hoặc loại mô hình."
+  },
+  {
+    "chapter": 1,
+    "chapter_title": "Bắt đầu với AI Studio",
+    "slug": "models",
+    "title": "Kết nối mô hình AI",
+    "description": "Chọn các mô hình mà workspace được sử dụng.",
+    "image": "models",
+    "narration": "Kết nối mô hình AI. Chọn các mô hình mà workspace được sử dụng. Mở Tích hợp → Model provider, chọn nhà cung cấp trong danh mục. Nhập địa chỉ kết nối và thông tin xác thực cần thiết."
+  },
+  {
+    "chapter": 1,
+    "chapter_title": "Bắt đầu với AI Studio",
+    "slug": "account",
+    "title": "Quản lý tài khoản cá nhân",
+    "description": "Cập nhật thông tin đăng nhập và tùy chọn cá nhân.",
+    "image": "account",
+    "narration": "Quản lý tài khoản cá nhân. Cập nhật thông tin đăng nhập và tùy chọn cá nhân. Mở tài khoản từ menu người dùng để xem hồ sơ và cài đặt cá nhân."
+  },
+  {
+    "chapter": 2,
+    "chapter_title": "Tri thức và dữ liệu",
+    "slug": "knowledge",
+    "title": "Xây dựng kho tri thức",
+    "description": "Tạo câu trả lời dựa trên tài liệu của bạn.",
+    "image": "knowledge",
+    "narration": "Xây dựng kho tri thức. Tạo câu trả lời dựa trên tài liệu của bạn. Mở Tri thức và tạo kho tri thức. Tải tài liệu lên hoặc kết nối nguồn được hỗ trợ, sau đó chọn cấu hình phân tích và lập chỉ mục."
+  },
+  {
+    "chapter": 2,
+    "chapter_title": "Tri thức và dữ liệu",
+    "slug": "documents",
+    "title": "Quản lý tài liệu và đoạn nội dung",
+    "description": "Theo dõi nhập liệu, xem tài liệu gốc và kiểm soát các đoạn dùng để truy xuất.",
+    "image": "documents",
+    "narration": "Quản lý tài liệu và đoạn nội dung. Theo dõi nhập liệu, xem tài liệu gốc và kiểm soát các đoạn dùng để truy xuất. Mở Tri thức, chọn kho và vào danh sách tài liệu. Tải lên tệp hoặc dùng nguồn đã kết nối."
+  },
+  {
+    "chapter": 2,
+    "chapter_title": "Tri thức và dữ liệu",
+    "slug": "retrieval",
+    "title": "Thử và điều chỉnh truy xuất",
+    "description": "Kiểm tra ngữ cảnh được lấy ra trước khi dùng trong câu trả lời.",
+    "image": "retrieval",
+    "narration": "Thử và điều chỉnh truy xuất. Kiểm tra ngữ cảnh được lấy ra trước khi dùng trong câu trả lời. Chọn kho tri thức, mở Thử truy xuất và nhập câu hỏi thực tế. Đọc các đoạn và điểm trả về. Kho chỉ mục tiết kiệm không có vector nên chỉ tìm toàn văn. Rerank thêm một lần gọi mô hình và có thể gửi nội dung đoạn tới nhà cung cấp đã chọn."
+  },
+  {
+    "chapter": 2,
+    "chapter_title": "Tri thức và dữ liệu",
+    "slug": "pipelines",
+    "title": "Thiết kế pipeline nhập tri thức",
+    "description": "Chọn mẫu và tùy chỉnh cách dữ liệu đi vào kho tri thức.",
+    "image": "pipeline",
+    "narration": "Thiết kế pipeline nhập tri thức. Chọn mẫu và tùy chỉnh cách dữ liệu đi vào kho tri thức. Mở Tri thức → Tùy chỉnh để xem các mẫu pipeline hiện có."
+  },
+  {
+    "chapter": 2,
+    "chapter_title": "Tri thức và dữ liệu",
+    "slug": "sources",
+    "title": "Kết nối nguồn dữ liệu",
+    "description": "Tái sử dụng kết nối nguồn để nhập tài liệu.",
+    "image": "sources",
+    "narration": "Kết nối nguồn dữ liệu. Tái sử dụng kết nối nguồn để nhập tài liệu. Mở Tích hợp → Nguồn dữ liệu và thêm kết nối được hỗ trợ. Nhập cấu hình và tham chiếu thông tin xác thực."
+  },
+  {
+    "chapter": 2,
+    "chapter_title": "Tri thức và dữ liệu",
+    "slug": "external-knowledge",
+    "title": "Kết nối kho tri thức ngoài",
+    "description": "Gọi dịch vụ truy xuất đang có của tổ chức.",
+    "image": "external",
+    "narration": "Kết nối kho tri thức ngoài. Gọi dịch vụ truy xuất đang có của tổ chức. Mở Thiết lập → Tri thức ngoài và thêm tên dịch vụ, endpoint cùng khóa nếu dịch vụ yêu cầu. Dịch vụ này nhận câu hỏi gửi ra ngoài; khác với nguồn dữ liệu kéo tài liệu vào. Đích truy cập phải phù hợp chính sách kết nối và nhãn dữ liệu."
+  },
+  {
+    "chapter": 3,
+    "chapter_title": "Công cụ và tự động hóa",
+    "slug": "tools",
+    "title": "Cấp công cụ cho agent",
+    "description": "Kết nối công cụ có sẵn, HTTP API và máy chủ MCP.",
+    "image": "tools",
+    "narration": "Cấp công cụ cho agent. Kết nối công cụ có sẵn, HTTP API và máy chủ MCP. Mở Tích hợp → Công cụ. Chọn nhà cung cấp có sẵn, thêm công cụ API hoặc cấu hình máy chủ MCP với địa chỉ và xác thực."
+  },
+  {
+    "chapter": 3,
+    "chapter_title": "Công cụ và tự động hóa",
+    "slug": "extensions",
+    "title": "Dùng API mở rộng để kiểm duyệt",
+    "description": "Đăng ký endpoint kiểm duyệt do tổ chức quản lý.",
+    "image": "extensions",
+    "narration": "Dùng API mở rộng để kiểm duyệt. Đăng ký endpoint kiểm duyệt do tổ chức quản lý. Mở Tích hợp → Extension, nhập tên, URL endpoint và khóa API nếu cần. Extension là lời gọi HTTP tới endpoint của bạn, không phải tải plugin về chạy. Endpoint nhận thông điệp người dùng và chịu chính sách truy cập ra ngoài."
+  },
+  {
+    "chapter": 3,
+    "chapter_title": "Công cụ và tự động hóa",
+    "slug": "workflows",
+    "title": "Thiết kế workflow trực quan",
+    "description": "Nối các bước xử lý và kiểm tra từng lượt chạy.",
+    "image": "workflow",
+    "narration": "Thiết kế workflow trực quan. Nối các bước xử lý và kiểm tra từng lượt chạy. Mở ứng dụng Workflow hoặc Chatflow và vào trình soạn workflow. Khai báo trường đầu vào ở node bắt đầu."
+  },
+  {
+    "chapter": 3,
+    "chapter_title": "Công cụ và tự động hóa",
+    "slug": "triggers",
+    "title": "Tự động hóa bằng trigger",
+    "description": "Khởi chạy workflow từ sự kiện hoặc lịch.",
+    "image": "triggers",
+    "narration": "Tự động hóa bằng trigger. Khởi chạy workflow từ sự kiện hoặc lịch. Mở Tích hợp → Điểm kích hoạt để xem loại hỗ trợ và các trigger đã có trong workspace. Để tạo, mở ứng dụng Workflow đích, lưu bản nháp và chọn node gốc/bắt đầu. Cấu hình tại bảng Điểm kích hoạt trên node đó; không tạo trigger ở trang tổng quan workspace."
+  },
+  {
+    "chapter": 3,
+    "chapter_title": "Công cụ và tự động hóa",
+    "slug": "approvals",
+    "title": "Duyệt yêu cầu đang chờ",
+    "description": "Đưa quyết định của con người vào luồng có cổng duyệt.",
+    "image": "approvals",
+    "narration": "Duyệt yêu cầu đang chờ. Đưa quyết định của con người vào luồng có cổng duyệt. Mở hộp thư duyệt để xem yêu cầu bạn có quyền xử lý. Chọn yêu cầu đang chờ."
+  },
+  {
+    "chapter": 4,
+    "chapter_title": "Xuất bản và tích hợp",
+    "slug": "publishing",
+    "title": "Xuất bản và chia sẻ",
+    "description": "Đưa phiên bản đã kiểm thử đến đúng kênh sử dụng.",
+    "image": "publish",
+    "narration": "Xuất bản và chia sẻ. Đưa phiên bản đã kiểm thử đến đúng kênh sử dụng. Mở ứng dụng, kiểm tra bản nháp và xuất bản phiên bản muốn người dùng sử dụng. Thay đổi bản nháp cần được xuất bản lại để có hiệu lực với người dùng."
+  },
+  {
+    "chapter": 4,
+    "chapter_title": "Xuất bản và tích hợp",
+    "slug": "api",
+    "title": "Dùng API và MCP của ứng dụng",
+    "description": "Tích hợp ứng dụng đã xuất bản vào hệ thống khác.",
+    "image": "api",
+    "narration": "Dùng API và MCP của ứng dụng. Tích hợp ứng dụng đã xuất bản vào hệ thống khác. Mở ứng dụng → Truy cập API và đọc địa chỉ, cấu trúc đầu vào, ví dụ được sinh cho ứng dụng. Xuất bản trước khi gọi giao diện đã công bố."
+  },
+  {
+    "chapter": 5,
+    "chapter_title": "Chất lượng và ghi nhớ",
+    "slug": "logs",
+    "title": "Đọc nhật ký và dấu vết chạy",
+    "description": "Đi từ kết quả ứng dụng đến lượt hội thoại hoặc bước xử lý cần kiểm tra.",
+    "image": "logs",
+    "narration": "Đọc nhật ký và dấu vết chạy. Đi từ kết quả ứng dụng đến lượt hội thoại hoặc bước xử lý cần kiểm tra. Mở ứng dụng và chọn Nhật ký. Danh sách phụ thuộc loại ứng dụng: hội thoại hoặc lượt chạy workflow."
+  },
+  {
+    "chapter": 5,
+    "chapter_title": "Chất lượng và ghi nhớ",
+    "slug": "annotations",
+    "title": "Thiết lập câu trả lời định sẵn",
+    "description": "Trả lời nhất quán cho câu hỏi trùng khớp đã được xác định.",
+    "image": "annotations",
+    "narration": "Thiết lập câu trả lời định sẵn. Trả lời nhất quán cho câu hỏi trùng khớp đã được xác định. Trong ứng dụng, mở khu vực Nhật ký và câu trả lời định sẵn. Câu hỏi khớp chính xác sau chuẩn hóa sẽ trả câu định sẵn mà không gọi mô hình. Không dùng so khớp gần đúng."
+  },
+  {
+    "chapter": 5,
+    "chapter_title": "Chất lượng và ghi nhớ",
+    "slug": "monitoring",
+    "title": "Theo dõi sử dụng và chất lượng",
+    "description": "Nắm lượt chạy, chi phí, phản hồi và sự kiện kiểm toán.",
+    "image": "monitoring",
+    "narration": "Theo dõi sử dụng và chất lượng. Nắm lượt chạy, chi phí, phản hồi và sự kiện kiểm toán. Mở Vận hành và chọn khoảng thời gian cùng bộ lọc phù hợp. Xem hoạt động, token, chi phí và chỉ số chất lượng. Trong ứng dụng, tạo bộ dữ liệu đánh giá, chạy thử và so sánh các lượt chạy tương thích; xuất dữ liệu huấn luyện khi cần."
+  },
+  {
+    "chapter": 5,
+    "chapter_title": "Chất lượng và ghi nhớ",
+    "slug": "memory",
+    "title": "Quản lý ghi nhớ dài hạn",
+    "description": "Duyệt và quản lý thông tin được giữ qua các lượt tương tác.",
+    "image": "memory",
+    "narration": "Quản lý ghi nhớ dài hạn. Duyệt và quản lý thông tin được giữ qua các lượt tương tác. Quản trị viên có quyền ghi nhớ mở Ghi nhớ để xem tổng quan và hàng đợi trích xuất. Kiểm tra nội dung và ngữ cảnh nguồn trước khi xử lý."
+  },
+  {
+    "chapter": 6,
+    "chapter_title": "Quản lý tổ chức",
+    "slug": "workspace",
+    "title": "Quản lý workspace",
+    "description": "Tổ chức thành viên, vai trò, khóa API và hạn mức.",
+    "image": "workspace",
+    "narration": "Quản lý workspace. Tổ chức thành viên, vai trò, khóa API và hạn mức. Dùng menu workspace để chọn đúng nhóm làm việc. Mở Cài đặt workspace để quản lý thành viên và lời mời."
+  },
+  {
+    "chapter": 6,
+    "chapter_title": "Quản lý tổ chức",
+    "slug": "roles",
+    "title": "Tạo vai trò và phân quyền",
+    "description": "Định nghĩa quyền theo nhiệm vụ trong workspace.",
+    "image": "roles",
+    "narration": "Tạo vai trò và phân quyền. Định nghĩa quyền theo nhiệm vụ trong workspace. Mở Thiết lập → Vai trò tùy chỉnh bằng tài khoản có quyền quản lý vai trò. Vai trò workspace không tự cấp quyền quản trị toàn hệ thống. Kiểm tra cả thao tác được phép và thao tác phải bị từ chối."
+  },
+  {
+    "chapter": 6,
+    "chapter_title": "Quản lý tổ chức",
+    "slug": "security",
+    "title": "Cấu hình bảo vệ dữ liệu",
+    "description": "Điều chỉnh việc dùng AI theo chính sách dữ liệu của tổ chức.",
+    "image": "security",
+    "narration": "Cấu hình bảo vệ dữ liệu. Điều chỉnh việc dùng AI theo chính sách dữ liệu của tổ chức. Mở Cài đặt → Bảo vệ dữ liệu để xem mức nhạy cảm và chính sách PII, OCR, xử lý dữ liệu được cung cấp."
+  },
+  {
+    "chapter": 6,
+    "chapter_title": "Quản lý tổ chức",
+    "slug": "settings",
+    "title": "Thiết lập nhận diện, lưu trữ và danh tính",
+    "description": "Cấu hình dịch vụ workspace từ các trang cài đặt riêng.",
+    "image": "settings",
+    "narration": "Thiết lập nhận diện, lưu trữ và danh tính. Cấu hình dịch vụ workspace từ các trang cài đặt riêng. Dùng Nhận diện để thiết lập thương hiệu workspace. Mở Lưu trữ để cấu hình S3 và kiểm tra quyền truy cập trước khi dùng cho tài liệu."
+  },
+  {
+    "chapter": 6,
+    "chapter_title": "Quản lý tổ chức",
+    "slug": "storage",
+    "title": "Quản lý lưu trữ S3",
+    "description": "Theo dõi bucket, dung lượng và dữ liệu không còn được tham chiếu.",
+    "image": "storage",
+    "narration": "Quản lý lưu trữ S3. Theo dõi bucket, dung lượng và dữ liệu không còn được tham chiếu. Mở Thiết lập → Lưu trữ để xem trạng thái bucket, dung lượng, số đối tượng và thời điểm đo."
+  },
+  {
+    "chapter": 6,
+    "chapter_title": "Quản lý tổ chức",
+    "slug": "identity",
+    "title": "Cấu hình đăng nhập một lần",
+    "description": "Kết nối nhà cung cấp danh tính và ánh xạ nhóm người dùng.",
+    "image": "identity",
+    "narration": "Cấu hình đăng nhập một lần. Kết nối nhà cung cấp danh tính và ánh xạ nhóm người dùng. Mở Thiết lập → Đăng nhập một lần. Thêm nhà cung cấp với issuer, client ID và thông tin xác thực do quản trị danh tính cung cấp."
+  },
+  {
+    "chapter": 7,
+    "chapter_title": "Huấn luyện và quản trị",
+    "slug": "training",
+    "title": "Tinh chỉnh mô hình",
+    "description": "Gửi và theo dõi huấn luyện qua nhà cung cấp đã cấu hình.",
+    "image": "training",
+    "narration": "Tinh chỉnh mô hình. Gửi và theo dõi huấn luyện qua nhà cung cấp đã cấu hình. Mở Cài đặt → Huấn luyện model và xem kênh huấn luyện hiện có. Kênh chưa dùng được có ghi rõ trên trang."
+  },
+  {
+    "chapter": 7,
+    "chapter_title": "Huấn luyện và quản trị",
+    "slug": "admin",
+    "title": "Quản trị toàn hệ thống",
+    "description": "Vận hành bản cài đặt ở phạm vi ngoài một workspace.",
+    "image": "admin",
+    "narration": "Quản trị toàn hệ thống. Vận hành bản cài đặt ở phạm vi ngoài một workspace. Đăng nhập bằng tài khoản quản trị hệ thống và mở Quản trị. Chỉ là chủ workspace chưa đủ quyền quản trị toàn hệ thống. Quản trị hệ thống còn có các mục tổ chức, tài khoản, sức khỏe dịch vụ, thiết lập lúc chạy, mạng và cờ tính năng. Quyền quản trị hệ thống tách biệt với vai trò trong workspace. Để thực hành từng bước, mở hướng dẫn tương ứng trên trang AI Studio. Cảm ơn bạn đã theo dõi."
+  }
+]

@@ -1,0 +1,81 @@
+{
+  "title": "Thương hiệu xDev",
+  "description": "Câu chuyện, hệ logo và nguyên tắc sử dụng nhận diện xDev.",
+  "kicker": "Nhận diện xDev",
+  "headline": "Một chữ X.<br>Nhiều điều để xây.",
+  "intro": "xDev là nơi Duy xây dựng sản phẩm, thử nghiệm ý tưởng và chia sẻ kinh nghiệm làm phần mềm. Nhận diện của xDev kết nối những hoạt động đó bằng một dấu hiệu chung: chữ X xanh.",
+  "explore": "Khám phá hệ logo",
+  "download": "Tải logo SVG",
+  "story_title": "Giữ dấu ấn.<br>Mở rộng cách thể hiện.",
+  "story": "Chữ X xanh là điểm nhận diện xuyên suốt. Phần tên bên cạnh dùng nét thanh, góc bo nhẹ và khoảng cách thoáng để tạo sự cân bằng. Mỗi sản phẩm có tên riêng, cùng chia sẻ một cấu trúc thiết kế.",
+  "family_title": "Cùng một họ nhận diện.",
+  "family_text": "DEV là thương hiệu chính. AI Studio dùng phần chữ AI / STUDIO nằm gọn trong chiều cao chữ X.",
+  "master": "Thương hiệu chính",
+  "product": "Sản phẩm AI Studio",
+  "light": "Nền sáng",
+  "dark": "Nền tối",
+  "notes_title": "Không gian cho những ý tưởng tiếp theo.",
+  "notes_text": "NOTES là một hướng mở rộng dành cho nội dung và blog. Cùng một chữ X, phần tên được dựng theo cùng quy tắc. Đây là mẫu mở rộng, chưa phải tên sản phẩm mới.",
+  "notes_label": "Mẫu mở rộng / NOTES",
+  "type_title": "Nét chữ thanh.<br>Cấu trúc rõ ràng.",
+  "type_text": "DEV và AI dùng chữ hoa với nét đều, góc nối bo nhẹ. STUDIO là dòng phụ nhỏ hơn: đặt sát dưới AI, cùng nằm trong chiều cao chữ X. Tên thương hiệu khi viết trong nội dung vẫn là xDev.",
+  "palette_title": "Sắc xanh làm điểm nhấn.",
+  "palette_text": "Chuyển sắc được giữ trong chữ X. Phần chữ và nền dùng màu trung tính để logo luôn dễ đọc.",
+  "colors": [
+    [
+      "X / xanh sáng",
+      "#7BD4FF"
+    ],
+    [
+      "X / xanh trung gian",
+      "#1E90FF"
+    ],
+    [
+      "X / xanh đậm",
+      "#004CFF"
+    ],
+    [
+      "Chữ / nền sáng",
+      "#344568"
+    ],
+    [
+      "Chữ / nền tối",
+      "#E8ECF8"
+    ],
+    [
+      "Nền tối",
+      "#142745"
+    ]
+  ],
+  "rules_title": "Nhất quán trong từng lần sử dụng.",
+  "rules": [
+    [
+      "Giữ nguyên chữ X",
+      "Dùng đúng biểu tượng, tỷ lệ và chuyển sắc trong file gốc."
+    ],
+    [
+      "Chọn đúng nền",
+      "Dùng bản sáng trên nền sáng, bản tối trên nền tối; tránh đặt logo lên vùng ảnh nhiều chi tiết."
+    ],
+    [
+      "Cho logo khoảng thở",
+      "Để khoảng trống quanh logo tối thiểu bằng một phần tư chiều cao chữ X."
+    ],
+    [
+      "Giữ đúng tỷ lệ",
+      "Không kéo giãn, xoay, thêm viền, đổ bóng hoặc tự đổi màu phần chữ."
+    ],
+    [
+      "Kiểm tra ở kích thước thật",
+      "Chữ DEV và STUDIO cần đọc được trên thiết bị sử dụng. Khi quá nhỏ, dùng biểu tượng X riêng."
+    ],
+    [
+      "Mở rộng có quy tắc",
+      "Tên sản phẩm bổ sung theo cùng nét chữ và cách căn chỉnh; không chỉnh lại hình dáng chữ X."
+    ]
+  ],
+  "files_title": "Bộ logo để sử dụng.",
+  "files_text": "Các phiên bản SVG nền sáng và nền tối của bộ nhận diện đã chốt.",
+  "file_label": "Tải SVG",
+  "ending": "Được xây bởi Duy. Tiếp tục học hỏi, tiếp tục tạo ra điều hữu ích."
+}

@@ -1,14 +1,14 @@
 {
   "headline": "Tri thức của bạn.<br>Quy trình của bạn.<br><span>AI của bạn.</span>",
   "description": "Xây ứng dụng AI từ tri thức của tổ chức. Kết nối mô hình và công cụ, thiết kế workflow và quyết định cách xuất bản ứng dụng.",
-  "start": "Bắt đầu xây dựng",
+  "start": "Đọc hướng dẫn bằng hình ảnh",
   "docs": "Hướng dẫn sử dụng",
   "next_label": "TỪ Ý TƯỞNG ĐẾN ỨNG DỤNG ĐẦU TIÊN",
   "next_title": "Bắt đầu với từng bước rõ ràng.",
   "next_text": "Chuẩn bị không gian làm việc, tạo ứng dụng, kiểm tra câu trả lời và xuất bản khi đã sẵn sàng.",
-  "app_text": "Bạn đã có tài khoản và quyền truy cập? Mở ứng dụng để tiếp tục công việc.",
-  "app_link": "Mở AI Studio",
-  "docs_description": "Hướng dẫn tạo, kiểm thử và xuất bản ứng dụng trong XDev AI Studio.",
+  "app_text": "Đọc toàn bộ tài liệu, xem ảnh màn hình và làm theo từng tác vụ ngay trên xdev.asia.",
+  "app_link": "Xem tất cả tính năng",
+  "docs_description": "Tài liệu sử dụng có hình ảnh: hướng dẫn từng bước, ảnh giao diện thật với dữ liệu minh họa và cách kiểm tra từng tính năng.",
   "features": [
     [
       "Thiết kế trực quan",
@@ -27,126 +27,2256 @@
     {
       "slug": "quickstart",
       "title": "Tạo ứng dụng đầu tiên",
-      "description": "Bắt đầu bằng chatbot đơn giản, sau đó bổ sung tri thức của tổ chức.",
+      "description": "Xây dựng chatbot, agent, chatflow hoặc workflow.",
       "sections": [
         {
           "title": "Trước khi bắt đầu",
-          "text": "Đăng nhập ai-studio.xdev.asia bằng tài khoản có quyền tạo ứng dụng trong không gian làm việc. Quản trị viên cần cấu hình nhà cung cấp mô hình khả dụng. Nếu không thấy thao tác tạo hoặc xuất bản, hãy nhờ quản trị viên kiểm tra quyền."
+          "text": "Hướng dẫn này nằm hoàn toàn trên xdev.asia. Khi thực hiện, dùng tài khoản trong workspace AI Studio của tổ chức có quyền với tính năng này. Ảnh chụp dùng workspace minh họa; tên và dữ liệu là ví dụ.",
+          "image": "signin",
+          "caption": "Màn hình đăng nhập. Dùng tài khoản và phương thức do tổ chức cung cấp; không lấy thông tin xác thực minh họa trong tài liệu để đăng nhập."
         },
         {
-          "title": "Tạo và cấu hình",
-          "steps": [
-            "Mở trang ứng dụng và chọn thao tác tạo ứng dụng.",
-            "Chọn Chatbot trong nhóm loại ứng dụng cơ bản cho ví dụ đầu tiên. Đặt tên dễ nhận biết rồi tạo ứng dụng.",
-            "Trong trình chỉnh sửa, chọn mô hình khả dụng và nhập chỉ dẫn. Ví dụ: “Giúp đồng nghiệp hiểu quy trình được cung cấp. Nếu thiếu thông tin, hãy nói rõ.”",
-            "Lưu bản nháp trước khi kiểm thử hoặc xuất bản."
-          ]
+          "title": "Nhận biết màn hình",
+          "text": "Xây dựng chatbot, agent, chatflow hoặc workflow.",
+          "image": "apps",
+          "caption": "Tạo ứng dụng đầu tiên: xác định tiêu đề trang, thanh điều hướng và các thao tác trước khi làm theo hướng dẫn. Bấm ảnh để xem ảnh gốc rõ hơn."
         },
         {
-          "title": "Thử một tình huống cụ thể",
-          "steps": [
-            "Mở phần xem trước và đặt câu hỏi liên quan đến chỉ dẫn.",
-            "Kiểm tra câu trả lời có làm đúng chỉ dẫn không. Thử câu hỏi chưa rõ ý và câu hỏi ứng dụng không có thông tin để trả lời.",
-            "Điều chỉnh chỉ dẫn và lưu lại. Thêm kho tri thức nếu ứng dụng cần sử dụng tài liệu của bạn."
-          ]
+          "title": "Bước 1",
+          "text": "Mở Studio và tạo ứng dụng. Chọn Chatbot cho trợ lý hội thoại, Agent cho tác vụ dùng công cụ, hoặc Chatflow/Workflow cho luồng trực quan.",
+          "image": "create-dialog",
+          "caption": "Chọn loại ứng dụng, nhập tên dễ nhận biết và xác nhận tạo. Mở hộp thoại này bằng nút Tạo ứng dụng trong Studio."
         },
         {
-          "title": "Bước tiếp theo",
-          "text": "Lưu bản nháp chưa phải là xuất bản ứng dụng. Đọc hướng dẫn xuất bản sau khi kiểm thử đạt yêu cầu. Nếu cần quy trình nhiều bước, hãy tạo ứng dụng Workflow."
+          "title": "Bước 2",
+          "text": "Đặt tên, chọn mô hình và viết chỉ dẫn về vai trò, nguồn được phép dùng và định dạng trả lời. Chọn mức nhạy cảm phù hợp với dữ liệu xử lý.",
+          "image": "editor",
+          "caption": "Trình soạn ứng dụng: cấu hình mô hình và chỉ dẫn, sau đó dùng khung xem trước để thử bản nháp."
+        },
+        {
+          "title": "Bước 3",
+          "text": "Thử câu hỏi thực tế trong khung xem trước, bao gồm trường hợp thiếu thông tin và đầu vào sai. Lưu thay đổi; chỉ xuất bản sau khi kiểm tra kết quả."
+        },
+        {
+          "title": "Kiểm tra kết quả",
+          "text": "Ứng dụng xuất hiện trong Studio và mở được khung xem trước. Chỉ dẫn đã lưu vẫn còn khi mở lại. Bản nháp chưa được đưa đến người dùng cuối."
+        }
+      ]
+    },
+    {
+      "slug": "models",
+      "title": "Kết nối mô hình AI",
+      "description": "Chọn các mô hình mà workspace được sử dụng.",
+      "sections": [
+        {
+          "title": "Trước khi bắt đầu",
+          "text": "Hướng dẫn này nằm hoàn toàn trên xdev.asia. Khi thực hiện, dùng tài khoản trong workspace AI Studio của tổ chức có quyền với tính năng này. Ảnh chụp dùng workspace minh họa; tên và dữ liệu là ví dụ."
+        },
+        {
+          "title": "Nhận biết màn hình",
+          "text": "Chọn các mô hình mà workspace được sử dụng.",
+          "image": "models",
+          "caption": "Kết nối mô hình AI: xác định tiêu đề trang, thanh điều hướng và các thao tác trước khi làm theo hướng dẫn. Bấm ảnh để xem ảnh gốc rõ hơn."
+        },
+        {
+          "title": "Bước 1",
+          "text": "Mở Tích hợp → Model provider, chọn nhà cung cấp trong danh mục. Nhập địa chỉ kết nối và thông tin xác thực cần thiết."
+        },
+        {
+          "title": "Bước 2",
+          "text": "Thêm hoặc bật mô hình cần dùng. Chọn mô hình chat cho hội thoại và mô hình embedding để lập chỉ mục tri thức."
+        },
+        {
+          "title": "Bước 3",
+          "text": "Chọn mô hình đã cấu hình trong ứng dụng và gửi câu hỏi thử. Nếu lỗi, kiểm tra thông tin xác thực, kết nối và quyền trong workspace."
+        },
+        {
+          "title": "Kiểm tra kết quả",
+          "text": "Nhà cung cấp xuất hiện trong danh sách và chọn được mô hình đã bật trong ứng dụng. Kết nối thành công chưa thay thế cho một yêu cầu thử với đúng mô hình."
         }
       ]
     },
     {
       "slug": "knowledge",
-      "title": "Kết nối kho tri thức",
-      "description": "Tạo kho tri thức và đưa tài liệu vào ứng dụng.",
+      "title": "Xây dựng kho tri thức",
+      "description": "Tạo câu trả lời dựa trên tài liệu của bạn.",
       "sections": [
         {
-          "title": "Chuẩn bị tài liệu",
-          "text": "Bắt đầu với một nhóm nhỏ tài liệu phù hợp và còn hiệu lực. Kiểm tra quyền sử dụng tài liệu của không gian làm việc và chọn mức độ nhạy cảm phù hợp. Quản trị viên có thể cần cấu hình mô hình embedding."
+          "title": "Trước khi bắt đầu",
+          "text": "Hướng dẫn này nằm hoàn toàn trên xdev.asia. Khi thực hiện, dùng tài khoản trong workspace AI Studio của tổ chức có quyền với tính năng này. Ảnh chụp dùng workspace minh họa; tên và dữ liệu là ví dụ."
         },
         {
-          "title": "Tạo kho tri thức",
-          "steps": [
-            "Mở phần Tri thức và bắt đầu tạo kho tri thức.",
-            "Chọn tệp có định dạng được hộp tải lên hỗ trợ. Làm theo các bước để cấu hình xử lý tài liệu và mô hình embedding.",
-            "Gửi tài liệu và chờ xử lý hoàn tất. Tải lên xong chưa có nghĩa là tài liệu đã sẵn sàng để tìm kiếm.",
-            "Kiểm tra trạng thái từng tài liệu. Nếu xử lý thất bại, đọc lỗi và sửa tệp hoặc cấu hình trước khi thử lại."
-          ]
+          "title": "Nhận biết màn hình",
+          "text": "Tạo câu trả lời dựa trên tài liệu của bạn.",
+          "image": "knowledge",
+          "caption": "Xây dựng kho tri thức: xác định tiêu đề trang, thanh điều hướng và các thao tác trước khi làm theo hướng dẫn. Bấm ảnh để xem ảnh gốc rõ hơn."
         },
         {
-          "title": "Sử dụng trong ứng dụng",
-          "steps": [
-            "Mở ứng dụng và chọn kho tri thức trong phần cấu hình tri thức. Với workflow, cấu hình node truy xuất tri thức.",
-            "Lưu bản nháp rồi thử câu hỏi có câu trả lời trong tài liệu.",
-            "Đối chiếu câu trả lời với nguồn. Thử thêm câu hỏi không có thông tin trong tài liệu."
-          ]
+          "title": "Bước 1",
+          "text": "Mở Tri thức và tạo kho tri thức. Tải tài liệu lên hoặc kết nối nguồn được hỗ trợ, sau đó chọn cấu hình phân tích và lập chỉ mục.",
+          "image": "knowledgeCreate",
+          "caption": "Bắt đầu trình hướng dẫn tài liệu: chọn tệp và mức nhạy cảm trước khi tiếp tục. Ảnh là trạng thái ban đầu trước khi tải tệp."
         },
         {
-          "title": "Khi không tìm thấy câu trả lời",
-          "text": "Kiểm tra tài liệu đã xử lý xong, ứng dụng đang dùng đúng kho tri thức và mô hình đang khả dụng. Cải thiện nội dung nguồn hoặc cấu hình truy xuất trước khi thêm tài liệu."
+          "title": "Bước 2",
+          "text": "Chờ xử lý tài liệu hoàn tất. Mở tài liệu để kiểm tra các đoạn và sửa hoặc thử lại mục bị lỗi khi có thao tác tương ứng."
+        },
+        {
+          "title": "Bước 3",
+          "text": "Dùng kiểm tra truy xuất với câu hỏi thực tế. Điều chỉnh cấu hình, gắn kho tri thức vào ứng dụng và kiểm tra câu trả lời có dẫn đúng nội dung hay không."
+        },
+        {
+          "title": "Kiểm tra kết quả",
+          "text": "Tài liệu xử lý xong và kiểm tra truy xuất trả về đoạn liên quan. Nếu không khớp đoạn nào, kiểm tra nội dung nguồn và cấu hình trước khi gắn kho vào ứng dụng."
+        }
+      ]
+    },
+    {
+      "slug": "sources",
+      "title": "Kết nối nguồn dữ liệu",
+      "description": "Tái sử dụng kết nối nguồn để nhập tài liệu.",
+      "sections": [
+        {
+          "title": "Trước khi bắt đầu",
+          "text": "Hướng dẫn này nằm hoàn toàn trên xdev.asia. Khi thực hiện, dùng tài khoản trong workspace AI Studio của tổ chức có quyền với tính năng này. Ảnh chụp dùng workspace minh họa; tên và dữ liệu là ví dụ."
+        },
+        {
+          "title": "Nhận biết màn hình",
+          "text": "Tái sử dụng kết nối nguồn để nhập tài liệu.",
+          "image": "sources",
+          "caption": "Kết nối nguồn dữ liệu: xác định tiêu đề trang, thanh điều hướng và các thao tác trước khi làm theo hướng dẫn. Bấm ảnh để xem ảnh gốc rõ hơn."
+        },
+        {
+          "title": "Bước 1",
+          "text": "Mở Tích hợp → Nguồn dữ liệu và thêm kết nối được hỗ trợ. Nhập cấu hình và tham chiếu thông tin xác thực."
+        },
+        {
+          "title": "Bước 2",
+          "text": "Mở Tri thức → Kết nối, chọn nguồn và nội dung cần nhập vào kho tri thức."
+        },
+        {
+          "title": "Bước 3",
+          "text": "Kiểm tra trạng thái xử lý tài liệu và đồng bộ nguồn. Kiểm tra quyền truy cập nguồn và thông tin xác thực trước khi thử nhập lại."
+        },
+        {
+          "title": "Kiểm tra kết quả",
+          "text": "Kết nối xuất hiện trong danh sách tài khoản đã nối. Kiểm tra truy cập đúng nguồn trước khi nhập tài liệu. Nguồn rỗng có thể do sai phạm vi hoặc thiếu quyền."
+        }
+      ]
+    },
+    {
+      "slug": "tools",
+      "title": "Cấp công cụ cho agent",
+      "description": "Kết nối công cụ có sẵn, HTTP API và máy chủ MCP.",
+      "sections": [
+        {
+          "title": "Trước khi bắt đầu",
+          "text": "Hướng dẫn này nằm hoàn toàn trên xdev.asia. Khi thực hiện, dùng tài khoản trong workspace AI Studio của tổ chức có quyền với tính năng này. Ảnh chụp dùng workspace minh họa; tên và dữ liệu là ví dụ."
+        },
+        {
+          "title": "Nhận biết màn hình",
+          "text": "Kết nối công cụ có sẵn, HTTP API và máy chủ MCP.",
+          "image": "tools",
+          "caption": "Cấp công cụ cho agent: xác định tiêu đề trang, thanh điều hướng và các thao tác trước khi làm theo hướng dẫn. Bấm ảnh để xem ảnh gốc rõ hơn."
+        },
+        {
+          "title": "Bước 1",
+          "text": "Mở Tích hợp → Công cụ. Chọn nhà cung cấp có sẵn, thêm công cụ API hoặc cấu hình máy chủ MCP với địa chỉ và xác thực."
+        },
+        {
+          "title": "Bước 2",
+          "text": "Xem các thao tác được cung cấp và chỉ bật những thao tác cần thiết. Thêm công cụ đã chọn vào cấu hình agent."
+        },
+        {
+          "title": "Bước 3",
+          "text": "Chạy tác vụ cần công cụ và kiểm tra lời gọi cùng kết quả. Nếu kết nối ra ngoài bị chặn, nhờ quản trị viên kiểm tra chính sách egress."
+        },
+        {
+          "title": "Kiểm tra kết quả",
+          "text": "Ứng dụng thấy các thao tác đã chọn và lượt thử có lời gọi đúng công cụ. Nếu thiếu công cụ, kiểm tra cả kết nối workspace lẫn danh sách công cụ của ứng dụng."
+        },
+        {
+          "title": "Chọn đúng loại công cụ",
+          "text": "Công cụ có sẵn dùng các thao tác do hệ thống cung cấp; công cụ API gọi giao diện HTTP bạn khai báo; MCP khám phá thao tác từ máy chủ đã kết nối; công cụ workflow đóng gói workflow để sử dụng lại. Chọn thao tác ở cấp ứng dụng sau khi cấu hình kết nối workspace."
         }
       ]
     },
     {
       "slug": "workflows",
-      "title": "Xây dựng workflow",
-      "description": "Kết nối các bước thành quy trình có thể lặp lại và kiểm tra kết quả mỗi lần chạy.",
+      "title": "Thiết kế workflow trực quan",
+      "description": "Nối các bước xử lý và kiểm tra từng lượt chạy.",
       "sections": [
         {
-          "title": "Bắt đầu từ luồng nhỏ",
-          "text": "Bắt đầu với đầu vào văn bản, một bước gọi mô hình và đầu ra. Ví dụ: tóm tắt một đoạn văn. Chỉ thêm công cụ và truy xuất tri thức sau khi luồng đơn giản chạy được."
+          "title": "Trước khi bắt đầu",
+          "text": "Hướng dẫn này nằm hoàn toàn trên xdev.asia. Khi thực hiện, dùng tài khoản trong workspace AI Studio của tổ chức có quyền với tính năng này. Ảnh chụp dùng workspace minh họa; tên và dữ liệu là ví dụ."
         },
         {
-          "title": "Thiết kế và kiểm thử",
-          "steps": [
-            "Tạo ứng dụng Workflow rồi mở trình chỉnh sửa workflow.",
-            "Khai báo đầu vào ở node bắt đầu và thêm node LLM. Chọn mô hình ngay trên node này.",
-            "Viết chỉ dẫn và chèn đầu vào bằng bộ chọn biến của trình chỉnh sửa.",
-            "Nối các bước đến node kết thúc và ánh xạ kết quả mô hình vào đầu ra.",
-            "Lưu workflow và sửa các lỗi kiểm tra. Chạy thử bằng dữ liệu ngắn, kiểm tra đầu ra và các bước lỗi nếu có."
-          ]
+          "title": "Nhận biết màn hình",
+          "text": "Nối các bước xử lý và kiểm tra từng lượt chạy.",
+          "image": "workflow",
+          "caption": "Thiết kế workflow trực quan: xác định tiêu đề trang, thanh điều hướng và các thao tác trước khi làm theo hướng dẫn. Bấm ảnh để xem ảnh gốc rõ hơn."
         },
         {
-          "title": "Mở rộng quy trình",
-          "text": "Thêm node truy xuất tri thức khi mô hình cần tài liệu nguồn. Chỉ thêm công cụ khi quy trình cần tác động đến hệ thống bên ngoài. Kiểm tra quyền và đầu vào của công cụ trước khi chạy thử thao tác làm thay đổi dữ liệu."
+          "title": "Bước 1",
+          "text": "Mở ứng dụng Workflow hoặc Chatflow và vào trình soạn workflow. Khai báo trường đầu vào ở node bắt đầu."
         },
         {
-          "title": "Khi bị chặn xuất bản",
-          "text": "Sửa lỗi cấu trúc workflow và cấu hình mô hình còn thiếu. Workflow chọn mô hình trên các node LLM; không yêu cầu cùng cấu hình mô hình cấp ứng dụng như chatbot cơ bản."
+          "title": "Bước 2",
+          "text": "Thêm node cần cho tác vụ như truy xuất tri thức, LLM, điều kiện, công cụ hoặc mã. Nối các node và ánh xạ đầu ra của bước trước vào đầu vào bước sau."
+        },
+        {
+          "title": "Bước 3",
+          "text": "Cấu hình đầu ra cuối, chạy với dữ liệu mẫu và kiểm tra kết quả từng node. Sửa lỗi xác thực trước khi xuất bản phiên bản."
+        },
+        {
+          "title": "Kiểm tra kết quả",
+          "text": "Lượt thử đến node cuối và trả đúng đầu ra. Kiểm tra node lỗi và đầu vào chưa ánh xạ trước khi xuất bản. Ảnh minh họa luồng đơn giản Bắt đầu → LLM → Kết thúc."
+        },
+        {
+          "title": "Nhóm node và điều kiện sử dụng",
+          "text": "Canvas có các nhóm phân loại, trích xuất tham số, điều kiện, bảng quyết định, lặp, mẫu văn bản, thao tác biến, trích xuất tài liệu, HTTP, công cụ, agent, gửi kênh, chờ, chờ sự kiện, nhập liệu con người và lập chỉ mục tri thức. Node mã cần sandbox được cấu hình. Lời gọi bên ngoài cần kết nối và chính sách phù hợp. Dùng lịch sử chạy, kiểm tra biến và so sánh phiên bản để xem thay đổi."
+        }
+      ]
+    },
+    {
+      "slug": "approvals",
+      "title": "Duyệt yêu cầu đang chờ",
+      "description": "Đưa quyết định của con người vào luồng có cổng duyệt.",
+      "sections": [
+        {
+          "title": "Trước khi bắt đầu",
+          "text": "Hướng dẫn này nằm hoàn toàn trên xdev.asia. Khi thực hiện, dùng tài khoản trong workspace AI Studio của tổ chức có quyền với tính năng này. Ảnh chụp dùng workspace minh họa; tên và dữ liệu là ví dụ."
+        },
+        {
+          "title": "Nhận biết màn hình",
+          "text": "Đưa quyết định của con người vào luồng có cổng duyệt.",
+          "image": "approvals",
+          "caption": "Duyệt yêu cầu đang chờ: xác định tiêu đề trang, thanh điều hướng và các thao tác trước khi làm theo hướng dẫn. Bấm ảnh để xem ảnh gốc rõ hơn."
+        },
+        {
+          "title": "Bước 1",
+          "text": "Mở hộp thư duyệt để xem yêu cầu bạn có quyền xử lý. Chọn yêu cầu đang chờ."
+        },
+        {
+          "title": "Bước 2",
+          "text": "Đọc dữ liệu và ngữ cảnh lượt chạy trước khi chọn thao tác duyệt hoặc từ chối. Nhập lý do khi được yêu cầu."
+        },
+        {
+          "title": "Bước 3",
+          "text": "Trở lại chi tiết lượt chạy để xác nhận trạng thái sau xử lý. Nếu không thấy yêu cầu, kiểm tra phân công người duyệt và quyền của bạn."
+        },
+        {
+          "title": "Kiểm tra kết quả",
+          "text": "Sau quyết định thành công, yêu cầu không còn ở trạng thái chờ. Kiểm tra trạng thái lượt chạy để xem luồng tiếp tục ra sao. Hộp thư rỗng nghĩa là tài khoản chưa có yêu cầu hiển thị."
         }
       ]
     },
     {
       "slug": "publishing",
-      "title": "Xuất bản và vận hành",
-      "description": "Phân biệt lưu bản nháp và xuất bản một phiên bản ứng dụng.",
+      "title": "Xuất bản và chia sẻ",
+      "description": "Đưa phiên bản đã kiểm thử đến đúng kênh sử dụng.",
       "sections": [
         {
-          "title": "Kiểm tra bản nháp",
-          "steps": [
-            "Lưu các thay đổi và xác nhận đúng bản nháp cần kiểm tra.",
-            "Thử đầu vào đại diện, tình huống thiếu thông tin và lỗi. Kiểm tra nguồn tri thức và hành vi công cụ.",
-            "Kiểm tra đối tượng sử dụng và cấu hình truy cập trước khi chia sẻ."
-          ]
+          "title": "Trước khi bắt đầu",
+          "text": "Hướng dẫn này nằm hoàn toàn trên xdev.asia. Khi thực hiện, dùng tài khoản trong workspace AI Studio của tổ chức có quyền với tính năng này. Ảnh chụp dùng workspace minh họa; tên và dữ liệu là ví dụ."
         },
         {
-          "title": "Xuất bản phiên bản",
-          "steps": [
-            "Chọn Xuất bản bằng tài khoản có quyền xuất bản ứng dụng.",
-            "Nếu bị chặn, kiểm tra thay đổi chưa lưu, cấu hình mô hình bắt buộc và lỗi kiểm tra workflow.",
-            "Sau khi xuất bản thành công, kiểm tra trạng thái phiên bản đã xuất bản. Sử dụng tùy chọn chia sẻ hoặc API hiện có theo nhu cầu của người dùng."
-          ]
+          "title": "Nhận biết màn hình",
+          "text": "Đưa phiên bản đã kiểm thử đến đúng kênh sử dụng.",
+          "image": "publish",
+          "caption": "Xuất bản và chia sẻ: xác định tiêu đề trang, thanh điều hướng và các thao tác trước khi làm theo hướng dẫn. Bấm ảnh để xem ảnh gốc rõ hơn."
         },
         {
-          "title": "Cập nhật ứng dụng",
-          "text": "Sửa bản nháp không tự thay thế phiên bản đã xuất bản. Hãy lưu, kiểm thử và xuất bản lại khi sẵn sàng. Ứng dụng được nhân bản cũng cần xuất bản riêng."
+          "title": "Bước 1",
+          "text": "Mở ứng dụng, kiểm tra bản nháp và xuất bản phiên bản muốn người dùng sử dụng. Thay đổi bản nháp cần được xuất bản lại để có hiệu lực với người dùng."
         },
         {
-          "title": "Tìm nguyên nhân lỗi",
-          "text": "Xem nhật ký và phần giám sát ứng dụng để tìm yêu cầu thất bại. Kiểm tra mô hình, xử lý tài liệu, quyền truy cập và lỗi công cụ. Không đưa thông tin xác thực nhà cung cấp hoặc nội dung tài liệu riêng tư vào tin nhắn hỗ trợ công khai."
+          "title": "Bước 2",
+          "text": "Mở Triển khai để cấu hình liên kết web công khai, widget nhúng hoặc kênh nhắn tin được hỗ trợ. Cung cấp thông tin xác thực và làm theo hướng dẫn của kênh."
+        },
+        {
+          "title": "Bước 3",
+          "text": "Thử liên kết hoặc kênh thật với vai trò người dùng cuối. Kiểm tra giới hạn truy cập và chia sẻ nếu liên kết không mở được hoặc kênh không trả lời."
+        },
+        {
+          "title": "Kiểm tra kết quả",
+          "text": "Trang hiển thị phiên bản đã xuất bản và kênh cấu hình hoạt động khi thử với người dùng cuối. Nếu chia sẻ web đang tắt, chỉ xuất bản chưa tạo ra liên kết công khai truy cập được."
+        },
+        {
+          "title": "Phiên bản và kênh sử dụng",
+          "text": "Chỉ dẫn và cấu hình đang sửa thuộc bản nháp. Kiểm tra phiên bản đã xuất bản trước khi chia sẻ web app hoặc gọi API/MCP. Khi tắt chia sẻ, kiểm tra lại liên kết công khai; không suy ra rằng mọi khóa API cũng đã bị thu hồi."
         }
       ]
+    },
+    {
+      "slug": "api",
+      "title": "Dùng API và MCP của ứng dụng",
+      "description": "Tích hợp ứng dụng đã xuất bản vào hệ thống khác.",
+      "sections": [
+        {
+          "title": "Trước khi bắt đầu",
+          "text": "Hướng dẫn này nằm hoàn toàn trên xdev.asia. Khi thực hiện, dùng tài khoản trong workspace AI Studio của tổ chức có quyền với tính năng này. Ảnh chụp dùng workspace minh họa; tên và dữ liệu là ví dụ."
+        },
+        {
+          "title": "Nhận biết màn hình",
+          "text": "Tích hợp ứng dụng đã xuất bản vào hệ thống khác.",
+          "image": "api",
+          "caption": "Dùng API và MCP của ứng dụng: xác định tiêu đề trang, thanh điều hướng và các thao tác trước khi làm theo hướng dẫn. Bấm ảnh để xem ảnh gốc rõ hơn."
+        },
+        {
+          "title": "Bước 1",
+          "text": "Mở ứng dụng → Truy cập API và đọc địa chỉ, cấu trúc đầu vào, ví dụ được sinh cho ứng dụng. Xuất bản trước khi gọi giao diện đã công bố."
+        },
+        {
+          "title": "Bước 2",
+          "text": "Tạo khóa API ở Cài đặt workspace với phạm vi cần thiết. Lưu bí mật an toàn và dùng định dạng xác thực trong tài liệu API."
+        },
+        {
+          "title": "Bước 3",
+          "text": "Gửi yêu cầu mẫu từ máy chủ hoặc cấu hình MCP client với địa chỉ trong tài liệu. Kiểm tra phản hồi và nhật ký ứng dụng; thu hồi khóa không còn dùng."
+        },
+        {
+          "title": "Kiểm tra kết quả",
+          "text": "Phản hồi đúng cấu trúc đầu ra trong tài liệu ứng dụng. Khi lỗi xác thực, kiểm tra khóa và phạm vi quyền. Khi ứng dụng không khả dụng, kiểm tra xuất bản và giới hạn truy cập."
+        }
+      ]
+    },
+    {
+      "slug": "triggers",
+      "title": "Tự động hóa bằng trigger",
+      "description": "Khởi chạy workflow từ sự kiện hoặc lịch.",
+      "sections": [
+        {
+          "title": "Trước khi bắt đầu",
+          "text": "Hướng dẫn này nằm hoàn toàn trên xdev.asia. Khi thực hiện, dùng tài khoản trong workspace AI Studio của tổ chức có quyền với tính năng này. Ảnh chụp dùng workspace minh họa; tên và dữ liệu là ví dụ."
+        },
+        {
+          "title": "Nhận biết màn hình",
+          "text": "Khởi chạy workflow từ sự kiện hoặc lịch.",
+          "image": "triggers",
+          "caption": "Tự động hóa bằng trigger: xác định tiêu đề trang, thanh điều hướng và các thao tác trước khi làm theo hướng dẫn. Bấm ảnh để xem ảnh gốc rõ hơn."
+        },
+        {
+          "title": "Bước 1",
+          "text": "Mở Tích hợp → Điểm kích hoạt để xem loại hỗ trợ và các trigger đã có trong workspace. Để tạo, mở ứng dụng Workflow đích, lưu bản nháp và chọn node gốc/bắt đầu. Cấu hình tại bảng Điểm kích hoạt trên node đó; không tạo trigger ở trang tổng quan workspace."
+        },
+        {
+          "title": "Bước 2",
+          "text": "Với lịch chạy, kiểm tra lịch và múi giờ. Với webhook hoặc sự kiện, dùng địa chỉ và xác thực được hiển thị trong cấu hình."
+        },
+        {
+          "title": "Bước 3",
+          "text": "Gửi sự kiện thử rồi xem nhật ký trigger trong Vận hành. Xác nhận đúng workflow đã chạy với đầu vào mong muốn trước khi sử dụng thường xuyên."
+        },
+        {
+          "title": "Kiểm tra kết quả",
+          "text": "Sự kiện thử xuất hiện trong nhật ký và khởi chạy đúng workflow. Nếu không có lượt chạy, kiểm tra múi giờ, ánh xạ đầu vào và cấu hình sự kiện."
+        }
+      ]
+    },
+    {
+      "slug": "memory",
+      "title": "Quản lý ghi nhớ dài hạn",
+      "description": "Duyệt và quản lý thông tin được giữ qua các lượt tương tác.",
+      "sections": [
+        {
+          "title": "Trước khi bắt đầu",
+          "text": "Hướng dẫn này nằm hoàn toàn trên xdev.asia. Khi thực hiện, dùng tài khoản trong workspace AI Studio của tổ chức có quyền với tính năng này. Ảnh chụp dùng workspace minh họa; tên và dữ liệu là ví dụ."
+        },
+        {
+          "title": "Nhận biết màn hình",
+          "text": "Duyệt và quản lý thông tin được giữ qua các lượt tương tác.",
+          "image": "memory",
+          "caption": "Quản lý ghi nhớ dài hạn: xác định tiêu đề trang, thanh điều hướng và các thao tác trước khi làm theo hướng dẫn. Bấm ảnh để xem ảnh gốc rõ hơn."
+        },
+        {
+          "title": "Bước 1",
+          "text": "Quản trị viên có quyền ghi nhớ mở Ghi nhớ để xem tổng quan và hàng đợi trích xuất. Kiểm tra nội dung và ngữ cảnh nguồn trước khi xử lý."
+        },
+        {
+          "title": "Bước 2",
+          "text": "Dùng kho ghi nhớ để kiểm tra thông tin đã lưu và các thao tác sửa hoặc xóa được cung cấp. Xem cài đặt và nhật ký để quản trị."
+        },
+        {
+          "title": "Bước 3",
+          "text": "Khi tích hợp, dùng nhất quán cùng định danh người dùng trong hội thoại và đánh giá. Thiếu hoặc lệch định danh có thể khiến ghi nhớ không được nạp đúng."
+        },
+        {
+          "title": "Kiểm tra kết quả",
+          "text": "Mục đã xử lý có trạng thái tương ứng trong hàng đợi hoặc kho. Thử nạp ghi nhớ với cùng định danh; duyệt ghi nhớ không có nghĩa mọi prompt sau đều chứa nó."
+        }
+      ]
+    },
+    {
+      "slug": "monitoring",
+      "title": "Theo dõi sử dụng và chất lượng",
+      "description": "Nắm lượt chạy, chi phí, phản hồi và sự kiện kiểm toán.",
+      "sections": [
+        {
+          "title": "Trước khi bắt đầu",
+          "text": "Hướng dẫn này nằm hoàn toàn trên xdev.asia. Khi thực hiện, dùng tài khoản trong workspace AI Studio của tổ chức có quyền với tính năng này. Ảnh chụp dùng workspace minh họa; tên và dữ liệu là ví dụ."
+        },
+        {
+          "title": "Nhận biết màn hình",
+          "text": "Nắm lượt chạy, chi phí, phản hồi và sự kiện kiểm toán.",
+          "image": "monitoring",
+          "caption": "Theo dõi sử dụng và chất lượng: xác định tiêu đề trang, thanh điều hướng và các thao tác trước khi làm theo hướng dẫn. Bấm ảnh để xem ảnh gốc rõ hơn."
+        },
+        {
+          "title": "Bước 1",
+          "text": "Mở Vận hành và chọn khoảng thời gian cùng bộ lọc phù hợp. Xem hoạt động, token, chi phí và chỉ số chất lượng."
+        },
+        {
+          "title": "Bước 2",
+          "text": "Mở ứng dụng cụ thể để xem nhật ký và theo dõi. Đối chiếu lượt chạy lỗi với đầu vào và lỗi từ mô hình hoặc công cụ."
+        },
+        {
+          "title": "Bước 3",
+          "text": "Dùng chú thích và phản hồi người dùng để tìm câu trả lời cần cải thiện. Xem sự kiện kiểm toán khi tài khoản được cấp quyền."
+        },
+        {
+          "title": "Kiểm tra kết quả",
+          "text": "Trang hiển thị khoảng báo cáo đã chọn và số liệu tương ứng. Biểu đồ trống có thể do chưa có hoạt động được ghi nhận, không tự nó chứng minh dịch vụ bị lỗi."
+        }
+      ]
+    },
+    {
+      "slug": "workspace",
+      "title": "Quản lý workspace",
+      "description": "Tổ chức thành viên, vai trò, khóa API và hạn mức.",
+      "sections": [
+        {
+          "title": "Trước khi bắt đầu",
+          "text": "Hướng dẫn này nằm hoàn toàn trên xdev.asia. Khi thực hiện, dùng tài khoản trong workspace AI Studio của tổ chức có quyền với tính năng này. Ảnh chụp dùng workspace minh họa; tên và dữ liệu là ví dụ."
+        },
+        {
+          "title": "Nhận biết màn hình",
+          "text": "Tổ chức thành viên, vai trò, khóa API và hạn mức.",
+          "image": "workspace",
+          "caption": "Quản lý workspace: xác định tiêu đề trang, thanh điều hướng và các thao tác trước khi làm theo hướng dẫn. Bấm ảnh để xem ảnh gốc rõ hơn."
+        },
+        {
+          "title": "Bước 1",
+          "text": "Dùng menu workspace để chọn đúng nhóm làm việc. Mở Cài đặt workspace để quản lý thành viên và lời mời."
+        },
+        {
+          "title": "Bước 2",
+          "text": "Gán vai trò phù hợp cho từng người. Dùng mục Vai trò để xem quyền và vai trò tùy chỉnh khi tài khoản được phép quản lý."
+        },
+        {
+          "title": "Bước 3",
+          "text": "Quản lý khóa API và hạn mức trong cài đặt workspace. Kiểm tra thay đổi áp dụng cho đúng workspace trước khi lưu."
+        },
+        {
+          "title": "Kiểm tra kết quả",
+          "text": "Thành viên, vai trò hoặc khóa xuất hiện trong đúng workspace. Sau khi đổi vai trò, nhờ thành viên kiểm tra quyền vào màn hình cần thiết."
+        }
+      ]
+    },
+    {
+      "slug": "security",
+      "title": "Cấu hình bảo vệ dữ liệu",
+      "description": "Điều chỉnh việc dùng AI theo chính sách dữ liệu của tổ chức.",
+      "sections": [
+        {
+          "title": "Trước khi bắt đầu",
+          "text": "Hướng dẫn này nằm hoàn toàn trên xdev.asia. Khi thực hiện, dùng tài khoản trong workspace AI Studio của tổ chức có quyền với tính năng này. Ảnh chụp dùng workspace minh họa; tên và dữ liệu là ví dụ."
+        },
+        {
+          "title": "Nhận biết màn hình",
+          "text": "Điều chỉnh việc dùng AI theo chính sách dữ liệu của tổ chức.",
+          "image": "security",
+          "caption": "Cấu hình bảo vệ dữ liệu: xác định tiêu đề trang, thanh điều hướng và các thao tác trước khi làm theo hướng dẫn. Bấm ảnh để xem ảnh gốc rõ hơn."
+        },
+        {
+          "title": "Bước 1",
+          "text": "Mở Cài đặt → Bảo vệ dữ liệu để xem mức nhạy cảm và chính sách PII, OCR, xử lý dữ liệu được cung cấp."
+        },
+        {
+          "title": "Bước 2",
+          "text": "Kiểm tra địa chỉ kết nối bên ngoài tại Tích hợp → Công cụ → Egress. Chỉ cho phép địa chỉ cần thiết cho tích hợp đã được duyệt."
+        },
+        {
+          "title": "Bước 3",
+          "text": "Thử bằng dữ liệu mẫu không nhạy cảm và kiểm tra hành vi thực tế. Nếu thao tác bị chặn, cùng quản trị viên kiểm tra mức nhạy cảm, đích nhà cung cấp và chính sách đang áp dụng."
+        },
+        {
+          "title": "Kiểm tra kết quả",
+          "text": "Chính sách đã lưu vẫn hiện khi tải lại. Dùng đầu vào mẫu không nhạy cảm để kiểm tra hành vi có hiệu lực trước khi áp dụng với dữ liệu thật."
+        },
+        {
+          "title": "PII, OCR và nhãn dữ liệu",
+          "text": "Phân biệt nhận diện/che dữ liệu cá nhân với đọc chữ từ tài liệu bằng OCR. Chọn chính sách khi xử lý lỗi, mức nhạy cảm và cấu hình dịch vụ theo nhu cầu. Kiểm tra cả trường hợp dữ liệu được phép và bị chặn bằng mẫu kiểm thử."
+        }
+      ]
+    },
+    {
+      "slug": "settings",
+      "title": "Thiết lập nhận diện, lưu trữ và danh tính",
+      "description": "Cấu hình dịch vụ workspace từ các trang cài đặt riêng.",
+      "sections": [
+        {
+          "title": "Trước khi bắt đầu",
+          "text": "Hướng dẫn này nằm hoàn toàn trên xdev.asia. Khi thực hiện, dùng tài khoản trong workspace AI Studio của tổ chức có quyền với tính năng này. Ảnh chụp dùng workspace minh họa; tên và dữ liệu là ví dụ."
+        },
+        {
+          "title": "Nhận biết màn hình",
+          "text": "Cấu hình dịch vụ workspace từ các trang cài đặt riêng.",
+          "image": "settings",
+          "caption": "Thiết lập nhận diện, lưu trữ và danh tính: xác định tiêu đề trang, thanh điều hướng và các thao tác trước khi làm theo hướng dẫn. Bấm ảnh để xem ảnh gốc rõ hơn."
+        },
+        {
+          "title": "Bước 1",
+          "text": "Dùng Nhận diện để thiết lập thương hiệu workspace. Mở Lưu trữ để cấu hình S3 và kiểm tra quyền truy cập trước khi dùng cho tài liệu."
+        },
+        {
+          "title": "Bước 2",
+          "text": "Dùng Danh tính để cấu hình nhà cung cấp đăng nhập và ánh xạ nhóm được hỗ trợ. Duy trì tài khoản quản trị đăng nhập được trong lúc kiểm tra cấu hình."
+        },
+        {
+          "title": "Bước 3",
+          "text": "Dùng Tri thức bên ngoài để cấu hình dịch vụ được hỗ trợ, sau đó thử truy xuất từ ứng dụng sử dụng nó. Các cài đặt này yêu cầu quyền tương ứng."
+        },
+        {
+          "title": "Kiểm tra kết quả",
+          "text": "Tên và logo workspace xuất hiện trên thanh điều hướng sau khi lưu. Kiểm tra riêng lưu trữ, danh tính và tri thức ngoài ở các trang cài đặt tương ứng."
+        }
+      ]
+    },
+    {
+      "slug": "training",
+      "title": "Tinh chỉnh mô hình",
+      "description": "Gửi và theo dõi huấn luyện qua nhà cung cấp đã cấu hình.",
+      "sections": [
+        {
+          "title": "Trước khi bắt đầu",
+          "text": "Hướng dẫn này nằm hoàn toàn trên xdev.asia. Khi thực hiện, dùng tài khoản trong workspace AI Studio của tổ chức có quyền với tính năng này. Ảnh chụp dùng workspace minh họa; tên và dữ liệu là ví dụ."
+        },
+        {
+          "title": "Nhận biết màn hình",
+          "text": "Gửi và theo dõi huấn luyện qua nhà cung cấp đã cấu hình.",
+          "image": "training",
+          "caption": "Tinh chỉnh mô hình: xác định tiêu đề trang, thanh điều hướng và các thao tác trước khi làm theo hướng dẫn. Bấm ảnh để xem ảnh gốc rõ hơn."
+        },
+        {
+          "title": "Bước 1",
+          "text": "Mở Cài đặt → Huấn luyện model và xem kênh huấn luyện hiện có. Kênh chưa dùng được có ghi rõ trên trang."
+        },
+        {
+          "title": "Bước 2",
+          "text": "Nhờ quản trị viên cấp training:finetune nếu cần gửi tác vụ. Chuẩn bị dữ liệu và tham số theo yêu cầu của kênh đã chọn."
+        },
+        {
+          "title": "Bước 3",
+          "text": "Gửi tác vụ và theo dõi trạng thái. Khi thành công, dùng luồng đăng ký mô hình được cung cấp và đánh giá trong ứng dụng thử trước khi sử dụng rộng rãi."
+        },
+        {
+          "title": "Kiểm tra kết quả",
+          "text": "Tác vụ xuất hiện trong lịch sử huấn luyện với trạng thái. Gửi tác vụ chưa phải triển khai mô hình: chờ hoàn tất, đăng ký khi được hỗ trợ và đánh giá trước khi dùng."
+        }
+      ]
+    },
+    {
+      "slug": "account",
+      "title": "Quản lý tài khoản cá nhân",
+      "description": "Cập nhật thông tin đăng nhập và tùy chọn cá nhân.",
+      "sections": [
+        {
+          "title": "Trước khi bắt đầu",
+          "text": "Hướng dẫn này nằm hoàn toàn trên xdev.asia. Khi thực hiện, dùng tài khoản trong workspace AI Studio của tổ chức có quyền với tính năng này. Ảnh chụp dùng workspace minh họa; tên và dữ liệu là ví dụ."
+        },
+        {
+          "title": "Nhận biết màn hình",
+          "text": "Cập nhật thông tin đăng nhập và tùy chọn cá nhân.",
+          "image": "account",
+          "caption": "Quản lý tài khoản cá nhân: xác định tiêu đề trang, thanh điều hướng và các thao tác trước khi làm theo hướng dẫn. Bấm ảnh để xem ảnh gốc rõ hơn."
+        },
+        {
+          "title": "Bước 1",
+          "text": "Mở tài khoản từ menu người dùng để xem hồ sơ và cài đặt cá nhân."
+        },
+        {
+          "title": "Bước 2",
+          "text": "Dùng chức năng mật khẩu và xác thực đa yếu tố được cung cấp. Hoàn tất bước xác minh trước khi sử dụng phương thức đăng nhập mới."
+        },
+        {
+          "title": "Bước 3",
+          "text": "Kiểm tra tùy chọn ghi nhớ cá nhân nếu có. Dùng nút ngôn ngữ và giao diện để chọn cách hiển thị phù hợp."
+        },
+        {
+          "title": "Kiểm tra kết quả",
+          "text": "Thông tin hồ sơ được lưu và phương thức đăng nhập đã được xác minh. Lưu thông tin khôi phục an toàn; không đưa vào ảnh chụp hay tài liệu chia sẻ."
+        }
+      ]
+    },
+    {
+      "slug": "admin",
+      "title": "Quản trị toàn hệ thống",
+      "description": "Vận hành bản cài đặt ở phạm vi ngoài một workspace.",
+      "sections": [
+        {
+          "title": "Trước khi bắt đầu",
+          "text": "Hướng dẫn này nằm hoàn toàn trên xdev.asia. Khi thực hiện, dùng tài khoản trong workspace AI Studio của tổ chức có quyền với tính năng này. Ảnh chụp dùng workspace minh họa; tên và dữ liệu là ví dụ."
+        },
+        {
+          "title": "Nhận biết màn hình",
+          "text": "Vận hành bản cài đặt ở phạm vi ngoài một workspace.",
+          "image": "admin",
+          "caption": "Quản trị toàn hệ thống: xác định tiêu đề trang, thanh điều hướng và các thao tác trước khi làm theo hướng dẫn. Bấm ảnh để xem ảnh gốc rõ hơn."
+        },
+        {
+          "title": "Bước 1",
+          "text": "Đăng nhập bằng tài khoản quản trị hệ thống và mở Quản trị. Chỉ là chủ workspace chưa đủ quyền quản trị toàn hệ thống."
+        },
+        {
+          "title": "Bước 2",
+          "text": "Dùng từng trang để quản lý tenant và tài khoản, kiểm tra sức khỏe, xem cấu hình runtime, mạng và cờ tính năng."
+        },
+        {
+          "title": "Bước 3",
+          "text": "Kiểm tra cấu hình có hiệu lực và sức khỏe sau thay đổi. Một số cài đặt chỉ đọc hoặc được quản lý qua môi trường triển khai."
+        },
+        {
+          "title": "Kiểm tra kết quả",
+          "text": "Cấu hình có hiệu lực hiện sau khi làm mới và kiểm tra sức khỏe vẫn tốt. Cài đặt môi trường chỉ đọc cần thay qua quy trình triển khai bản cài đặt."
+        },
+        {
+          "title": "Tổ chức và tài khoản",
+          "text": "Ở Quản trị → Tổ chức, kiểm tra trạng thái, workspace và hạn mức của tổ chức. Ở Tài khoản, tìm người dùng rồi kiểm tra trạng thái trước khi cập nhật. Đây là phạm vi toàn bản cài đặt, không chỉ workspace đang chọn."
+        },
+        {
+          "title": "Sức khỏe và thiết lập lúc chạy",
+          "text": "Mở Sức khỏe để xem dịch vụ phụ thuộc và trạng thái migration. Ở Thiết lập lúc chạy, tìm khóa, xem nguồn cấu hình và chỉ sửa mục được phép. Sau khi lưu, chờ thời gian làm mới được hiển thị và kiểm tra lại. Không suy ra giá trị bí mật từ trạng thái đã cấu hình."
+        },
+        {
+          "title": "Mạng và cờ tính năng",
+          "text": "Mạng và Feature flags là các màn hình chỉ đọc. Kiểm tra vùng mạng, đích được phép, phạm vi và trạng thái cờ tính năng. Các giá trị do triển khai quản lý phải được thay đổi trong cấu hình cài đặt, sau đó tải lại màn hình để kiểm tra; bật cờ không tự cấu hình các dịch vụ phụ thuộc."
+        }
+      ]
+    },
+    {
+      "slug": "marketplace",
+      "title": "Khám phá nhà cung cấp mô hình",
+      "description": "So sánh danh mục nhà cung cấp trước khi cấu hình mô hình.",
+      "sections": [
+        {
+          "title": "Bắt đầu ở đâu",
+          "text": "So sánh danh mục nhà cung cấp trước khi cấu hình mô hình.",
+          "image": "marketplace",
+          "caption": "Giao diện AI Studio liên quan đến tính năng; dữ liệu minh họa."
+        },
+        {
+          "title": "Các bước thực hiện",
+          "steps": [
+            "Mở Marketplace và tìm theo tên nhà cung cấp hoặc loại mô hình.",
+            "Xem nhóm chạy trong tổ chức, dịch vụ bên ngoài hoặc chỉ dùng thử luồng; đọc các trường cấu hình mà nhà cung cấp yêu cầu.",
+            "Chuyển đến Tích hợp → Nhà cung cấp mô hình để cấu hình nhà cung cấp được chọn và chọn mô hình mặc định."
+          ]
+        },
+        {
+          "title": "Kiểm tra kết quả",
+          "text": "Danh mục không đồng nghĩa với một kết nối đã hoạt động. Kiểm tra cấu hình và khả năng sử dụng mô hình trước khi gắn vào ứng dụng."
+        }
+      ]
+    },
+    {
+      "slug": "documents",
+      "title": "Quản lý tài liệu và đoạn nội dung",
+      "description": "Theo dõi nhập liệu, xem tài liệu gốc và kiểm soát các đoạn dùng để truy xuất.",
+      "sections": [
+        {
+          "title": "Bắt đầu ở đâu",
+          "text": "Theo dõi nhập liệu, xem tài liệu gốc và kiểm soát các đoạn dùng để truy xuất.",
+          "image": "documents",
+          "caption": "Giao diện AI Studio liên quan đến tính năng; dữ liệu minh họa."
+        },
+        {
+          "title": "Các bước thực hiện",
+          "steps": [
+            "Mở Tri thức, chọn kho và vào danh sách tài liệu. Tải lên tệp hoặc dùng nguồn đã kết nối.",
+            "Theo dõi trạng thái xử lý; mở tài liệu để xem nội dung gốc và các đoạn đã tách. Khi xử lý lỗi, đọc thông báo trước khi thử lại.",
+            "Chỉnh sửa nội dung, từ khóa hoặc bật/tắt các đoạn được phép sử dụng; kiểm tra lựa chọn trước khi thao tác hàng loạt."
+          ]
+        },
+        {
+          "title": "Kiểm tra kết quả",
+          "text": "Thử truy xuất bằng một câu hỏi liên quan để xác nhận đoạn mong muốn được tìm thấy. Kho tri thức ngoài không lưu danh sách tài liệu tại đây."
+        }
+      ]
+    },
+    {
+      "slug": "retrieval",
+      "title": "Thử và điều chỉnh truy xuất",
+      "description": "Kiểm tra ngữ cảnh được lấy ra trước khi dùng trong câu trả lời.",
+      "sections": [
+        {
+          "title": "Bắt đầu ở đâu",
+          "text": "Kiểm tra ngữ cảnh được lấy ra trước khi dùng trong câu trả lời.",
+          "image": "retrieval",
+          "caption": "Giao diện AI Studio liên quan đến tính năng; dữ liệu minh họa."
+        },
+        {
+          "title": "Các bước thực hiện",
+          "steps": [
+            "Chọn kho tri thức, mở Thử truy xuất và nhập câu hỏi thực tế. Đọc các đoạn và điểm trả về.",
+            "Trong thiết lập kho, chọn tìm kiếm toàn văn, ngữ nghĩa hoặc kết hợp theo loại chỉ mục. Chỉnh Top K và ngưỡng điểm theo kết quả thử.",
+            "Nếu dùng rerank, chọn mô hình rerank đã cấu hình. Thử lại với nhiều cách diễn đạt và một câu hỏi không có trong tài liệu."
+          ]
+        },
+        {
+          "title": "Kiểm tra kết quả",
+          "text": "Kho chỉ mục tiết kiệm không có vector nên chỉ tìm toàn văn. Rerank thêm một lần gọi mô hình và có thể gửi nội dung đoạn tới nhà cung cấp đã chọn."
+        }
+      ]
+    },
+    {
+      "slug": "pipelines",
+      "title": "Thiết kế pipeline nhập tri thức",
+      "description": "Chọn mẫu và tùy chỉnh cách dữ liệu đi vào kho tri thức.",
+      "sections": [
+        {
+          "title": "Bắt đầu ở đâu",
+          "text": "Chọn mẫu và tùy chỉnh cách dữ liệu đi vào kho tri thức.",
+          "image": "pipeline",
+          "caption": "Giao diện AI Studio liên quan đến tính năng; dữ liệu minh họa."
+        },
+        {
+          "title": "Các bước thực hiện",
+          "steps": [
+            "Mở Tri thức → Tùy chỉnh để xem các mẫu pipeline hiện có.",
+            "Chọn mẫu, đặt tên kho và xác nhận tạo. Kho và pipeline được tạo cùng nhau, sau đó canvas mở ra.",
+            "Kiểm tra các bước và cấu hình trên canvas trước khi nhập dữ liệu. Dùng một tập tài liệu nhỏ để kiểm tra kết quả."
+          ]
+        },
+        {
+          "title": "Kiểm tra kết quả",
+          "text": "Kiểm tra trạng thái tài liệu và thử truy xuất sau khi nhập, không chỉ dựa vào việc pipeline đã được lưu."
+        }
+      ]
+    },
+    {
+      "slug": "external-knowledge",
+      "title": "Kết nối kho tri thức ngoài",
+      "description": "Gọi dịch vụ truy xuất đang có của tổ chức.",
+      "sections": [
+        {
+          "title": "Bắt đầu ở đâu",
+          "text": "Gọi dịch vụ truy xuất đang có của tổ chức.",
+          "image": "external",
+          "caption": "Giao diện AI Studio liên quan đến tính năng; dữ liệu minh họa."
+        },
+        {
+          "title": "Các bước thực hiện",
+          "steps": [
+            "Mở Thiết lập → Tri thức ngoài và thêm tên dịch vụ, endpoint cùng khóa nếu dịch vụ yêu cầu.",
+            "Tạo kho tri thức ngoài và chọn dịch vụ vừa khai báo cùng định danh kho phía dịch vụ.",
+            "Mở Thử truy xuất trong kho, nhập câu hỏi và kiểm tra phản hồi. Gắn kho vào ứng dụng sau khi thử thành công."
+          ]
+        },
+        {
+          "title": "Kiểm tra kết quả",
+          "text": "Dịch vụ này nhận câu hỏi gửi ra ngoài; khác với nguồn dữ liệu kéo tài liệu vào. Đích truy cập phải phù hợp chính sách kết nối và nhãn dữ liệu."
+        }
+      ]
+    },
+    {
+      "slug": "extensions",
+      "title": "Dùng API mở rộng để kiểm duyệt",
+      "description": "Đăng ký endpoint kiểm duyệt do tổ chức quản lý.",
+      "sections": [
+        {
+          "title": "Bắt đầu ở đâu",
+          "text": "Đăng ký endpoint kiểm duyệt do tổ chức quản lý.",
+          "image": "extensions",
+          "caption": "Giao diện AI Studio liên quan đến tính năng; dữ liệu minh họa."
+        },
+        {
+          "title": "Các bước thực hiện",
+          "steps": [
+            "Mở Tích hợp → Extension, nhập tên, URL endpoint và khóa API nếu cần.",
+            "Dùng thao tác kiểm tra để xác nhận endpoint trả đúng kết quả kiểm duyệt.",
+            "Trong cấu hình ứng dụng, mở Kiểm duyệt và chọn endpoint thay cho mô hình kiểm duyệt. Thử cả đầu vào được chấp nhận và bị chặn."
+          ]
+        },
+        {
+          "title": "Kiểm tra kết quả",
+          "text": "Extension là lời gọi HTTP tới endpoint của bạn, không phải tải plugin về chạy. Endpoint nhận thông điệp người dùng và chịu chính sách truy cập ra ngoài."
+        }
+      ]
+    },
+    {
+      "slug": "logs",
+      "title": "Đọc nhật ký và dấu vết chạy",
+      "description": "Đi từ kết quả ứng dụng đến lượt hội thoại hoặc bước xử lý cần kiểm tra.",
+      "sections": [
+        {
+          "title": "Bắt đầu ở đâu",
+          "text": "Đi từ kết quả ứng dụng đến lượt hội thoại hoặc bước xử lý cần kiểm tra.",
+          "image": "logs",
+          "caption": "Giao diện AI Studio liên quan đến tính năng; dữ liệu minh họa."
+        },
+        {
+          "title": "Các bước thực hiện",
+          "steps": [
+            "Mở ứng dụng và chọn Nhật ký. Danh sách phụ thuộc loại ứng dụng: hội thoại hoặc lượt chạy workflow.",
+            "Tìm theo nội dung có trong danh sách; chọn hội thoại hoặc mở dấu vết của lượt chạy cần kiểm tra.",
+            "Đối chiếu trạng thái, thời điểm, token và thời gian xử lý. Với workflow, kiểm tra bước lỗi trước khi chỉnh bản nháp và chạy lại."
+          ]
+        },
+        {
+          "title": "Kiểm tra kết quả",
+          "text": "Phân biệt nhật ký từng ứng dụng với trang Giám sát tổng hợp. Danh sách có giới hạn tải, tìm kiếm không đảm bảo phủ toàn bộ lịch sử."
+        }
+      ]
+    },
+    {
+      "slug": "annotations",
+      "title": "Thiết lập câu trả lời định sẵn",
+      "description": "Trả lời nhất quán cho câu hỏi trùng khớp đã được xác định.",
+      "sections": [
+        {
+          "title": "Bắt đầu ở đâu",
+          "text": "Trả lời nhất quán cho câu hỏi trùng khớp đã được xác định.",
+          "image": "annotations",
+          "caption": "Giao diện AI Studio liên quan đến tính năng; dữ liệu minh họa."
+        },
+        {
+          "title": "Các bước thực hiện",
+          "steps": [
+            "Trong ứng dụng, mở khu vực Nhật ký và câu trả lời định sẵn.",
+            "Thêm câu hỏi và câu trả lời chuẩn khi tài khoản có quyền sửa annotation.",
+            "Thử câu hỏi khớp và một câu gần giống nhưng khác ý nghĩa; kiểm tra kết quả trước khi đưa vào dùng."
+          ]
+        },
+        {
+          "title": "Kiểm tra kết quả",
+          "text": "Câu hỏi khớp chính xác sau chuẩn hóa sẽ trả câu định sẵn mà không gọi mô hình. Không dùng so khớp gần đúng."
+        }
+      ]
+    },
+    {
+      "slug": "roles",
+      "title": "Tạo vai trò và phân quyền",
+      "description": "Định nghĩa quyền theo nhiệm vụ trong workspace.",
+      "sections": [
+        {
+          "title": "Bắt đầu ở đâu",
+          "text": "Định nghĩa quyền theo nhiệm vụ trong workspace.",
+          "image": "roles",
+          "caption": "Giao diện AI Studio liên quan đến tính năng; dữ liệu minh họa."
+        },
+        {
+          "title": "Các bước thực hiện",
+          "steps": [
+            "Mở Thiết lập → Vai trò tùy chỉnh bằng tài khoản có quyền quản lý vai trò.",
+            "Tạo vai trò, đặt tên và chọn quyền phù hợp nhiệm vụ. Quyền được cấp phải nằm trong tập quyền mà bạn được phép cấp.",
+            "Gán vai trò cho thành viên ở phần quản lý workspace; kiểm tra bằng tài khoản thành viên trước khi áp dụng rộng."
+          ]
+        },
+        {
+          "title": "Kiểm tra kết quả",
+          "text": "Vai trò workspace không tự cấp quyền quản trị toàn hệ thống. Kiểm tra cả thao tác được phép và thao tác phải bị từ chối."
+        }
+      ]
+    },
+    {
+      "slug": "storage",
+      "title": "Quản lý lưu trữ S3",
+      "description": "Theo dõi bucket, dung lượng và dữ liệu không còn được tham chiếu.",
+      "sections": [
+        {
+          "title": "Bắt đầu ở đâu",
+          "text": "Theo dõi bucket, dung lượng và dữ liệu không còn được tham chiếu.",
+          "image": "storage",
+          "caption": "Giao diện AI Studio liên quan đến tính năng; dữ liệu minh họa."
+        },
+        {
+          "title": "Các bước thực hiện",
+          "steps": [
+            "Mở Thiết lập → Lưu trữ để xem trạng thái bucket, dung lượng, số đối tượng và thời điểm đo.",
+            "Nếu có quyền quản lý hạn mức, điều chỉnh giới hạn phù hợp. Kiểm tra danh sách metadata để hiểu dữ liệu đang sử dụng dung lượng.",
+            "Quét đối tượng không còn tham chiếu và xem lại trước khi dọn. Khi chuyển từ bucket chung, thực hiện di chuyển trước, rồi mới dọn bucket cũ."
+          ]
+        },
+        {
+          "title": "Kiểm tra kết quả",
+          "text": "Số liệu dung lượng cập nhật theo lần đo; vượt hạn mức có thể chặn tải tệp mới. Chỉ dọn dữ liệu đã xác nhận không cần giữ."
+        }
+      ]
+    },
+    {
+      "slug": "identity",
+      "title": "Cấu hình đăng nhập một lần",
+      "description": "Kết nối nhà cung cấp danh tính và ánh xạ nhóm người dùng.",
+      "sections": [
+        {
+          "title": "Bắt đầu ở đâu",
+          "text": "Kết nối nhà cung cấp danh tính và ánh xạ nhóm người dùng.",
+          "image": "identity",
+          "caption": "Giao diện AI Studio liên quan đến tính năng; dữ liệu minh họa."
+        },
+        {
+          "title": "Các bước thực hiện",
+          "steps": [
+            "Mở Thiết lập → Đăng nhập một lần. Thêm nhà cung cấp với issuer, client ID và thông tin xác thực do quản trị danh tính cung cấp.",
+            "Chọn workspace mặc định, miền định tuyến và chính sách ánh xạ nhóm nếu cần. Dùng đúng tên claim mà nhà cung cấp gửi.",
+            "Thử đăng nhập với tài khoản kiểm tra; xác nhận workspace, vai trò và mức truy cập trước khi bật cho người dùng."
+          ]
+        },
+        {
+          "title": "Kiểm tra kết quả",
+          "text": "Khi bật đồng bộ nhóm, vai trò và mức truy cập được cập nhật tại mỗi lần đăng nhập. Cấu hình sai có thể đưa người dùng vào sai workspace hoặc thiếu quyền."
+        }
+      ]
+    },
+    {
+      "slug": "app-config",
+      "title": "Cấu hình ứng dụng và đa phương thức",
+      "description": "Điều chỉnh biến đầu vào, hội thoại, giọng nói, tạo ảnh và nghiệp vụ.",
+      "sections": [
+        {
+          "title": "Tổng quan",
+          "text": "Điều chỉnh biến đầu vào, hội thoại, giọng nói, tạo ảnh và nghiệp vụ.",
+          "image": "editor",
+          "caption": "Giao diện ứng dụng liên quan với dữ liệu minh họa."
+        },
+        {
+          "title": "Các bước thực hiện",
+          "steps": [
+            "Mở cấu hình bản nháp. Chọn mô hình, tham số và chỉ dẫn; khai báo các biến được dùng trong mẫu chỉ dẫn hoặc câu chào.",
+            "Mở Tính năng để cấu hình câu chào, câu hỏi gợi ý và chế độ truy xuất phù hợp. Chọn mô hình nhận dạng giọng nói, đọc văn bản hoặc tạo ảnh nếu nhà cung cấp tương ứng đã được cấu hình.",
+            "Với nghiệp vụ riêng, khai báo chỉ dẫn và công cụ phù hợp. Lưu bản nháp, thử các biến đầu vào và từng tính năng trước khi xuất bản."
+          ]
+        },
+        {
+          "title": "Kiểm tra kết quả",
+          "text": "Có trường cấu hình không có nghĩa là dịch vụ đã sẵn sàng. Âm thanh và tạo ảnh cần mô hình hỗ trợ, quyền sử dụng và kết nối hoạt động."
+        }
+      ]
+    },
+    {
+      "slug": "evaluations",
+      "title": "Đánh giá và so sánh chất lượng",
+      "description": "Dùng bộ câu hỏi kiểm thử để theo dõi chất lượng ứng dụng qua các lần chạy.",
+      "sections": [
+        {
+          "title": "Tổng quan",
+          "text": "Dùng bộ câu hỏi kiểm thử để theo dõi chất lượng ứng dụng qua các lần chạy.",
+          "image": "app-monitoring",
+          "caption": "Giao diện ứng dụng liên quan với dữ liệu minh họa."
+        },
+        {
+          "title": "Các bước thực hiện",
+          "steps": [
+            "Trong ứng dụng, mở Giám sát và phần Đánh giá. Tạo bộ dữ liệu theo định dạng đầu vào được hiển thị cho loại ứng dụng.",
+            "Nhập câu hỏi và kết quả kỳ vọng; nếu dùng sinh dữ liệu kiểm thử, chọn chủ đề, ngôn ngữ và số lượng rồi xem lại dữ liệu được sinh.",
+            "Chạy đánh giá, theo dõi trạng thái và mở kết quả từng trường hợp. Chọn hai lượt chạy tương thích để so sánh; xem riêng các trường hợp thất bại trước khi đổi cấu hình."
+          ]
+        },
+        {
+          "title": "Kiểm tra kết quả",
+          "text": "Kết quả đánh giá phụ thuộc bộ dữ liệu và cấu hình. Phần xuất dữ liệu huấn luyện ở giám sát là bước chuẩn bị dữ liệu, không tự hoàn thành fine-tuning."
+        }
+      ]
+    },
+    {
+      "slug": "inputs",
+      "title": "Biến và biểu mẫu đầu vào",
+      "description": "Thu thập dữ liệu có cấu trúc trước khi ứng dụng chạy.",
+      "parent": "app-config",
+      "related": [
+        "app-config"
+      ],
+      "source_files": [
+        "apps/[id]/variables-panel.tsx",
+        "apps/[id]/config-panel.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Màn hình thao tác",
+          "text": "Thu thập dữ liệu có cấu trúc trước khi ứng dụng chạy.",
+          "image": "editor",
+          "caption": "Màn hình tổng quan liên quan. Làm theo đường dẫn bên dưới để mở đúng tính năng."
+        },
+        {
+          "title": "Thực hiện từng bước",
+          "steps": [
+            "Mở ứng dụng → Cấu hình → Biến. Thêm biến với tên kỹ thuật và nhãn người dùng nhìn thấy.",
+            "Chọn kiểu dữ liệu. Với trường lựa chọn, nhập mỗi lựa chọn trên một dòng; đặt giá trị mặc định đúng kiểu.",
+            "Đánh dấu bắt buộc, giới hạn độ dài và mức nhạy cảm phù hợp. Sắp xếp trường theo thứ tự người dùng cần điền.",
+            "Dùng tên biến trong mẫu chỉ dẫn hoặc câu chào. Lưu bản nháp và thử cả dữ liệu hợp lệ, bỏ trống và sai kiểu trong khung xem trước."
+          ]
+        },
+        {
+          "title": "Kết quả cần thấy",
+          "text": "Biểu mẫu hiện đúng nhãn; trường bắt buộc được kiểm tra và giá trị đi vào đúng chỉ dẫn."
+        },
+        {
+          "title": "Khi chưa được như mong muốn",
+          "text": "Không lưu được: tìm biến chưa khai báo trong mẫu. Giá trị mặc định bị từ chối: kiểm tra kiểu số, lựa chọn và tên biến."
+        }
+      ]
+    },
+    {
+      "slug": "speech-images",
+      "title": "Giọng nói và tạo ảnh",
+      "description": "Bật đầu vào giọng nói, đọc câu trả lời và công cụ tạo ảnh khi có mô hình hỗ trợ.",
+      "parent": "app-config",
+      "related": [
+        "app-config"
+      ],
+      "source_files": [
+        "apps/[id]/features-panel.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Màn hình thao tác",
+          "text": "Bật đầu vào giọng nói, đọc câu trả lời và công cụ tạo ảnh khi có mô hình hỗ trợ.",
+          "image": "editor",
+          "caption": "Màn hình tổng quan liên quan. Làm theo đường dẫn bên dưới để mở đúng tính năng."
+        },
+        {
+          "title": "Thực hiện từng bước",
+          "steps": [
+            "Ở Nhà cung cấp mô hình, cấu hình mô hình nhận dạng giọng nói, TTS hoặc text-to-image theo tính năng cần dùng.",
+            "Mở ứng dụng → Cấu hình → Tính năng. Chọn từng mô hình thay vì chỉ chọn một LLM thông thường.",
+            "Nếu chọn TTS, điền tên giọng mà nhà cung cấp hỗ trợ. Với tạo ảnh, kiểm tra công cụ image_generate được sử dụng trong cấu hình phù hợp.",
+            "Lưu, thử một đoạn nói ngắn, một câu trả lời đọc thành tiếng hoặc yêu cầu tạo ảnh. Kiểm tra đầu ra trước khi xuất bản."
+          ]
+        },
+        {
+          "title": "Kết quả cần thấy",
+          "text": "Tính năng tạo ra đúng loại đầu ra; ứng dụng không chỉ hiển thị lựa chọn mô hình."
+        },
+        {
+          "title": "Khi chưa được như mong muốn",
+          "text": "Danh sách trống: chưa có mô hình đúng loại hoặc tài khoản không được sử dụng. Lỗi nhà cung cấp: kiểm tra kết nối, tên giọng và quyền truy cập microphone ở trình duyệt."
+        }
+      ]
+    },
+    {
+      "slug": "versions",
+      "title": "Lịch sử và khôi phục phiên bản",
+      "description": "Lấy lại cấu hình cũ vào bản nháp mà vẫn kiểm soát việc xuất bản.",
+      "parent": "publishing",
+      "related": [
+        "publishing"
+      ],
+      "source_files": [
+        "apps/[id]/version-history.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Màn hình thao tác",
+          "text": "Lấy lại cấu hình cũ vào bản nháp mà vẫn kiểm soát việc xuất bản.",
+          "image": "editor",
+          "caption": "Màn hình tổng quan liên quan. Làm theo đường dẫn bên dưới để mở đúng tính năng."
+        },
+        {
+          "title": "Thực hiện từng bước",
+          "steps": [
+            "Mở lịch sử phiên bản trong trình chỉnh sửa ứng dụng. Đối chiếu số phiên bản, mô hình và nhãn Bản nháp/Đã xuất bản.",
+            "Lưu hoặc ghi lại thay đổi chưa lưu trước khi chọn Khôi phục ở phiên bản mong muốn.",
+            "Đọc phần xem lại trong hộp xác nhận rồi khôi phục vào bản nháp. Mở lại cấu hình và so sánh các trường quan trọng.",
+            "Chạy bộ câu hỏi kiểm thử. Chỉ xuất bản lại khi đã xác nhận hành vi cần khôi phục."
+          ]
+        },
+        {
+          "title": "Kết quả cần thấy",
+          "text": "Bản nháp chứa cấu hình đã chọn; người dùng cuối chỉ nhận thay đổi sau bước xuất bản phù hợp."
+        },
+        {
+          "title": "Khi chưa được như mong muốn",
+          "text": "Khôi phục không thay thế việc kiểm thử. Nếu có thay đổi chưa lưu, kiểm tra cảnh báo để tránh ghi đè nhầm."
+        }
+      ]
+    },
+    {
+      "slug": "workflow-debug",
+      "title": "Chạy thử, truy vết và so sánh workflow",
+      "description": "Tìm bước sai bằng dữ liệu đầu vào và đầu ra thực tế của từng node.",
+      "parent": "workflows",
+      "related": [
+        "workflows"
+      ],
+      "source_files": [
+        "apps/[id]/workflow/run-panel.tsx",
+        "apps/[id]/workflow/compare-panel.tsx",
+        "apps/[id]/workflow/variable-inspect.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Màn hình thao tác",
+          "text": "Tìm bước sai bằng dữ liệu đầu vào và đầu ra thực tế của từng node.",
+          "image": "workflow",
+          "caption": "Màn hình tổng quan liên quan. Làm theo đường dẫn bên dưới để mở đúng tính năng."
+        },
+        {
+          "title": "Thực hiện từng bước",
+          "steps": [
+            "Mở bảng Chạy, nhập dữ liệu đúng kiểu của node bắt đầu và chạy bản nháp.",
+            "Xem các tab Đầu vào, Kết quả, Chi tiết và Truy vết. Chọn node để xem dữ liệu xử lý bên trong và đầu ra.",
+            "Kiểm tra trạng thái chờ: lịch hẹn, sự kiện, workflow con hoặc phê duyệt. Một lượt đang chờ chưa phải lỗi.",
+            "Mở lịch sử và so sánh hai lượt chạy. Đối chiếu trạng thái, thời gian và nhãn từng node trước khi sửa ánh xạ biến."
+          ]
+        },
+        {
+          "title": "Kết quả cần thấy",
+          "text": "Lượt chạy đến đầu ra mong muốn; khác biệt giữa hai lần thử có thể truy về một node và dữ liệu cụ thể."
+        },
+        {
+          "title": "Khi chưa được như mong muốn",
+          "text": "Không thấy dữ liệu node: kiểm tra mức truy cập. Node mã lỗi: xác nhận sandbox đã cấu hình; không suy ra mã có thể chạy chỉ vì node có trên canvas."
+        }
+      ]
+    },
+    {
+      "slug": "workflow-dsl",
+      "title": "Nhập, xuất DSL và biến môi trường",
+      "description": "Chuyển cấu trúc ứng dụng giữa môi trường và cấu hình lại bí mật ở nơi nhận.",
+      "parent": "workflows",
+      "related": [
+        "workflows"
+      ],
+      "source_files": [
+        "apps/[id]/workflow/import-dsl-dialog.tsx",
+        "apps/[id]/workflow/env-panel.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Màn hình thao tác",
+          "text": "Chuyển cấu trúc ứng dụng giữa môi trường và cấu hình lại bí mật ở nơi nhận.",
+          "image": "workflow",
+          "caption": "Màn hình tổng quan liên quan. Làm theo đường dẫn bên dưới để mở đúng tính năng."
+        },
+        {
+          "title": "Thực hiện từng bước",
+          "steps": [
+            "Xuất DSL từ workflow cần chuyển. Kiểm tra tên, loại ứng dụng và các tham chiếu mô hình/công cụ trong tệp.",
+            "Ở nơi nhận, chọn Nhập ứng dụng từ DSL, dán nội dung hoặc chọn tệp rồi xác nhận. Thao tác này tạo ứng dụng mới.",
+            "Mở Biến môi trường của ứng dụng mới. Nhập lại giá trị cho các tên biến cần thiết; DSL không mang theo giá trị bí mật.",
+            "Chọn lại các mô hình, kho tri thức và công cụ khả dụng ở môi trường nhận; chạy thử trước khi xuất bản."
+          ]
+        },
+        {
+          "title": "Kết quả cần thấy",
+          "text": "Ứng dụng mới có cấu trúc đúng, bản gốc không bị thay và các tham chiếu được cấu hình lại."
+        },
+        {
+          "title": "Khi chưa được như mong muốn",
+          "text": "Nhập thành công nhưng chạy lỗi thường do thiếu biến, mô hình hoặc công cụ. Giá trị biến đã lưu không đọc lại được; để trống khi sửa nghĩa là giữ nguyên."
+        }
+      ]
+    },
+    {
+      "slug": "workflow-library",
+      "title": "Tái sử dụng snippet và chỉnh sửa canvas",
+      "description": "Lưu cấu trúc dùng lại và chỉnh workflow bằng các công cụ canvas.",
+      "parent": "workflows",
+      "related": [
+        "workflows"
+      ],
+      "source_files": [
+        "apps/[id]/workflow/snippets-panel.tsx",
+        "apps/[id]/workflow/workflow-context-menu.tsx",
+        "apps/[id]/workflow/clipboard.ts"
+      ],
+      "sections": [
+        {
+          "title": "Màn hình thao tác",
+          "text": "Lưu cấu trúc dùng lại và chỉnh workflow bằng các công cụ canvas.",
+          "image": "workflow",
+          "caption": "Màn hình tổng quan liên quan. Làm theo đường dẫn bên dưới để mở đúng tính năng."
+        },
+        {
+          "title": "Thực hiện từng bước",
+          "steps": [
+            "Mở Snippets và lưu workflow hiện tại với tên mô tả nhiệm vụ. Đây là lưu cả đồ thị hiện tại.",
+            "Chèn snippet vào canvas đích. Kiểm tra các node mới và kết nối vào luồng của bạn.",
+            "Dùng menu ngữ cảnh, sao chép/dán và hoàn tác/làm lại để chỉnh cấu trúc. Thêm ghi chú để giải thích quyết định quan trọng.",
+            "Kiểm tra lại biến và tham chiếu sau khi chèn; chạy thử đường đi được bổ sung."
+          ]
+        },
+        {
+          "title": "Kết quả cần thấy",
+          "text": "Node được chèn có định danh riêng, không làm trùng định danh của canvas đích."
+        },
+        {
+          "title": "Khi chưa được như mong muốn",
+          "text": "Snippet không thay cho kết nối và bí mật của môi trường đích. Nếu node bị rời, nối lại cổng và kiểm tra đầu vào trước khi chạy."
+        }
+      ]
+    },
+    {
+      "slug": "trigger-events",
+      "title": "Webhook, lịch chạy và thử lại sự kiện",
+      "description": "Gắn trigger vào workflow và theo dõi từng sự kiện gửi đến.",
+      "parent": "triggers",
+      "related": [
+        "triggers"
+      ],
+      "source_files": [
+        "apps/[id]/workflow/trigger-binding.tsx",
+        "integrations/trigger/page.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Màn hình thao tác",
+          "text": "Gắn trigger vào workflow và theo dõi từng sự kiện gửi đến.",
+          "image": "triggers",
+          "caption": "Màn hình tổng quan liên quan. Làm theo đường dẫn bên dưới để mở đúng tính năng."
+        },
+        {
+          "title": "Thực hiện từng bước",
+          "steps": [
+            "Lưu workflow trước, chọn node trigger webhook hoặc lịch chạy, rồi mở cấu hình gắn trigger.",
+            "Với lịch chạy, nhập cron và kiểm tra múi giờ hiển thị. Với webhook, lưu khóa ký ngay khi được hiển thị lần đầu.",
+            "Ánh xạ trường payload vào biến đầu vào. Chọn đúng định dạng JSON hoặc FHIR Bundle nếu dùng nguồn tương ứng; đặt hạn mức mỗi giờ.",
+            "Gửi sự kiện thử, lọc trạng thái ở danh sách Sự kiện đã nhận rồi mở lượt chạy. Chỉ thử lại sự kiện lỗi sau khi kiểm tra nguyên nhân."
+          ]
+        },
+        {
+          "title": "Kết quả cần thấy",
+          "text": "Sự kiện xuất hiện, có lượt chạy liên kết và kết thúc hoặc chờ đúng theo workflow."
+        },
+        {
+          "title": "Khi chưa được như mong muốn",
+          "text": "Không chạy: kiểm tra bật/tắt trigger, chữ ký, cron và ánh xạ. Tắt trigger giữ khóa hiện tại; xoay khóa yêu cầu cập nhật phía gửi."
+        }
+      ]
+    },
+    {
+      "slug": "tool-api",
+      "title": "Khai báo công cụ API",
+      "description": "Cho agent gọi API được khai báo trong workspace.",
+      "parent": "tools",
+      "related": [
+        "tools"
+      ],
+      "source_files": [
+        "integrations/tools/api/page.tsx",
+        "apps/[id]/agent-tools-panel.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Màn hình thao tác",
+          "text": "Cho agent gọi API được khai báo trong workspace.",
+          "image": "tool-api",
+          "caption": "Màn hình tổng quan liên quan. Làm theo đường dẫn bên dưới để mở đúng tính năng."
+        },
+        {
+          "title": "Thực hiện từng bước",
+          "steps": [
+            "Mở Tích hợp → Công cụ → API và xem danh sách khai báo hiện có.",
+            "Thêm hoặc sửa khai báo theo biểu mẫu; đối chiếu schema thao tác, đầu vào và phương thức xác thực với tài liệu của dịch vụ.",
+            "Kiểm tra đích truy cập trong chính sách egress. Gắn công cụ vào ứng dụng và chọn đúng thao tác cần dùng.",
+            "Chạy yêu cầu mẫu qua agent và xem nhật ký lời gọi để kiểm tra tên thao tác, tham số và kết quả."
+          ]
+        },
+        {
+          "title": "Kết quả cần thấy",
+          "text": "Agent gọi đúng API và dùng kết quả trả về trong nhiệm vụ thử."
+        },
+        {
+          "title": "Khi chưa được như mong muốn",
+          "text": "Lỗi xác thực: kiểm tra credential. Công cụ không xuất hiện: kiểm tra kết nối workspace và danh sách công cụ được chọn ở ứng dụng."
+        }
+      ]
+    },
+    {
+      "slug": "tool-mcp",
+      "title": "Kết nối máy chủ MCP",
+      "description": "Khám phá và chọn thao tác MCP cho agent.",
+      "parent": "tools",
+      "related": [
+        "tools"
+      ],
+      "source_files": [
+        "integrations/tools/mcp/page.tsx",
+        "apps/[id]/agent-tools-panel.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Màn hình thao tác",
+          "text": "Khám phá và chọn thao tác MCP cho agent.",
+          "image": "tools",
+          "caption": "Màn hình tổng quan liên quan. Làm theo đường dẫn bên dưới để mở đúng tính năng."
+        },
+        {
+          "title": "Thực hiện từng bước",
+          "steps": [
+            "Mở Tích hợp → Công cụ → MCP, thêm địa chỉ máy chủ và thông tin xác thực theo biểu mẫu.",
+            "Kiểm tra kết nối và xem các thao tác máy chủ cung cấp. Đối chiếu schema đầu vào của thao tác cần dùng.",
+            "Trong ứng dụng agent, thêm kết nối MCP rồi chọn các thao tác phù hợp với nhiệm vụ.",
+            "Chạy một tác vụ kiểm thử và xem lời gọi thực tế trong nhật ký, kể cả trường hợp máy chủ trả lỗi."
+          ]
+        },
+        {
+          "title": "Kết quả cần thấy",
+          "text": "Thao tác được khám phá, có thể chọn và được gọi với đầu vào mong muốn."
+        },
+        {
+          "title": "Khi chưa được như mong muốn",
+          "text": "Không khám phá được thao tác: kiểm tra URL, xác thực và egress. Kết nối được không có nghĩa là ứng dụng đã được gắn công cụ."
+        }
+      ]
+    },
+    {
+      "slug": "tool-workflow",
+      "title": "Dùng workflow làm công cụ",
+      "description": "Tái sử dụng một workflow qua giao diện công cụ.",
+      "parent": "tools",
+      "related": [
+        "tools"
+      ],
+      "source_files": [
+        "integrations/tools/workflow/page.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Màn hình thao tác",
+          "text": "Tái sử dụng một workflow qua giao diện công cụ.",
+          "image": "tool-workflow",
+          "caption": "Màn hình tổng quan liên quan. Làm theo đường dẫn bên dưới để mở đúng tính năng."
+        },
+        {
+          "title": "Thực hiện từng bước",
+          "steps": [
+            "Chuẩn bị workflow có đầu vào rõ ràng và đầu ra được ánh xạ ở node kết thúc. Chạy thử trước.",
+            "Mở Tích hợp → Công cụ → Workflow để xem các workflow khả dụng và cấu hình công cụ được cung cấp.",
+            "Gắn công cụ vào agent hoặc node công cụ của workflow khác; ánh xạ đúng tham số đầu vào.",
+            "Chạy luồng gọi và mở dấu vết để kiểm tra cả bên gọi lẫn workflow được gọi."
+          ]
+        },
+        {
+          "title": "Kết quả cần thấy",
+          "text": "Bên gọi nhận đầu ra đúng hợp đồng của workflow; các bước chờ/lỗi được theo dõi."
+        },
+        {
+          "title": "Khi chưa được như mong muốn",
+          "text": "Thiếu đầu ra: kiểm tra node kết thúc. Không có workflow trong danh sách: kiểm tra quyền, loại ứng dụng và trạng thái xuất bản được yêu cầu."
+        }
+      ]
+    },
+    {
+      "slug": "egress",
+      "title": "Quản lý kết nối ra ngoài",
+      "description": "Cấu hình đích được phép cho công cụ và dịch vụ ngoài.",
+      "parent": "security",
+      "related": [
+        "security"
+      ],
+      "source_files": [
+        "integrations/tools/egress/page.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Màn hình thao tác",
+          "text": "Cấu hình đích được phép cho công cụ và dịch vụ ngoài.",
+          "image": "egress",
+          "caption": "Màn hình tổng quan liên quan. Làm theo đường dẫn bên dưới để mở đúng tính năng."
+        },
+        {
+          "title": "Thực hiện từng bước",
+          "steps": [
+            "Mở Tích hợp → Công cụ → Egress bằng tài khoản được quản lý kết nối.",
+            "Đối chiếu tên miền và cổng của dịch vụ với danh sách cho phép; thêm đúng đích cần thiết.",
+            "Kiểm tra nhãn dữ liệu, loại nhà cung cấp và cấu hình vùng mạng trước khi chạy ứng dụng.",
+            "Thử lời gọi được phép và lời gọi phải bị chặn bằng dữ liệu mẫu; xem thông báo và nhật ký."
+          ]
+        },
+        {
+          "title": "Kết quả cần thấy",
+          "text": "Các lời gọi phù hợp chính sách đi qua; lời gọi không được phép bị từ chối rõ ràng."
+        },
+        {
+          "title": "Khi chưa được như mong muốn",
+          "text": "Chỉ mở URL ở UI không thay đổi nhãn dữ liệu. Khi bị chặn, kiểm tra đồng thời nhãn, đích và quyền thay vì mở toàn bộ mạng."
+        }
+      ]
+    },
+    {
+      "slug": "document-folders",
+      "title": "Thư mục, lọc và di chuyển tài liệu",
+      "description": "Tổ chức tài liệu trong kho để tìm và thao tác đúng phạm vi.",
+      "parent": "documents",
+      "related": [
+        "documents"
+      ],
+      "source_files": [
+        "datasets/[id]/documents-panel.tsx",
+        "datasets/[id]/document-toolbar.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Màn hình thao tác",
+          "text": "Tổ chức tài liệu trong kho để tìm và thao tác đúng phạm vi.",
+          "image": "documents",
+          "caption": "Màn hình tổng quan liên quan. Làm theo đường dẫn bên dưới để mở đúng tính năng."
+        },
+        {
+          "title": "Thực hiện từng bước",
+          "steps": [
+            "Mở kho tri thức → Tài liệu. Tìm tài liệu theo tên và dùng bộ lọc trạng thái khi cần.",
+            "Tạo hoặc chọn thư mục trong cây điều hướng. Kiểm tra đường dẫn thư mục trước khi thêm tài liệu.",
+            "Chọn tài liệu cần di chuyển và chọn thư mục đích. Với thao tác nhiều tài liệu, xem lại số lượng được chọn.",
+            "Mở thư mục đích, tìm lại tài liệu và kiểm tra trạng thái; không suy ra tài liệu bị xóa chỉ vì bộ lọc đang ẩn nó."
+          ]
+        },
+        {
+          "title": "Kết quả cần thấy",
+          "text": "Tài liệu xuất hiện đúng thư mục và các bộ lọc không làm bạn chọn nhầm phạm vi."
+        },
+        {
+          "title": "Khi chưa được như mong muốn",
+          "text": "Không thấy tài liệu: xóa bộ lọc và kiểm tra thư mục hiện tại. Di chuyển thư mục không thay cho thay đổi nội dung hoặc nhãn bảo mật."
+        }
+      ]
+    },
+    {
+      "slug": "document-chunks",
+      "title": "Kiểm tra và sửa từng đoạn tri thức",
+      "description": "Sửa nội dung thực sự được đưa vào truy xuất.",
+      "parent": "documents",
+      "related": [
+        "documents"
+      ],
+      "source_files": [
+        "datasets/[id]/segments-panel.tsx",
+        "datasets/[id]/documents/[docId]/page.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Màn hình thao tác",
+          "text": "Sửa nội dung thực sự được đưa vào truy xuất.",
+          "image": "documents",
+          "caption": "Màn hình tổng quan liên quan. Làm theo đường dẫn bên dưới để mở đúng tính năng."
+        },
+        {
+          "title": "Thực hiện từng bước",
+          "steps": [
+            "Mở một tài liệu đã xử lý và xem các đoạn nội dung được tách. Đối chiếu với bản gốc.",
+            "Chỉnh nội dung hoặc từ khóa của đoạn cần sửa; thêm đoạn nếu cần bổ sung thông tin còn thiếu.",
+            "Bật/tắt đoạn để kiểm soát việc sử dụng. Khi thao tác hàng loạt, kiểm tra phạm vi chọn đang hiển thị.",
+            "Lưu rồi thử truy xuất với câu hỏi liên quan; kiểm tra rằng đoạn đã tắt không còn được chọn."
+          ]
+        },
+        {
+          "title": "Kết quả cần thấy",
+          "text": "Đoạn sửa xuất hiện trong kết quả truy xuất đúng như dự kiến."
+        },
+        {
+          "title": "Khi chưa được như mong muốn",
+          "text": "Kết quả cũ: kiểm tra đã lưu, trạng thái lập chỉ mục và kho đang thử. Với PDF/OCR, đối chiếu nội dung trích xuất với trang gốc."
+        }
+      ]
+    },
+    {
+      "slug": "memory-review",
+      "title": "Duyệt ghi nhớ và xem bằng chứng",
+      "description": "Quyết định điều gì được dùng lại trong những lượt AI sau.",
+      "parent": "memory",
+      "related": [
+        "memory"
+      ],
+      "source_files": [
+        "memories/queue-panel.tsx",
+        "memories/store-panel.tsx",
+        "memories/audit-panel.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Màn hình thao tác",
+          "text": "Quyết định điều gì được dùng lại trong những lượt AI sau.",
+          "image": "memory",
+          "caption": "Màn hình tổng quan liên quan. Làm theo đường dẫn bên dưới để mở đúng tính năng."
+        },
+        {
+          "title": "Thực hiện từng bước",
+          "steps": [
+            "Mở Ghi nhớ → Chờ duyệt với quyền quản trị ghi nhớ. Xem người sở hữu, ứng dụng và nhãn của từng đề xuất.",
+            "Đọc phần so sánh bản nháp và nội dung được chỉnh sửa. Nếu không có bằng chứng, xem cảnh báo trước khi quyết định.",
+            "Duyệt thông tin phù hợp hoặc từ chối thông tin sai. Ghi nhớ được duyệt có thể vào prompt các lượt sau của đúng chủ thể.",
+            "Mở Kho ghi nhớ và Nhật ký hoạt động để kiểm tra trạng thái và thao tác vừa thực hiện."
+          ]
+        },
+        {
+          "title": "Kết quả cần thấy",
+          "text": "Đề xuất đổi trạng thái đúng; ghi nhớ của một người không bị nhầm với người khác."
+        },
+        {
+          "title": "Khi chưa được như mong muốn",
+          "text": "Chưa có tỷ lệ duyệt không phải lỗi: có thể chưa có quyết định nào. Bản ghi thiếu diff cần được xem xét thận trọng thay vì tự động duyệt."
+        }
+      ]
+    },
+    {
+      "slug": "memory-settings",
+      "title": "Cấu hình, thời hạn và tắt ghi nhớ",
+      "description": "Kiểm soát tần suất trích xuất, thời hạn và dữ liệu khi tắt tính năng.",
+      "parent": "memory",
+      "related": [
+        "memory"
+      ],
+      "source_files": [
+        "memories/settings-panel.tsx",
+        "memories/page.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Màn hình thao tác",
+          "text": "Kiểm soát tần suất trích xuất, thời hạn và dữ liệu khi tắt tính năng.",
+          "image": "memory",
+          "caption": "Màn hình tổng quan liên quan. Làm theo đường dẫn bên dưới để mở đúng tính năng."
+        },
+        {
+          "title": "Thực hiện từng bước",
+          "steps": [
+            "Mở Ghi nhớ → Thiết lập. Kiểm tra mô hình trích xuất và các giới hạn hiện có.",
+            "Điều chỉnh ngưỡng trích xuất theo số tin nhắn, thời hạn và giới hạn phù hợp với nhu cầu; lưu cấu hình.",
+            "Nếu cho khách ở liên kết công khai dùng ghi nhớ, đọc rõ cơ chế định danh bằng cookie trước khi bật.",
+            "Khi tắt, chọn giữ dữ liệu nhưng ngừng sử dụng hoặc quy trình xóa. Xóa toàn bộ cần thao tác và xác nhận riêng sau khi đã tắt trích xuất."
+          ]
+        },
+        {
+          "title": "Kết quả cần thấy",
+          "text": "Thiết lập vẫn đúng sau tải lại; tắt tính năng không tự xóa dữ liệu ngoài thao tác đã xác nhận."
+        },
+        {
+          "title": "Khi chưa được như mong muốn",
+          "text": "Lưu thiết lập không đồng nghĩa với đã xóa. Khi kiểm tra ghi nhớ khách, thay cookie sẽ làm thay đổi định danh."
+        }
+      ]
+    },
+    {
+      "slug": "training-export",
+      "title": "Xuất dữ liệu cho huấn luyện",
+      "description": "Chuẩn bị dữ liệu từ ứng dụng trước khi gửi tác vụ huấn luyện.",
+      "parent": "training",
+      "related": [
+        "training"
+      ],
+      "source_files": [
+        "apps/[id]/monitoring/training-export.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Màn hình thao tác",
+          "text": "Chuẩn bị dữ liệu từ ứng dụng trước khi gửi tác vụ huấn luyện.",
+          "image": "app-monitoring",
+          "caption": "Màn hình tổng quan liên quan. Làm theo đường dẫn bên dưới để mở đúng tính năng."
+        },
+        {
+          "title": "Thực hiện từng bước",
+          "steps": [
+            "Mở ứng dụng → Giám sát → Xuất dữ liệu huấn luyện bằng tài khoản có quyền tương ứng.",
+            "Đọc mô tả phạm vi dữ liệu và cảnh báo trước khi xuất; xác nhận dữ liệu phù hợp mục đích huấn luyện.",
+            "Chọn tải tệp xuống hoặc xuất tới kho lưu trữ được cấu hình. Chờ kết quả và xem số bản ghi đã xuất, số bị loại do nhãn.",
+            "Xem lại dữ liệu, loại thông tin không phù hợp rồi mới dùng ở phần Huấn luyện model."
+          ]
+        },
+        {
+          "title": "Kết quả cần thấy",
+          "text": "Có tệp hoặc kết quả lưu trữ, kèm số bản ghi; tác vụ fine-tuning vẫn là bước riêng."
+        },
+        {
+          "title": "Khi chưa được như mong muốn",
+          "text": "Tệp ít dữ liệu hơn dự kiến: xem số bản ghi bị loại theo nhãn và quyền truy cập, không tự nới chính sách để lấy đủ dữ liệu."
+        }
+      ]
+    },
+    {
+      "slug": "workspace-members",
+      "title": "Mời thành viên và giới hạn truy cập",
+      "description": "Đưa đúng người vào đúng workspace, vai trò và phòng ban.",
+      "parent": "workspace",
+      "related": [
+        "workspace"
+      ],
+      "source_files": [
+        "settings/workspace/page.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Màn hình thao tác",
+          "text": "Đưa đúng người vào đúng workspace, vai trò và phòng ban.",
+          "image": "workspace",
+          "caption": "Màn hình tổng quan liên quan. Làm theo đường dẫn bên dưới để mở đúng tính năng."
+        },
+        {
+          "title": "Thực hiện từng bước",
+          "steps": [
+            "Mở Thiết lập → Workspace → Thành viên và chọn Mời thành viên.",
+            "Nhập email, chọn vai trò và các giới hạn phòng ban/mức truy cập được phép cấp.",
+            "Người nhận mở lời mời và hoàn tất luồng chấp nhận/đăng nhập. Kiểm tra trạng thái thành viên sau đó.",
+            "Khi thay vai trò hoặc gỡ thành viên, kiểm tra workspace đang chọn và xác nhận tác động trước khi lưu."
+          ]
+        },
+        {
+          "title": "Kết quả cần thấy",
+          "text": "Thành viên vào đúng workspace và chỉ thấy thao tác phù hợp quyền."
+        },
+        {
+          "title": "Khi chưa được như mong muốn",
+          "text": "Không thấy chức năng mời: kiểm tra quyền quản lý thành viên. Đồng bộ SSO có thể cập nhật vai trò khi người dùng đăng nhập lại."
+        }
+      ]
+    },
+    {
+      "slug": "quotas",
+      "title": "Hạn mức token và yêu cầu",
+      "description": "Đặt giới hạn sử dụng theo phạm vi và chu kỳ phù hợp.",
+      "parent": "workspace",
+      "related": [
+        "workspace"
+      ],
+      "source_files": [
+        "settings/workspace/page.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Màn hình thao tác",
+          "text": "Đặt giới hạn sử dụng theo phạm vi và chu kỳ phù hợp.",
+          "image": "workspace",
+          "caption": "Màn hình tổng quan liên quan. Làm theo đường dẫn bên dưới để mở đúng tính năng."
+        },
+        {
+          "title": "Thực hiện từng bước",
+          "steps": [
+            "Mở phần Hạn mức trong quản lý workspace. Chọn phạm vi tổ chức, workspace, ứng dụng hoặc nhà cung cấp được hỗ trợ.",
+            "Chọn chu kỳ ngày/tháng và nhập trần token, yêu cầu. Kiểm tra ý nghĩa giá trị trống và số 0 trước khi lưu.",
+            "Theo dõi lượng đã dùng và trạng thái chạm trần. Đối chiếu với thống kê Giám sát.",
+            "Chỉ khởi động kỳ mới hoặc xóa hạn mức khi đã xác nhận tác động tới khả năng tiếp tục sử dụng."
+          ]
+        },
+        {
+          "title": "Kết quả cần thấy",
+          "text": "Hạn mức áp đúng đối tượng và thời kỳ, lượng sử dụng hiện rõ."
+        },
+        {
+          "title": "Khi chưa được như mong muốn",
+          "text": "Ứng dụng bị chặn dù chưa chạm hạn mức riêng: kiểm tra các hạn mức ở phạm vi cao hơn. Không có hạn mức và hạn mức 0 là hai trạng thái khác nhau."
+        }
+      ]
+    },
+    {
+      "slug": "workspace-keys",
+      "title": "API key và quyền MCP của workspace",
+      "description": "Cấp khóa với phạm vi cần thiết cho hệ thống tích hợp.",
+      "parent": "api",
+      "related": [
+        "api"
+      ],
+      "source_files": [
+        "settings/workspace/page.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Màn hình thao tác",
+          "text": "Cấp khóa với phạm vi cần thiết cho hệ thống tích hợp.",
+          "image": "workspace",
+          "caption": "Màn hình tổng quan liên quan. Làm theo đường dẫn bên dưới để mở đúng tính năng."
+        },
+        {
+          "title": "Thực hiện từng bước",
+          "steps": [
+            "Mở quản lý workspace → API keys, chọn tạo khóa và đặt tên dễ nhận biết.",
+            "Chọn phạm vi ứng dụng và thời hạn. Quyền MCP mặc định chỉ chạy ứng dụng; chọn mcp:author hoặc mcp:admin chỉ khi cần.",
+            "Lưu khóa lúc được hiển thị lần đầu vào nơi quản lý bí mật. Kiểm tra tích hợp bằng phạm vi vừa cấp.",
+            "Để quản trị workspace qua MCP, cần khóa không gắn một ứng dụng, có mcp:admin và bật cổng quản trị MCP. Thu hồi khóa không còn dùng."
+          ]
+        },
+        {
+          "title": "Kết quả cần thấy",
+          "text": "Khóa gọi đúng chức năng được cấp; hết hạn hoặc thu hồi thì không còn dùng được."
+        },
+        {
+          "title": "Khi chưa được như mong muốn",
+          "text": "Khai mcp:admin chưa đủ nếu cổng quản trị đang tắt. Một số quyền như đọc ghi nhớ người khác và credential nhà cung cấp không được chuyển qua MCP."
+        }
+      ]
+    },
+    {
+      "slug": "admin-tenants",
+      "title": "Tổ chức và hạn mức hệ thống",
+      "description": "Thao tác dành cho quản trị viên bản cài đặt AI Studio.",
+      "parent": "admin",
+      "related": [
+        "admin"
+      ],
+      "source_files": [
+        "web/app/(admin)/admin/tenants/page.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Màn hình thao tác",
+          "text": "Thao tác dành cho quản trị viên bản cài đặt AI Studio.",
+          "image": "admin-tenants",
+          "caption": "Màn hình tổng quan liên quan. Làm theo đường dẫn bên dưới để mở đúng tính năng."
+        },
+        {
+          "title": "Thực hiện từng bước",
+          "steps": [
+            "Đăng nhập bằng tài khoản quản trị hệ thống và mở mục Quản trị tương ứng. Vai trò chủ workspace không tự cấp quyền này.",
+            "Xem danh sách tổ chức, trạng thái, số workspace và thành viên.",
+            "Đối chiếu chính sách MFA và hạn mức tổ chức. Để thay đổi, dùng phần thiết lập workspace hoặc quy trình vận hành tương ứng; trang tổng quan này chỉ đọc.",
+            "Tải lại trang để kiểm tra trạng thái có hiệu lực và xem xét tác động tới ứng dụng đang dùng."
+          ]
+        },
+        {
+          "title": "Kết quả cần thấy",
+          "text": "Tổ chức và workspace là hai phạm vi khác nhau; kiểm tra đúng đối tượng."
+        },
+        {
+          "title": "Khi chưa được như mong muốn",
+          "text": "Nếu bị từ chối truy cập, kiểm tra quyền quản trị hệ thống. Với mục chỉ đọc, thay đổi qua quy trình triển khai thay vì tìm cách sửa tại trang."
+        }
+      ]
+    },
+    {
+      "slug": "admin-users",
+      "title": "Tài khoản toàn hệ thống",
+      "description": "Thao tác dành cho quản trị viên bản cài đặt AI Studio.",
+      "parent": "admin",
+      "related": [
+        "admin"
+      ],
+      "source_files": [
+        "web/app/(admin)/admin/users/page.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Màn hình thao tác",
+          "text": "Thao tác dành cho quản trị viên bản cài đặt AI Studio.",
+          "image": "admin-users",
+          "caption": "Màn hình tổng quan liên quan. Làm theo đường dẫn bên dưới để mở đúng tính năng."
+        },
+        {
+          "title": "Thực hiện từng bước",
+          "steps": [
+            "Đăng nhập bằng tài khoản quản trị hệ thống và mở mục Quản trị tương ứng. Vai trò chủ workspace không tự cấp quyền này.",
+            "Tìm tài khoản theo thông tin được hiển thị và xem trạng thái hiện tại.",
+            "Thực hiện thay đổi được giao diện cho phép, đọc xác nhận và tải lại danh sách.",
+            "Tải lại trang để kiểm tra trạng thái có hiệu lực và xem xét tác động tới ứng dụng đang dùng."
+          ]
+        },
+        {
+          "title": "Kết quả cần thấy",
+          "text": "Quản lý tài khoản hệ thống không đồng nghĩa với gỡ một thành viên khỏi một workspace."
+        },
+        {
+          "title": "Khi chưa được như mong muốn",
+          "text": "Nếu bị từ chối truy cập, kiểm tra quyền quản trị hệ thống. Với mục chỉ đọc, thay đổi qua quy trình triển khai thay vì tìm cách sửa tại trang."
+        }
+      ]
+    },
+    {
+      "slug": "admin-health",
+      "title": "Kiểm tra sức khỏe dịch vụ",
+      "description": "Thao tác dành cho quản trị viên bản cài đặt AI Studio.",
+      "parent": "admin",
+      "related": [
+        "admin"
+      ],
+      "source_files": [
+        "web/app/(admin)/admin/health/page.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Màn hình thao tác",
+          "text": "Thao tác dành cho quản trị viên bản cài đặt AI Studio.",
+          "image": "admin-health",
+          "caption": "Màn hình tổng quan liên quan. Làm theo đường dẫn bên dưới để mở đúng tính năng."
+        },
+        {
+          "title": "Thực hiện từng bước",
+          "steps": [
+            "Đăng nhập bằng tài khoản quản trị hệ thống và mở mục Quản trị tương ứng. Vai trò chủ workspace không tự cấp quyền này.",
+            "Mở Sức khỏe và đọc trạng thái các dịch vụ phụ thuộc cùng migration.",
+            "Đối chiếu lỗi với dịch vụ liên quan, xử lý theo quy trình vận hành rồi tải lại.",
+            "Tải lại trang để kiểm tra trạng thái có hiệu lực và xem xét tác động tới ứng dụng đang dùng."
+          ]
+        },
+        {
+          "title": "Kết quả cần thấy",
+          "text": "Trang sức khỏe không thay thế kiểm thử một lượt ứng dụng; kiểm tra thêm tác vụ người dùng."
+        },
+        {
+          "title": "Khi chưa được như mong muốn",
+          "text": "Nếu bị từ chối truy cập, kiểm tra quyền quản trị hệ thống. Với mục chỉ đọc, thay đổi qua quy trình triển khai thay vì tìm cách sửa tại trang."
+        }
+      ]
+    },
+    {
+      "slug": "admin-runtime",
+      "title": "Thay đổi thiết lập lúc chạy",
+      "description": "Thao tác dành cho quản trị viên bản cài đặt AI Studio.",
+      "parent": "admin",
+      "related": [
+        "admin"
+      ],
+      "source_files": [
+        "web/app/(admin)/admin/runtime/page.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Màn hình thao tác",
+          "text": "Thao tác dành cho quản trị viên bản cài đặt AI Studio.",
+          "image": "admin-runtime",
+          "caption": "Màn hình tổng quan liên quan. Làm theo đường dẫn bên dưới để mở đúng tính năng."
+        },
+        {
+          "title": "Thực hiện từng bước",
+          "steps": [
+            "Đăng nhập bằng tài khoản quản trị hệ thống và mở mục Quản trị tương ứng. Vai trò chủ workspace không tự cấp quyền này.",
+            "Mở Thiết lập lúc chạy, tìm tên khóa và xem nguồn giá trị.",
+            "Sửa mục được phép, lưu và chờ thời gian làm mới cấu hình hiển thị trên trang.",
+            "Tải lại trang để kiểm tra trạng thái có hiệu lực và xem xét tác động tới ứng dụng đang dùng."
+          ]
+        },
+        {
+          "title": "Kết quả cần thấy",
+          "text": "Giá trị bí mật chỉ thể hiện đã cấu hình hay chưa; không có chức năng đọc lại bí mật."
+        },
+        {
+          "title": "Khi chưa được như mong muốn",
+          "text": "Nếu bị từ chối truy cập, kiểm tra quyền quản trị hệ thống. Với mục chỉ đọc, thay đổi qua quy trình triển khai thay vì tìm cách sửa tại trang."
+        }
+      ]
+    },
+    {
+      "slug": "admin-network",
+      "title": "Vùng mạng và đích kết nối",
+      "description": "Thao tác dành cho quản trị viên bản cài đặt AI Studio.",
+      "parent": "admin",
+      "related": [
+        "admin"
+      ],
+      "source_files": [
+        "web/app/(admin)/admin/network/page.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Màn hình thao tác",
+          "text": "Thao tác dành cho quản trị viên bản cài đặt AI Studio.",
+          "image": "admin-network",
+          "caption": "Màn hình tổng quan liên quan. Làm theo đường dẫn bên dưới để mở đúng tính năng."
+        },
+        {
+          "title": "Thực hiện từng bước",
+          "steps": [
+            "Đăng nhập bằng tài khoản quản trị hệ thống và mở mục Quản trị tương ứng. Vai trò chủ workspace không tự cấp quyền này.",
+            "Mở Mạng và xem vùng mạng đang áp dụng cùng các đích cho phép.",
+            "Trang hiển thị vùng mạng và danh sách cho phép có hiệu lực. Thay đổi cấu hình triển khai hoặc tệp allowlist qua quy trình vận hành rồi tải lại.",
+            "Tải lại trang để kiểm tra trạng thái có hiệu lực và xem xét tác động tới ứng dụng đang dùng."
+          ]
+        },
+        {
+          "title": "Kết quả cần thấy",
+          "text": "Cấu hình mạng, nhãn dữ liệu và danh sách đích cùng ảnh hưởng việc cho phép lời gọi."
+        },
+        {
+          "title": "Khi chưa được như mong muốn",
+          "text": "Nếu bị từ chối truy cập, kiểm tra quyền quản trị hệ thống. Với mục chỉ đọc, thay đổi qua quy trình triển khai thay vì tìm cách sửa tại trang."
+        }
+      ]
+    },
+    {
+      "slug": "admin-flags",
+      "title": "Kiểm soát cờ tính năng",
+      "description": "Thao tác dành cho quản trị viên bản cài đặt AI Studio.",
+      "parent": "admin",
+      "related": [
+        "admin"
+      ],
+      "source_files": [
+        "web/app/(admin)/admin/flags/page.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Màn hình thao tác",
+          "text": "Thao tác dành cho quản trị viên bản cài đặt AI Studio.",
+          "image": "admin-flags",
+          "caption": "Màn hình tổng quan liên quan. Làm theo đường dẫn bên dưới để mở đúng tính năng."
+        },
+        {
+          "title": "Thực hiện từng bước",
+          "steps": [
+            "Đăng nhập bằng tài khoản quản trị hệ thống và mở mục Quản trị tương ứng. Vai trò chủ workspace không tự cấp quyền này.",
+            "Mở Cờ tính năng, đọc mô tả và trạng thái từng mục trước khi thay đổi.",
+            "Trang này chỉ đọc. Thay đổi cấu hình cờ tính năng qua quy trình triển khai, sau đó tải lại trang và thử luồng bị ảnh hưởng.",
+            "Tải lại trang để kiểm tra trạng thái có hiệu lực và xem xét tác động tới ứng dụng đang dùng."
+          ]
+        },
+        {
+          "title": "Kết quả cần thấy",
+          "text": "Bật cờ không cài đặt nhà cung cấp hoặc hạ tầng còn thiếu."
+        },
+        {
+          "title": "Khi chưa được như mong muốn",
+          "text": "Nếu bị từ chối truy cập, kiểm tra quyền quản trị hệ thống. Với mục chỉ đọc, thay đổi qua quy trình triển khai thay vì tìm cách sửa tại trang."
+        }
+      ]
+    },
+    {
+      "slug": "business-processes",
+      "parent": "app-config",
+      "related": [
+        "app-config"
+      ],
+      "title": "Thiết kế nghiệp vụ cho agent",
+      "description": "Tách các mục tiêu và chỉ dẫn thành nghiệp vụ được chọn theo yêu cầu người dùng.",
+      "sections": [
+        {
+          "title": "Tổng quan",
+          "text": "Tách các mục tiêu và chỉ dẫn thành nghiệp vụ được chọn theo yêu cầu người dùng.",
+          "image": "editor",
+          "caption": "Tổng quan trình chỉnh sửa hoặc triển khai; mở các thiết lập theo hướng dẫn bên dưới."
+        },
+        {
+          "title": "Các bước",
+          "steps": [
+            "Mở Cấu hình → Tính năng → Nghiệp vụ. Thêm tên và mô tả khi nào nên sử dụng nghiệp vụ.",
+            "Điền mục tiêu, chỉ dẫn, ràng buộc và câu hỏi mẫu. Viết mô tả phân biệt rõ các nghiệp vụ để giảm chọn nhầm.",
+            "Chọn Reason & Act, kế hoạch cố định hoặc chạy một công cụ. Chế độ chạy công cụ cần chọn đúng một công cụ; các chế độ khác có thể giới hạn tập công cụ.",
+            "Lưu và thử câu hỏi đại diện cho từng nghiệp vụ, cùng câu hỏi nằm giữa hai nhóm. Xem kết quả và chỉnh mô tả nếu định tuyến sai."
+          ]
+        },
+        {
+          "title": "Kết quả cần thấy",
+          "text": "Mỗi lượt chỉ mang một bộ chỉ dẫn nghiệp vụ được chọn. Khi không có nghiệp vụ, ứng dụng dùng system prompt."
+        },
+        {
+          "title": "Kiểm tra và giới hạn",
+          "text": "Không có công cụ để chọn: gắn công cụ vào ứng dụng trước. Từ hai nghiệp vụ trở lên, bước chọn nghiệp vụ có thể phát sinh thêm lời gọi mô hình."
+        }
+      ]
+    },
+    {
+      "slug": "web-sharing",
+      "parent": "publishing",
+      "related": [
+        "publishing"
+      ],
+      "title": "Web app, nhúng và trải nghiệm hội thoại",
+      "description": "Đưa phiên bản đã xuất bản đến người dùng qua liên kết hoặc widget.",
+      "sections": [
+        {
+          "title": "Tổng quan",
+          "text": "Đưa phiên bản đã xuất bản đến người dùng qua liên kết hoặc widget.",
+          "image": "publish",
+          "caption": "Tổng quan trình chỉnh sửa hoặc triển khai; mở các thiết lập theo hướng dẫn bên dưới."
+        },
+        {
+          "title": "Các bước",
+          "steps": [
+            "Xuất bản bản nháp đã kiểm thử rồi mở Triển khai → Chia sẻ web. Đọc lý do bị chặn nếu chưa thể bật.",
+            "Bật chia sẻ và dùng liên kết hoặc mã nhúng được giao diện cung cấp. Mở thử bằng cửa sổ riêng để kiểm tra như khách.",
+            "Trong Tính năng, cấu hình câu chào, câu hỏi gợi ý, câu hỏi tiếp theo, biểu đồ và quyền đính kèm tệp nếu phù hợp.",
+            "Thử hội thoại và tệp mẫu; kiểm tra mô hình có đọc được ảnh, hạn mức và phản hồi. Khi tắt chia sẻ, thử lại liên kết cũ."
+          ]
+        },
+        {
+          "title": "Kết quả cần thấy",
+          "text": "Người dùng mở đúng phiên bản công khai; chế độ chia sẻ tắt thì liên kết không còn phục vụ ứng dụng như trước."
+        },
+        {
+          "title": "Kiểm tra và giới hạn",
+          "text": "Tệp công khai dùng dung lượng workspace; câu hỏi tiếp theo có thể tốn thêm lượt gọi mô hình. Không nhầm quyền tải tệp của console với quyền của khách."
+        }
+      ]
+    },
+    {
+      "slug": "messaging-channels",
+      "parent": "publishing",
+      "related": [
+        "publishing"
+      ],
+      "title": "Kết nối các kênh nhắn tin",
+      "description": "Đưa ứng dụng đã xuất bản vào kênh liên lạc được hỗ trợ.",
+      "sections": [
+        {
+          "title": "Tổng quan",
+          "text": "Đưa ứng dụng đã xuất bản vào kênh liên lạc được hỗ trợ.",
+          "image": "publish",
+          "caption": "Tổng quan trình chỉnh sửa hoặc triển khai; mở các thiết lập theo hướng dẫn bên dưới."
+        },
+        {
+          "title": "Các bước",
+          "steps": [
+            "Mở ứng dụng → Triển khai và xem danh mục kênh. Chọn kênh đúng với nền tảng đội ngũ sử dụng.",
+            "Mở cấu hình kênh và nhập credential, mã định danh cùng URL callback theo các trường được yêu cầu.",
+            "Hoàn tất cấu hình ở nền tảng bên kia rồi bật kết nối. Đảm bảo ứng dụng có phiên bản đã xuất bản.",
+            "Gửi tin nhắn thử từ kênh thực, kiểm tra phản hồi và nhật ký. Thử lại sau khi đổi credential hoặc phiên bản xuất bản."
+          ]
+        },
+        {
+          "title": "Kết quả cần thấy",
+          "text": "Tin nhắn đi qua kênh và có phản hồi đúng ứng dụng, không chỉ hiện trạng thái đã lưu cấu hình."
+        },
+        {
+          "title": "Kiểm tra và giới hạn",
+          "text": "Nhận tin nhưng không trả lời: kiểm tra xuất bản, callback, credential và quyền của bot. Kênh khả dụng phụ thuộc cấu hình triển khai và nền tảng tương ứng."
+        }
+      ]
+    },
+    {
+      "slug": "workflow-nodes",
+      "parent": "workflows",
+      "related": [
+        "workflows",
+        "workflow-debug",
+        "trigger-events"
+      ],
+      "title": "Tra cứu các loại node workflow",
+      "description": "Chọn và cấu hình 28 loại node trong trình chỉnh sửa.",
+      "sections": [
+        {
+          "title": "Chọn node theo nhiệm vụ",
+          "text": "Trình chỉnh sửa hiện có 28 loại node. Thêm node, cấu hình trường dữ liệu, nối cổng và kiểm tra đầu vào/đầu ra trước khi xuất bản.",
+          "image": "workflow",
+          "caption": "Tổng quan trình chỉnh sửa workflow với luồng ba node minh họa."
+        },
+        {
+          "title": "Điểm bắt đầu, AI và dữ liệu",
+          "text": "Khai báo đầu vào ở node bắt đầu hoặc trigger. Chọn mô hình/chỉ dẫn cho LLM và agent, chọn kho và câu truy vấn cho truy xuất. Ánh xạ câu trả lời hoặc trường đầu ra tại điểm kết thúc.",
+          "steps": [
+            "Bắt đầu",
+            "LLM",
+            "Truy hồi tri thức",
+            "Trả lời",
+            "Kết thúc",
+            "Agent",
+            "Nguồn dữ liệu",
+            "Trigger webhook",
+            "Trigger theo lịch"
+          ]
+        },
+        {
+          "title": "Hiểu yêu cầu",
+          "text": "Với phân loại, đặt lớp và mô tả rõ rồi nối từng nhánh. Với trích xuất tham số, khai báo tên, kiểu và thông tin cần lấy; kiểm tra trường hợp không đủ dữ liệu.",
+          "steps": [
+            "Phân loại câu hỏi",
+            "Trích tham số"
+          ]
+        },
+        {
+          "title": "Điều kiện và vòng lặp",
+          "text": "Kiểm tra đủ nhánh điều kiện và trường hợp mặc định. Bảng quyết định trả giá trị; muốn rẽ nhánh theo giá trị đó, thêm If/Else. Với lặp, đặt đầu vào và điều kiện kết thúc để tránh chạy ngoài dự kiến.",
+          "steps": [
+            "Nếu / Ngược lại",
+            "Bảng quyết định",
+            "Lặp theo danh sách",
+            "Vòng lặp"
+          ]
+        },
+        {
+          "title": "Biến đổi dữ liệu",
+          "text": "Chọn đúng biến đầu vào, kiểu dữ liệu và trường đầu ra. Kiểm tra mẫu văn bản, gộp/gán biến, danh sách và trích xuất tài liệu bằng dữ liệu nhỏ. Node mã cần sandbox do vận hành cấu hình.",
+          "steps": [
+            "Ghép văn bản",
+            "Gộp biến",
+            "Gán biến",
+            "Xử lý danh sách",
+            "Đọc tài liệu",
+            "Code"
+          ]
+        },
+        {
+          "title": "Tích hợp và đầu ra",
+          "text": "Cấu hình đích HTTP, công cụ hoặc kênh được phép. Với ghi vào tri thức, chọn kho đích và kiểm tra trạng thái nhập liệu. Đối chiếu xác thực, schema và chính sách egress.",
+          "steps": [
+            "Gọi HTTP",
+            "Công cụ",
+            "Gửi qua kênh",
+            "Ghi vào kho"
+          ]
+        },
+        {
+          "title": "Chờ và phê duyệt",
+          "text": "Chọn thời điểm hoặc sự kiện tiếp tục và dữ liệu cần từ người duyệt. Khi lượt chạy dừng ở đây, kiểm tra trạng thái chờ và danh sách phê duyệt trước khi coi là lỗi.",
+          "steps": [
+            "Chờ theo thời gian",
+            "Chờ sự kiện",
+            "Cổng duyệt"
+          ]
+        }
+      ],
+      "source_files": [
+        "web/app/(console)/apps/[id]/workflow/node-types.ts"
+      ]
     }
-  ]
+  ],
+  "landing": {
+    "eyebrow": "Không gian xây dựng ứng dụng AI",
+    "headline": "Từ tri thức sẵn có,<br>đến ứng dụng AI.",
+    "intro": "Kết nối tài liệu, chọn mô hình và thiết kế cách AI làm việc. Xây trợ lý và workflow trong một không gian bạn có thể kiểm soát.",
+    "start": "Tạo ứng dụng đầu tiên",
+    "explore": "Khám phá giao diện",
+    "note": "Chatbot, agent, chatflow và workflow",
+    "demo_label": "Từ yêu cầu đến kết quả được duyệt",
+    "demo_badge": "Minh họa tương tác",
+    "run": "Chạy minh họa",
+    "running": "Đang chạy…",
+    "rerun": "Chạy lại minh họa",
+    "nodes": [
+      [
+        "Nhận yêu cầu",
+        "Đầu vào & biến"
+      ],
+      [
+        "Tìm ngữ cảnh",
+        "Tri thức & nguồn dữ liệu"
+      ],
+      [
+        "Soạn bản nháp",
+        "Mô hình & chỉ dẫn"
+      ],
+      [
+        "Kiểm tra quy tắc",
+        "Điều kiện & rẽ nhánh"
+      ],
+      [
+        "Người dùng duyệt",
+        "Điểm kiểm soát phê duyệt"
+      ],
+      [
+        "Gửi & ghi nhận",
+        "Đầu ra & lịch sử chạy"
+      ]
+    ],
+    "demo_idle": "Xem cách các thành phần kết nối với nhau.",
+    "demo_states": [
+      "Đọc yêu cầu mẫu.",
+      "Tra cứu tài liệu tham chiếu minh họa.",
+      "Chuẩn bị bản nháp mẫu.",
+      "Kiểm tra quy tắc của tình huống.",
+      "Mô phỏng điểm phê duyệt.",
+      "Chuẩn bị đầu ra minh họa."
+    ],
+    "demo_result": "Luồng minh họa hoàn tất. Bạn thiết kế từng bước trong AI Studio.",
+    "demo_note": "Mô phỏng luồng xử lý; không gọi mô hình hay gửi dữ liệu.",
+    "strip": [
+      "Kết nối tri thức",
+      "Thiết kế workflow",
+      "Kiểm tra trước khi xuất bản"
+    ],
+    "workspace_title": "Một nơi để xây.<br>Nhiều cách để ứng dụng.",
+    "workspace_intro": "Khám phá các màn hình trong AI Studio, từ nguồn tri thức đến lúc ứng dụng sẵn sàng phục vụ đội ngũ.",
+    "gallery_label": "Khám phá AI Studio",
+    "guide": "Đọc hướng dẫn",
+    "zoom": "Mở ảnh đầy đủ",
+    "image_note": "Giao diện AI Studio với dữ liệu minh họa.",
+    "panels": [
+      {
+        "label": "Ứng dụng",
+        "title": "Bắt đầu bằng một trợ lý hữu ích.",
+        "text": "Chọn loại ứng dụng, viết chỉ dẫn và thử câu trả lời ngay trong khung xem trước. Điều chỉnh bản nháp trước khi xuất bản.",
+        "image": "editor",
+        "slug": "quickstart",
+        "detail": "Chatbot / Agent / Chatflow / Workflow"
+      },
+      {
+        "label": "Tri thức",
+        "title": "Đưa tài liệu vào đúng ngữ cảnh.",
+        "text": "Tạo kho tri thức, thêm tài liệu và kết nối với ứng dụng để AI có nguồn thông tin phù hợp cho công việc.",
+        "image": "knowledge",
+        "slug": "knowledge",
+        "detail": "Tài liệu / Kho tri thức / Truy xuất"
+      },
+      {
+        "label": "Workflow",
+        "title": "Thiết kế từng bước AI thực hiện.",
+        "text": "Kết nối đầu vào, mô hình và đầu ra trên giao diện trực quan. Mở rộng luồng xử lý theo nhu cầu cụ thể của đội ngũ.",
+        "image": "workflow",
+        "slug": "workflows",
+        "detail": "Đầu vào / Mô hình / Đầu ra"
+      },
+      {
+        "label": "Công cụ",
+        "title": "Kết nối AI với công cụ làm việc.",
+        "text": "Khám phá các công cụ và kết nối MCP được cấu hình trong workspace. Chọn thao tác phù hợp với nhiệm vụ của ứng dụng.",
+        "image": "tools",
+        "slug": "tools",
+        "detail": "Công cụ / MCP / Thao tác"
+      }
+    ],
+    "control_title": "AI làm việc.<br>Bạn quyết định cách làm.",
+    "control_intro": "Giữ những quyết định quan trọng trong tay đội ngũ, từ cấu hình ứng dụng đến quyền truy cập và xuất bản.",
+    "controls": [
+      [
+        "Mô hình phù hợp với tác vụ",
+        "Chọn mô hình được cấu hình trong workspace cho từng nhu cầu.",
+        "models"
+      ],
+      [
+        "Quyền truy cập rõ ràng",
+        "Quản lý thành viên và vai trò trong không gian làm việc.",
+        "workspace"
+      ],
+      [
+        "Kiểm tra trước khi đưa vào dùng",
+        "Thử bản nháp, xem lại kết quả và xuất bản khi sẵn sàng.",
+        "publishing"
+      ]
+    ],
+    "journey_title": "Bắt đầu nhỏ. Xây từng bước.",
+    "steps": [
+      [
+        "Chuẩn bị tri thức",
+        "Chọn tài liệu và xác định việc bạn muốn AI hỗ trợ.",
+        "knowledge"
+      ],
+      [
+        "Xây và kiểm tra",
+        "Tạo ứng dụng, viết chỉ dẫn và thử với câu hỏi thực tế.",
+        "quickstart"
+      ],
+      [
+        "Xuất bản và theo dõi",
+        "Đưa phiên bản đã kiểm tra vào sử dụng, xem lại hoạt động.",
+        "publishing"
+      ]
+    ],
+    "closing_title": "Ứng dụng AI đầu tiên<br>bắt đầu từ công việc của bạn.",
+    "closing_text": "Hướng dẫn từng bước, kèm ảnh giao diện để bạn có thể làm theo.",
+    "closing_link": "Xem toàn bộ tài liệu",
+    "scenarios": [
+      {
+        "title": "Trợ lý nội bộ",
+        "input": "Nhân viên mới cần thực hiện những bước nào trong ngày đầu tiên?",
+        "result": "Bản nháp sẵn sàng: danh sách việc cần làm, tài liệu tham chiếu và bước duyệt trước khi chia sẻ."
+      },
+      {
+        "title": "Rà soát tài liệu",
+        "input": "Đọc đề xuất của nhà cung cấp và chỉ ra thông tin cần xác nhận.",
+        "result": "Kết quả rà soát: tóm tắt, thông tin còn thiếu và câu hỏi gửi người kiểm tra."
+      },
+      {
+        "title": "Phân loại hỗ trợ",
+        "input": "Phân loại yêu cầu hỗ trợ và chuẩn bị câu trả lời cho đội ngũ.",
+        "result": "Kết quả phân loại: nhóm yêu cầu đề xuất, bản nháp trả lời và chuyển người phụ trách duyệt."
+      }
+    ],
+    "scenario_label": "Chọn tình huống",
+    "sample_label": "Yêu cầu mẫu",
+    "output_label": "Kết quả minh họa",
+    "booking": {
+      "label": "Đặt lịch demo",
+      "title": "Khám phá AI Studio qua bài toán của bạn.",
+      "intro": "Cùng Duy xem một luồng xử lý phù hợp, trao đổi về dữ liệu và tích hợp, rồi xác định điểm bắt đầu thực tế.",
+      "topics": [
+        "Bài toán và quy trình đang sử dụng",
+        "Demo các tính năng phù hợp",
+        "Nhu cầu dữ liệu, phân quyền và tích hợp"
+      ],
+      "contact": "Nhắn Duy để hẹn demo",
+      "note": "Gửi bài toán, quy mô đội ngũ và vài khung giờ thuận tiện. Lịch hẹn sẽ được xác nhận qua trao đổi.",
+      "url": "https://www.facebook.com/duydev/"
+    }
+  },
+  "feature_catalog": {
+    "title": "Khám phá từng phần của AI Studio",
+    "intro": "Từ thiết kế ứng dụng đến quản trị hệ thống. Mở từng chủ đề để xem cách sử dụng; thao tác khả dụng tùy quyền và cấu hình triển khai."
+  }
 }

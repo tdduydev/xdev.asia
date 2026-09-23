@@ -1,0 +1,81 @@
+{
+  "title": "The xDev brand",
+  "description": "The story, logo family, and usage principles behind the xDev identity.",
+  "kicker": "The xDev identity",
+  "headline": "One X.<br>More things to build.",
+  "intro": "xDev is where Duy builds products, explores ideas, and shares the practice of making software. One shared signature connects these activities: the blue X.",
+  "explore": "Explore the logo family",
+  "download": "Download SVG logos",
+  "story_title": "Keep the signature.<br>Extend the expression.",
+  "story": "The blue X is the consistent point of recognition. Lighter lettering, gently rounded joins, and open spacing balance the mark. Each product has its own name within the same visual structure.",
+  "family_title": "One family of identities.",
+  "family_text": "DEV is the master identity. AI Studio uses a two-line AI / STUDIO name aligned within the height of the X.",
+  "master": "Master identity",
+  "product": "AI Studio product",
+  "light": "Light background",
+  "dark": "Dark background",
+  "notes_title": "Room for the next idea.",
+  "notes_text": "NOTES explores how the identity could extend to writing and the blog. It shares the X and the same lettering rules. This is an extension study, not a newly launched product.",
+  "notes_label": "Extension study / NOTES",
+  "type_title": "Lighter lettering.<br>A clear structure.",
+  "type_text": "DEV and AI use uppercase letters with an even stroke and gently rounded joins. The smaller STUDIO line sits beneath AI, within the height of the X. In written content, the brand name remains xDev.",
+  "palette_title": "Blue is the signature.",
+  "palette_text": "The gradient stays inside the X. Neutral lettering and backgrounds keep the logo clear and legible.",
+  "colors": [
+    [
+      "X / light blue",
+      "#7BD4FF"
+    ],
+    [
+      "X / mid blue",
+      "#1E90FF"
+    ],
+    [
+      "X / deep blue",
+      "#004CFF"
+    ],
+    [
+      "Type / light background",
+      "#344568"
+    ],
+    [
+      "Type / dark background",
+      "#E8ECF8"
+    ],
+    [
+      "Dark background",
+      "#142745"
+    ]
+  ],
+  "rules_title": "Consistency in every use.",
+  "rules": [
+    [
+      "Preserve the X",
+      "Use the original symbol, proportions, and gradient."
+    ],
+    [
+      "Choose the right background",
+      "Use the light version on light backgrounds and the dark version on dark backgrounds. Avoid visually busy imagery behind the mark."
+    ],
+    [
+      "Give it breathing room",
+      "Leave clear space of at least one quarter of the X height around the logo."
+    ],
+    [
+      "Preserve proportions",
+      "Do not stretch, rotate, outline, add shadows, or independently recolor the lettering."
+    ],
+    [
+      "Check the actual size",
+      "DEV and STUDIO must remain readable on the intended device. Use the standalone X when space is too small."
+    ],
+    [
+      "Extend the system",
+      "Add product names using the same letter construction and alignment without altering the X."
+    ]
+  ],
+  "files_title": "Logos ready to use.",
+  "files_text": "Light and dark SVG versions of the selected identity.",
+  "file_label": "Download SVG",
+  "ending": "Built by Duy. Keep learning. Keep making useful things."
+}

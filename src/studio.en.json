@@ -1,14 +1,14 @@
 {
   "headline": "Your knowledge.<br>Your workflows.<br><span>Your AI.</span>",
   "description": "Build AI applications around your organization’s knowledge. Connect models and tools, design workflows, and decide how your applications are published.",
-  "start": "Start building",
+  "start": "Read the illustrated guide",
   "docs": "Documentation",
   "next_label": "FROM AN IDEA TO YOUR FIRST APP",
   "next_title": "A clear path to getting started.",
   "next_text": "Set up your workspace, create an application, test its responses, and publish when you are ready.",
-  "app_text": "Already have access to a workspace? Open the application to continue your work.",
-  "app_link": "Open AI Studio",
-  "docs_description": "Practical guides for creating, testing, and publishing applications in XDev AI Studio.",
+  "app_text": "Stay on xdev.asia: read the full manual, inspect screenshots and follow each task at your own pace.",
+  "app_link": "Browse all features",
+  "docs_description": "An illustrated user manual: step-by-step instructions, real interface screenshots with sample data, and checks for each feature.",
   "features": [
     [
       "Build visually",
@@ -27,126 +27,2256 @@
     {
       "slug": "quickstart",
       "title": "Create your first application",
-      "description": "Start with a simple chatbot, then add your organization’s knowledge.",
+      "description": "Build a chatbot, agent, chatflow or workflow.",
       "sections": [
         {
           "title": "Before you begin",
-          "text": "Sign in to ai-studio.xdev.asia with an account that can create applications in your workspace. A workspace administrator must configure an available model provider. If you cannot see a create or publish action, ask your administrator to check your permissions."
+          "text": "This guide stays on xdev.asia. To perform the task, use an account in your organization’s AI Studio workspace with access to this feature. Screenshots show a demonstration workspace; names and data are examples.",
+          "image": "signin",
+          "caption": "The sign-in screen. Use the account and sign-in method provided by your organization; never copy sample credentials from documentation."
         },
         {
-          "title": "Create and configure",
-          "steps": [
-            "Open the applications page and choose the action to create an application.",
-            "Choose Chatbot under the basic application types for this first example. Give it a recognizable name and create it.",
-            "In the application editor, select an available model and enter instructions. For example: “Help colleagues understand the supplied procedure. If information is missing, say so.”",
-            "Save your draft before testing or publishing."
-          ]
+          "title": "Find the screen",
+          "text": "Build a chatbot, agent, chatflow or workflow.",
+          "image": "apps",
+          "caption": "Create your first application: locate the page title, navigation and available actions before following the steps. Click the image to inspect the full-size screenshot."
         },
         {
-          "title": "Try a focused example",
-          "steps": [
-            "Open the preview and ask a question related to your instructions.",
-            "Check whether the answer follows the instructions. Try an unclear question and a question the application cannot answer.",
-            "Refine the instructions and save the draft again. Add a knowledge base if the application needs your documents."
-          ]
+          "title": "Step 1",
+          "text": "Open Studio and create an application. Choose Chatbot for a conversational assistant, Agent for tool-assisted tasks, or Chatflow/Workflow for a visual flow.",
+          "image": "create-dialog",
+          "caption": "Choose the application type, enter a recognizable name and confirm creation. This dialog is opened with Create app in Studio."
         },
         {
-          "title": "What comes next",
-          "text": "A saved draft is not a published application. Follow the publishing guide when your tests are satisfactory. For a multi-step process, create a Workflow application instead."
+          "title": "Step 2",
+          "text": "Name the app, choose a model and write instructions describing its role, allowed sources and expected response format. Configure its sensitivity level for the data it will handle.",
+          "image": "editor",
+          "caption": "The application editor: configure the model and instructions, then use the preview to test the draft."
+        },
+        {
+          "title": "Step 3",
+          "text": "Test representative questions in the preview, including missing information and invalid inputs. Save your changes; publish only after checking the result."
+        },
+        {
+          "title": "Check your result",
+          "text": "The app appears in Studio and its preview opens. Your saved instructions remain after you reopen the app. A draft is not yet available to end users."
+        }
+      ]
+    },
+    {
+      "slug": "models",
+      "title": "Connect AI models",
+      "description": "Choose the models your workspace can use.",
+      "sections": [
+        {
+          "title": "Before you begin",
+          "text": "This guide stays on xdev.asia. To perform the task, use an account in your organization’s AI Studio workspace with access to this feature. Screenshots show a demonstration workspace; names and data are examples."
+        },
+        {
+          "title": "Find the screen",
+          "text": "Choose the models your workspace can use.",
+          "image": "models",
+          "caption": "Connect AI models: locate the page title, navigation and available actions before following the steps. Click the image to inspect the full-size screenshot."
+        },
+        {
+          "title": "Step 1",
+          "text": "Open Integrations → Model provider and select a provider from the catalog. Enter its endpoint and credentials as required."
+        },
+        {
+          "title": "Step 2",
+          "text": "Add or enable the models you need. Use a chat model for conversations and an embedding model for knowledge indexing."
+        },
+        {
+          "title": "Step 3",
+          "text": "Select the configured model in your app and send a test prompt. If it fails, check credentials, endpoint connectivity and workspace permissions."
+        },
+        {
+          "title": "Check your result",
+          "text": "The provider is listed and the enabled model can be selected in an app. A successful connection does not replace a test request with your intended model."
         }
       ]
     },
     {
       "slug": "knowledge",
-      "title": "Connect your knowledge",
-      "description": "Create a knowledge base and make documents available to your application.",
+      "title": "Build a knowledge base",
+      "description": "Ground answers in your own documents.",
       "sections": [
         {
-          "title": "Prepare your documents",
-          "text": "Use a small set of relevant, current documents for your first test. Confirm that your workspace is allowed to use them and choose the appropriate sensitivity level. An administrator may need to configure an embedding model."
+          "title": "Before you begin",
+          "text": "This guide stays on xdev.asia. To perform the task, use an account in your organization’s AI Studio workspace with access to this feature. Screenshots show a demonstration workspace; names and data are examples."
         },
         {
-          "title": "Create a knowledge base",
-          "steps": [
-            "Open Knowledge and start creating a knowledge base.",
-            "Choose files supported by the upload dialog. Follow the wizard to configure document processing and the embedding model.",
-            "Submit the documents and wait for processing to finish. Upload completion alone does not mean the documents are searchable.",
-            "Inspect document status. If processing fails, read the reported error and correct the file or configuration before retrying."
-          ]
+          "title": "Find the screen",
+          "text": "Ground answers in your own documents.",
+          "image": "knowledge",
+          "caption": "Build a knowledge base: locate the page title, navigation and available actions before following the steps. Click the image to inspect the full-size screenshot."
         },
         {
-          "title": "Use it in an application",
-          "steps": [
-            "Open your application and select the knowledge base in its knowledge configuration. For a workflow, configure a knowledge-retrieval node.",
-            "Save the draft and test a question whose answer is present in a document.",
-            "Compare the response with the source. Also test a question that is not covered by the documents."
-          ]
+          "title": "Step 1",
+          "text": "Open Knowledge and create a knowledge base. Upload documents or connect a supported source, then select the parsing and indexing settings.",
+          "image": "knowledgeCreate",
+          "caption": "Start the document wizard: select a file and sensitivity level before continuing. This screenshot is the initial state before uploading."
         },
         {
-          "title": "When answers are missing",
-          "text": "Check that document processing has completed, the application uses the intended knowledge base, and the chosen model is available. Improve the source content or retrieval configuration before adding more documents."
+          "title": "Step 2",
+          "text": "Wait for document processing to finish. Open a document to inspect its segments and correct or retry failed processing where available."
+        },
+        {
+          "title": "Step 3",
+          "text": "Use the retrieval test with a real question. Tune retrieval settings, then attach the knowledge base to your app and check whether its answers cite the right material."
+        },
+        {
+          "title": "Check your result",
+          "text": "Documents finish processing and a retrieval test returns relevant segments. If no segments match, review the source text and retrieval settings before attaching the knowledge base to an app."
+        }
+      ]
+    },
+    {
+      "slug": "sources",
+      "title": "Connect data sources",
+      "description": "Reuse source connections for document ingestion.",
+      "sections": [
+        {
+          "title": "Before you begin",
+          "text": "This guide stays on xdev.asia. To perform the task, use an account in your organization’s AI Studio workspace with access to this feature. Screenshots show a demonstration workspace; names and data are examples."
+        },
+        {
+          "title": "Find the screen",
+          "text": "Reuse source connections for document ingestion.",
+          "image": "sources",
+          "caption": "Connect data sources: locate the page title, navigation and available actions before following the steps. Click the image to inspect the full-size screenshot."
+        },
+        {
+          "title": "Step 1",
+          "text": "Open Integrations → Data sources and add a supported connection. Enter its configuration and credential references."
+        },
+        {
+          "title": "Step 2",
+          "text": "Open Knowledge → Connect, select the source and choose the content to import into a knowledge base."
+        },
+        {
+          "title": "Step 3",
+          "text": "Inspect document processing and source sync status. Check source access and credentials before retrying an import that failed."
+        },
+        {
+          "title": "Check your result",
+          "text": "The connection appears under connected accounts. Verify its access to the intended source before importing documents. An empty source can indicate the wrong scope or insufficient permissions."
+        }
+      ]
+    },
+    {
+      "slug": "tools",
+      "title": "Give agents tools",
+      "description": "Connect built-in tools, HTTP APIs and MCP servers.",
+      "sections": [
+        {
+          "title": "Before you begin",
+          "text": "This guide stays on xdev.asia. To perform the task, use an account in your organization’s AI Studio workspace with access to this feature. Screenshots show a demonstration workspace; names and data are examples."
+        },
+        {
+          "title": "Find the screen",
+          "text": "Connect built-in tools, HTTP APIs and MCP servers.",
+          "image": "tools",
+          "caption": "Give agents tools: locate the page title, navigation and available actions before following the steps. Click the image to inspect the full-size screenshot."
+        },
+        {
+          "title": "Step 1",
+          "text": "Open Integrations → Tools. Choose a built-in provider, add an API tool or configure an MCP server with its endpoint and authentication."
+        },
+        {
+          "title": "Step 2",
+          "text": "Review the available operations and enable only those the app needs. Add the selected tools to your agent configuration."
+        },
+        {
+          "title": "Step 3",
+          "text": "Run a task that needs the tool and inspect the tool call and result. For blocked external calls, ask an administrator to review the egress policy."
+        },
+        {
+          "title": "Check your result",
+          "text": "The app can see the selected operations and a test run shows the intended tool call. If a tool is absent, check both the workspace connection and the app’s tool selection."
+        },
+        {
+          "title": "Choose the right tool type",
+          "text": "Built-in tools expose system-provided operations; API tools call the HTTP interfaces you define; MCP discovers operations from a connected server; workflow tools reuse workflows. Select application-level operations after configuring workspace connections."
         }
       ]
     },
     {
       "slug": "workflows",
-      "title": "Build a workflow",
-      "description": "Connect steps into a repeatable process and inspect the result of each run.",
+      "title": "Design visual workflows",
+      "description": "Connect processing steps and inspect each run.",
       "sections": [
         {
-          "title": "Plan a small first flow",
-          "text": "Start with a text input, a model step, and an output. For example, turn a paragraph into a short summary. Add tools and knowledge retrieval after this simple flow works."
+          "title": "Before you begin",
+          "text": "This guide stays on xdev.asia. To perform the task, use an account in your organization’s AI Studio workspace with access to this feature. Screenshots show a demonstration workspace; names and data are examples."
         },
         {
-          "title": "Build and test",
-          "steps": [
-            "Create a Workflow application and open its workflow editor.",
-            "Define the input on the start node and add an LLM node. Select the model on that node.",
-            "Write the model instructions and insert the input using the editor’s variable selector.",
-            "Connect the steps to an end node and map the model result to the output.",
-            "Save the workflow and address any validation errors. Run it with a short sample and inspect the output and any failed steps."
-          ]
+          "title": "Find the screen",
+          "text": "Connect processing steps and inspect each run.",
+          "image": "workflow",
+          "caption": "Design visual workflows: locate the page title, navigation and available actions before following the steps. Click the image to inspect the full-size screenshot."
         },
         {
-          "title": "Extend carefully",
-          "text": "Add a knowledge-retrieval node when the model needs source documents. Add tools only when the process needs an external action. Check tool permissions and inputs before a test that changes external data."
+          "title": "Step 1",
+          "text": "Open a Workflow or Chatflow app and enter its workflow editor. Define input fields on the start node."
         },
         {
-          "title": "If publication is blocked",
-          "text": "Resolve graph validation errors and missing model configuration. A Workflow uses models on its LLM nodes; it does not require the same application-level model setting as a basic chatbot."
+          "title": "Step 2",
+          "text": "Add the nodes needed for your task, such as knowledge retrieval, LLM, conditions, tools or code. Connect them and map outputs from earlier steps into later inputs."
+        },
+        {
+          "title": "Step 3",
+          "text": "Configure the final output, run with sample inputs and inspect each node result. Fix validation errors before publishing a version."
+        },
+        {
+          "title": "Check your result",
+          "text": "A test run reaches the final node and returns the expected output. Inspect failed nodes and unmapped inputs before publishing. The screenshot shows a simple Start → LLM → End example."
+        },
+        {
+          "title": "Node groups and prerequisites",
+          "text": "The canvas includes classification, parameter extraction, conditions, decision tables, loops, iteration, templates, variable operations, document extraction, HTTP, tools, agents, channel sending, waits, event waits, human input and knowledge indexing. Code nodes require a configured sandbox. External calls require suitable connections and outbound policy. Use run history, variable inspection and version comparison to investigate changes."
+        }
+      ]
+    },
+    {
+      "slug": "approvals",
+      "title": "Review approval requests",
+      "description": "Keep a human decision in approval-gated flows.",
+      "sections": [
+        {
+          "title": "Before you begin",
+          "text": "This guide stays on xdev.asia. To perform the task, use an account in your organization’s AI Studio workspace with access to this feature. Screenshots show a demonstration workspace; names and data are examples."
+        },
+        {
+          "title": "Find the screen",
+          "text": "Keep a human decision in approval-gated flows.",
+          "image": "approvals",
+          "caption": "Review approval requests: locate the page title, navigation and available actions before following the steps. Click the image to inspect the full-size screenshot."
+        },
+        {
+          "title": "Step 1",
+          "text": "Open the approval inbox to find requests you are allowed to review. Select a pending request."
+        },
+        {
+          "title": "Step 2",
+          "text": "Read the submitted data and run context before choosing the available approval or rejection action. Provide a reason when requested."
+        },
+        {
+          "title": "Step 3",
+          "text": "Return to the run details to confirm the resulting status. If the request is missing, check your reviewer assignment and permissions."
+        },
+        {
+          "title": "Check your result",
+          "text": "The request no longer appears as pending after a successful decision. Check the run status to see how the workflow continued. An empty inbox means there are no requests visible to your account."
         }
       ]
     },
     {
       "slug": "publishing",
-      "title": "Publish and maintain",
-      "description": "Understand the difference between saving a draft and publishing an application.",
+      "title": "Publish and share",
+      "description": "Deliver a tested version through the right channel.",
       "sections": [
         {
-          "title": "Review your draft",
-          "steps": [
-            "Save pending changes and confirm that you are reviewing the intended draft.",
-            "Test representative inputs, missing information, and failure cases. Verify knowledge sources and tool behavior.",
-            "Check the audience and access configuration before sharing the application."
-          ]
+          "title": "Before you begin",
+          "text": "This guide stays on xdev.asia. To perform the task, use an account in your organization’s AI Studio workspace with access to this feature. Screenshots show a demonstration workspace; names and data are examples."
         },
         {
-          "title": "Publish a version",
-          "steps": [
-            "Use Publish with an account that has permission to publish applications.",
-            "If publication is blocked, check unsaved changes, required model settings, and workflow validation errors.",
-            "After publication succeeds, inspect the published version state. Use the application’s available sharing or API options as appropriate for your audience."
-          ]
+          "title": "Find the screen",
+          "text": "Deliver a tested version through the right channel.",
+          "image": "publish",
+          "caption": "Publish and share: locate the page title, navigation and available actions before following the steps. Click the image to inspect the full-size screenshot."
         },
         {
-          "title": "Updating an application",
-          "text": "Changes to a draft do not automatically replace the published version. Save, test, and publish again when the update is ready. A duplicated application also needs its own publication."
+          "title": "Step 1",
+          "text": "Open the app, test its draft and publish the version you want users to run. Draft edits need a new publication to reach users."
         },
         {
-          "title": "Investigate a problem",
-          "text": "Review the application’s logs and monitoring views for failed requests. Check model availability, document processing, permissions, and tool errors. Do not put provider credentials or private document contents into public support messages."
+          "title": "Step 2",
+          "text": "Open Deploy to configure a public web link, embedded widget or supported messaging channel. Supply the channel credentials and follow its setup instructions."
+        },
+        {
+          "title": "Step 3",
+          "text": "Test the actual link or channel as an end user. Review access and sharing restrictions if the link is unavailable or the channel cannot reply."
+        },
+        {
+          "title": "Check your result",
+          "text": "The published version is shown and the configured channel works in an end-user test. If web sharing is disabled, a published version alone does not create an accessible public link."
+        },
+        {
+          "title": "Versions and delivery channels",
+          "text": "Instructions and configuration being edited belong to the draft. Check the published version before sharing a web app or calling API/MCP. When disabling sharing, recheck the public link; do not assume every API key has also been revoked."
         }
       ]
+    },
+    {
+      "slug": "api",
+      "title": "Use the application API and MCP",
+      "description": "Integrate published apps into another system.",
+      "sections": [
+        {
+          "title": "Before you begin",
+          "text": "This guide stays on xdev.asia. To perform the task, use an account in your organization’s AI Studio workspace with access to this feature. Screenshots show a demonstration workspace; names and data are examples."
+        },
+        {
+          "title": "Find the screen",
+          "text": "Integrate published apps into another system.",
+          "image": "api",
+          "caption": "Use the application API and MCP: locate the page title, navigation and available actions before following the steps. Click the image to inspect the full-size screenshot."
+        },
+        {
+          "title": "Step 1",
+          "text": "Open an app → API access and read its generated endpoint, input schema and examples. Publish the app before calling its published interface."
+        },
+        {
+          "title": "Step 2",
+          "text": "Create an API key in Workspace settings with the required scopes. Store the secret securely and use the authentication format shown in the API documentation."
+        },
+        {
+          "title": "Step 3",
+          "text": "Send a sample request from your server or configure your MCP client with the documented endpoint. Inspect the response and app logs; revoke keys that are no longer needed."
+        },
+        {
+          "title": "Check your result",
+          "text": "The response matches the application’s documented output schema. For authentication errors, verify the key and its scopes. For unavailable apps, verify publication and access restrictions."
+        }
+      ]
+    },
+    {
+      "slug": "triggers",
+      "title": "Automate with triggers",
+      "description": "Start workflows from events or schedules.",
+      "sections": [
+        {
+          "title": "Before you begin",
+          "text": "This guide stays on xdev.asia. To perform the task, use an account in your organization’s AI Studio workspace with access to this feature. Screenshots show a demonstration workspace; names and data are examples."
+        },
+        {
+          "title": "Find the screen",
+          "text": "Start workflows from events or schedules.",
+          "image": "triggers",
+          "caption": "Automate with triggers: locate the page title, navigation and available actions before following the steps. Click the image to inspect the full-size screenshot."
+        },
+        {
+          "title": "Step 1",
+          "text": "Open Integrations → Triggers to review the available types and existing workspace triggers. To create one, open the target Workflow app, save its draft and select the root/start node. Configure the trigger in that node’s Triggers panel; triggers are not created from the workspace overview."
+        },
+        {
+          "title": "Step 2",
+          "text": "For scheduled execution, check the schedule and time zone. For webhooks or events, use the endpoint and authentication shown by the configuration."
+        },
+        {
+          "title": "Step 3",
+          "text": "Send a test event and inspect the trigger event log under Operations. Confirm that the intended workflow ran with the expected input before enabling regular use."
+        },
+        {
+          "title": "Check your result",
+          "text": "The test event appears in the event log and starts the intended workflow. Check time zone, payload mapping and event configuration if no run is created."
+        }
+      ]
+    },
+    {
+      "slug": "memory",
+      "title": "Manage long-term memory",
+      "description": "Review and govern information retained across interactions.",
+      "sections": [
+        {
+          "title": "Before you begin",
+          "text": "This guide stays on xdev.asia. To perform the task, use an account in your organization’s AI Studio workspace with access to this feature. Screenshots show a demonstration workspace; names and data are examples."
+        },
+        {
+          "title": "Find the screen",
+          "text": "Review and govern information retained across interactions.",
+          "image": "memory",
+          "caption": "Manage long-term memory: locate the page title, navigation and available actions before following the steps. Click the image to inspect the full-size screenshot."
+        },
+        {
+          "title": "Step 1",
+          "text": "An authorized memory administrator opens Memories to review the dashboard and extraction queue. Check items and their source context before acting."
+        },
+        {
+          "title": "Step 2",
+          "text": "Use the memory store to inspect retained information and the available correction or removal controls. Review settings and audit history for governance."
+        },
+        {
+          "title": "Step 3",
+          "text": "For integrations, use the same user identity consistently across conversations and reviews. Missing or inconsistent identities can prevent the intended memories from being recalled."
+        },
+        {
+          "title": "Check your result",
+          "text": "Reviewed items appear in the appropriate queue or store state. Test recall using the same user identity; approving a memory does not mean every future prompt will include it."
+        }
+      ]
+    },
+    {
+      "slug": "monitoring",
+      "title": "Monitor usage and quality",
+      "description": "Understand runs, costs, feedback and audit events.",
+      "sections": [
+        {
+          "title": "Before you begin",
+          "text": "This guide stays on xdev.asia. To perform the task, use an account in your organization’s AI Studio workspace with access to this feature. Screenshots show a demonstration workspace; names and data are examples."
+        },
+        {
+          "title": "Find the screen",
+          "text": "Understand runs, costs, feedback and audit events.",
+          "image": "monitoring",
+          "caption": "Monitor usage and quality: locate the page title, navigation and available actions before following the steps. Click the image to inspect the full-size screenshot."
+        },
+        {
+          "title": "Step 1",
+          "text": "Open Operations and select the relevant time range and filters. Review activity, token usage, cost and quality indicators."
+        },
+        {
+          "title": "Step 2",
+          "text": "Open a specific app to inspect its logs and monitoring. Compare failed runs with their inputs and provider or tool errors."
+        },
+        {
+          "title": "Step 3",
+          "text": "Use annotations and user feedback to identify answers to improve. Review audit events when your account has audit access."
+        },
+        {
+          "title": "Check your result",
+          "text": "The selected reporting period is visible and the displayed metrics correspond to it. Empty charts can mean no recorded activity; they do not by themselves prove a service outage."
+        }
+      ]
+    },
+    {
+      "slug": "workspace",
+      "title": "Manage your workspace",
+      "description": "Organize members, roles, API keys and quotas.",
+      "sections": [
+        {
+          "title": "Before you begin",
+          "text": "This guide stays on xdev.asia. To perform the task, use an account in your organization’s AI Studio workspace with access to this feature. Screenshots show a demonstration workspace; names and data are examples."
+        },
+        {
+          "title": "Find the screen",
+          "text": "Organize members, roles, API keys and quotas.",
+          "image": "workspace",
+          "caption": "Manage your workspace: locate the page title, navigation and available actions before following the steps. Click the image to inspect the full-size screenshot."
+        },
+        {
+          "title": "Step 1",
+          "text": "Use the workspace menu to select the right workspace. Open Workspace settings to manage members and invitations."
+        },
+        {
+          "title": "Step 2",
+          "text": "Assign roles appropriate to each member. Use Roles to review permissions and custom roles when your account is allowed to manage them."
+        },
+        {
+          "title": "Step 3",
+          "text": "Manage API keys and quotas from the workspace settings. Check that a change applies to the intended workspace before saving it."
+        },
+        {
+          "title": "Check your result",
+          "text": "The intended member, role or key appears in the correct workspace. Have the member verify access to the required screen after their role changes."
+        }
+      ]
+    },
+    {
+      "slug": "security",
+      "title": "Configure data protection",
+      "description": "Align AI usage with your organization’s data policies.",
+      "sections": [
+        {
+          "title": "Before you begin",
+          "text": "This guide stays on xdev.asia. To perform the task, use an account in your organization’s AI Studio workspace with access to this feature. Screenshots show a demonstration workspace; names and data are examples."
+        },
+        {
+          "title": "Find the screen",
+          "text": "Align AI usage with your organization’s data policies.",
+          "image": "security",
+          "caption": "Configure data protection: locate the page title, navigation and available actions before following the steps. Click the image to inspect the full-size screenshot."
+        },
+        {
+          "title": "Step 1",
+          "text": "Open Settings → Data protection to review sensitivity levels and the available PII, OCR and data-handling policies."
+        },
+        {
+          "title": "Step 2",
+          "text": "Review external destinations under Integrations → Tools → Egress. Allow only the destinations required by your approved integrations."
+        },
+        {
+          "title": "Step 3",
+          "text": "Test with non-sensitive sample data and inspect the resulting behavior. If an action is blocked, review the app sensitivity, provider destination and effective policy with an administrator."
+        },
+        {
+          "title": "Check your result",
+          "text": "Saved policies are still shown after reload. Use non-sensitive sample inputs to check the effective behavior before applying changes to real data."
+        },
+        {
+          "title": "PII, OCR and data labels",
+          "text": "Distinguish personal-data detection and masking from extracting document text with OCR. Choose error handling, sensitivity levels and service configuration for the task. Test both allowed and blocked cases with sample data."
+        }
+      ]
+    },
+    {
+      "slug": "settings",
+      "title": "Set up branding, storage and identity",
+      "description": "Configure workspace services from dedicated settings pages.",
+      "sections": [
+        {
+          "title": "Before you begin",
+          "text": "This guide stays on xdev.asia. To perform the task, use an account in your organization’s AI Studio workspace with access to this feature. Screenshots show a demonstration workspace; names and data are examples."
+        },
+        {
+          "title": "Find the screen",
+          "text": "Configure workspace services from dedicated settings pages.",
+          "image": "settings",
+          "caption": "Set up branding, storage and identity: locate the page title, navigation and available actions before following the steps. Click the image to inspect the full-size screenshot."
+        },
+        {
+          "title": "Step 1",
+          "text": "Use Branding to set the workspace identity. Open Storage to configure the available S3 storage settings and verify access before using it for documents."
+        },
+        {
+          "title": "Step 2",
+          "text": "Use Identity for your organization’s supported sign-in provider and group mappings. Keep a working administrator sign-in while validating the configuration."
+        },
+        {
+          "title": "Step 3",
+          "text": "Use External knowledge to configure a supported external knowledge service, then verify retrieval from an app that uses it. These settings require the corresponding permissions."
+        },
+        {
+          "title": "Check your result",
+          "text": "The workspace name and logo appear in the navigation after saving. Validate storage, identity and external knowledge separately on their dedicated settings pages."
+        }
+      ]
+    },
+    {
+      "slug": "training",
+      "title": "Fine-tune a model",
+      "description": "Submit and track training through configured providers.",
+      "sections": [
+        {
+          "title": "Before you begin",
+          "text": "This guide stays on xdev.asia. To perform the task, use an account in your organization’s AI Studio workspace with access to this feature. Screenshots show a demonstration workspace; names and data are examples."
+        },
+        {
+          "title": "Find the screen",
+          "text": "Submit and track training through configured providers.",
+          "image": "training",
+          "caption": "Fine-tune a model: locate the page title, navigation and available actions before following the steps. Click the image to inspect the full-size screenshot."
+        },
+        {
+          "title": "Step 1",
+          "text": "Open Settings → Model training and review the available training channels. Unavailable channels are identified in the page."
+        },
+        {
+          "title": "Step 2",
+          "text": "Ask an administrator to grant training:finetune if you need to submit a job. Prepare the dataset and parameters required by the selected channel."
+        },
+        {
+          "title": "Step 3",
+          "text": "Submit the job and follow its status. After success, use the available model registration flow and evaluate the model in a test app before wider use."
+        },
+        {
+          "title": "Check your result",
+          "text": "The job appears in training history with its status. A submitted job is not a deployed model: wait for completion, register it where supported and evaluate it before use."
+        }
+      ]
+    },
+    {
+      "slug": "account",
+      "title": "Manage your account",
+      "description": "Keep sign-in details and personal preferences up to date.",
+      "sections": [
+        {
+          "title": "Before you begin",
+          "text": "This guide stays on xdev.asia. To perform the task, use an account in your organization’s AI Studio workspace with access to this feature. Screenshots show a demonstration workspace; names and data are examples."
+        },
+        {
+          "title": "Find the screen",
+          "text": "Keep sign-in details and personal preferences up to date.",
+          "image": "account",
+          "caption": "Manage your account: locate the page title, navigation and available actions before following the steps. Click the image to inspect the full-size screenshot."
+        },
+        {
+          "title": "Step 1",
+          "text": "Open your account from the user menu to review your profile and account settings."
+        },
+        {
+          "title": "Step 2",
+          "text": "Use the available password and multi-factor authentication controls. Complete the verification steps before relying on the new sign-in method."
+        },
+        {
+          "title": "Step 3",
+          "text": "Review personal memory controls where available. Use the language and theme controls to choose the interface you prefer."
+        },
+        {
+          "title": "Check your result",
+          "text": "Profile changes persist and the intended sign-in method is verified. Store recovery information securely; never include it in screenshots or shared documentation."
+        }
+      ]
+    },
+    {
+      "slug": "admin",
+      "title": "Administer the instance",
+      "description": "Operate the installation beyond a single workspace.",
+      "sections": [
+        {
+          "title": "Before you begin",
+          "text": "This guide stays on xdev.asia. To perform the task, use an account in your organization’s AI Studio workspace with access to this feature. Screenshots show a demonstration workspace; names and data are examples."
+        },
+        {
+          "title": "Find the screen",
+          "text": "Operate the installation beyond a single workspace.",
+          "image": "admin",
+          "caption": "Administer the instance: locate the page title, navigation and available actions before following the steps. Click the image to inspect the full-size screenshot."
+        },
+        {
+          "title": "Step 1",
+          "text": "Sign in with an instance administrator account and open Administration. Workspace ownership alone does not grant instance administration."
+        },
+        {
+          "title": "Step 2",
+          "text": "Use the dedicated pages to manage tenants and accounts, inspect health, and review runtime or network settings and feature flags."
+        },
+        {
+          "title": "Step 3",
+          "text": "Check the effective configuration and health after making a change. Some settings are read-only or managed by the deployment environment."
+        },
+        {
+          "title": "Check your result",
+          "text": "The effective setting is displayed after refresh and health checks remain healthy. Read-only environment settings must be changed through the installation’s deployment process."
+        },
+        {
+          "title": "Organisations and accounts",
+          "text": "Under Administration → Organisations, inspect organisation status, workspaces and quotas. Under Accounts, locate the user and review status before updating it. These pages cover the whole instance, not just the selected workspace."
+        },
+        {
+          "title": "Health and runtime settings",
+          "text": "Open Health to inspect dependencies and migration state. In Runtime settings, locate the key, review its configuration source and edit only permitted settings. After saving, allow the indicated refresh period and check again. A configured-state indicator does not reveal a secret value."
+        },
+        {
+          "title": "Network and feature flags",
+          "text": "Network and Feature flags are inspection screens. Review the effective network zone, allowed destinations, flag scope and state. Change deployment-managed values through the installation configuration, then refresh these screens; enabling a flag does not configure its dependent services."
+        }
+      ]
+    },
+    {
+      "slug": "marketplace",
+      "title": "Explore model providers",
+      "description": "Compare the provider catalog before configuring models.",
+      "sections": [
+        {
+          "title": "Where to start",
+          "text": "Compare the provider catalog before configuring models.",
+          "image": "marketplace",
+          "caption": "AI Studio overview for this feature; illustrative data."
+        },
+        {
+          "title": "Steps",
+          "steps": [
+            "Open Marketplace and search by provider name or model type.",
+            "Review whether a provider runs inside the organisation, uses an external service or only tests flows; inspect its required configuration fields.",
+            "Go to Integrations → Model providers to configure the selected provider and select default models."
+          ]
+        },
+        {
+          "title": "Check the result",
+          "text": "A catalog entry is not a working connection. Check configuration and model availability before attaching it to an application."
+        }
+      ]
+    },
+    {
+      "slug": "documents",
+      "title": "Manage documents and chunks",
+      "description": "Track ingestion, inspect original documents and manage chunks used for retrieval.",
+      "sections": [
+        {
+          "title": "Where to start",
+          "text": "Track ingestion, inspect original documents and manage chunks used for retrieval.",
+          "image": "documents",
+          "caption": "AI Studio overview for this feature; illustrative data."
+        },
+        {
+          "title": "Steps",
+          "steps": [
+            "Open Knowledge, select a base and open its document list. Upload files or use a connected source.",
+            "Track processing status; open a document to inspect its original content and extracted chunks. Read any processing error before retrying.",
+            "Edit chunk content or keywords, and enable or disable chunks for retrieval. Review the selection before bulk actions."
+          ]
+        },
+        {
+          "title": "Check the result",
+          "text": "Test retrieval with a relevant question to confirm the intended chunk is found. External knowledge bases do not store document lists here."
+        }
+      ]
+    },
+    {
+      "slug": "retrieval",
+      "title": "Test and tune retrieval",
+      "description": "Inspect retrieved context before using it in answers.",
+      "sections": [
+        {
+          "title": "Where to start",
+          "text": "Inspect retrieved context before using it in answers.",
+          "image": "retrieval",
+          "caption": "AI Studio overview for this feature; illustrative data."
+        },
+        {
+          "title": "Steps",
+          "steps": [
+            "Select a knowledge base, open Retrieval and enter a realistic question. Inspect the returned chunks and scores.",
+            "In base settings, choose full-text, semantic or hybrid retrieval as supported by the index. Adjust Top K and the score threshold using test results.",
+            "For reranking, select a configured rerank model. Repeat with alternate wording and a question outside the documents."
+          ]
+        },
+        {
+          "title": "Check the result",
+          "text": "Economy indexing has no vectors and only supports full-text search. Reranking adds a model call and may send chunk content to the selected provider."
+        }
+      ]
+    },
+    {
+      "slug": "pipelines",
+      "title": "Design knowledge ingestion pipelines",
+      "description": "Choose a template and customise how data enters a knowledge base.",
+      "sections": [
+        {
+          "title": "Where to start",
+          "text": "Choose a template and customise how data enters a knowledge base.",
+          "image": "pipeline",
+          "caption": "AI Studio overview for this feature; illustrative data."
+        },
+        {
+          "title": "Steps",
+          "steps": [
+            "Open Knowledge → Custom to review available pipeline templates.",
+            "Choose a template, name the base and create it. The base and pipeline are created together, then the canvas opens.",
+            "Review steps and configuration on the canvas before ingestion. Use a small document set to check the results."
+          ]
+        },
+        {
+          "title": "Check the result",
+          "text": "Check document status and test retrieval after ingestion, rather than relying only on a saved pipeline."
+        }
+      ]
+    },
+    {
+      "slug": "external-knowledge",
+      "title": "Connect external knowledge",
+      "description": "Connect an existing retrieval service in your organisation.",
+      "sections": [
+        {
+          "title": "Where to start",
+          "text": "Connect an existing retrieval service in your organisation.",
+          "image": "external",
+          "caption": "AI Studio overview for this feature; illustrative data."
+        },
+        {
+          "title": "Steps",
+          "steps": [
+            "Open Settings → External knowledge and register a service name, endpoint and required key.",
+            "Create an external knowledge base and select the registered service and its external knowledge identifier.",
+            "Use Retrieval inside that base to send a test question and inspect the response. Attach the base to an application after a successful test."
+          ]
+        },
+        {
+          "title": "Check the result",
+          "text": "This service receives outbound queries; it differs from a source that imports documents. The destination must satisfy connection policies and data labels."
+        }
+      ]
+    },
+    {
+      "slug": "extensions",
+      "title": "Use extension APIs for moderation",
+      "description": "Register a moderation endpoint managed by your organisation.",
+      "sections": [
+        {
+          "title": "Where to start",
+          "text": "Register a moderation endpoint managed by your organisation.",
+          "image": "extensions",
+          "caption": "AI Studio overview for this feature; illustrative data."
+        },
+        {
+          "title": "Steps",
+          "steps": [
+            "Open Integrations → Extension and enter a name, endpoint URL and an API key if required.",
+            "Use the test action to confirm the endpoint returns a valid moderation response.",
+            "In application configuration, open Moderation and select this endpoint instead of a moderation model. Test accepted and blocked inputs."
+          ]
+        },
+        {
+          "title": "Check the result",
+          "text": "An extension is an HTTP call to your endpoint, not a downloaded executable plugin. The endpoint receives user messages and follows outbound-access policy."
+        }
+      ]
+    },
+    {
+      "slug": "logs",
+      "title": "Read logs and execution traces",
+      "description": "Trace application results back to conversations or execution steps.",
+      "sections": [
+        {
+          "title": "Where to start",
+          "text": "Trace application results back to conversations or execution steps.",
+          "image": "logs",
+          "caption": "AI Studio overview for this feature; illustrative data."
+        },
+        {
+          "title": "Steps",
+          "steps": [
+            "Open an application and select Logs. The list shows conversations or workflow runs depending on application type.",
+            "Search within the loaded list, then open a conversation or execution trace.",
+            "Compare status, timestamps, token use and elapsed time. For workflows, inspect the failing step before changing the draft and retrying."
+          ]
+        },
+        {
+          "title": "Check the result",
+          "text": "Distinguish per-application logs from aggregate Monitoring. Lists have loading limits, so searching does not necessarily cover all historical records."
+        }
+      ]
+    },
+    {
+      "slug": "annotations",
+      "title": "Set up canned answers",
+      "description": "Provide consistent answers to explicitly matched questions.",
+      "sections": [
+        {
+          "title": "Where to start",
+          "text": "Provide consistent answers to explicitly matched questions.",
+          "image": "annotations",
+          "caption": "AI Studio overview for this feature; illustrative data."
+        },
+        {
+          "title": "Steps",
+          "steps": [
+            "Inside an application, open the logs and canned-answers area.",
+            "Add the question and approved answer using an account with annotation write permission.",
+            "Test an exact matching question and a similar question with different meaning before relying on the result."
+          ]
+        },
+        {
+          "title": "Check the result",
+          "text": "An exact match after normalisation returns the canned answer without a model call. Approximate matching is not used."
+        }
+      ]
+    },
+    {
+      "slug": "roles",
+      "title": "Create roles and assign permissions",
+      "description": "Define workspace permissions around team responsibilities.",
+      "sections": [
+        {
+          "title": "Where to start",
+          "text": "Define workspace permissions around team responsibilities.",
+          "image": "roles",
+          "caption": "AI Studio overview for this feature; illustrative data."
+        },
+        {
+          "title": "Steps",
+          "steps": [
+            "Open Settings → Custom roles using an account allowed to manage roles.",
+            "Create a role, name it and select task-appropriate permissions. Granted permissions must stay within those you are allowed to grant.",
+            "Assign the role to members through workspace management and verify it with a member account before wider use."
+          ]
+        },
+        {
+          "title": "Check the result",
+          "text": "Workspace roles do not automatically grant instance administration. Check both allowed operations and operations that must be denied."
+        }
+      ]
+    },
+    {
+      "slug": "storage",
+      "title": "Manage S3 storage",
+      "description": "Monitor the bucket, storage use and unreferenced objects.",
+      "sections": [
+        {
+          "title": "Where to start",
+          "text": "Monitor the bucket, storage use and unreferenced objects.",
+          "image": "storage",
+          "caption": "AI Studio overview for this feature; illustrative data."
+        },
+        {
+          "title": "Steps",
+          "steps": [
+            "Open Settings → Storage to inspect bucket status, use, object counts and measurement time.",
+            "With quota-management permission, adjust limits as appropriate. Review object metadata to understand storage use.",
+            "Scan for unreferenced objects and review them before cleanup. When migrating from shared storage, move files first and clean the old bucket afterwards."
+          ]
+        },
+        {
+          "title": "Check the result",
+          "text": "Usage reflects the latest measurement; exceeding the limit can block new uploads. Clean up only data confirmed as no longer needed."
+        }
+      ]
+    },
+    {
+      "slug": "identity",
+      "title": "Configure single sign-on",
+      "description": "Connect an identity provider and map user groups.",
+      "sections": [
+        {
+          "title": "Where to start",
+          "text": "Connect an identity provider and map user groups.",
+          "image": "identity",
+          "caption": "AI Studio overview for this feature; illustrative data."
+        },
+        {
+          "title": "Steps",
+          "steps": [
+            "Open Settings → Single sign-on. Add the issuer, client ID and credentials supplied by the identity administrator.",
+            "Select the default workspace, routing domain and optional group mapping. Use the exact claim name sent by the provider.",
+            "Test sign-in with a test account and verify workspace, role and clearance before enabling it for users."
+          ]
+        },
+        {
+          "title": "Check the result",
+          "text": "With group sync enabled, role and clearance refresh on each sign-in. Incorrect configuration can put users in the wrong workspace or leave them without needed access."
+        }
+      ]
+    },
+    {
+      "slug": "app-config",
+      "title": "Configure applications and multimodal features",
+      "description": "Configure inputs, conversation features, speech, image generation and business processes.",
+      "sections": [
+        {
+          "title": "Overview",
+          "text": "Configure inputs, conversation features, speech, image generation and business processes.",
+          "image": "editor",
+          "caption": "Related application interface with illustrative data."
+        },
+        {
+          "title": "Steps",
+          "steps": [
+            "Open draft configuration. Select the model, parameters and instructions; declare variables referenced by instruction or opening-message templates.",
+            "Open Features to configure the opening message, suggested questions and retrieval mode. Select speech recognition, text-to-speech or image-generation models when the relevant provider is configured.",
+            "For business-specific processes, define appropriate instructions and tools. Save the draft and test its inputs and each enabled feature before publishing."
+          ]
+        },
+        {
+          "title": "Check the result",
+          "text": "A configuration field does not mean its service is ready. Speech and image generation require supported models, permissions and a working connection."
+        }
+      ]
+    },
+    {
+      "slug": "evaluations",
+      "title": "Evaluate and compare quality",
+      "description": "Use test datasets to track application quality across runs.",
+      "sections": [
+        {
+          "title": "Overview",
+          "text": "Use test datasets to track application quality across runs.",
+          "image": "app-monitoring",
+          "caption": "Related application interface with illustrative data."
+        },
+        {
+          "title": "Steps",
+          "steps": [
+            "Inside an application, open Monitoring and Evaluations. Create a dataset using the input format shown for that application type.",
+            "Enter questions and expected outputs. If generating test cases, choose topics, language and count, then review the generated dataset.",
+            "Run the evaluation, track status and inspect individual cases. Select compatible runs for comparison, and review failures before changing configuration."
+          ]
+        },
+        {
+          "title": "Check the result",
+          "text": "Evaluation results depend on the dataset and configuration. Training-data export under monitoring prepares data; it does not complete fine-tuning."
+        }
+      ]
+    },
+    {
+      "slug": "inputs",
+      "title": "Variables and input forms",
+      "description": "Collect structured data before an application runs.",
+      "parent": "app-config",
+      "related": [
+        "app-config"
+      ],
+      "source_files": [
+        "apps/[id]/variables-panel.tsx",
+        "apps/[id]/config-panel.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Where to work",
+          "text": "Collect structured data before an application runs.",
+          "image": "editor",
+          "caption": "Related workspace overview. Follow the navigation steps below to open this feature."
+        },
+        {
+          "title": "Step-by-step",
+          "steps": [
+            "Open the application → Configuration → Variables. Add a variable with an internal name and a user-facing label.",
+            "Choose the data type. For a select field, enter one option per line and use a default value of the correct type.",
+            "Set required status, length limits and sensitivity as appropriate. Order fields in the sequence users should complete them.",
+            "Reference variable names in the instruction or opening-message template. Save the draft and test valid, missing and incorrectly typed values in preview."
+          ]
+        },
+        {
+          "title": "Expected result",
+          "text": "The form shows the correct labels, required fields are checked and values reach the intended instructions."
+        },
+        {
+          "title": "If it does not work",
+          "text": "Cannot save: look for undeclared variables in templates. Invalid defaults: check numeric types, select options and variable names."
+        }
+      ]
+    },
+    {
+      "slug": "speech-images",
+      "title": "Speech and image generation",
+      "description": "Enable speech input, spoken answers and image generation with supported models.",
+      "parent": "app-config",
+      "related": [
+        "app-config"
+      ],
+      "source_files": [
+        "apps/[id]/features-panel.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Where to work",
+          "text": "Enable speech input, spoken answers and image generation with supported models.",
+          "image": "editor",
+          "caption": "Related workspace overview. Follow the navigation steps below to open this feature."
+        },
+        {
+          "title": "Step-by-step",
+          "steps": [
+            "In Model providers, configure speech recognition, TTS or text-to-image models for the required capability.",
+            "Open application → Configuration → Features. Select each specialised model rather than only a general LLM.",
+            "For TTS, enter a voice supported by the provider. For image generation, check that image_generate is available in the relevant tool configuration.",
+            "Save and test a short spoken input, a spoken response or an image request. Inspect the output before publishing."
+          ]
+        },
+        {
+          "title": "Expected result",
+          "text": "The feature produces the expected output, rather than merely displaying a selected model."
+        },
+        {
+          "title": "If it does not work",
+          "text": "Empty list: no usable model of that type is configured. Provider errors: check connectivity, voice name and browser microphone permission."
+        }
+      ]
+    },
+    {
+      "slug": "versions",
+      "title": "Version history and restoration",
+      "description": "Restore earlier configuration into a draft while controlling publication.",
+      "parent": "publishing",
+      "related": [
+        "publishing"
+      ],
+      "source_files": [
+        "apps/[id]/version-history.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Where to work",
+          "text": "Restore earlier configuration into a draft while controlling publication.",
+          "image": "editor",
+          "caption": "Related workspace overview. Follow the navigation steps below to open this feature."
+        },
+        {
+          "title": "Step-by-step",
+          "steps": [
+            "Open version history in the application editor. Compare version numbers, models and Draft/Published badges.",
+            "Save or record unsaved changes before choosing Restore on the intended version.",
+            "Review the confirmation dialog and restore into the draft. Reopen configuration and compare important fields.",
+            "Run your test questions. Republish only after confirming the restored behaviour."
+          ]
+        },
+        {
+          "title": "Expected result",
+          "text": "The draft contains the selected configuration; end users receive changes only after the appropriate publication step."
+        },
+        {
+          "title": "If it does not work",
+          "text": "Restoration does not replace testing. Review unsaved-change warnings to avoid overwriting work."
+        }
+      ]
+    },
+    {
+      "slug": "workflow-debug",
+      "title": "Run, trace and compare workflows",
+      "description": "Locate failing steps through each node’s actual inputs and outputs.",
+      "parent": "workflows",
+      "related": [
+        "workflows"
+      ],
+      "source_files": [
+        "apps/[id]/workflow/run-panel.tsx",
+        "apps/[id]/workflow/compare-panel.tsx",
+        "apps/[id]/workflow/variable-inspect.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Where to work",
+          "text": "Locate failing steps through each node’s actual inputs and outputs.",
+          "image": "workflow",
+          "caption": "Related workspace overview. Follow the navigation steps below to open this feature."
+        },
+        {
+          "title": "Step-by-step",
+          "steps": [
+            "Open the Run panel, provide inputs matching the start node and run the draft.",
+            "Inspect Inputs, Result, Detail and Tracing. Select a node to inspect its process data and output.",
+            "Check waiting states: scheduled time, event, child workflow or approval. A waiting run is not necessarily a failure.",
+            "Open run history and compare two runs. Compare node status, elapsed time and labels before changing variable mappings."
+          ]
+        },
+        {
+          "title": "Expected result",
+          "text": "The run reaches its expected output and differences between attempts can be traced to a node and its data."
+        },
+        {
+          "title": "If it does not work",
+          "text": "Hidden node data: check clearance. Code-node failure: verify sandbox configuration; placing a node on the canvas does not make the runtime available."
+        }
+      ]
+    },
+    {
+      "slug": "workflow-dsl",
+      "title": "Import/export DSL and environment variables",
+      "description": "Move application structure between environments and configure secrets at the destination.",
+      "parent": "workflows",
+      "related": [
+        "workflows"
+      ],
+      "source_files": [
+        "apps/[id]/workflow/import-dsl-dialog.tsx",
+        "apps/[id]/workflow/env-panel.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Where to work",
+          "text": "Move application structure between environments and configure secrets at the destination.",
+          "image": "workflow",
+          "caption": "Related workspace overview. Follow the navigation steps below to open this feature."
+        },
+        {
+          "title": "Step-by-step",
+          "steps": [
+            "Export DSL from the workflow. Review application name, type and model/tool references in the file.",
+            "At the destination, choose Import app from DSL, paste content or choose a file, then confirm. Import creates a new application.",
+            "Open Environment variables in the new application. Supply required values again; DSL does not carry secret values.",
+            "Select models, knowledge bases and tools available at the destination, then test before publishing."
+          ]
+        },
+        {
+          "title": "Expected result",
+          "text": "The new application has the correct structure, the original is unchanged and dependencies are configured."
+        },
+        {
+          "title": "If it does not work",
+          "text": "Successful import followed by failure often means missing variables, models or tools. Saved secret values cannot be read back; an empty replacement field means unchanged."
+        }
+      ]
+    },
+    {
+      "slug": "workflow-library",
+      "title": "Reuse snippets and edit the canvas",
+      "description": "Save reusable structures and use the canvas editing tools.",
+      "parent": "workflows",
+      "related": [
+        "workflows"
+      ],
+      "source_files": [
+        "apps/[id]/workflow/snippets-panel.tsx",
+        "apps/[id]/workflow/workflow-context-menu.tsx",
+        "apps/[id]/workflow/clipboard.ts"
+      ],
+      "sections": [
+        {
+          "title": "Where to work",
+          "text": "Save reusable structures and use the canvas editing tools.",
+          "image": "workflow",
+          "caption": "Related workspace overview. Follow the navigation steps below to open this feature."
+        },
+        {
+          "title": "Step-by-step",
+          "steps": [
+            "Open Snippets and save the current workflow with a task-oriented name. This saves the current whole graph.",
+            "Insert the snippet into the destination canvas. Inspect the new nodes and connect them to your flow.",
+            "Use the context menu, copy/paste and undo/redo to edit the structure. Add notes to explain important decisions.",
+            "Recheck variables and references after insertion, then test the added path."
+          ]
+        },
+        {
+          "title": "Expected result",
+          "text": "Inserted nodes have their own IDs and do not collide with existing canvas IDs."
+        },
+        {
+          "title": "If it does not work",
+          "text": "A snippet does not configure destination connections or secrets. Reconnect disconnected ports and inspect inputs before running."
+        }
+      ]
+    },
+    {
+      "slug": "trigger-events",
+      "title": "Webhooks, schedules and event retries",
+      "description": "Attach triggers to workflows and track incoming events.",
+      "parent": "triggers",
+      "related": [
+        "triggers"
+      ],
+      "source_files": [
+        "apps/[id]/workflow/trigger-binding.tsx",
+        "integrations/trigger/page.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Where to work",
+          "text": "Attach triggers to workflows and track incoming events.",
+          "image": "triggers",
+          "caption": "Related workspace overview. Follow the navigation steps below to open this feature."
+        },
+        {
+          "title": "Step-by-step",
+          "steps": [
+            "Save the workflow first, select a webhook or schedule trigger node and open its binding configuration.",
+            "For schedules, enter cron and check the displayed timezone. For webhooks, save the signing secret when first shown.",
+            "Map payload fields into input variables. Choose JSON or FHIR Bundle for the corresponding source, and set an hourly cap.",
+            "Send a test event, filter Received events by status and open the linked run. Retry failed events only after checking their cause."
+          ]
+        },
+        {
+          "title": "Expected result",
+          "text": "The event appears, links to a run and completes or waits as designed."
+        },
+        {
+          "title": "If it does not work",
+          "text": "No run: check enabled state, signature, cron and mappings. Disabling preserves the current secret; rotating it requires sender updates."
+        }
+      ]
+    },
+    {
+      "slug": "tool-api",
+      "title": "Configure API tools",
+      "description": "Let agents call APIs registered in the workspace.",
+      "parent": "tools",
+      "related": [
+        "tools"
+      ],
+      "source_files": [
+        "integrations/tools/api/page.tsx",
+        "apps/[id]/agent-tools-panel.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Where to work",
+          "text": "Let agents call APIs registered in the workspace.",
+          "image": "tool-api",
+          "caption": "Related workspace overview. Follow the navigation steps below to open this feature."
+        },
+        {
+          "title": "Step-by-step",
+          "steps": [
+            "Open Integrations → Tools → API and inspect existing definitions.",
+            "Add or edit a definition using the form; match its operation schema, inputs and authentication to the service documentation.",
+            "Check the destination against egress policy. Attach the tool to an application and select the required operations.",
+            "Run a sample task through the agent and inspect the tool call, parameters and result in logs."
+          ]
+        },
+        {
+          "title": "Expected result",
+          "text": "The agent calls the intended API and uses its returned data in the test task."
+        },
+        {
+          "title": "If it does not work",
+          "text": "Authentication failure: check credentials. Missing tool: check workspace configuration and application tool selection."
+        }
+      ]
+    },
+    {
+      "slug": "tool-mcp",
+      "title": "Connect MCP servers",
+      "description": "Discover and select MCP operations for agents.",
+      "parent": "tools",
+      "related": [
+        "tools"
+      ],
+      "source_files": [
+        "integrations/tools/mcp/page.tsx",
+        "apps/[id]/agent-tools-panel.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Where to work",
+          "text": "Discover and select MCP operations for agents.",
+          "image": "tools",
+          "caption": "Related workspace overview. Follow the navigation steps below to open this feature."
+        },
+        {
+          "title": "Step-by-step",
+          "steps": [
+            "Open Integrations → Tools → MCP and add the server address and authentication required by the form.",
+            "Check connectivity and inspect the operations exposed by the server. Review the input schema of the needed operation.",
+            "In the agent application, attach the MCP connection and choose operations relevant to its task.",
+            "Run a test task and inspect the actual call in logs, including a server-error case."
+          ]
+        },
+        {
+          "title": "Expected result",
+          "text": "Operations are discovered, selectable and invoked with the expected inputs."
+        },
+        {
+          "title": "If it does not work",
+          "text": "Discovery failure: check URL, authentication and egress. A working connection does not mean it has been attached to an application."
+        }
+      ]
+    },
+    {
+      "slug": "tool-workflow",
+      "title": "Use workflows as tools",
+      "description": "Reuse a workflow through a tool interface.",
+      "parent": "tools",
+      "related": [
+        "tools"
+      ],
+      "source_files": [
+        "integrations/tools/workflow/page.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Where to work",
+          "text": "Reuse a workflow through a tool interface.",
+          "image": "tool-workflow",
+          "caption": "Related workspace overview. Follow the navigation steps below to open this feature."
+        },
+        {
+          "title": "Step-by-step",
+          "steps": [
+            "Prepare a workflow with clear inputs and mapped end-node outputs, and test it first.",
+            "Open Integrations → Tools → Workflow to inspect available workflows and configure the provided tool interface.",
+            "Attach the tool to an agent or another workflow’s tool node and map input parameters.",
+            "Run the caller and inspect traces for both the caller and the invoked workflow."
+          ]
+        },
+        {
+          "title": "Expected result",
+          "text": "The caller receives the workflow’s expected output and waiting/error states are traceable."
+        },
+        {
+          "title": "If it does not work",
+          "text": "Missing output: inspect the end node. Missing workflow: check permissions, application type and required publication state."
+        }
+      ]
+    },
+    {
+      "slug": "egress",
+      "title": "Manage outbound connections",
+      "description": "Configure allowed destinations for tools and external services.",
+      "parent": "security",
+      "related": [
+        "security"
+      ],
+      "source_files": [
+        "integrations/tools/egress/page.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Where to work",
+          "text": "Configure allowed destinations for tools and external services.",
+          "image": "egress",
+          "caption": "Related workspace overview. Follow the navigation steps below to open this feature."
+        },
+        {
+          "title": "Step-by-step",
+          "steps": [
+            "Open Integrations → Tools → Egress using an account allowed to manage connections.",
+            "Compare the service hostname and port with the allowlist and add the required destination.",
+            "Review data labels, provider type and network-zone configuration before running the application.",
+            "Test an allowed call and one that should be denied using sample data, then inspect errors and logs."
+          ]
+        },
+        {
+          "title": "Expected result",
+          "text": "Policy-compliant calls pass and disallowed calls are explicitly rejected."
+        },
+        {
+          "title": "If it does not work",
+          "text": "Adding a URL does not change data labels. When blocked, inspect labels, destinations and permissions together rather than opening the whole network."
+        }
+      ]
+    },
+    {
+      "slug": "document-folders",
+      "title": "Folders, filtering and moving documents",
+      "description": "Organise knowledge documents and act on the intended scope.",
+      "parent": "documents",
+      "related": [
+        "documents"
+      ],
+      "source_files": [
+        "datasets/[id]/documents-panel.tsx",
+        "datasets/[id]/document-toolbar.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Where to work",
+          "text": "Organise knowledge documents and act on the intended scope.",
+          "image": "documents",
+          "caption": "Related workspace overview. Follow the navigation steps below to open this feature."
+        },
+        {
+          "title": "Step-by-step",
+          "steps": [
+            "Open a knowledge base → Documents. Search by name and filter processing status when needed.",
+            "Create or select a folder in the navigation tree. Check its path before adding documents.",
+            "Select documents to move and choose the destination folder. For bulk operations, review the selected count.",
+            "Open the destination, locate the document and check status; a filtered-out document has not necessarily been deleted."
+          ]
+        },
+        {
+          "title": "Expected result",
+          "text": "Documents appear in the intended folder and filters do not lead to unintended selections."
+        },
+        {
+          "title": "If it does not work",
+          "text": "Missing document: clear filters and check the current folder. Moving a folder does not change content or security labels."
+        }
+      ]
+    },
+    {
+      "slug": "document-chunks",
+      "title": "Inspect and edit knowledge chunks",
+      "description": "Edit the content actually used for retrieval.",
+      "parent": "documents",
+      "related": [
+        "documents"
+      ],
+      "source_files": [
+        "datasets/[id]/segments-panel.tsx",
+        "datasets/[id]/documents/[docId]/page.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Where to work",
+          "text": "Edit the content actually used for retrieval.",
+          "image": "documents",
+          "caption": "Related workspace overview. Follow the navigation steps below to open this feature."
+        },
+        {
+          "title": "Step-by-step",
+          "steps": [
+            "Open a processed document and inspect its extracted chunks alongside the original.",
+            "Edit content or keywords in the relevant chunk, or add a chunk for missing information.",
+            "Enable or disable chunks to control their use. Check the visible selection scope before bulk operations.",
+            "Save and test a related retrieval query, checking that disabled chunks are not selected."
+          ]
+        },
+        {
+          "title": "Expected result",
+          "text": "The edited chunk appears in retrieval results as intended."
+        },
+        {
+          "title": "If it does not work",
+          "text": "Stale result: check saving, indexing status and the tested base. For PDF/OCR, compare extracted text with the original page."
+        }
+      ]
+    },
+    {
+      "slug": "memory-review",
+      "title": "Review memories and their evidence",
+      "description": "Decide what may be reused in later AI turns.",
+      "parent": "memory",
+      "related": [
+        "memory"
+      ],
+      "source_files": [
+        "memories/queue-panel.tsx",
+        "memories/store-panel.tsx",
+        "memories/audit-panel.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Where to work",
+          "text": "Decide what may be reused in later AI turns.",
+          "image": "memory",
+          "caption": "Related workspace overview. Follow the navigation steps below to open this feature."
+        },
+        {
+          "title": "Step-by-step",
+          "steps": [
+            "Open Memory → Awaiting review with memory-administration permission. Inspect each proposal’s owner, application and label.",
+            "Read the draft-versus-edit comparison. If evidence is unavailable, review the warning before deciding.",
+            "Approve appropriate information or reject incorrect information. Approved memories may enter that subject’s later prompts.",
+            "Open Store and Activity to verify the resulting state and the recorded action."
+          ]
+        },
+        {
+          "title": "Expected result",
+          "text": "The proposal changes state correctly and memories are not confused between subjects."
+        },
+        {
+          "title": "If it does not work",
+          "text": "No approval rate may simply mean no decisions exist yet. A missing diff calls for review, not automatic approval."
+        }
+      ]
+    },
+    {
+      "slug": "memory-settings",
+      "title": "Configure, retain and disable memory",
+      "description": "Control extraction frequency, retention and data when disabling memory.",
+      "parent": "memory",
+      "related": [
+        "memory"
+      ],
+      "source_files": [
+        "memories/settings-panel.tsx",
+        "memories/page.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Where to work",
+          "text": "Control extraction frequency, retention and data when disabling memory.",
+          "image": "memory",
+          "caption": "Related workspace overview. Follow the navigation steps below to open this feature."
+        },
+        {
+          "title": "Step-by-step",
+          "steps": [
+            "Open Memory → Settings. Inspect the extraction model and current limits.",
+            "Adjust message-based extraction frequency, retention and limits for your needs, then save.",
+            "Before enabling memories for public-link visitors, review the cookie-based identity behaviour.",
+            "When disabling, choose to keep data unused or follow the deletion process. Purging requires a separate action and confirmation after extraction is off."
+          ]
+        },
+        {
+          "title": "Expected result",
+          "text": "Settings persist after reload and disabling does not silently delete data beyond confirmed actions."
+        },
+        {
+          "title": "If it does not work",
+          "text": "Saving settings does not mean data has been purged. Changing a visitor cookie changes the memory identity."
+        }
+      ]
+    },
+    {
+      "slug": "training-export",
+      "title": "Export training data",
+      "description": "Prepare application data before submitting a training job.",
+      "parent": "training",
+      "related": [
+        "training"
+      ],
+      "source_files": [
+        "apps/[id]/monitoring/training-export.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Where to work",
+          "text": "Prepare application data before submitting a training job.",
+          "image": "app-monitoring",
+          "caption": "Related workspace overview. Follow the navigation steps below to open this feature."
+        },
+        {
+          "title": "Step-by-step",
+          "steps": [
+            "Open application → Monitoring → Training data export with the required permission.",
+            "Review the data scope and notice before exporting, confirming suitability for training.",
+            "Choose download or the configured object store. Wait for the result and inspect exported and label-excluded counts.",
+            "Review the data and remove inappropriate material before using it in model training."
+          ]
+        },
+        {
+          "title": "Expected result",
+          "text": "A file or stored export exists with record counts; fine-tuning remains a separate step."
+        },
+        {
+          "title": "If it does not work",
+          "text": "Fewer records than expected: inspect label exclusions and permissions rather than relaxing policy to increase the count."
+        }
+      ]
+    },
+    {
+      "slug": "workspace-members",
+      "title": "Invite members and control access",
+      "description": "Place people in the correct workspace, role and departments.",
+      "parent": "workspace",
+      "related": [
+        "workspace"
+      ],
+      "source_files": [
+        "settings/workspace/page.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Where to work",
+          "text": "Place people in the correct workspace, role and departments.",
+          "image": "workspace",
+          "caption": "Related workspace overview. Follow the navigation steps below to open this feature."
+        },
+        {
+          "title": "Step-by-step",
+          "steps": [
+            "Open Settings → Workspace → Members and choose Invite member.",
+            "Enter the email, select a role and assign permitted department and clearance limits.",
+            "The recipient opens the invitation and completes acceptance/sign-in. Check membership status afterwards.",
+            "When changing roles or removing members, check the selected workspace and review the effect before saving."
+          ]
+        },
+        {
+          "title": "Expected result",
+          "text": "Members enter the correct workspace and see actions appropriate to their permissions."
+        },
+        {
+          "title": "If it does not work",
+          "text": "Missing invitation control: check member-management permission. SSO group sync may refresh roles at the next sign-in."
+        }
+      ]
+    },
+    {
+      "slug": "quotas",
+      "title": "Token and request quotas",
+      "description": "Set usage limits for the appropriate scope and period.",
+      "parent": "workspace",
+      "related": [
+        "workspace"
+      ],
+      "source_files": [
+        "settings/workspace/page.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Where to work",
+          "text": "Set usage limits for the appropriate scope and period.",
+          "image": "workspace",
+          "caption": "Related workspace overview. Follow the navigation steps below to open this feature."
+        },
+        {
+          "title": "Step-by-step",
+          "steps": [
+            "Open Quotas in workspace management. Choose an available organisation, workspace, application or provider scope.",
+            "Select the daily/monthly period and token/request ceilings. Check the meaning of empty values and zero before saving.",
+            "Monitor usage and ceiling-reached state, comparing them with Monitoring statistics.",
+            "Start a new period or delete a quota only after reviewing its effect on further usage."
+          ]
+        },
+        {
+          "title": "Expected result",
+          "text": "The quota applies to the intended subject and period, with visible usage."
+        },
+        {
+          "title": "If it does not work",
+          "text": "Blocked below an application’s own limit: check higher-level quotas. No limit and a zero limit are different states."
+        }
+      ]
+    },
+    {
+      "slug": "workspace-keys",
+      "title": "Workspace API keys and MCP capabilities",
+      "description": "Issue scoped keys for integrating systems.",
+      "parent": "api",
+      "related": [
+        "api"
+      ],
+      "source_files": [
+        "settings/workspace/page.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Where to work",
+          "text": "Issue scoped keys for integrating systems.",
+          "image": "workspace",
+          "caption": "Related workspace overview. Follow the navigation steps below to open this feature."
+        },
+        {
+          "title": "Step-by-step",
+          "steps": [
+            "Open workspace management → API keys, create a key and give it a recognisable name.",
+            "Choose application scope and expiry. The default runs applications only; select mcp:author or mcp:admin only when needed.",
+            "Save the key when first shown in your secret-management system, then test the integration with its granted scope.",
+            "For workspace administration over MCP, use an app-unscoped key with mcp:admin and enable the MCP admin gate. Revoke unused keys."
+          ]
+        },
+        {
+          "title": "Expected result",
+          "text": "The key calls granted capabilities and stops working after expiry or revocation."
+        },
+        {
+          "title": "If it does not work",
+          "text": "Declaring mcp:admin is insufficient while the admin gate is off. Some permissions, including others’ memories and provider credentials, never transfer over MCP."
+        }
+      ]
+    },
+    {
+      "slug": "admin-tenants",
+      "title": "Organisations and instance quotas",
+      "description": "Operations for AI Studio instance administrators.",
+      "parent": "admin",
+      "related": [
+        "admin"
+      ],
+      "source_files": [
+        "web/app/(admin)/admin/tenants/page.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Where to work",
+          "text": "Operations for AI Studio instance administrators.",
+          "image": "admin-tenants",
+          "caption": "Related workspace overview. Follow the navigation steps below to open this feature."
+        },
+        {
+          "title": "Step-by-step",
+          "steps": [
+            "Sign in as an instance administrator and open the corresponding Administration page. Workspace ownership alone does not grant this access.",
+            "Inspect organisations, status, workspace counts and membership.",
+            "Review the MFA floor and organisation quotas. Use the relevant workspace settings or operational procedure for changes; this overview is read-only.",
+            "Reload to verify effective state and review the effect on applications in use."
+          ]
+        },
+        {
+          "title": "Expected result",
+          "text": "Organisations and workspaces are different scopes; verify the intended target."
+        },
+        {
+          "title": "If it does not work",
+          "text": "If access is denied, check instance-administration access. Change read-only settings through deployment procedures rather than trying to edit them here."
+        }
+      ]
+    },
+    {
+      "slug": "admin-users",
+      "title": "Instance accounts",
+      "description": "Operations for AI Studio instance administrators.",
+      "parent": "admin",
+      "related": [
+        "admin"
+      ],
+      "source_files": [
+        "web/app/(admin)/admin/users/page.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Where to work",
+          "text": "Operations for AI Studio instance administrators.",
+          "image": "admin-users",
+          "caption": "Related workspace overview. Follow the navigation steps below to open this feature."
+        },
+        {
+          "title": "Step-by-step",
+          "steps": [
+            "Sign in as an instance administrator and open the corresponding Administration page. Workspace ownership alone does not grant this access.",
+            "Locate an account using displayed information and inspect its current state.",
+            "Make a permitted change, review the confirmation and reload the list.",
+            "Reload to verify effective state and review the effect on applications in use."
+          ]
+        },
+        {
+          "title": "Expected result",
+          "text": "Managing an instance account differs from removing one workspace membership."
+        },
+        {
+          "title": "If it does not work",
+          "text": "If access is denied, check instance-administration access. Change read-only settings through deployment procedures rather than trying to edit them here."
+        }
+      ]
+    },
+    {
+      "slug": "admin-health",
+      "title": "Check service health",
+      "description": "Operations for AI Studio instance administrators.",
+      "parent": "admin",
+      "related": [
+        "admin"
+      ],
+      "source_files": [
+        "web/app/(admin)/admin/health/page.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Where to work",
+          "text": "Operations for AI Studio instance administrators.",
+          "image": "admin-health",
+          "caption": "Related workspace overview. Follow the navigation steps below to open this feature."
+        },
+        {
+          "title": "Step-by-step",
+          "steps": [
+            "Sign in as an instance administrator and open the corresponding Administration page. Workspace ownership alone does not grant this access.",
+            "Open Health and inspect dependency and migration states.",
+            "Correlate errors with the affected service, follow its operational procedure and refresh.",
+            "Reload to verify effective state and review the effect on applications in use."
+          ]
+        },
+        {
+          "title": "Expected result",
+          "text": "Health status does not replace an application run; also test a user task."
+        },
+        {
+          "title": "If it does not work",
+          "text": "If access is denied, check instance-administration access. Change read-only settings through deployment procedures rather than trying to edit them here."
+        }
+      ]
+    },
+    {
+      "slug": "admin-runtime",
+      "title": "Change runtime settings",
+      "description": "Operations for AI Studio instance administrators.",
+      "parent": "admin",
+      "related": [
+        "admin"
+      ],
+      "source_files": [
+        "web/app/(admin)/admin/runtime/page.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Where to work",
+          "text": "Operations for AI Studio instance administrators.",
+          "image": "admin-runtime",
+          "caption": "Related workspace overview. Follow the navigation steps below to open this feature."
+        },
+        {
+          "title": "Step-by-step",
+          "steps": [
+            "Sign in as an instance administrator and open the corresponding Administration page. Workspace ownership alone does not grant this access.",
+            "Open Runtime settings, locate the key and inspect its value source.",
+            "Edit a permitted setting, save and allow the refresh interval shown on the page.",
+            "Reload to verify effective state and review the effect on applications in use."
+          ]
+        },
+        {
+          "title": "Expected result",
+          "text": "Secret settings expose configured state rather than a read-back of the secret."
+        },
+        {
+          "title": "If it does not work",
+          "text": "If access is denied, check instance-administration access. Change read-only settings through deployment procedures rather than trying to edit them here."
+        }
+      ]
+    },
+    {
+      "slug": "admin-network",
+      "title": "Network zones and destinations",
+      "description": "Operations for AI Studio instance administrators.",
+      "parent": "admin",
+      "related": [
+        "admin"
+      ],
+      "source_files": [
+        "web/app/(admin)/admin/network/page.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Where to work",
+          "text": "Operations for AI Studio instance administrators.",
+          "image": "admin-network",
+          "caption": "Related workspace overview. Follow the navigation steps below to open this feature."
+        },
+        {
+          "title": "Step-by-step",
+          "steps": [
+            "Sign in as an instance administrator and open the corresponding Administration page. Workspace ownership alone does not grant this access.",
+            "Open Network and inspect the effective network zone and allowed destinations.",
+            "This page reports effective network-zone and allowlist configuration. Change the underlying deployment settings or allowlist files through operations procedures, then refresh.",
+            "Reload to verify effective state and review the effect on applications in use."
+          ]
+        },
+        {
+          "title": "Expected result",
+          "text": "Network configuration, data labels and destination rules jointly affect calls."
+        },
+        {
+          "title": "If it does not work",
+          "text": "If access is denied, check instance-administration access. Change read-only settings through deployment procedures rather than trying to edit them here."
+        }
+      ]
+    },
+    {
+      "slug": "admin-flags",
+      "title": "Control feature flags",
+      "description": "Operations for AI Studio instance administrators.",
+      "parent": "admin",
+      "related": [
+        "admin"
+      ],
+      "source_files": [
+        "web/app/(admin)/admin/flags/page.tsx"
+      ],
+      "sections": [
+        {
+          "title": "Where to work",
+          "text": "Operations for AI Studio instance administrators.",
+          "image": "admin-flags",
+          "caption": "Related workspace overview. Follow the navigation steps below to open this feature."
+        },
+        {
+          "title": "Step-by-step",
+          "steps": [
+            "Sign in as an instance administrator and open the corresponding Administration page. Workspace ownership alone does not grant this access.",
+            "Open Feature flags and read descriptions and current state before making changes.",
+            "This page is read-only. Change feature-flag configuration through the deployment process, then refresh this page and test the affected flow.",
+            "Reload to verify effective state and review the effect on applications in use."
+          ]
+        },
+        {
+          "title": "Expected result",
+          "text": "Enabling a flag does not install missing providers or infrastructure."
+        },
+        {
+          "title": "If it does not work",
+          "text": "If access is denied, check instance-administration access. Change read-only settings through deployment procedures rather than trying to edit them here."
+        }
+      ]
+    },
+    {
+      "slug": "business-processes",
+      "parent": "app-config",
+      "related": [
+        "app-config"
+      ],
+      "title": "Design agent business processes",
+      "description": "Separate goals and instructions into processes selected for each user request.",
+      "sections": [
+        {
+          "title": "Overview",
+          "text": "Separate goals and instructions into processes selected for each user request.",
+          "image": "editor",
+          "caption": "Related editor or deployment overview; use the steps below to open the relevant settings."
+        },
+        {
+          "title": "Steps",
+          "steps": [
+            "Open Configuration → Features → Business processes. Add a name and a description of when to use it.",
+            "Provide the goal, instructions, constraints and example questions. Make descriptions distinct to reduce incorrect routing.",
+            "Choose Reason & Act, Fixed plan or Run a tool. Run a tool requires exactly one tool; other modes can restrict the allowed tool set.",
+            "Save and test representative questions for each process plus ambiguous cases. Inspect results and refine descriptions when routing is wrong."
+          ]
+        },
+        {
+          "title": "Expected result",
+          "text": "Each turn carries one selected process’s instructions. With no processes, the application follows the system prompt."
+        },
+        {
+          "title": "Checks and limitations",
+          "text": "No available tools: attach tools to the application first. With two or more processes, routing can add a model call."
+        }
+      ]
+    },
+    {
+      "slug": "web-sharing",
+      "parent": "publishing",
+      "related": [
+        "publishing"
+      ],
+      "title": "Web apps, embedding and chat experience",
+      "description": "Deliver a published application through a link or embedded widget.",
+      "sections": [
+        {
+          "title": "Overview",
+          "text": "Deliver a published application through a link or embedded widget.",
+          "image": "publish",
+          "caption": "Related editor or deployment overview; use the steps below to open the relevant settings."
+        },
+        {
+          "title": "Steps",
+          "steps": [
+            "Publish a tested draft, then open Deploy → Web sharing. Read any blocking reason before enabling it.",
+            "Enable sharing and use the provided link or embed code. Test in a separate browser session as a visitor.",
+            "In Features, configure the opening message, suggested and follow-up questions, charts and visitor attachments as appropriate.",
+            "Test conversations and sample attachments; check image-model capability, quotas and responses. After disabling sharing, retest the old link."
+          ]
+        },
+        {
+          "title": "Expected result",
+          "text": "Visitors access the intended published version; disabling sharing stops the link from serving the application as before."
+        },
+        {
+          "title": "Checks and limitations",
+          "text": "Public attachments consume workspace storage; follow-up questions can add model calls. Console attachment support differs from visitor permissions."
+        }
+      ]
+    },
+    {
+      "slug": "messaging-channels",
+      "parent": "publishing",
+      "related": [
+        "publishing"
+      ],
+      "title": "Connect messaging channels",
+      "description": "Connect a published application to a supported communication channel.",
+      "sections": [
+        {
+          "title": "Overview",
+          "text": "Connect a published application to a supported communication channel.",
+          "image": "publish",
+          "caption": "Related editor or deployment overview; use the steps below to open the relevant settings."
+        },
+        {
+          "title": "Steps",
+          "steps": [
+            "Open application → Deploy and inspect the channel gallery. Choose the platform used by your team.",
+            "Open channel configuration and provide credentials, identifiers and callback details required by the form.",
+            "Complete the corresponding platform setup and enable the connection. Ensure the application has a published version.",
+            "Send a test message from the actual channel and inspect the reply and logs. Retest after changing credentials or the published version."
+          ]
+        },
+        {
+          "title": "Expected result",
+          "text": "Messages traverse the channel and receive replies from the correct application, beyond merely saving configuration."
+        },
+        {
+          "title": "Checks and limitations",
+          "text": "Receiving without replying: check publication, callbacks, credentials and bot permissions. Channel availability depends on deployment and platform configuration."
+        }
+      ]
+    },
+    {
+      "slug": "workflow-nodes",
+      "parent": "workflows",
+      "related": [
+        "workflows",
+        "workflow-debug",
+        "trigger-events"
+      ],
+      "title": "Workflow node reference",
+      "description": "Choose and configure the 28 node types available in the editor.",
+      "sections": [
+        {
+          "title": "Choose a node for the task",
+          "text": "The current editor exposes 28 node types. Add a node, configure its fields, connect its ports and test its inputs/outputs before publishing.",
+          "image": "workflow",
+          "caption": "Workflow editor overview with an illustrative three-node flow."
+        },
+        {
+          "title": "Start points, AI and data",
+          "text": "Declare inputs at the start or trigger node. Select models/instructions for LLM and agent nodes, and a base/query for retrieval. Map the answer or output fields at the end.",
+          "steps": [
+            "Start",
+            "LLM",
+            "Knowledge retrieval",
+            "Answer",
+            "End",
+            "Agent",
+            "Data source",
+            "Webhook trigger",
+            "Schedule trigger"
+          ]
+        },
+        {
+          "title": "Understand requests",
+          "text": "Define clear classes and connect each classifier branch. For parameter extraction, define names, types and expected information; test missing-data cases.",
+          "steps": [
+            "Question classifier",
+            "Parameter extractor"
+          ]
+        },
+        {
+          "title": "Conditions and loops",
+          "text": "Cover conditional branches and defaults. A decision table returns values; add If/Else to branch on them. For iteration/loops, define inputs and termination conditions.",
+          "steps": [
+            "If / Else",
+            "Decision table",
+            "Iteration",
+            "Loop"
+          ]
+        },
+        {
+          "title": "Transform data",
+          "text": "Select the correct inputs, types and outputs. Test templates, variable aggregation/assignment, lists and document extraction on small data. Code nodes require an operations-configured sandbox.",
+          "steps": [
+            "Template",
+            "Variable aggregator",
+            "Variable assigner",
+            "List operator",
+            "Document extractor",
+            "Code"
+          ]
+        },
+        {
+          "title": "Integrations and outputs",
+          "text": "Configure permitted HTTP destinations, tools or channels. For knowledge writes, select the destination base and inspect ingestion status. Check authentication, schemas and egress policy.",
+          "steps": [
+            "HTTP request",
+            "Tool",
+            "Send via channel",
+            "Write to knowledge"
+          ]
+        },
+        {
+          "title": "Waits and approvals",
+          "text": "Configure resume time/events and required reviewer input. When a run stops here, inspect its waiting state and approval queue before treating it as a failure.",
+          "steps": [
+            "Wait",
+            "Wait for event",
+            "Human input"
+          ]
+        }
+      ],
+      "source_files": [
+        "web/app/(console)/apps/[id]/workflow/node-types.ts"
+      ]
     }
-  ]
+  ],
+  "landing": {
+    "eyebrow": "Your workspace for building AI applications",
+    "headline": "From what you know,<br>to what AI can do.",
+    "intro": "Connect documents, choose a model, and design how AI works. Build assistants and workflows in a workspace you control.",
+    "start": "Build your first application",
+    "explore": "Explore the interface",
+    "note": "Chatbots, agents, chatflows, and workflows",
+    "demo_label": "From request to reviewed result",
+    "demo_badge": "Interactive illustration",
+    "run": "Run the illustration",
+    "running": "Running…",
+    "rerun": "Run it again",
+    "nodes": [
+      [
+        "Receive request",
+        "Input & variables"
+      ],
+      [
+        "Retrieve context",
+        "Knowledge & sources"
+      ],
+      [
+        "Generate a draft",
+        "Model & instructions"
+      ],
+      [
+        "Apply rules",
+        "Conditions & routing"
+      ],
+      [
+        "Human review",
+        "Approval checkpoint"
+      ],
+      [
+        "Deliver & record",
+        "Output & run history"
+      ]
+    ],
+    "demo_idle": "See how the pieces connect.",
+    "demo_states": [
+      "Reading the sample request.",
+      "Looking up illustrative reference material.",
+      "Preparing a sample draft.",
+      "Checking the scenario rules.",
+      "Simulating the review checkpoint.",
+      "Preparing the illustrative output."
+    ],
+    "demo_result": "Illustration complete. Design each step in AI Studio.",
+    "demo_note": "A simulated workflow. No model calls or data sent.",
+    "strip": [
+      "Connect your knowledge",
+      "Design your workflow",
+      "Review before publishing"
+    ],
+    "workspace_title": "One place to build.<br>More ways to put AI to work.",
+    "workspace_intro": "Explore AI Studio, from connecting knowledge to preparing an application for your team.",
+    "gallery_label": "Explore AI Studio",
+    "guide": "Read the guide",
+    "zoom": "Open full-size image",
+    "image_note": "AI Studio interface with example data.",
+    "panels": [
+      {
+        "label": "Applications",
+        "title": "Start with a useful assistant.",
+        "text": "Choose an application type, write instructions, and test answers in the preview panel. Refine your draft before publishing.",
+        "image": "editor",
+        "slug": "quickstart",
+        "detail": "Chatbot / Agent / Chatflow / Workflow"
+      },
+      {
+        "label": "Knowledge",
+        "title": "Give your documents context.",
+        "text": "Create a knowledge base, add documents, and connect it to your application so AI has the right information for the task.",
+        "image": "knowledge",
+        "slug": "knowledge",
+        "detail": "Documents / Knowledge bases / Retrieval"
+      },
+      {
+        "label": "Workflows",
+        "title": "Design every step AI takes.",
+        "text": "Connect inputs, models, and outputs on a visual canvas. Extend the workflow to match your team’s needs.",
+        "image": "workflow",
+        "slug": "workflows",
+        "detail": "Inputs / Models / Outputs"
+      },
+      {
+        "label": "Tools",
+        "title": "Connect AI to the tools you use.",
+        "text": "Explore tools and MCP connections configured in your workspace. Choose the operations that fit your application’s task.",
+        "image": "tools",
+        "slug": "tools",
+        "detail": "Tools / MCP / Operations"
+      }
+    ],
+    "control_title": "AI does the work.<br>You decide how.",
+    "control_intro": "Keep important decisions with your team, from application configuration to access and publishing.",
+    "controls": [
+      [
+        "The right model for the task",
+        "Choose from the models configured in your workspace.",
+        "models"
+      ],
+      [
+        "Clear access permissions",
+        "Manage members and roles in your workspace.",
+        "workspace"
+      ],
+      [
+        "Review before release",
+        "Test drafts, review results, and publish when ready.",
+        "publishing"
+      ]
+    ],
+    "journey_title": "Start small. Build step by step.",
+    "steps": [
+      [
+        "Prepare your knowledge",
+        "Choose documents and define what you want AI to help with.",
+        "knowledge"
+      ],
+      [
+        "Build and test",
+        "Create an application, write instructions, and try real questions.",
+        "quickstart"
+      ],
+      [
+        "Publish and monitor",
+        "Release a reviewed version and inspect its activity.",
+        "publishing"
+      ]
+    ],
+    "closing_title": "Your first AI application<br>starts with your work.",
+    "closing_text": "Follow step-by-step guides with screenshots to help you along the way.",
+    "closing_link": "Browse all documentation",
+    "scenarios": [
+      {
+        "title": "Internal assistant",
+        "input": "What steps should a new colleague follow on their first day?",
+        "result": "Draft ready: onboarding checklist, reference material and a review step before sharing."
+      },
+      {
+        "title": "Document review",
+        "input": "Review a supplier proposal and flag information that needs confirmation.",
+        "result": "Review ready: summary, missing information and questions for the reviewer."
+      },
+      {
+        "title": "Support triage",
+        "input": "Classify a support request and prepare a response for the support team.",
+        "result": "Triage ready: proposed category, draft response and handoff to a support reviewer."
+      }
+    ],
+    "scenario_label": "Choose a scenario",
+    "sample_label": "Sample request",
+    "output_label": "Illustrative result",
+    "booking": {
+      "label": "Book a demo",
+      "title": "See AI Studio through your own use case.",
+      "intro": "Walk through a relevant workflow with Duy, discuss your data and integrations, and identify a practical starting point.",
+      "topics": [
+        "Your use case and current process",
+        "A guided tour of relevant features",
+        "Data, permissions and integration needs"
+      ],
+      "contact": "Message Duy to arrange a demo",
+      "note": "Send your use case, team size and a few suitable times. The meeting time will be confirmed in the conversation.",
+      "url": "https://www.facebook.com/duydev/"
+    }
+  },
+  "feature_catalog": {
+    "title": "Explore every area of AI Studio",
+    "intro": "From application design to instance administration. Open a topic for practical steps; available actions depend on permissions and deployment configuration."
+  }
 }

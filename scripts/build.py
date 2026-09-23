@@ -5,6 +5,9 @@ import json
 import os
 import posixpath
 import shutil
+from studio_page import render_studio
+from brand_page import render_brand
+from docs_page import render_docs
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'dist'
@@ -23,9 +26,17 @@ def decorate(page, language, path):
     current = route(language, path)
     prefix = relative(current, '')
     page = page.replace('href="assets/', f'href="{prefix}assets/').replace('src="assets/', f'src="{prefix}assets/').replace('href="styles.css"', f'href="{prefix}styles.css"')
+    page = page.replace('poster="assets/', f'poster="{prefix}assets/')
     page = page.replace('@home@', relative(current, route(language))).replace('@studio@', relative(current, route(language, 'ai-studio/')))
     page = page.replace('@docs@', relative(current, route(language, 'ai-studio/docs/')))
     page = page.replace('@quickstart@', relative(current, route(language, 'ai-studio/docs/quickstart/')))
+    page = page.replace('@brand@', relative(current, route(language, 'brand/')))
+    social_label = 'Connect with Duy' if language == 'en' else 'Kết nối với Duy'
+    social_links = '<div class="social-links" role="group" aria-label="' + social_label + '">' + ''.join(
+        f'<a href="{url}">{label}<span aria-hidden="true"> ↗</span></a>'
+        for label, url in [('Facebook', 'https://www.facebook.com/duydev/'), ('GitHub', 'https://github.com/tdduydev'), ('LinkedIn', 'https://www.linkedin.com/in/duydev/')]
+    ) + '</div>'
+    page = page.replace('@social@', social_links)
     switcher = '<div class="language-switch" role="group" aria-label="' + ('Language' if language == 'en' else 'Ngôn ngữ') + '">'
     for lang, label in [('en', 'English'), ('vi', 'Tiếng Việt')]:
         active = ' aria-current="page"' if lang == language else ''
@@ -43,13 +54,15 @@ def decorate(page, language, path):
     target.write_text(page)
 
 
-def shell(language, title, description, body):
+def shell(language, title, description, body, product=False):
     en = language == 'en'
+    logo = 'ai-studio-light.svg' if product else 'master-light.svg'
+    brand_name = 'XDev AI Studio' if product else 'xDev'
     return f'''<!doctype html><html lang="{language}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{escape(title)} — xDev Asia</title><meta name="description" content="{escape(description, quote=True)}"><meta property="og:title" content="{escape(title, quote=True)}"><meta property="og:description" content="{escape(description, quote=True)}"><meta property="og:type" content="website"><link rel="icon" href="assets/favicon.png"><link rel="stylesheet" href="styles.css"></head><body>
 <a class="skip" href="#main">{'Skip to content' if en else 'Đến nội dung chính'}</a>
-<header><div class="container header-inner"><a class="brand" href="@home@" aria-label="xDev Asia"><img src="assets/xdev-logo.svg" alt="xDev" width="143" height="50"><span>ASIA</span></a><nav aria-label="{'Main navigation' if en else 'Điều hướng chính'}"><a href="@studio@">AI Studio</a><a href="@docs@">{'Docs' if en else 'Tài liệu'}</a><a href="https://blog.xdev.asia">Blog ↗</a></nav></div></header>
-{body}<footer class="container"><a href="@home@">© 2026 xDev Asia</a><div class="footer-links"><a href="@studio@">AI Studio</a><a href="@docs@">{'Documentation' if en else 'Hướng dẫn sử dụng'}</a></div></footer></body></html>'''
+<header><div class="container header-inner"><a class="brand" href="@home@" aria-label="xDev Asia"><img src="assets/brand/wordmark-v2/{logo}" alt="{brand_name}" width="143" height="70"></a><nav aria-label="{'Main navigation' if en else 'Điều hướng chính'}"><a href="@studio@">AI Studio</a><a href="@docs@">{'Docs' if en else 'Tài liệu'}</a><a href="https://blog.xdev.asia">Blog ↗</a></nav></div></header>
+{body}<footer class="container"><a href="@home@">© 2026 xDev Asia</a><div class="footer-navigation"><div class="footer-links"><a href="@brand@">{'Brand' if en else 'Thương hiệu'}</a><a href="@studio@">AI Studio</a><a href="@docs@">{'Documentation' if en else 'Hướng dẫn sử dụng'}</a></div>@social@</div></footer></body></html>'''
 
 
 def build():
@@ -71,35 +84,34 @@ def build():
     for language in ['en', 'vi']:
         content = json.loads((ROOT / f'src/studio.{language}.json').read_text())
         en = language == 'en'
-        cards = ''.join(f'<article><span class="principle-number">/ {i:02}</span><h3>{escape(item[0])}</h3><p>{escape(item[1])}</p></article>' for i, item in enumerate(content['features'], 1))
-        body = f'''<main id="main"><section class="container product-hero"><div class="eyebrow">XDEV AI STUDIO</div><h1>{content['headline']}</h1><p class="lead">{escape(content['description'])}</p><div class="hero-actions"><a class="button primary" href="@quickstart@">{content['start']} →</a><a class="text-link" href="@docs@">{content['docs']} →</a></div></section><section class="container product-features"><div class="principles">{cards}</div></section><section class="container"><div class="blog-panel studio-next"><div><div class="eyebrow">{content['next_label']}</div><h2>{content['next_title']}</h2><p>{content['next_text']}</p><a class="button white" href="@docs@">{content['docs']} →</a></div><div><p>{content['app_text']}</p><a class="button white" href="https://ai-studio.xdev.asia">{content['app_link']} ↗</a></div></div></section></main>'''
-        decorate(shell(language, 'XDev AI Studio', content['description'], body), language, 'ai-studio/')
+        body = render_studio(language, content)
+        decorate(shell(language, 'XDev AI Studio', content['description'], body, product=True), language, 'ai-studio/')
         pages = content['pages']
         entries = [{'slug': '', 'title': content['docs'], 'description': content['docs_description'], 'sections': []}] + pages
         for entry in entries:
             path = 'ai-studio/docs/' + (entry['slug'] + '/' if entry['slug'] else '')
-            nav = ''
-            for item in entries:
-                target = 'ai-studio/docs/' + (item['slug'] + '/' if item['slug'] else '')
-                active = ' aria-current="page"' if item['slug'] == entry['slug'] else ''
-                nav += f'<a href="{relative(route(language,path),route(language,target))}"{active}>{escape(item["title"])}</a>'
             sections = ''
-            for section in entry['sections']:
-                sections += f'<section><h2>{escape(section["title"])}</h2>'
+            for number, section in enumerate(entry['sections'], 1):
+                sections += f'<section id="section-{number}"><h2>{escape(section["title"])}</h2>'
                 if 'text' in section:
                     sections += f'<p>{escape(section["text"])}</p>'
                 if 'steps' in section:
                     sections += '<ol>' + ''.join(f'<li>{escape(step)}</li>' for step in section['steps']) + '</ol>'
+                if 'image' in section:
+                    asset = f'assets/ai-studio/{section["image"]}.{language}.png'
+                    caption = escape(section['caption'])
+                    alt = escape(section['caption'].split(':')[0], quote=True)
+                    sections += f'<figure class="guide-figure"><a href="{asset}" target="_blank" rel="noopener" aria-label="{alt}"><img src="{asset}" alt="{alt}" width="1440" height="1000" loading="lazy" decoding="async"></a><figcaption>{caption}</figcaption></figure>'
                 sections += '</section>'
-            if not entry['slug']:
-                sections = '<div class="doc-cards">' + ''.join(f'<a href="{item["slug"]}/"><h2>{escape(item["title"])}</h2><p>{escape(item["description"])}</p><span>{"Read guide" if en else "Đọc hướng dẫn"} →</span></a>' for item in pages) + '</div>'
-            else:
-                index = pages.index(entry)
-                if index + 1 < len(pages):
-                    following = pages[index + 1]
-                    sections += f'<a class="button primary" href="../{following["slug"]}/">{escape(following["title"])} →</a>'
-            body = f'<main id="main" class="container docs-layout"><aside><div class="eyebrow">AI STUDIO / DOCS</div><nav aria-label="{"Documentation" if en else "Mục lục tài liệu"}">{nav}</nav></aside><article class="doc-content"><a class="text-link" href="@studio@">← AI Studio</a><h1>{escape(entry["title"])}</h1><p class="lead">{escape(entry["description"])}</p>{sections}</article></main>'
-            decorate(shell(language, entry['title'], entry['description'], body), language, path)
+            body = render_docs(language, content, entry, sections)
+            page = shell(language, entry['title'], entry['description'], body, product=True)
+            page = page.replace('</head>', '<link rel="stylesheet" href="assets/docs-page.css"></head>')
+            decorate(page, language, path)
+    for language in ['en', 'vi']:
+        brand = json.loads((ROOT / f'src/brand.{language}.json').read_text())
+        page = shell(language, brand['title'], brand['description'], render_brand(brand))
+        page = page.replace('</head>', '<link rel="stylesheet" href="assets/brand-guide.css"></head>')
+        decorate(page, language, 'brand/')
     (OUT / '.nojekyll').touch()
     print(f'Built {len(list(OUT.rglob("index.html")))} localized pages.')
 

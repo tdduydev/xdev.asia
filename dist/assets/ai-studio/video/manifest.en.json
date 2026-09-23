@@ -1,0 +1,307 @@
+{
+  "language": "en",
+  "voice": "en-US-JennyNeural",
+  "duration": 403.3,
+  "duration_label": "6:43",
+  "playback_rate": 1.323955,
+  "chapters": [
+    {
+      "title": "Start with AI Studio",
+      "start": 0,
+      "time": "00:00"
+    },
+    {
+      "title": "Knowledge and data",
+      "start": 61.2,
+      "time": "01:01"
+    },
+    {
+      "title": "Tools and automation",
+      "start": 140.35,
+      "time": "02:20"
+    },
+    {
+      "title": "Publish and integrate",
+      "start": 211.15,
+      "time": "03:31"
+    },
+    {
+      "title": "Quality and memory",
+      "start": 234.95,
+      "time": "03:54"
+    },
+    {
+      "title": "Manage your organisation",
+      "start": 293.25,
+      "time": "04:53"
+    },
+    {
+      "title": "Training and administration",
+      "start": 366.35,
+      "time": "06:06"
+    }
+  ],
+  "slides": [
+    {
+      "chapter": 1,
+      "chapter_title": "Start with AI Studio",
+      "slug": "quickstart",
+      "title": "Create your first application",
+      "description": "Build a chatbot, agent, chatflow or workflow.",
+      "image": "apps",
+      "narration": "Welcome to AI Studio. This tour covers seven chapters, from building applications, connecting data and automating work to operations and administration. The screens use illustrative data. Available actions depend on permissions and deployment configuration. Create your first application. Build a chatbot, agent, chatflow or workflow. Open Studio and create an application. Choose Chatbot for a conversational assistant, Agent for tool-assisted tasks, or Chatflow/Workflow for a visual flow.Configure variables, opening messages, business processes, speech recognition, text to speech and image generation with suitable models."
+    },
+    {
+      "chapter": 1,
+      "chapter_title": "Start with AI Studio",
+      "slug": "marketplace",
+      "title": "Explore model providers",
+      "description": "Compare the provider catalog before configuring models.",
+      "image": "marketplace",
+      "narration": "Explore model providers. Compare the provider catalog before configuring models. Open Marketplace and search by provider name or model type."
+    },
+    {
+      "chapter": 1,
+      "chapter_title": "Start with AI Studio",
+      "slug": "models",
+      "title": "Connect AI models",
+      "description": "Choose the models your workspace can use.",
+      "image": "models",
+      "narration": "Connect AI models. Choose the models your workspace can use. Open Integrations → Model provider and select a provider from the catalog. Enter its endpoint and credentials as required."
+    },
+    {
+      "chapter": 1,
+      "chapter_title": "Start with AI Studio",
+      "slug": "account",
+      "title": "Manage your account",
+      "description": "Keep sign-in details and personal preferences up to date.",
+      "image": "account",
+      "narration": "Manage your account. Keep sign-in details and personal preferences up to date. Open your account from the user menu to review your profile and account settings."
+    },
+    {
+      "chapter": 2,
+      "chapter_title": "Knowledge and data",
+      "slug": "knowledge",
+      "title": "Build a knowledge base",
+      "description": "Ground answers in your own documents.",
+      "image": "knowledge",
+      "narration": "Build a knowledge base. Ground answers in your own documents. Open Knowledge and create a knowledge base. Upload documents or connect a supported source, then select the parsing and indexing settings."
+    },
+    {
+      "chapter": 2,
+      "chapter_title": "Knowledge and data",
+      "slug": "documents",
+      "title": "Manage documents and chunks",
+      "description": "Track ingestion, inspect original documents and manage chunks used for retrieval.",
+      "image": "documents",
+      "narration": "Manage documents and chunks. Track ingestion, inspect original documents and manage chunks used for retrieval. Open Knowledge, select a base and open its document list. Upload files or use a connected source."
+    },
+    {
+      "chapter": 2,
+      "chapter_title": "Knowledge and data",
+      "slug": "retrieval",
+      "title": "Test and tune retrieval",
+      "description": "Inspect retrieved context before using it in answers.",
+      "image": "retrieval",
+      "narration": "Test and tune retrieval. Inspect retrieved context before using it in answers. Select a knowledge base, open Retrieval and enter a realistic question. Inspect the returned chunks and scores. Economy indexing has no vectors and only supports full-text search. Reranking adds a model call and may send chunk content to the selected provider."
+    },
+    {
+      "chapter": 2,
+      "chapter_title": "Knowledge and data",
+      "slug": "pipelines",
+      "title": "Design knowledge ingestion pipelines",
+      "description": "Choose a template and customise how data enters a knowledge base.",
+      "image": "pipeline",
+      "narration": "Design knowledge ingestion pipelines. Choose a template and customise how data enters a knowledge base. Open Knowledge → Custom to review available pipeline templates."
+    },
+    {
+      "chapter": 2,
+      "chapter_title": "Knowledge and data",
+      "slug": "sources",
+      "title": "Connect data sources",
+      "description": "Reuse source connections for document ingestion.",
+      "image": "sources",
+      "narration": "Connect data sources. Reuse source connections for document ingestion. Open Integrations → Data sources and add a supported connection. Enter its configuration and credential references."
+    },
+    {
+      "chapter": 2,
+      "chapter_title": "Knowledge and data",
+      "slug": "external-knowledge",
+      "title": "Connect external knowledge",
+      "description": "Connect an existing retrieval service in your organisation.",
+      "image": "external",
+      "narration": "Connect external knowledge. Connect an existing retrieval service in your organisation. Open Settings → External knowledge and register a service name, endpoint and required key. This service receives outbound queries; it differs from a source that imports documents. The destination must satisfy connection policies and data labels."
+    },
+    {
+      "chapter": 3,
+      "chapter_title": "Tools and automation",
+      "slug": "tools",
+      "title": "Give agents tools",
+      "description": "Connect built-in tools, HTTP APIs and MCP servers.",
+      "image": "tools",
+      "narration": "Give agents tools. Connect built-in tools, HTTP APIs and MCP servers. Open Integrations → Tools. Choose a built-in provider, add an API tool or configure an MCP server with its endpoint and authentication."
+    },
+    {
+      "chapter": 3,
+      "chapter_title": "Tools and automation",
+      "slug": "extensions",
+      "title": "Use extension APIs for moderation",
+      "description": "Register a moderation endpoint managed by your organisation.",
+      "image": "extensions",
+      "narration": "Use extension APIs for moderation. Register a moderation endpoint managed by your organisation. Open Integrations → Extension and enter a name, endpoint URL and an API key if required. An extension is an HTTP call to your endpoint, not a downloaded executable plugin. The endpoint receives user messages and follows outbound-access policy."
+    },
+    {
+      "chapter": 3,
+      "chapter_title": "Tools and automation",
+      "slug": "workflows",
+      "title": "Design visual workflows",
+      "description": "Connect processing steps and inspect each run.",
+      "image": "workflow",
+      "narration": "Design visual workflows. Connect processing steps and inspect each run. Open a Workflow or Chatflow app and enter its workflow editor. Define input fields on the start node."
+    },
+    {
+      "chapter": 3,
+      "chapter_title": "Tools and automation",
+      "slug": "triggers",
+      "title": "Automate with triggers",
+      "description": "Start workflows from events or schedules.",
+      "image": "triggers",
+      "narration": "Automate with triggers. Start workflows from events or schedules. Open Integrations → Triggers to review the available types and existing workspace triggers. To create one, open the target Workflow app, save its draft and select the root/start node. Configure the trigger in that node’s Triggers panel; triggers are not created from the workspace overview."
+    },
+    {
+      "chapter": 3,
+      "chapter_title": "Tools and automation",
+      "slug": "approvals",
+      "title": "Review approval requests",
+      "description": "Keep a human decision in approval-gated flows.",
+      "image": "approvals",
+      "narration": "Review approval requests. Keep a human decision in approval-gated flows. Open the approval inbox to find requests you are allowed to review. Select a pending request."
+    },
+    {
+      "chapter": 4,
+      "chapter_title": "Publish and integrate",
+      "slug": "publishing",
+      "title": "Publish and share",
+      "description": "Deliver a tested version through the right channel.",
+      "image": "publish",
+      "narration": "Publish and share. Deliver a tested version through the right channel. Open the app, test its draft and publish the version you want users to run. Draft edits need a new publication to reach users."
+    },
+    {
+      "chapter": 4,
+      "chapter_title": "Publish and integrate",
+      "slug": "api",
+      "title": "Use the application API and MCP",
+      "description": "Integrate published apps into another system.",
+      "image": "api",
+      "narration": "Use the application API and MCP. Integrate published apps into another system. Open an app → API access and read its generated endpoint, input schema and examples. Publish the app before calling its published interface."
+    },
+    {
+      "chapter": 5,
+      "chapter_title": "Quality and memory",
+      "slug": "logs",
+      "title": "Read logs and execution traces",
+      "description": "Trace application results back to conversations or execution steps.",
+      "image": "logs",
+      "narration": "Read logs and execution traces. Trace application results back to conversations or execution steps. Open an application and select Logs. The list shows conversations or workflow runs depending on application type."
+    },
+    {
+      "chapter": 5,
+      "chapter_title": "Quality and memory",
+      "slug": "annotations",
+      "title": "Set up canned answers",
+      "description": "Provide consistent answers to explicitly matched questions.",
+      "image": "annotations",
+      "narration": "Set up canned answers. Provide consistent answers to explicitly matched questions. Inside an application, open the logs and canned-answers area. An exact match after normalisation returns the canned answer without a model call. Approximate matching is not used."
+    },
+    {
+      "chapter": 5,
+      "chapter_title": "Quality and memory",
+      "slug": "monitoring",
+      "title": "Monitor usage and quality",
+      "description": "Understand runs, costs, feedback and audit events.",
+      "image": "monitoring",
+      "narration": "Monitor usage and quality. Understand runs, costs, feedback and audit events. Open Operations and select the relevant time range and filters. Review activity, token usage, cost and quality indicators.Inside an application, create evaluation datasets, run tests and compare compatible runs; export training data when needed."
+    },
+    {
+      "chapter": 5,
+      "chapter_title": "Quality and memory",
+      "slug": "memory",
+      "title": "Manage long-term memory",
+      "description": "Review and govern information retained across interactions.",
+      "image": "memory",
+      "narration": "Manage long-term memory. Review and govern information retained across interactions. An authorized memory administrator opens Memories to review the dashboard and extraction queue. Check items and their source context before acting."
+    },
+    {
+      "chapter": 6,
+      "chapter_title": "Manage your organisation",
+      "slug": "workspace",
+      "title": "Manage your workspace",
+      "description": "Organize members, roles, API keys and quotas.",
+      "image": "workspace",
+      "narration": "Manage your workspace. Organize members, roles, API keys and quotas. Use the workspace menu to select the right workspace. Open Workspace settings to manage members and invitations."
+    },
+    {
+      "chapter": 6,
+      "chapter_title": "Manage your organisation",
+      "slug": "roles",
+      "title": "Create roles and assign permissions",
+      "description": "Define workspace permissions around team responsibilities.",
+      "image": "roles",
+      "narration": "Create roles and assign permissions. Define workspace permissions around team responsibilities. Open Settings → Custom roles using an account allowed to manage roles. Workspace roles do not automatically grant instance administration. Check both allowed operations and operations that must be denied."
+    },
+    {
+      "chapter": 6,
+      "chapter_title": "Manage your organisation",
+      "slug": "security",
+      "title": "Configure data protection",
+      "description": "Align AI usage with your organization’s data policies.",
+      "image": "security",
+      "narration": "Configure data protection. Align AI usage with your organization’s data policies. Open Settings → Data protection to review sensitivity levels and the available PII, OCR and data-handling policies."
+    },
+    {
+      "chapter": 6,
+      "chapter_title": "Manage your organisation",
+      "slug": "settings",
+      "title": "Set up branding, storage and identity",
+      "description": "Configure workspace services from dedicated settings pages.",
+      "image": "settings",
+      "narration": "Set up branding, storage and identity. Configure workspace services from dedicated settings pages. Use Branding to set the workspace identity. Open Storage to configure the available S3 storage settings and verify access before using it for documents."
+    },
+    {
+      "chapter": 6,
+      "chapter_title": "Manage your organisation",
+      "slug": "storage",
+      "title": "Manage S3 storage",
+      "description": "Monitor the bucket, storage use and unreferenced objects.",
+      "image": "storage",
+      "narration": "Manage S3 storage. Monitor the bucket, storage use and unreferenced objects. Open Settings → Storage to inspect bucket status, use, object counts and measurement time."
+    },
+    {
+      "chapter": 6,
+      "chapter_title": "Manage your organisation",
+      "slug": "identity",
+      "title": "Configure single sign-on",
+      "description": "Connect an identity provider and map user groups.",
+      "image": "identity",
+      "narration": "Configure single sign-on. Connect an identity provider and map user groups. Open Settings → Single sign-on. Add the issuer, client ID and credentials supplied by the identity administrator."
+    },
+    {
+      "chapter": 7,
+      "chapter_title": "Training and administration",
+      "slug": "training",
+      "title": "Fine-tune a model",
+      "description": "Submit and track training through configured providers.",
+      "image": "training",
+      "narration": "Fine-tune a model. Submit and track training through configured providers. Open Settings → Model training and review the available training channels. Unavailable channels are identified in the page."
+    },
+    {
+      "chapter": 7,
+      "chapter_title": "Training and administration",
+      "slug": "admin",
+      "title": "Administer the instance",
+      "description": "Operate the installation beyond a single workspace.",
+      "image": "admin",
+      "narration": "Administer the instance. Operate the installation beyond a single workspace. Sign in with an instance administrator account and open Administration. Workspace ownership alone does not grant instance administration.Instance administration also includes organisations, accounts, service health, runtime settings, network rules and feature flags. Instance administration is separate from workspace roles. For step-by-step practice, open the corresponding guide on the AI Studio website. Thank you for watching."
+    }
+  ]
+}

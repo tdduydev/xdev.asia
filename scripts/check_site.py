@@ -18,6 +18,8 @@ class Page(HTMLParser):
         self.language = None
         self.canonical = None
         self.headings = 0
+        self.images = []
+        self.anchors = []
         self.feed(text)
         assert not self.stack, f"Unclosed tags: {self.stack}"
 
@@ -28,6 +30,10 @@ class Page(HTMLParser):
         if 'id' in attrs:
             assert attrs['id'] not in self.ids, f'Duplicate id {attrs["id"]}'
             self.ids.add(attrs['id'])
+        if tag == 'img':
+            self.images.append(attrs)
+        if tag == 'a':
+            self.anchors.append(attrs.get('href', ''))
         if tag == 'html':
             self.language = attrs.get('lang')
         if tag == 'h1':
@@ -36,7 +42,7 @@ class Page(HTMLParser):
             self.canonical = attrs.get('href')
         if tag == 'link' and attrs.get('rel') == 'alternate':
             self.alternates[attrs.get('hreflang')] = attrs.get('href')
-        for key in ['href', 'src']:
+        for key in ['href', 'src', 'poster']:
             if attrs.get(key):
                 self.links.append(attrs[key])
 
@@ -50,7 +56,7 @@ def check():
     vi = json.loads((ROOT / 'src/studio.vi.json').read_text())
     slugs = [p['slug'] for p in en['pages']]
     assert slugs == [p['slug'] for p in vi['pages']], 'Locale routes differ'
-    paths = ['', 'ai-studio/', 'ai-studio/docs/'] + [f'ai-studio/docs/{slug}/' for slug in slugs]
+    paths = ['', 'brand/', 'ai-studio/', 'ai-studio/docs/'] + [f'ai-studio/docs/{slug}/' for slug in slugs]
     expected = {prefix + path + 'index.html' for prefix in ['', 'vi/'] for path in paths}
     actual = {str(p.relative_to(OUT)) for p in OUT.rglob('*.html')}
     assert actual == expected, f'Missing or stale pages: {actual ^ expected}'
@@ -58,7 +64,7 @@ def check():
     for name in sorted(expected):
         file = OUT / name
         text = file.read_text()
-        assert not re.search(r'forge|@(?:home|studio|docs|quickstart)@', text, re.I), f'Hidden product or unresolved placeholder: {name}'
+        assert not re.search(r'forge|@(?:home|studio|docs|quickstart|brand|social)@', text, re.I), f'Hidden product or unresolved placeholder: {name}'
         page = Page(text)
         assert page.language == ('vi' if name.startswith('vi/') else 'en'), name
         assert page.headings == 1, name
@@ -70,6 +76,17 @@ def check():
             if locale == 'vi':
                 target = 'vi/' + target
             assert page.alternates[locale].endswith('/' + target.removesuffix('index.html')), name
+        assert not any(urlsplit(link).hostname == 'ai-studio.xdev.asia' for link in page.anchors), f'Guide must stay on the product site: {name}'
+        if '/docs/' in name and name.split('/')[-2] != 'docs':
+            screenshots = [image for image in page.images if '/ai-studio/' in image.get('src', '')]
+            assert screenshots, f'Missing feature screenshot: {name}'
+            for image in screenshots:
+                assert image.get('alt') and image.get('width') and image.get('height'), f'Inaccessible image: {name}'
+                assert image['src'].endswith(f'.{page.language}.png'), f'Wrong screenshot language: {name}'
+                target = (file.parent / image['src']).resolve()
+                png = target.read_bytes()
+                assert png[:8] == b'\x89PNG\r\n\x1a\n', f'Invalid screenshot: {target}'
+                assert int.from_bytes(png[16:20], 'big') == 1440 and int.from_bytes(png[20:24], 'big') == 1000, target
         pages[file.resolve()] = page
     for file, page in pages.items():
         for link in page.links:
