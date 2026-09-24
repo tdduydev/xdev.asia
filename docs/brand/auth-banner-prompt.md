@@ -1,0 +1,6 @@
+# AI Studio sign-in artwork
+
+Generated with the built-in imagegen tool. No embedded logo or localized copy.
+Product asset: `../xdev-ai-studio/web/public/brand/auth-workflow-v1.png`.
+
+Use case: stylized-concept. Asset type: 16:9 illustration inside the dark navy sign-in panel of XDev AI Studio. Primary request: a refined original abstract visualization of documents becoming useful AI workflows. Scene: deep midnight navy studio background, three thin translucent glass document sheets on the left flowing through a sculptural luminous cobalt glass prism in the center, delicate curved blue light conduits leading to three neatly arranged small glass output tiles on the right. Sophisticated restrained 3D editorial render, crisp edges, subtle bloom, beautiful negative space, deliberate asymmetric composition, viewed in gentle isometric perspective. Materials: frosted optical glass, satin dark blue, soft cyan reflections. Palette: navy and electric blue matching existing XDev identity. Wide 16:9 composition, keep entire object cluster within central 80 percent for responsive display. No typography, letters, numbers, logos, X shapes, badges, watermarks, UI screenshot, or humanoid robots. This is background artwork only; the exact approved SVG brand mark is rendered separately by the website.
