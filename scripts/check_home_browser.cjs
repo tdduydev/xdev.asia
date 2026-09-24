@@ -40,7 +40,7 @@ const assert=require('node:assert/strict');
   await page.waitForFunction(()=>document.querySelector('.x-canvas').dataset.moving==='false');
   const idleFrames=await page.evaluate(()=>window.frameCalls);await page.waitForTimeout(350);
   assert.equal(await page.evaluate(()=>window.frameCalls),idleFrames,'Canvas still renders while idle');
-  await page.locator(`.language-switch a[lang="${locale==='en'?'vi':'en'}"]`).click();
+  await page.locator('.language-switch select').selectOption({label:locale==='en'?'Tiếng Việt':'English'});
   assert.equal(await page.locator('html').getAttribute('lang'),locale==='en'?'vi':'en');
  }
  await page.setViewportSize({width:1440,height:1000});await page.goto(origin+'/vi/');

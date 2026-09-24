@@ -11,11 +11,12 @@ from docs_page import render_docs
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'dist'
+LANGUAGES = [('en', 'English'), ('vi', 'Tiếng Việt')]
 ORIGIN = os.environ.get('SITE_URL', 'https://xdev.asia').rstrip('/')
 
 
 def route(language, path=''):
-    return ('vi/' if language == 'vi' else '') + path
+    return (language + '/' if language != 'en' else '') + path
 
 
 def relative(source, target):
@@ -37,11 +38,16 @@ def decorate(page, language, path):
         for label, url in [('Facebook', 'https://www.facebook.com/duydev/'), ('GitHub', 'https://github.com/tdduydev'), ('LinkedIn', 'https://www.linkedin.com/in/duydev/')]
     ) + '</div>'
     page = page.replace('@social@', social_links)
-    switcher = '<div class="language-switch" role="group" aria-label="' + ('Language' if language == 'en' else 'Ngôn ngữ') + '">'
-    for lang, label in [('en', 'English'), ('vi', 'Tiếng Việt')]:
-        active = ' aria-current="page"' if lang == language else ''
-        switcher += f'<a href="{relative(current, route(lang, path))}" lang="{lang}" hreflang="{lang}" aria-label="{label}"{active}>{lang.upper()}</a>'
-    switcher += '</div>'
+    label = 'Language' if language == 'en' else 'Ngôn ngữ'
+    switcher = f'<div class="language-switch"><select aria-label="{label}" data-language-select>'
+    fallback = ''
+    for lang, name in LANGUAGES:
+        target = relative(current, route(lang, path))
+        selected = ' selected' if lang == language else ''
+        switcher += f'<option value="{target}" lang="{lang}"{selected}>{name}</option>'
+        fallback += f'<a href="{target}" lang="{lang}" hreflang="{lang}">{name}</a>'
+    switcher += f'</select><noscript><style>[data-language-select]{{display:none}}</style>{fallback}</noscript></div>'
+    page = page.replace('</body>', f'<script src="{prefix}assets/language-switch.js" defer></script></body>')
     page = page.replace('</nav>', '</nav>' + switcher, 1)
     canonical = ORIGIN + '/' + current
     metadata = f'<link rel="canonical" href="{canonical}">\n'

@@ -35,7 +35,7 @@ const assert=require('node:assert/strict');
   assert.equal(await page.locator('.studio-tab').nth(3).getAttribute('aria-selected'),'true');
   await page.keyboard.press('Home');
   assert.equal(await page.locator('.studio-tab').first().getAttribute('aria-selected'),'true');
-  await page.locator(`.language-switch a[lang="${locale==='en'?'vi':'en'}"]`).click();
+  await page.locator('.language-switch select').selectOption({label:locale==='en'?'Tiếng Việt':'English'});
   assert.equal(await page.locator('html').getAttribute('lang'),locale==='en'?'vi':'en');
  }
  await page.emulateMedia({reducedMotion:'reduce'});
