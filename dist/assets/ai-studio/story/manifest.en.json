@@ -1,0 +1,84 @@
+{
+  "language": "en",
+  "duration": 107.66666666666666,
+  "fps": 24,
+  "scenes": [
+    {
+      "title": "The knowledge is there. The connections aren't.",
+      "labels": [
+        "Documents",
+        "Systems",
+        "Experience",
+        "Where is the answer?"
+      ],
+      "narration": "Inside an organization, knowledge already exists. It lives in documents, systems, and people's experience. Yet finding an answer often means searching several places, asking colleagues, and piecing the information together by hand.",
+      "duration": 17.666666666666668,
+      "start": 0
+    },
+    {
+      "title": "A chat box is not a business process.",
+      "labels": [
+        "Question",
+        "AI model",
+        "Which data?",
+        "Who has access?",
+        "What happens next?"
+      ],
+      "narration": "An AI model can hold a conversation. Putting it to work takes more: the right data, appropriate access, useful tools, and a process you can inspect. This is the problem AI Studio is designed to address.",
+      "duration": 15.916666666666666,
+      "start": 17.666666666666668
+    },
+    {
+      "title": "Start with your knowledge.",
+      "labels": [
+        "Documents",
+        "Knowledge base",
+        "Retrieval",
+        "Relevant context"
+      ],
+      "narration": "Start by connecting and organizing your knowledge sources. Documents are processed into retrievable pieces. When a question arrives, the system finds related information to provide context for the model. Source quality and retrieval settings still need to be checked.",
+      "duration": 19.125,
+      "start": 33.583333333333336
+    },
+    {
+      "title": "Draw the flow. Connect tools. Test it.",
+      "labels": [
+        "Request",
+        "Knowledge",
+        "Model",
+        "Tools",
+        "Result"
+      ],
+      "narration": "Next, choose a model and design how the application works. In a visual workflow, connect the incoming request, knowledge retrieval, model processing, and tool calls. The data flow becomes visible, ready to test and inspect one step at a time.",
+      "duration": 18.416666666666668,
+      "start": 52.708333333333336
+    },
+    {
+      "title": "Stay in control as you grow.",
+      "labels": [
+        "Test",
+        "Inspect",
+        "Approve",
+        "Publish",
+        "Web / API",
+        "Observe"
+      ],
+      "narration": "Before sharing, test the results and add an approval step when a person needs to decide. Permissions, logs, and monitoring help your team control how an application is used. Deployment channels depend on the configuration and integrations available in your installation.",
+      "duration": 18.708333333333332,
+      "start": 71.125
+    },
+    {
+      "title": "From what you know, to what AI can do.",
+      "labels": [
+        "Knowledge",
+        "Models",
+        "Workflows",
+        "Applications",
+        "Start small. Evaluate. Expand."
+      ],
+      "narration": "AI Studio connects knowledge, models, and workflows in one workspace. Its aim is to shorten the path from an AI idea to a useful application that you can control. Begin with a small problem, evaluate its quality, and expand with your team.",
+      "duration": 17.833333333333332,
+      "start": 89.83333333333333
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 """Product overview; all copy and screenshots follow the selected locale."""
 from html import escape
-from studio_features import render_features, render_video
+from studio_features import render_features, render_video, render_story
 
 
 def render_studio(language, content):
@@ -28,11 +28,12 @@ def render_studio(language, content):
     states = ''.join(f'<span data-state="{i}" hidden>{e(state)}</span>' for i, state in enumerate(c['demo_states']))
     return f'''<link rel="stylesheet" href="assets/studio-page.css">
 <main id="main" class="studio-landing">
-<section class="container studio-hero"><div class="studio-hero-copy"><p class="studio-eyebrow">{e(c['eyebrow'])}</p><h1>{c['headline']}</h1><p class="studio-intro">{e(c['intro'])}</p><div class="studio-actions"><a class="button primary" href="#book-demo">{e(booking['label'])}</a><a class="studio-inline-link" href="#explore">{e(c['explore'])}<span aria-hidden="true">↓</span></a></div><div class="studio-catalog-links"><a href="#features">{("All features" if language == "en" else "Toàn bộ tính năng")}</a><a href="#video">{("Watch the tour" if language == "en" else "Xem video giới thiệu")}</a></div><p class="studio-hero-note">{e(c['note'])}</p></div>
+<section class="container studio-hero"><div class="studio-hero-copy"><p class="studio-eyebrow">{e(c['eyebrow'])}</p><h1>{c['headline']}</h1><p class="studio-intro">{e(c['intro'])}</p><div class="studio-actions"><a class="button primary" href="#book-demo">{e(booking['label'])}</a><a class="studio-inline-link" href="#explore">{e(c['explore'])}<span aria-hidden="true">↓</span></a></div><div class="studio-catalog-links"><a href="#story">{("Why AI Studio?" if language == "en" else "Vì sao có AI Studio?")}</a><a href="#features">{("All features" if language == "en" else "Toàn bộ tính năng")}</a><a href="#video">{("Watch the tour" if language == "en" else "Xem video giới thiệu")}</a></div><p class="studio-hero-note">{e(c['note'])}</p></div>
 <div class="studio-blueprint"><div class="studio-blueprint-top"><span>{e(c['demo_label'])}</span><span class="studio-demo-badge">{e(c['demo_badge'])}</span></div><div class="workflow-scenario"><label for="workflow-scenario">{e(c['scenario_label'])}</label><select id="workflow-scenario" data-scenario disabled>{scenarios}</select><p class="workflow-input-label">{e(c['sample_label'])}</p><p data-sample-input>{e(c['scenarios'][0]['input'])}</p></div>{canvas}<div class="workflow-result" data-workflow-result hidden><strong>{e(c['output_label'])}</strong><p data-output-text></p></div><div class="studio-demo-output"><span class="studio-status-dot" aria-hidden="true"></span><p role="status" aria-live="polite" data-demo-status>{e(c['demo_idle'])}</p><div class="studio-demo-progress" aria-hidden="true"><span></span></div></div><button class="workflow-pause" type="button" data-flow-pause data-pause="{('Pause animation' if language == 'en' else 'Tạm dừng')}" data-resume="{('Resume animation' if language == 'en' else 'Tiếp tục')}" hidden>{('Pause animation' if language == 'en' else 'Tạm dừng')}</button><p class="studio-demo-note">{e(c['demo_note'])}</p><div hidden data-demo-copy>{states}<span data-result>{e(c['demo_result'])}</span></div></div></section>
 <div class="container"><ul class="studio-summary">{''.join(f'<li><span aria-hidden="true">✓</span>{e(item)}</li>' for item in c['strip'])}</ul></div>
 <section class="container studio-explore" id="explore"><div class="studio-section-heading"><h2>{c['workspace_title']}</h2><p>{e(c['workspace_intro'])}</p></div><nav class="studio-tabs" aria-label="{e(c['gallery_label'])}">{tabs}</nav><div class="studio-panels">{panels}</div></section>
 <section class="studio-control-section"><div class="container studio-control-layout"><div><span class="studio-control-emblem" aria-hidden="true">✳</span><h2>{c['control_title']}</h2><p class="studio-control-intro">{e(c['control_intro'])}</p></div><div class="studio-controls">{controls}</div></div></section>
+{render_story(language)}
 {render_video(language)}
 {render_features(language, content)}
 <section class="container studio-journey"><h2>{e(c['journey_title'])}</h2><ol class="studio-steps">{steps}</ol></section>

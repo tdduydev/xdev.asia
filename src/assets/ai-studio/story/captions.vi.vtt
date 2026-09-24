@@ -1,0 +1,58 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:03.688
+Trong một tổ chức, tri thức đã có sẵn.
+
+00:00:03.638 --> 00:00:07.862
+Nó nằm trong tài liệu, hệ thống và kinh nghiệm của từng người.
+
+00:00:07.862 --> 00:00:14.225
+Nhưng khi cần một câu trả lời, chúng ta vẫn phải tìm nhiều nơi, hỏi nhiều người và ghép thông tin bằng tay.
+
+00:00:15.883 --> 00:00:18.821
+Một mô hình AI có thể trò chuyện.
+
+00:00:18.771 --> 00:00:26.558
+Đưa nó vào công việc lại cần nhiều hơn: dữ liệu đúng, quyền truy cập phù hợp, công cụ cần thiết và một quy trình có thể kiểm tra.
+
+00:00:26.558 --> 00:00:30.796
+Đây là bài toán mà AI Studio được xây dựng để giải quyết.
+
+00:00:32.467 --> 00:00:35.979
+Bắt đầu bằng việc kết nối và tổ chức nguồn tri thức.
+
+00:00:35.929 --> 00:00:39.504
+Tài liệu được xử lý thành những phần có thể truy hồi.
+
+00:00:39.504 --> 00:00:44.629
+Khi có câu hỏi, hệ thống tìm nội dung liên quan để bổ sung ngữ cảnh cho mô hình.
+
+00:00:44.629 --> 00:00:48.429
+Chất lượng nguồn và cấu hình truy hồi vẫn cần được kiểm tra.
+
+00:00:50.133 --> 00:00:54.396
+Tiếp theo, lựa chọn mô hình và thiết kế cách ứng dụng hoạt động.
+
+00:00:54.346 --> 00:01:01.396
+Với workflow trực quan, bạn nối bước nhận yêu cầu, truy hồi tri thức, xử lý bằng mô hình và gọi công cụ.
+
+00:01:01.396 --> 00:01:06.221
+Luồng dữ liệu trở nên rõ ràng, có thể chạy thử và kiểm tra từng bước.
+
+00:01:07.883 --> 00:01:14.383
+Trước khi chia sẻ, hãy chạy thử, xem kết quả và thêm bước phê duyệt nếu quy trình cần con người quyết định.
+
+00:01:14.333 --> 00:01:19.446
+Phân quyền, nhật ký và theo dõi giúp đội ngũ kiểm soát cách ứng dụng được sử dụng.
+
+00:01:19.446 --> 00:01:23.571
+Các kênh triển khai phụ thuộc cấu hình và tích hợp của từng hệ thống.
+
+00:01:25.258 --> 00:01:30.433
+AI Studio kết nối tri thức, mô hình và workflow trong một không gian làm việc.
+
+00:01:30.383 --> 00:01:36.033
+Mục tiêu là rút ngắn khoảng cách từ một ý tưởng AI đến một ứng dụng hữu ích và có thể kiểm soát.
+
+00:01:36.033 --> 00:01:41.596
+Bắt đầu với một bài toán nhỏ, đo chất lượng, rồi mở rộng cùng đội ngũ của bạn.

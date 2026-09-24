@@ -1,0 +1,58 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:04.475
+Inside an organization, knowledge already exists.
+
+00:00:04.425 --> 00:00:08.750
+It lives in documents, systems, and people's experience.
+
+00:00:08.750 --> 00:00:16.512
+Yet finding an answer often means searching several places, asking colleagues, and piecing the information together by hand.
+
+00:00:18.217 --> 00:00:21.254
+An AI model can hold a conversation.
+
+00:00:21.204 --> 00:00:28.654
+Putting it to work takes more: the right data, appropriate access, useful tools, and a process you can inspect.
+
+00:00:28.654 --> 00:00:32.454
+This is the problem AI Studio is designed to address.
+
+00:00:34.133 --> 00:00:37.958
+Start by connecting and organizing your knowledge sources.
+
+00:00:37.908 --> 00:00:41.483
+Documents are processed into retrievable pieces.
+
+00:00:41.483 --> 00:00:47.596
+When a question arrives, the system finds related information to provide context for the model.
+
+00:00:47.596 --> 00:00:51.583
+Source quality and retrieval settings still need to be checked.
+
+00:00:53.258 --> 00:00:57.358
+Next, choose a model and design how the application works.
+
+00:00:57.308 --> 00:01:04.658
+In a visual workflow, connect the incoming request, knowledge retrieval, model processing, and tool calls.
+
+00:01:04.658 --> 00:01:09.983
+The data flow becomes visible, ready to test and inspect one step at a time.
+
+00:01:11.675 --> 00:01:17.300
+Before sharing, test the results and add an approval step when a person needs to decide.
+
+00:01:17.250 --> 00:01:22.950
+Permissions, logs, and monitoring help your team control how an application is used.
+
+00:01:22.950 --> 00:01:28.700
+Deployment channels depend on the configuration and integrations available in your installation.
+
+00:01:30.383 --> 00:01:35.633
+AI Studio connects knowledge, models, and workflows in one workspace.
+
+00:01:35.583 --> 00:01:41.321
+Its aim is to shorten the path from an AI idea to a useful application that you can control.
+
+00:01:41.321 --> 00:01:46.521
+Begin with a small problem, evaluate its quality, and expand with your team.

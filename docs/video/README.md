@@ -7,7 +7,7 @@ Narration uses synthetic voices: vi-VN-HoaiMyNeural and en-US-JennyNeural.
 
 Editable narration: `script.vi.json` and `script.en.json`. Each tour has 29 illustrated
 segments; application configuration and evaluation are covered inside their parent
-segments. The website provides all 31 topic guides, 7 seek buttons, localized WebVTT
+segments. The website provides all 60 topic guides, 7 seek buttons, localized WebVTT
 captions and a full transcript. MP4 files also contain chapter metadata.
 
 ## Regenerate
@@ -45,3 +45,5 @@ PLAYWRIGHT_MODULE=/path/to/node_modules/playwright SITE_PREVIEW=http://127.0.0.1
 This checks playback, audio/video decoding, localized caption cues, chapter
 seeking, downloads, transcript access and mobile overflow. It does not establish
 backend feature acceptance or independently review pronunciation.
+
+A separate drawn product story is documented in [story/README.md](story/README.md).

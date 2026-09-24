@@ -35,3 +35,4 @@
 @media(max-width:420px){.language-switch select{width:124px;padding-left:32px;padding-right:24px;font-size:12px}.language-globe{left:10px;width:15px;height:15px}.language-switch:after{right:10px}}
 @media(max-width:380px){.header-inner .brand{width:88px;flex-shrink:0}.header-inner .brand img{width:88px}.header-inner nav>a{white-space:nowrap}.header-inner nav{gap:6px}}
 .language-switch:has(noscript a) .language-globe,.language-switch:has(noscript a):after{display:none}.language-switch noscript:has(a){flex-direction:column;gap:0;padding:3px 8px}.language-switch noscript a{min-height:24px;white-space:nowrap;font-size:11px}
+@media(min-width:381px) and (max-width:420px){.header-inner nav>a{white-space:nowrap}.header-inner nav>a:last-child{display:none}}

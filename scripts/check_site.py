@@ -58,7 +58,7 @@ def check():
     assert slugs == [p['slug'] for p in vi['pages']], 'Locale routes differ'
     paths = ['', 'brand/', 'ai-studio/', 'ai-studio/docs/'] + [f'ai-studio/docs/{slug}/' for slug in slugs]
     expected = {prefix + path + 'index.html' for prefix in ['', 'vi/'] for path in paths}
-    actual = {str(p.relative_to(OUT)) for p in OUT.rglob('*.html')}
+    actual = {str(p.relative_to(OUT)) for p in OUT.rglob('*.html') if 'assets' not in p.relative_to(OUT).parts}
     assert actual == expected, f'Missing or stale pages: {actual ^ expected}'
     pages = {}
     for name in sorted(expected):

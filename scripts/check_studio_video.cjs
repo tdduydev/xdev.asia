@@ -12,10 +12,10 @@ const root=path.resolve(__dirname,'..');const origin=process.env.SITE_PREVIEW||'
    assert.equal(await page.locator('.feature-items>a').count(),guides.length);
    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
   }
-  const video=page.locator('video');
+  const video=page.locator('#studio-tour');
   assert.equal((await page.request.get(await video.evaluate(v=>v.poster))).status(),200);
   await video.scrollIntoViewIfNeeded();
-  await page.waitForFunction(()=>document.querySelector('video').readyState>=2);
+  await page.waitForFunction(()=>document.querySelector('#studio-tour').readyState>=2);
   const initial=await video.evaluate(v=>({duration:v.duration,source:v.currentSrc,muted:v.muted,track:v.textTracks[0].language}));
   assert(initial.duration>=300&&initial.duration<=420,JSON.stringify(initial));
   assert(initial.source.endsWith(`ai-studio.${lang}.mp4`));assert.equal(initial.track,lang);assert(!initial.muted);
@@ -23,13 +23,13 @@ const root=path.resolve(__dirname,'..');const origin=process.env.SITE_PREVIEW||'
   for(const i of [0,3,6]){
    const start=Number(await chapters.nth(i).getAttribute('data-video-seek'));
    await chapters.nth(i).click();
-   await page.waitForFunction(t=>{const v=document.querySelector('video');return !v.paused&&v.currentTime>=t&&v.currentTime<t+5},start);
+   await page.waitForFunction(t=>{const v=document.querySelector('#studio-tour');return !v.paused&&v.currentTime>=t&&v.currentTime<t+5},start);
    await page.waitForTimeout(400);
    assert(await video.evaluate(v=>v.webkitDecodedFrameCount>0));
    assert(await video.evaluate(v=>v.webkitAudioDecodedByteCount>0));
    await video.evaluate(v=>v.pause());
   }
-  await page.waitForFunction(()=>document.querySelector('video').textTracks[0].cues?.length>0);
+  await page.waitForFunction(()=>document.querySelector('#studio-tour').textTracks[0].cues?.length>0);
   const cueState=await video.evaluate(v=>{const cues=[...v.textTracks[0].cues];return {count:cues.length,last:cues.at(-1).endTime,valid:cues.every(c=>c.endTime>c.startTime&&c.endTime<=v.duration+1)}});
   assert(cueState.valid&&cueState.count>60,JSON.stringify(cueState));
   const downloaded=page.waitForEvent('download');await page.locator('.studio-video-links a').first().click();
@@ -37,6 +37,6 @@ const root=path.resolve(__dirname,'..');const origin=process.env.SITE_PREVIEW||'
   await page.locator('.video-transcript summary').click();assert(await page.locator('.video-transcript section').first().isVisible());
   await page.setViewportSize({width:1440,height:1000});await page.locator('#video').scrollIntoViewIfNeeded();await page.screenshot({path:`/tmp/xdev-video-page-${lang}.png`});
  }
- const nojs=await browser.newPage({javaScriptEnabled:false});await nojs.goto(origin+'/vi/ai-studio/');assert(await nojs.locator('video').getAttribute('controls')!==null);assert.equal(await nojs.locator('.studio-video nav noscript').count(),7);
+ const nojs=await browser.newPage({javaScriptEnabled:false});await nojs.goto(origin+'/vi/ai-studio/');assert(await nojs.locator('#studio-tour').getAttribute('controls')!==null);assert.equal(await nojs.locator('.studio-video nav noscript').count(),7);
  assert.deepEqual(errors,[]);await browser.close();console.log('PASS: 60 feature links per locale; localized video/audio decoding, 5–7 minute duration, captions, chapter seek/play, downloads, transcripts, no-JS fallback and responsive layouts.');
 })().catch(e=>{console.error(e);process.exit(1)});

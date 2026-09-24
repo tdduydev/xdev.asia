@@ -229,3 +229,13 @@ if (tour) document.querySelectorAll('[data-video-seek]').forEach(button => {
     tour.play().catch(() => {});
   });
 });
+
+const story = document.querySelector('#studio-story');
+if(story) document.querySelectorAll('[data-story-seek]').forEach(button=>{
+ button.hidden=false;
+ button.addEventListener('click',()=>{story.currentTime=Number(button.dataset.storySeek);story.play().catch(()=>{});});
+});
+// Keep narration intelligible when moving between the two films.
+document.querySelectorAll('video').forEach(video=>video.addEventListener('play',()=>{
+ document.querySelectorAll('video').forEach(other=>{if(other!==video)other.pause();});
+}));
