@@ -1,84 +1,225 @@
 {
   "language": "en",
-  "duration": 107.66666666666666,
+  "duration": 399.00000000000006,
   "fps": 24,
   "scenes": [
     {
-      "title": "The knowledge is there. The connections aren't.",
+      "title": "One question. Too many places to look.",
       "labels": [
+        "Employee",
+        "Purchasing process",
         "Documents",
-        "Systems",
-        "Experience",
-        "Where is the answer?"
+        "Email",
+        "Ask a colleague"
       ],
-      "narration": "Inside an organization, knowledge already exists. It lives in documents, systems, and people's experience. Yet finding an answer often means searching several places, asking colleagues, and piecing the information together by hand.",
-      "duration": 17.666666666666668,
+      "narration": "An employee wants to understand how to purchase equipment for their team. The answer is scattered across documents, email, and colleagues. Finding a paragraph is only the start. Is it current? Is the employee allowed to see it? And who approves the next step?",
+      "kind": "problem",
+      "duration": 20.083333333333332,
       "start": 0
     },
     {
-      "title": "A chat box is not a business process.",
+      "title": "One request, one connected process.",
       "labels": [
-        "Question",
-        "AI model",
-        "Which data?",
-        "Who has access?",
-        "What happens next?"
+        "Employee",
+        "Purchasing assistant",
+        "Find policy",
+        "Draft request",
+        "Reviewer"
       ],
-      "narration": "An AI model can hold a conversation. Putting it to work takes more: the right data, appropriate access, useful tools, and a process you can inspect. This is the problem AI Studio is designed to address.",
-      "duration": 15.916666666666666,
-      "start": 17.666666666666668
+      "narration": "Follow an illustrative use case: an internal purchasing assistant. An employee asks a question in an application built with AI Studio. The application finds the relevant procedure, helps draft a request, and passes it to a responsible reviewer. This is a process you can design, not a built-in purchasing system for every organization.",
+      "kind": "usecase",
+      "duration": 23.75,
+      "start": 20.083333333333332
     },
     {
-      "title": "Start with your knowledge.",
+      "kind": "ingestion",
+      "title": "OCR, NER and knowledge pipelines.",
       "labels": [
-        "Documents",
-        "Knowledge base",
-        "Retrieval",
-        "Relevant context"
+        "Documents / images",
+        "OCR",
+        "NER / PII",
+        "Chunking",
+        "Indexing"
       ],
-      "narration": "Start by connecting and organizing your knowledge sources. Documents are processed into retrievable pieces. When a question arrives, the system finds related information to provide context for the model. Source quality and retrieval settings still need to be checked.",
-      "duration": 19.125,
-      "start": 33.583333333333336
+      "narration": "Inputs may include documents or images that need OCR to extract text. NER helps identify entities such as personal names, alongside policy-based PII rules. Detection is assistance, not a guarantee that every sensitive detail will be found. Configure processing, chunking, and indexing next. Folders, synchronized sources, knowledge pipelines, hybrid retrieval, and reranking help organize the collection and test its quality.",
+      "duration": 31.5,
+      "start": 43.83333333333333
     },
     {
-      "title": "Draw the flow. Connect tools. Test it.",
+      "title": "Retrieve the right data, with the right access.",
       "labels": [
         "Request",
-        "Knowledge",
-        "Model",
-        "Tools",
-        "Result"
+        "Access checks",
+        "Knowledge base",
+        "Relevant passages",
+        "Access denied"
       ],
-      "narration": "Next, choose a model and design how the application works. In a visual workflow, connect the incoming request, knowledge retrieval, model processing, and tool calls. The data flow becomes visible, ready to test and inspect one step at a time.",
-      "duration": 18.416666666666668,
-      "start": 52.708333333333336
+      "narration": "Before a document becomes part of an answer, the caller needs appropriate access. Organization boundaries, departments, and sensitivity levels affect retrieval. Unauthorized documents should not enter the context. In this example, the assistant retrieves the permitted passages needed to prepare the next step.",
+      "kind": "knowledge",
+      "duration": 21.958333333333332,
+      "start": 75.33333333333333
     },
     {
-      "title": "Stay in control as you grow.",
+      "kind": "custom",
+      "title": "Customize the workflow to fit your work.",
       "labels": [
-        "Test",
-        "Inspect",
-        "Approve",
-        "Publish",
-        "Web / API",
-        "Observe"
+        "Connect nodes",
+        "Branch / loop",
+        "Debug each step",
+        "DSL / library"
       ],
-      "narration": "Before sharing, test the results and add an approval step when a person needs to decide. Permissions, logs, and monitoring help your team control how an application is used. Deployment channels depend on the configuration and integrations available in your installation.",
-      "duration": 18.708333333333332,
-      "start": 71.125
+      "narration": "A workflow is not a fixed path. Connect node families for inputs, retrieval, models, branches, loops, data processing, and outputs. Define input variables, run a test, and inspect each step to find problems. Drafts, version history, DSL import and export, and reusable graph snippets support deliberate changes before publication.",
+      "duration": 26.083333333333332,
+      "start": 97.29166666666666
     },
     {
-      "title": "From what you know, to what AI can do.",
+      "title": "AI Gateway: route the model request.",
       "labels": [
-        "Knowledge",
-        "Models",
-        "Workflows",
-        "Applications",
-        "Start small. Evaluate. Expand."
+        "Context",
+        "AI Gateway",
+        "Internal model",
+        "External model",
+        "Policy-filtered routing"
       ],
-      "narration": "AI Studio connects knowledge, models, and workflows in one workspace. Its aim is to shorten the path from an AI idea to a useful application that you can control. Begin with a small problem, evaluate its quality, and expand with your team.",
-      "duration": 17.833333333333332,
-      "start": 89.83333333333333
+      "narration": "With context ready, the application still needs a route to a model. In this diagram, AI Gateway describes the model orchestration layer in AI Studio. It filters eligible models by policy, manages connection credentials, and can fall back to an allowed model after a suitable error. Both internal and external models must meet the configuration and data policy.",
+      "kind": "gateway",
+      "duration": 25.416666666666668,
+      "start": 123.37499999999999
+    },
+    {
+      "title": "What is allowed to leave the boundary?",
+      "labels": [
+        "Sensitive data",
+        "PII masking by policy",
+        "Outbound checks",
+        "External model",
+        "Blocked",
+        "Internal model"
+      ],
+      "narration": "Data protection takes several layers. On the chat path, personal information can be masked according to the configured policy. Sensitivity labels determine whether an external provider is allowed. Tool calls also pass destination controls. A disallowed request must be blocked. Masking personal information alone does not make every payload safe to send outside.",
+      "kind": "security",
+      "duration": 26.583333333333332,
+      "start": 148.79166666666666
+    },
+    {
+      "kind": "sandbox",
+      "title": "Run custom code in a separate sandbox.",
+      "labels": [
+        "Workflow",
+        "Code node",
+        "Sandbox",
+        "Result",
+        "Isolation / limits"
+      ],
+      "narration": "For custom logic, a Code node sends work to a separate sandbox service. This execution boundary separates user code from the main process and applies the sandbox limits. The node stays disabled when the service is not configured. A sandbox does not replace permissions or outbound controls; tool calls still need their own policies.",
+      "duration": 23.583333333333332,
+      "start": 175.375
+    },
+    {
+      "title": "AI drafts. A person decides.",
+      "labels": [
+        "Draft",
+        "Reviewer",
+        "Approved",
+        "Tool / API",
+        "Return for changes"
+      ],
+      "narration": "Back to the purchasing request. AI prepares a draft for a responsible person to review. If changes are needed, it returns for revision. Only after approval does this designed workflow continue to the configured tool. Build this gate for actions with consequences; do not assume that every model output should be executed automatically.",
+      "kind": "approval",
+      "duration": 23.75,
+      "start": 198.95833333333334
+    },
+    {
+      "kind": "integrations",
+      "title": "Connect tools without hiding their effects.",
+      "labels": [
+        "API",
+        "MCP",
+        "Workflow tool",
+        "Destination policy"
+      ],
+      "narration": "Connect built-in tools, API tools, MCP servers, or a workflow exposed as a tool. Data source integrations and external knowledge services bring in information from other systems. Moderation extensions require a compatible service contract. Enable only the operations you need and verify access, connection settings, and permitted destinations before use.",
+      "duration": 26.0,
+      "start": 222.70833333333334
+    },
+    {
+      "kind": "publish",
+      "title": "From a draft to channels and triggers.",
+      "labels": [
+        "Web / widget",
+        "API / MCP",
+        "Messaging",
+        "Schedule / webhook"
+      ],
+      "narration": "After testing, publish an application to the web, embed a widget, or integrate through API and MCP access with appropriate permissions. Messaging channels need provider-specific setup. Scheduled triggers and webhooks can start workflows with suitable authentication and event configuration. API documentation, access keys, and quotas help manage how other systems call the application.",
+      "duration": 27.333333333333332,
+      "start": 248.70833333333334
+    },
+    {
+      "kind": "memory",
+      "title": "Conversations, memory and more modalities.",
+      "labels": [
+        "Conversation",
+        "Reviewed memory",
+        "Speech",
+        "Images"
+      ],
+      "narration": "Configure conversation starters, inputs, follow-up questions, and business behavior. Long-term memory includes evidence review, approval, and retention settings tied to a subject. Speech recognition, text-to-speech, and image generation depend on connected models. Enable the capabilities that serve the use case, and review what the application retains.",
+      "duration": 25.75,
+      "start": 276.0416666666667
+    },
+    {
+      "kind": "quality",
+      "title": "Measure quality before expanding.",
+      "labels": [
+        "Logs",
+        "Evaluation / comparison",
+        "Annotations",
+        "Training data"
+      ],
+      "narration": "Inspect conversations and run logs to understand what happened. Use evaluation datasets, compatible run comparisons, and annotations to check quality. Monitor usage and operations to detect problems. Data can be prepared for training, while fine-tuning still depends on a runner, resources, and deployment configuration, not just a button.",
+      "duration": 24.916666666666668,
+      "start": 301.7916666666667
+    },
+    {
+      "kind": "operations",
+      "title": "Manage workspaces and the installation.",
+      "labels": [
+        "Members / roles",
+        "Identity / security",
+        "S3 storage",
+        "Administration"
+      ],
+      "narration": "Manage members, invitations, roles, keys, and quotas at workspace level. Identity, data protection, model providers, and S3 storage support operations. Instance administrators have separate access to organization and account views, service health, and runtime configuration. Some network and feature-flag screens are read-only inspection surfaces, not direct editing controls.",
+      "duration": 28.041666666666668,
+      "start": 326.70833333333337
+    },
+    {
+      "title": "One platform, several use cases.",
+      "labels": [
+        "Internal Q&A",
+        "Customer support",
+        "Document processing",
+        "Business approvals"
+      ],
+      "narration": "The same building blocks can support internal policy questions, assist customer support staff, process documents, or coordinate business approvals. Each application needs its own data sources, access rules, tools, and evaluation criteria. Test within a small scope before expanding.",
+      "kind": "examples",
+      "duration": 21.0,
+      "start": 354.75000000000006
+    },
+    {
+      "title": "From a question to a controlled outcome.",
+      "labels": [
+        "People",
+        "Knowledge",
+        "AI Gateway",
+        "Workflow",
+        "Outcome"
+      ],
+      "narration": "AI Studio connects people, knowledge, models, and workflows. The value is more than a faster answer. It is a process you can inspect: where the data came from, which model was called, who made the decision, and what happened. Start with a concrete use case, evaluate quality, and observe operations before expanding.",
+      "kind": "closing",
+      "duration": 23.25,
+      "start": 375.75000000000006
     }
   ]
 }

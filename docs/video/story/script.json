@@ -1,18 +1,378 @@
 {
- "vi": [
-  {"title":"Tri thức có sẵn. Kết nối thì chưa.","labels":["Tài liệu","Hệ thống","Kinh nghiệm","Câu trả lời ở đâu?"],"narration":"Trong một tổ chức, tri thức đã có sẵn. Nó nằm trong tài liệu, hệ thống và kinh nghiệm của từng người. Nhưng khi cần một câu trả lời, chúng ta vẫn phải tìm nhiều nơi, hỏi nhiều người và ghép thông tin bằng tay."},
-  {"title":"Một ô chat chưa phải một quy trình.","labels":["Câu hỏi","Mô hình AI","Dữ liệu nào?","Ai được xem?","Làm gì tiếp?"],"narration":"Một mô hình AI có thể trò chuyện. Đưa nó vào công việc lại cần nhiều hơn: dữ liệu đúng, quyền truy cập phù hợp, công cụ cần thiết và một quy trình có thể kiểm tra. Đây là bài toán mà AI Studio được xây dựng để giải quyết."},
-  {"title":"Bắt đầu từ tri thức của bạn.","labels":["Tài liệu","Kho tri thức","Truy hồi","Ngữ cảnh phù hợp"],"narration":"Bắt đầu bằng việc kết nối và tổ chức nguồn tri thức. Tài liệu được xử lý thành những phần có thể truy hồi. Khi có câu hỏi, hệ thống tìm nội dung liên quan để bổ sung ngữ cảnh cho mô hình. Chất lượng nguồn và cấu hình truy hồi vẫn cần được kiểm tra."},
-  {"title":"Vẽ luồng. Gắn công cụ. Chạy thử.","labels":["Yêu cầu","Tri thức","Mô hình","Công cụ","Kết quả"],"narration":"Tiếp theo, lựa chọn mô hình và thiết kế cách ứng dụng hoạt động. Với workflow trực quan, bạn nối bước nhận yêu cầu, truy hồi tri thức, xử lý bằng mô hình và gọi công cụ. Luồng dữ liệu trở nên rõ ràng, có thể chạy thử và kiểm tra từng bước."},
-  {"title":"Kiểm soát trước khi mở rộng.","labels":["Chạy thử","Kiểm tra","Phê duyệt","Xuất bản","Web / API","Theo dõi"],"narration":"Trước khi chia sẻ, hãy chạy thử, xem kết quả và thêm bước phê duyệt nếu quy trình cần con người quyết định. Phân quyền, nhật ký và theo dõi giúp đội ngũ kiểm soát cách ứng dụng được sử dụng. Các kênh triển khai phụ thuộc cấu hình và tích hợp của từng hệ thống."},
-  {"title":"Từ điều bạn biết, đến điều AI làm được.","labels":["Tri thức","Mô hình","Workflow","Ứng dụng","Bắt đầu nhỏ. Kiểm tra. Mở rộng."],"narration":"AI Studio kết nối tri thức, mô hình và workflow trong một không gian làm việc. Mục tiêu là rút ngắn khoảng cách từ một ý tưởng AI đến một ứng dụng hữu ích và có thể kiểm soát. Bắt đầu với một bài toán nhỏ, đo chất lượng, rồi mở rộng cùng đội ngũ của bạn."}
- ],
- "en": [
-  {"title":"The knowledge is there. The connections aren't.","labels":["Documents","Systems","Experience","Where is the answer?"],"narration":"Inside an organization, knowledge already exists. It lives in documents, systems, and people's experience. Yet finding an answer often means searching several places, asking colleagues, and piecing the information together by hand."},
-  {"title":"A chat box is not a business process.","labels":["Question","AI model","Which data?","Who has access?","What happens next?"],"narration":"An AI model can hold a conversation. Putting it to work takes more: the right data, appropriate access, useful tools, and a process you can inspect. This is the problem AI Studio is designed to address."},
-  {"title":"Start with your knowledge.","labels":["Documents","Knowledge base","Retrieval","Relevant context"],"narration":"Start by connecting and organizing your knowledge sources. Documents are processed into retrievable pieces. When a question arrives, the system finds related information to provide context for the model. Source quality and retrieval settings still need to be checked."},
-  {"title":"Draw the flow. Connect tools. Test it.","labels":["Request","Knowledge","Model","Tools","Result"],"narration":"Next, choose a model and design how the application works. In a visual workflow, connect the incoming request, knowledge retrieval, model processing, and tool calls. The data flow becomes visible, ready to test and inspect one step at a time."},
-  {"title":"Stay in control as you grow.","labels":["Test","Inspect","Approve","Publish","Web / API","Observe"],"narration":"Before sharing, test the results and add an approval step when a person needs to decide. Permissions, logs, and monitoring help your team control how an application is used. Deployment channels depend on the configuration and integrations available in your installation."},
-  {"title":"From what you know, to what AI can do.","labels":["Knowledge","Models","Workflows","Applications","Start small. Evaluate. Expand."],"narration":"AI Studio connects knowledge, models, and workflows in one workspace. Its aim is to shorten the path from an AI idea to a useful application that you can control. Begin with a small problem, evaluate its quality, and expand with your team."}
- ]
+  "vi": [
+    {
+      "title": "Một câu hỏi. Quá nhiều nơi để tìm.",
+      "labels": [
+        "Nhân viên",
+        "Quy trình mua sắm",
+        "Tài liệu",
+        "Email",
+        "Hỏi đồng nghiệp"
+      ],
+      "narration": "Một nhân viên cần biết quy trình mua thiết bị cho nhóm. Câu trả lời nằm rải rác trong tài liệu, email và kinh nghiệm của đồng nghiệp. Tìm được một đoạn thông tin vẫn chưa đủ: cần biết tài liệu còn hiệu lực không, mình được xem gì, và ai sẽ duyệt bước tiếp theo.",
+      "kind": "problem"
+    },
+    {
+      "title": "Một yêu cầu, một luồng làm việc.",
+      "labels": [
+        "Nhân viên",
+        "Trợ lý mua sắm",
+        "Tìm quy trình",
+        "Soạn bản nháp",
+        "Người duyệt"
+      ],
+      "narration": "Hãy theo một tình huống minh họa: trợ lý mua sắm nội bộ. Nhân viên gửi câu hỏi vào ứng dụng được xây bằng AI Studio. Ứng dụng tìm quy trình phù hợp, hỗ trợ soạn bản nháp và chuyển đến người có trách nhiệm. Đây là luồng có thể thiết kế, không phải quy trình có sẵn cho mọi tổ chức.",
+      "kind": "usecase"
+    },
+    {
+      "kind": "ingestion",
+      "title": "OCR, NER và pipeline tri thức.",
+      "labels": [
+        "Tài liệu / ảnh",
+        "OCR",
+        "NER / PII",
+        "Chia đoạn",
+        "Lập chỉ mục"
+      ],
+      "narration": "Đầu vào có thể là tài liệu hoặc ảnh cần OCR để lấy chữ. NER hỗ trợ nhận diện thực thể như tên người, kết hợp các quy tắc PII theo chính sách. Đây là hỗ trợ nhận diện, không bảo đảm tìm hết dữ liệu nhạy cảm. Sau đó cấu hình xử lý, chia đoạn và lập chỉ mục. Thư mục, nguồn đồng bộ, pipeline tri thức, truy hồi kết hợp và reranking giúp tổ chức và kiểm tra chất lượng kho."
+    },
+    {
+      "title": "Truy hồi đúng dữ liệu, đúng quyền.",
+      "labels": [
+        "Yêu cầu",
+        "Kiểm tra quyền",
+        "Kho tri thức",
+        "Đoạn liên quan",
+        "Không đủ quyền"
+      ],
+      "narration": "Trước khi đưa tài liệu vào câu trả lời, hệ thống phải xét quyền của người gọi. Phạm vi tổ chức, phòng ban và mức nhạy cảm ảnh hưởng đến dữ liệu được truy hồi. Tài liệu không được phép không nên đi vào ngữ cảnh. Trong ví dụ này, trợ lý chỉ lấy các đoạn quy trình phù hợp để chuẩn bị cho bước xử lý.",
+      "kind": "knowledge"
+    },
+    {
+      "kind": "custom",
+      "title": "Workflow tùy chỉnh theo cách bạn làm việc.",
+      "labels": [
+        "Kéo & nối node",
+        "Rẽ nhánh / lặp",
+        "Chạy thử từng bước",
+        "DSL / thư viện"
+      ],
+      "narration": "Workflow không phải một đường đi cố định. Bạn có thể nối các nhóm node để nhận dữ liệu, truy hồi, gọi mô hình, rẽ nhánh, lặp, xử lý dữ liệu và trả kết quả. Khai báo biến đầu vào, chạy thử và xem đầu ra từng bước để tìm lỗi. Phiên bản nháp, lịch sử, nhập xuất DSL và thư viện đồ thị giúp chỉnh sửa, tái sử dụng rồi xuất bản có chủ đích."
+    },
+    {
+      "title": "AI Gateway: chọn đường gọi mô hình.",
+      "labels": [
+        "Ngữ cảnh",
+        "AI Gateway",
+        "Mô hình nội bộ",
+        "Mô hình bên ngoài",
+        "Lọc theo chính sách"
+      ],
+      "narration": "Có ngữ cảnh rồi, ứng dụng vẫn cần chọn đường gọi mô hình. Trong sơ đồ này, AI Gateway là tên mô tả lớp điều phối mô hình của AI Studio: lọc mô hình theo chính sách, quản lý thông tin kết nối và chuyển sang mô hình dự phòng được phép khi gặp lỗi phù hợp. Mô hình nội bộ hay bên ngoài đều phải phù hợp với cấu hình và mức dữ liệu.",
+      "kind": "gateway"
+    },
+    {
+      "title": "Dữ liệu nào được phép ra ngoài?",
+      "labels": [
+        "Dữ liệu nhạy cảm",
+        "Che PII theo chính sách",
+        "Kiểm tra đường ra",
+        "Mô hình bên ngoài",
+        "Bị chặn",
+        "Mô hình nội bộ"
+      ],
+      "narration": "Bảo vệ dữ liệu cần nhiều lớp. Trên đường chat, thông tin nhận dạng cá nhân có thể được che theo chính sách đã cấu hình. Nhãn nhạy cảm quyết định có được dùng nhà cung cấp bên ngoài hay không. Lời gọi công cụ còn qua kiểm soát đích truy cập. Nếu không được phép, yêu cầu phải bị chặn. Che thông tin không có nghĩa là mọi dữ liệu đã an toàn để gửi ra ngoài.",
+      "kind": "security"
+    },
+    {
+      "kind": "sandbox",
+      "title": "Code chạy trong sandbox riêng.",
+      "labels": [
+        "Workflow",
+        "Code node",
+        "Sandbox",
+        "Kết quả",
+        "Cách ly / giới hạn"
+      ],
+      "narration": "Khi cần logic tùy chỉnh, node Code gửi tác vụ đến dịch vụ sandbox riêng. Đây là một ranh giới thực thi, giúp tách code người dùng khỏi tiến trình chính và áp dụng giới hạn của sandbox. Node này bị tắt nếu chưa cấu hình dịch vụ. Sandbox không thay thế phân quyền hay kiểm soát đường ra ngoài; các lời gọi công cụ vẫn cần chính sách riêng."
+    },
+    {
+      "title": "AI soạn nháp. Con người quyết định.",
+      "labels": [
+        "Bản nháp",
+        "Người phụ trách",
+        "Đồng ý",
+        "Công cụ / API",
+        "Gửi lại để sửa"
+      ],
+      "narration": "Trở lại yêu cầu mua sắm. AI tạo bản nháp để người phụ trách kiểm tra. Nếu cần sửa, bản nháp quay lại bước xử lý. Chỉ khi được duyệt, luồng mới tiếp tục gọi công cụ đã cấu hình. Workflow cần được thiết kế như vậy cho các thao tác có tác động; không nên mặc định mọi kết quả của mô hình đều được tự động thực hiện.",
+      "kind": "approval"
+    },
+    {
+      "kind": "integrations",
+      "title": "Kết nối công cụ, không giấu tác động.",
+      "labels": [
+        "API",
+        "MCP",
+        "Workflow tool",
+        "Kiểm soát đích"
+      ],
+      "narration": "Ứng dụng có thể kết nối công cụ có sẵn, công cụ API, máy chủ MCP hoặc một workflow được đóng gói thành công cụ. Tích hợp nguồn dữ liệu và dịch vụ tri thức ngoài giúp dùng thông tin ở hệ thống khác. Các tiện ích kiểm duyệt cần đúng hợp đồng dịch vụ. Chỉ bật thao tác cần thiết, kiểm tra quyền, cấu hình kết nối và danh sách đích được phép trước khi sử dụng."
+    },
+    {
+      "kind": "publish",
+      "title": "Từ bản nháp đến các kênh sử dụng.",
+      "labels": [
+        "Web / widget",
+        "API / MCP",
+        "Kênh nhắn tin",
+        "Lịch / webhook"
+      ],
+      "narration": "Khi đã kiểm tra, xuất bản ứng dụng để chia sẻ trên web, nhúng widget hoặc tích hợp qua API và MCP theo quyền được cấp. Kênh nhắn tin cần thiết lập từng nhà cung cấp. Trigger theo lịch và webhook có thể khởi động workflow, với cấu hình xác thực và sự kiện phù hợp. Tài liệu API, khóa truy cập và hạn mức giúp quản lý cách các hệ thống gọi vào ứng dụng."
+    },
+    {
+      "kind": "memory",
+      "title": "Hội thoại, ghi nhớ và đa phương thức.",
+      "labels": [
+        "Hội thoại",
+        "Ghi nhớ có duyệt",
+        "Giọng nói",
+        "Hình ảnh"
+      ],
+      "narration": "Với ứng dụng hội thoại, bạn có thể cấu hình lời mở đầu, đầu vào, câu hỏi gợi ý và cách xử lý nghiệp vụ. Ghi nhớ dài hạn có màn hình xem bằng chứng, duyệt và cấu hình thời gian lưu theo chủ thể. Nhận dạng giọng nói, đọc thành tiếng và tạo hình ảnh phụ thuộc mô hình đã kết nối. Chỉ bật những khả năng thực sự phục vụ tình huống sử dụng."
+    },
+    {
+      "kind": "quality",
+      "title": "Đo chất lượng trước khi mở rộng.",
+      "labels": [
+        "Nhật ký",
+        "Đánh giá / so sánh",
+        "Chú thích",
+        "Dữ liệu huấn luyện"
+      ],
+      "narration": "Xem hội thoại và nhật ký chạy để hiểu điều gì đã xảy ra. Dùng bộ dữ liệu đánh giá, so sánh các lượt tương thích và chú thích để kiểm tra chất lượng. Theo dõi sử dụng và vận hành để phát hiện vấn đề. Dữ liệu có thể được chuẩn bị cho huấn luyện; chạy tinh chỉnh còn phụ thuộc runner, tài nguyên và cấu hình triển khai, không chỉ một nút bấm."
+    },
+    {
+      "kind": "operations",
+      "title": "Quản lý từ workspace đến hệ thống.",
+      "labels": [
+        "Thành viên / vai trò",
+        "Danh tính / bảo mật",
+        "Lưu trữ S3",
+        "Quản trị hệ thống"
+      ],
+      "narration": "Đội ngũ quản lý thành viên, lời mời, vai trò, khóa và hạn mức ở workspace. Cấu hình danh tính, bảo vệ dữ liệu, nguồn mô hình và lưu trữ S3 hỗ trợ vận hành. Quản trị viên hệ thống có phạm vi riêng để xem tổ chức, tài khoản, sức khỏe dịch vụ và cấu hình thời gian chạy. Một số màn hình mạng và cờ tính năng chỉ để kiểm tra, không cho sửa trực tiếp."
+    },
+    {
+      "title": "Một nền tảng, nhiều tình huống sử dụng.",
+      "labels": [
+        "Hỏi đáp nội bộ",
+        "Hỗ trợ khách hàng",
+        "Xử lý tài liệu",
+        "Phê duyệt nghiệp vụ"
+      ],
+      "narration": "Cùng cách kết nối đó có thể áp dụng cho nhiều tình huống: hỏi đáp quy định nội bộ, hỗ trợ nhân viên chăm sóc khách hàng, trích xuất và xử lý tài liệu, hoặc điều phối phê duyệt nghiệp vụ. Mỗi ứng dụng cần nguồn dữ liệu, quyền truy cập, công cụ và tiêu chí đánh giá riêng. Hãy thử trên một phạm vi nhỏ trước khi mở rộng.",
+      "kind": "examples"
+    },
+    {
+      "title": "Từ câu hỏi đến kết quả có kiểm soát.",
+      "labels": [
+        "Con người",
+        "Tri thức",
+        "AI Gateway",
+        "Workflow",
+        "Kết quả"
+      ],
+      "narration": "AI Studio kết nối con người, tri thức, mô hình và workflow. Giá trị không chỉ là một câu trả lời nhanh hơn, mà là một luồng có thể kiểm tra: dữ liệu đến từ đâu, mô hình nào được gọi, ai quyết định và việc gì đã diễn ra. Bắt đầu bằng một tình huống cụ thể, đánh giá chất lượng và theo dõi vận hành trước khi mở rộng.",
+      "kind": "closing"
+    }
+  ],
+  "en": [
+    {
+      "title": "One question. Too many places to look.",
+      "labels": [
+        "Employee",
+        "Purchasing process",
+        "Documents",
+        "Email",
+        "Ask a colleague"
+      ],
+      "narration": "An employee wants to understand how to purchase equipment for their team. The answer is scattered across documents, email, and colleagues. Finding a paragraph is only the start. Is it current? Is the employee allowed to see it? And who approves the next step?",
+      "kind": "problem"
+    },
+    {
+      "title": "One request, one connected process.",
+      "labels": [
+        "Employee",
+        "Purchasing assistant",
+        "Find policy",
+        "Draft request",
+        "Reviewer"
+      ],
+      "narration": "Follow an illustrative use case: an internal purchasing assistant. An employee asks a question in an application built with AI Studio. The application finds the relevant procedure, helps draft a request, and passes it to a responsible reviewer. This is a process you can design, not a built-in purchasing system for every organization.",
+      "kind": "usecase"
+    },
+    {
+      "kind": "ingestion",
+      "title": "OCR, NER and knowledge pipelines.",
+      "labels": [
+        "Documents / images",
+        "OCR",
+        "NER / PII",
+        "Chunking",
+        "Indexing"
+      ],
+      "narration": "Inputs may include documents or images that need OCR to extract text. NER helps identify entities such as personal names, alongside policy-based PII rules. Detection is assistance, not a guarantee that every sensitive detail will be found. Configure processing, chunking, and indexing next. Folders, synchronized sources, knowledge pipelines, hybrid retrieval, and reranking help organize the collection and test its quality."
+    },
+    {
+      "title": "Retrieve the right data, with the right access.",
+      "labels": [
+        "Request",
+        "Access checks",
+        "Knowledge base",
+        "Relevant passages",
+        "Access denied"
+      ],
+      "narration": "Before a document becomes part of an answer, the caller needs appropriate access. Organization boundaries, departments, and sensitivity levels affect retrieval. Unauthorized documents should not enter the context. In this example, the assistant retrieves the permitted passages needed to prepare the next step.",
+      "kind": "knowledge"
+    },
+    {
+      "kind": "custom",
+      "title": "Customize the workflow to fit your work.",
+      "labels": [
+        "Connect nodes",
+        "Branch / loop",
+        "Debug each step",
+        "DSL / library"
+      ],
+      "narration": "A workflow is not a fixed path. Connect node families for inputs, retrieval, models, branches, loops, data processing, and outputs. Define input variables, run a test, and inspect each step to find problems. Drafts, version history, DSL import and export, and reusable graph snippets support deliberate changes before publication."
+    },
+    {
+      "title": "AI Gateway: route the model request.",
+      "labels": [
+        "Context",
+        "AI Gateway",
+        "Internal model",
+        "External model",
+        "Policy-filtered routing"
+      ],
+      "narration": "With context ready, the application still needs a route to a model. In this diagram, AI Gateway describes the model orchestration layer in AI Studio. It filters eligible models by policy, manages connection credentials, and can fall back to an allowed model after a suitable error. Both internal and external models must meet the configuration and data policy.",
+      "kind": "gateway"
+    },
+    {
+      "title": "What is allowed to leave the boundary?",
+      "labels": [
+        "Sensitive data",
+        "PII masking by policy",
+        "Outbound checks",
+        "External model",
+        "Blocked",
+        "Internal model"
+      ],
+      "narration": "Data protection takes several layers. On the chat path, personal information can be masked according to the configured policy. Sensitivity labels determine whether an external provider is allowed. Tool calls also pass destination controls. A disallowed request must be blocked. Masking personal information alone does not make every payload safe to send outside.",
+      "kind": "security"
+    },
+    {
+      "kind": "sandbox",
+      "title": "Run custom code in a separate sandbox.",
+      "labels": [
+        "Workflow",
+        "Code node",
+        "Sandbox",
+        "Result",
+        "Isolation / limits"
+      ],
+      "narration": "For custom logic, a Code node sends work to a separate sandbox service. This execution boundary separates user code from the main process and applies the sandbox limits. The node stays disabled when the service is not configured. A sandbox does not replace permissions or outbound controls; tool calls still need their own policies."
+    },
+    {
+      "title": "AI drafts. A person decides.",
+      "labels": [
+        "Draft",
+        "Reviewer",
+        "Approved",
+        "Tool / API",
+        "Return for changes"
+      ],
+      "narration": "Back to the purchasing request. AI prepares a draft for a responsible person to review. If changes are needed, it returns for revision. Only after approval does this designed workflow continue to the configured tool. Build this gate for actions with consequences; do not assume that every model output should be executed automatically.",
+      "kind": "approval"
+    },
+    {
+      "kind": "integrations",
+      "title": "Connect tools without hiding their effects.",
+      "labels": [
+        "API",
+        "MCP",
+        "Workflow tool",
+        "Destination policy"
+      ],
+      "narration": "Connect built-in tools, API tools, MCP servers, or a workflow exposed as a tool. Data source integrations and external knowledge services bring in information from other systems. Moderation extensions require a compatible service contract. Enable only the operations you need and verify access, connection settings, and permitted destinations before use."
+    },
+    {
+      "kind": "publish",
+      "title": "From a draft to channels and triggers.",
+      "labels": [
+        "Web / widget",
+        "API / MCP",
+        "Messaging",
+        "Schedule / webhook"
+      ],
+      "narration": "After testing, publish an application to the web, embed a widget, or integrate through API and MCP access with appropriate permissions. Messaging channels need provider-specific setup. Scheduled triggers and webhooks can start workflows with suitable authentication and event configuration. API documentation, access keys, and quotas help manage how other systems call the application."
+    },
+    {
+      "kind": "memory",
+      "title": "Conversations, memory and more modalities.",
+      "labels": [
+        "Conversation",
+        "Reviewed memory",
+        "Speech",
+        "Images"
+      ],
+      "narration": "Configure conversation starters, inputs, follow-up questions, and business behavior. Long-term memory includes evidence review, approval, and retention settings tied to a subject. Speech recognition, text-to-speech, and image generation depend on connected models. Enable the capabilities that serve the use case, and review what the application retains."
+    },
+    {
+      "kind": "quality",
+      "title": "Measure quality before expanding.",
+      "labels": [
+        "Logs",
+        "Evaluation / comparison",
+        "Annotations",
+        "Training data"
+      ],
+      "narration": "Inspect conversations and run logs to understand what happened. Use evaluation datasets, compatible run comparisons, and annotations to check quality. Monitor usage and operations to detect problems. Data can be prepared for training, while fine-tuning still depends on a runner, resources, and deployment configuration, not just a button."
+    },
+    {
+      "kind": "operations",
+      "title": "Manage workspaces and the installation.",
+      "labels": [
+        "Members / roles",
+        "Identity / security",
+        "S3 storage",
+        "Administration"
+      ],
+      "narration": "Manage members, invitations, roles, keys, and quotas at workspace level. Identity, data protection, model providers, and S3 storage support operations. Instance administrators have separate access to organization and account views, service health, and runtime configuration. Some network and feature-flag screens are read-only inspection surfaces, not direct editing controls."
+    },
+    {
+      "title": "One platform, several use cases.",
+      "labels": [
+        "Internal Q&A",
+        "Customer support",
+        "Document processing",
+        "Business approvals"
+      ],
+      "narration": "The same building blocks can support internal policy questions, assist customer support staff, process documents, or coordinate business approvals. Each application needs its own data sources, access rules, tools, and evaluation criteria. Test within a small scope before expanding.",
+      "kind": "examples"
+    },
+    {
+      "title": "From a question to a controlled outcome.",
+      "labels": [
+        "People",
+        "Knowledge",
+        "AI Gateway",
+        "Workflow",
+        "Outcome"
+      ],
+      "narration": "AI Studio connects people, knowledge, models, and workflows. The value is more than a faster answer. It is a process you can inspect: where the data came from, which model was called, who made the decision, and what happened. Start with a concrete use case, evaluate quality, and observe operations before expanding.",
+      "kind": "closing"
+    }
+  ]
 }

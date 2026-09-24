@@ -1,58 +1,193 @@
 WEBVTT
 
-00:00:00.550 --> 00:00:03.688
-Trong một tổ chức, tri thức đã có sẵn.
+00:00:00.550 --> 00:00:04.062
+Một nhân viên cần biết quy trình mua thiết bị cho nhóm.
 
-00:00:03.638 --> 00:00:07.862
-Nó nằm trong tài liệu, hệ thống và kinh nghiệm của từng người.
+00:00:04.012 --> 00:00:08.800
+Câu trả lời nằm rải rác trong tài liệu, email và kinh nghiệm của đồng nghiệp.
 
-00:00:07.862 --> 00:00:14.225
-Nhưng khi cần một câu trả lời, chúng ta vẫn phải tìm nhiều nơi, hỏi nhiều người và ghép thông tin bằng tay.
+00:00:08.800 --> 00:00:16.438
+Tìm được một đoạn thông tin vẫn chưa đủ: cần biết tài liệu còn hiệu lực không, mình được xem gì, và ai sẽ duyệt bước tiếp theo.
 
-00:00:15.883 --> 00:00:18.821
-Một mô hình AI có thể trò chuyện.
+00:00:18.133 --> 00:00:22.233
+Hãy theo một tình huống minh họa: trợ lý mua sắm nội bộ.
 
-00:00:18.771 --> 00:00:26.558
-Đưa nó vào công việc lại cần nhiều hơn: dữ liệu đúng, quyền truy cập phù hợp, công cụ cần thiết và một quy trình có thể kiểm tra.
+00:00:22.183 --> 00:00:26.583
+Nhân viên gửi câu hỏi vào ứng dụng được xây bằng AI Studio.
 
-00:00:26.558 --> 00:00:30.796
-Đây là bài toán mà AI Studio được xây dựng để giải quyết.
+00:00:26.583 --> 00:00:31.783
+Ứng dụng tìm quy trình phù hợp, hỗ trợ soạn bản nháp và chuyển đến người có trách nhiệm.
 
-00:00:32.467 --> 00:00:35.979
-Bắt đầu bằng việc kết nối và tổ chức nguồn tri thức.
+00:00:31.783 --> 00:00:36.508
+Đây là luồng có thể thiết kế, không phải quy trình có sẵn cho mọi tổ chức.
 
-00:00:35.929 --> 00:00:39.504
-Tài liệu được xử lý thành những phần có thể truy hồi.
+00:00:38.175 --> 00:00:42.912
+Đầu vào có thể là tài liệu hoặc ảnh cần OCR để lấy chữ.
 
-00:00:39.504 --> 00:00:44.629
-Khi có câu hỏi, hệ thống tìm nội dung liên quan để bổ sung ngữ cảnh cho mô hình.
+00:00:42.863 --> 00:00:48.713
+NER hỗ trợ nhận diện thực thể như tên người, kết hợp các quy tắc PII theo chính sách.
 
-00:00:44.629 --> 00:00:48.429
-Chất lượng nguồn và cấu hình truy hồi vẫn cần được kiểm tra.
+00:00:48.713 --> 00:00:53.225
+Đây là hỗ trợ nhận diện, không bảo đảm tìm hết dữ liệu nhạy cảm.
 
-00:00:50.133 --> 00:00:54.396
-Tiếp theo, lựa chọn mô hình và thiết kế cách ứng dụng hoạt động.
+00:00:53.225 --> 00:00:57.100
+Sau đó cấu hình xử lý, chia đoạn và lập chỉ mục.
 
-00:00:54.346 --> 00:01:01.396
-Với workflow trực quan, bạn nối bước nhận yêu cầu, truy hồi tri thức, xử lý bằng mô hình và gọi công cụ.
+00:00:57.100 --> 00:01:04.463
+Thư mục, nguồn đồng bộ, pipeline tri thức, truy hồi kết hợp và reranking giúp tổ chức và kiểm tra chất lượng kho.
 
-00:01:01.396 --> 00:01:06.221
-Luồng dữ liệu trở nên rõ ràng, có thể chạy thử và kiểm tra từng bước.
+00:01:06.133 --> 00:01:11.083
+Trước khi đưa tài liệu vào câu trả lời, hệ thống phải xét quyền của người gọi.
 
-00:01:07.883 --> 00:01:14.383
-Trước khi chia sẻ, hãy chạy thử, xem kết quả và thêm bước phê duyệt nếu quy trình cần con người quyết định.
+00:01:11.033 --> 00:01:16.058
+Phạm vi tổ chức, phòng ban và mức nhạy cảm ảnh hưởng đến dữ liệu được truy hồi.
 
-00:01:14.333 --> 00:01:19.446
-Phân quyền, nhật ký và theo dõi giúp đội ngũ kiểm soát cách ứng dụng được sử dụng.
+00:01:16.058 --> 00:01:19.483
+Tài liệu không được phép không nên đi vào ngữ cảnh.
 
-00:01:19.446 --> 00:01:23.571
-Các kênh triển khai phụ thuộc cấu hình và tích hợp của từng hệ thống.
+00:01:19.483 --> 00:01:25.021
+Trong ví dụ này, trợ lý chỉ lấy các đoạn quy trình phù hợp để chuẩn bị cho bước xử lý.
 
-00:01:25.258 --> 00:01:30.433
-AI Studio kết nối tri thức, mô hình và workflow trong một không gian làm việc.
+00:01:26.717 --> 00:01:29.692
+Workflow không phải một đường đi cố định.
 
-00:01:30.383 --> 00:01:36.033
-Mục tiêu là rút ngắn khoảng cách từ một ý tưởng AI đến một ứng dụng hữu ích và có thể kiểm soát.
+00:01:29.642 --> 00:01:38.042
+Bạn có thể nối các nhóm node để nhận dữ liệu, truy hồi, gọi mô hình, rẽ nhánh, lặp, xử lý dữ liệu và trả kết quả.
 
-00:01:36.033 --> 00:01:41.596
-Bắt đầu với một bài toán nhỏ, đo chất lượng, rồi mở rộng cùng đội ngũ của bạn.
+00:01:38.042 --> 00:01:42.917
+Khai báo biến đầu vào, chạy thử và xem đầu ra từng bước để tìm lỗi.
+
+00:01:42.917 --> 00:01:50.642
+Phiên bản nháp, lịch sử, nhập xuất DSL và thư viện đồ thị giúp chỉnh sửa, tái sử dụng rồi xuất bản có chủ đích.
+
+00:01:52.342 --> 00:01:56.492
+Có ngữ cảnh rồi, ứng dụng vẫn cần chọn đường gọi mô hình.
+
+00:01:56.442 --> 00:02:07.792
+Trong sơ đồ này, AI Gateway là tên mô tả lớp điều phối mô hình của AI Studio: lọc mô hình theo chính sách, quản lý thông tin kết nối và chuyển sang mô hình dự phòng được phép khi gặp lỗi phù hợp.
+
+00:02:07.792 --> 00:02:12.567
+Mô hình nội bộ hay bên ngoài đều phải phù hợp với cấu hình và mức dữ liệu.
+
+00:02:14.258 --> 00:02:16.921
+Bảo vệ dữ liệu cần nhiều lớp.
+
+00:02:16.871 --> 00:02:21.971
+Trên đường chat, thông tin nhận dạng cá nhân có thể được che theo chính sách đã cấu hình.
+
+00:02:21.971 --> 00:02:26.058
+Nhãn nhạy cảm quyết định có được dùng nhà cung cấp bên ngoài hay không.
+
+00:02:26.058 --> 00:02:29.371
+Lời gọi công cụ còn qua kiểm soát đích truy cập.
+
+00:02:29.371 --> 00:02:32.683
+Nếu không được phép, yêu cầu phải bị chặn.
+
+00:02:32.683 --> 00:02:37.233
+Che thông tin không có nghĩa là mọi dữ liệu đã an toàn để gửi ra ngoài.
+
+00:02:38.925 --> 00:02:43.825
+Khi cần logic tùy chỉnh, node Code gửi tác vụ đến dịch vụ sandbox riêng.
+
+00:02:43.775 --> 00:02:49.850
+Đây là một ranh giới thực thi, giúp tách code người dùng khỏi tiến trình chính và áp dụng giới hạn của sandbox.
+
+00:02:49.850 --> 00:02:53.075
+Node này bị tắt nếu chưa cấu hình dịch vụ.
+
+00:02:53.075 --> 00:02:59.200
+Sandbox không thay thế phân quyền hay kiểm soát đường ra ngoài; các lời gọi công cụ vẫn cần chính sách riêng.
+
+00:03:00.883 --> 00:03:03.246
+Trở lại yêu cầu mua sắm.
+
+00:03:03.196 --> 00:03:06.546
+AI tạo bản nháp để người phụ trách kiểm tra.
+
+00:03:06.546 --> 00:03:10.208
+Nếu cần sửa, bản nháp quay lại bước xử lý.
+
+00:03:10.208 --> 00:03:14.433
+Chỉ khi được duyệt, luồng mới tiếp tục gọi công cụ đã cấu hình.
+
+00:03:14.433 --> 00:03:21.846
+Workflow cần được thiết kế như vậy cho các thao tác có tác động; không nên mặc định mọi kết quả của mô hình đều được tự động thực hiện.
+
+00:03:23.508 --> 00:03:31.458
+Ứng dụng có thể kết nối công cụ có sẵn, công cụ API, máy chủ MCP hoặc một workflow được đóng gói thành công cụ.
+
+00:03:31.408 --> 00:03:36.296
+Tích hợp nguồn dữ liệu và dịch vụ tri thức ngoài giúp dùng thông tin ở hệ thống khác.
+
+00:03:36.296 --> 00:03:39.558
+Các tiện ích kiểm duyệt cần đúng hợp đồng dịch vụ.
+
+00:03:39.558 --> 00:03:45.746
+Chỉ bật thao tác cần thiết, kiểm tra quyền, cấu hình kết nối và danh sách đích được phép trước khi sử dụng.
+
+00:03:47.425 --> 00:03:55.137
+Khi đã kiểm tra, xuất bản ứng dụng để chia sẻ trên web, nhúng widget hoặc tích hợp qua API và MCP theo quyền được cấp.
+
+00:03:55.087 --> 00:03:58.175
+Kênh nhắn tin cần thiết lập từng nhà cung cấp.
+
+00:03:58.175 --> 00:04:04.212
+Trigger theo lịch và webhook có thể khởi động workflow, với cấu hình xác thực và sự kiện phù hợp.
+
+00:04:04.212 --> 00:04:09.975
+Tài liệu API, khóa truy cập và hạn mức giúp quản lý cách các hệ thống gọi vào ứng dụng.
+
+00:04:11.633 --> 00:04:18.933
+Với ứng dụng hội thoại, bạn có thể cấu hình lời mở đầu, đầu vào, câu hỏi gợi ý và cách xử lý nghiệp vụ.
+
+00:04:18.883 --> 00:04:24.421
+Ghi nhớ dài hạn có màn hình xem bằng chứng, duyệt và cấu hình thời gian lưu theo chủ thể.
+
+00:04:24.421 --> 00:04:29.608
+Nhận dạng giọng nói, đọc thành tiếng và tạo hình ảnh phụ thuộc mô hình đã kết nối.
+
+00:04:29.608 --> 00:04:33.346
+Chỉ bật những khả năng thực sự phục vụ tình huống sử dụng.
+
+00:04:35.008 --> 00:04:39.021
+Xem hội thoại và nhật ký chạy để hiểu điều gì đã xảy ra.
+
+00:04:38.971 --> 00:04:44.421
+Dùng bộ dữ liệu đánh giá, so sánh các lượt tương thích và chú thích để kiểm tra chất lượng.
+
+00:04:44.421 --> 00:04:48.008
+Theo dõi sử dụng và vận hành để phát hiện vấn đề.
+
+00:04:48.008 --> 00:04:56.008
+Dữ liệu có thể được chuẩn bị cho huấn luyện; chạy tinh chỉnh còn phụ thuộc runner, tài nguyên và cấu hình triển khai, không chỉ một nút bấm.
+
+00:04:57.717 --> 00:05:03.742
+Đội ngũ quản lý thành viên, lời mời, vai trò, khóa và hạn mức ở workspace.
+
+00:05:03.692 --> 00:05:09.592
+Cấu hình danh tính, bảo vệ dữ liệu, nguồn mô hình và lưu trữ S3 hỗ trợ vận hành.
+
+00:05:09.592 --> 00:05:16.317
+Quản trị viên hệ thống có phạm vi riêng để xem tổ chức, tài khoản, sức khỏe dịch vụ và cấu hình thời gian chạy.
+
+00:05:16.317 --> 00:05:21.367
+Một số màn hình mạng và cờ tính năng chỉ để kiểm tra, không cho sửa trực tiếp.
+
+00:05:23.050 --> 00:05:33.225
+Cùng cách kết nối đó có thể áp dụng cho nhiều tình huống: hỏi đáp quy định nội bộ, hỗ trợ nhân viên chăm sóc khách hàng, trích xuất và xử lý tài liệu, hoặc điều phối phê duyệt nghiệp vụ.
+
+00:05:33.175 --> 00:05:38.725
+Mỗi ứng dụng cần nguồn dữ liệu, quyền truy cập, công cụ và tiêu chí đánh giá riêng.
+
+00:05:38.725 --> 00:05:42.112
+Hãy thử trên một phạm vi nhỏ trước khi mở rộng.
+
+00:05:43.800 --> 00:05:48.812
+AI Studio kết nối con người, tri thức, mô hình và workflow.
+
+00:05:48.762 --> 00:05:58.575
+Giá trị không chỉ là một câu trả lời nhanh hơn, mà là một luồng có thể kiểm tra: dữ liệu đến từ đâu, mô hình nào được gọi, ai quyết định và việc gì đã diễn ra.
+
+00:05:58.575 --> 00:06:04.375
+Bắt đầu bằng một tình huống cụ thể, đánh giá chất lượng và theo dõi vận hành trước khi mở rộng.

@@ -1,58 +1,208 @@
 WEBVTT
 
-00:00:00.550 --> 00:00:04.475
-Inside an organization, knowledge already exists.
+00:00:00.550 --> 00:00:04.975
+An employee wants to understand how to purchase equipment for their team.
 
-00:00:04.425 --> 00:00:08.750
-It lives in documents, systems, and people's experience.
+00:00:04.925 --> 00:00:09.388
+The answer is scattered across documents, email, and colleagues.
 
-00:00:08.750 --> 00:00:16.512
-Yet finding an answer often means searching several places, asking colleagues, and piecing the information together by hand.
+00:00:09.388 --> 00:00:12.325
+Finding a paragraph is only the start.
 
-00:00:18.217 --> 00:00:21.254
-An AI model can hold a conversation.
+00:00:12.325 --> 00:00:14.038
+Is it current?
 
-00:00:21.204 --> 00:00:28.654
-Putting it to work takes more: the right data, appropriate access, useful tools, and a process you can inspect.
+00:00:14.038 --> 00:00:16.550
+Is the employee allowed to see it?
 
-00:00:28.654 --> 00:00:32.454
-This is the problem AI Studio is designed to address.
+00:00:16.550 --> 00:00:18.975
+And who approves the next step?
 
-00:00:34.133 --> 00:00:37.958
-Start by connecting and organizing your knowledge sources.
+00:00:20.633 --> 00:00:25.221
+Follow an illustrative use case: an internal purchasing assistant.
 
-00:00:37.908 --> 00:00:41.483
-Documents are processed into retrievable pieces.
+00:00:25.171 --> 00:00:29.833
+An employee asks a question in an application built with AI Studio.
 
-00:00:41.483 --> 00:00:47.596
-When a question arrives, the system finds related information to provide context for the model.
+00:00:29.833 --> 00:00:36.933
+The application finds the relevant procedure, helps draft a request, and passes it to a responsible reviewer.
 
-00:00:47.596 --> 00:00:51.583
-Source quality and retrieval settings still need to be checked.
+00:00:36.933 --> 00:00:42.721
+This is a process you can design, not a built-in purchasing system for every organization.
 
-00:00:53.258 --> 00:00:57.358
-Next, choose a model and design how the application works.
+00:00:44.383 --> 00:00:49.608
+Inputs may include documents or images that need OCR to extract text.
 
-00:00:57.308 --> 00:01:04.658
-In a visual workflow, connect the incoming request, knowledge retrieval, model processing, and tool calls.
+00:00:49.558 --> 00:00:55.883
+NER helps identify entities such as personal names, alongside policy-based PII rules.
 
-00:01:04.658 --> 00:01:09.983
-The data flow becomes visible, ready to test and inspect one step at a time.
+00:00:55.883 --> 00:01:01.246
+Detection is assistance, not a guarantee that every sensitive detail will be found.
 
-00:01:11.675 --> 00:01:17.300
-Before sharing, test the results and add an approval step when a person needs to decide.
+00:01:01.246 --> 00:01:05.333
+Configure processing, chunking, and indexing next.
 
-00:01:17.250 --> 00:01:22.950
-Permissions, logs, and monitoring help your team control how an application is used.
+00:01:05.333 --> 00:01:14.233
+Folders, synchronized sources, knowledge pipelines, hybrid retrieval, and reranking help organize the collection and test its quality.
 
-00:01:22.950 --> 00:01:28.700
-Deployment channels depend on the configuration and integrations available in your installation.
+00:01:15.883 --> 00:01:21.183
+Before a document becomes part of an answer, the caller needs appropriate access.
 
-00:01:30.383 --> 00:01:35.633
-AI Studio connects knowledge, models, and workflows in one workspace.
+00:01:21.133 --> 00:01:26.733
+Organization boundaries, departments, and sensitivity levels affect retrieval.
 
-00:01:35.583 --> 00:01:41.321
-Its aim is to shorten the path from an AI idea to a useful application that you can control.
+00:01:26.733 --> 00:01:30.346
+Unauthorized documents should not enter the context.
 
-00:01:41.321 --> 00:01:46.521
-Begin with a small problem, evaluate its quality, and expand with your team.
+00:01:30.346 --> 00:01:36.158
+In this example, the assistant retrieves the permitted passages needed to prepare the next step.
+
+00:01:37.842 --> 00:01:40.692
+A workflow is not a fixed path.
+
+00:01:40.642 --> 00:01:48.292
+Connect node families for inputs, retrieval, models, branches, loops, data processing, and outputs.
+
+00:01:48.292 --> 00:01:53.854
+Define input variables, run a test, and inspect each step to find problems.
+
+00:01:53.854 --> 00:02:02.267
+Drafts, version history, DSL import and export, and reusable graph snippets support deliberate changes before publication.
+
+00:02:03.925 --> 00:02:08.425
+With context ready, the application still needs a route to a model.
+
+00:02:08.375 --> 00:02:13.975
+In this diagram, AI Gateway describes the model orchestration layer in AI Studio.
+
+00:02:13.975 --> 00:02:22.400
+It filters eligible models by policy, manages connection credentials, and can fall back to an allowed model after a suitable error.
+
+00:02:22.400 --> 00:02:27.650
+Both internal and external models must meet the configuration and data policy.
+
+00:02:29.342 --> 00:02:32.304
+Data protection takes several layers.
+
+00:02:32.254 --> 00:02:37.929
+On the chat path, personal information can be masked according to the configured policy.
+
+00:02:37.929 --> 00:02:42.404
+Sensitivity labels determine whether an external provider is allowed.
+
+00:02:42.404 --> 00:02:45.929
+Tool calls also pass destination controls.
+
+00:02:45.929 --> 00:02:48.904
+A disallowed request must be blocked.
+
+00:02:48.904 --> 00:02:54.254
+Masking personal information alone does not make every payload safe to send outside.
+
+00:02:55.925 --> 00:03:01.138
+For custom logic, a Code node sends work to a separate sandbox service.
+
+00:03:01.087 --> 00:03:07.325
+This execution boundary separates user code from the main process and applies the sandbox limits.
+
+00:03:07.325 --> 00:03:11.112
+The node stays disabled when the service is not configured.
+
+00:03:11.112 --> 00:03:17.850
+A sandbox does not replace permissions or outbound controls; tool calls still need their own policies.
+
+00:03:19.508 --> 00:03:22.096
+Back to the purchasing request.
+
+00:03:22.046 --> 00:03:26.058
+AI prepares a draft for a responsible person to review.
+
+00:03:26.058 --> 00:03:29.408
+If changes are needed, it returns for revision.
+
+00:03:29.408 --> 00:03:34.408
+Only after approval does this designed workflow continue to the configured tool.
+
+00:03:34.408 --> 00:03:41.608
+Build this gate for actions with consequences; do not assume that every model output should be executed automatically.
+
+00:03:43.258 --> 00:03:49.758
+Connect built-in tools, API tools, MCP servers, or a workflow exposed as a tool.
+
+00:03:49.708 --> 00:03:55.496
+Data source integrations and external knowledge services bring in information from other systems.
+
+00:03:55.496 --> 00:03:59.871
+Moderation extensions require a compatible service contract.
+
+00:03:59.871 --> 00:04:07.583
+Enable only the operations you need and verify access, connection settings, and permitted destinations before use.
+
+00:04:09.258 --> 00:04:18.308
+After testing, publish an application to the web, embed a widget, or integrate through API and MCP access with appropriate permissions.
+
+00:04:18.258 --> 00:04:21.721
+Messaging channels need provider-specific setup.
+
+00:04:21.721 --> 00:04:28.033
+Scheduled triggers and webhooks can start workflows with suitable authentication and event configuration.
+
+00:04:28.033 --> 00:04:34.933
+API documentation, access keys, and quotas help manage how other systems call the application.
+
+00:04:36.592 --> 00:04:42.554
+Configure conversation starters, inputs, follow-up questions, and business behavior.
+
+00:04:42.504 --> 00:04:48.842
+Long-term memory includes evidence review, approval, and retention settings tied to a subject.
+
+00:04:48.842 --> 00:04:54.842
+Speech recognition, text-to-speech, and image generation depend on connected models.
+
+00:04:54.842 --> 00:05:00.654
+Enable the capabilities that serve the use case, and review what the application retains.
+
+00:05:02.342 --> 00:05:06.617
+Inspect conversations and run logs to understand what happened.
+
+00:05:06.567 --> 00:05:13.167
+Use evaluation datasets, compatible run comparisons, and annotations to check quality.
+
+00:05:13.167 --> 00:05:16.792
+Monitor usage and operations to detect problems.
+
+00:05:16.792 --> 00:05:25.554
+Data can be prepared for training, while fine-tuning still depends on a runner, resources, and deployment configuration, not just a button.
+
+00:05:27.258 --> 00:05:32.983
+Manage members, invitations, roles, keys, and quotas at workspace level.
+
+00:05:32.933 --> 00:05:38.983
+Identity, data protection, model providers, and S3 storage support operations.
+
+00:05:38.983 --> 00:05:46.808
+Instance administrators have separate access to organization and account views, service health, and runtime configuration.
+
+00:05:46.808 --> 00:05:53.608
+Some network and feature-flag screens are read-only inspection surfaces, not direct editing controls.
+
+00:05:55.300 --> 00:06:04.600
+The same building blocks can support internal policy questions, assist customer support staff, process documents, or coordinate business approvals.
+
+00:06:04.550 --> 00:06:11.400
+Each application needs its own data sources, access rules, tools, and evaluation criteria.
+
+00:06:11.400 --> 00:06:14.612
+Test within a small scope before expanding.
+
+00:06:16.300 --> 00:06:21.188
+AI Studio connects people, knowledge, models, and workflows.
+
+00:06:21.138 --> 00:06:24.113
+The value is more than a faster answer.
+
+00:06:24.113 --> 00:06:31.688
+It is a process you can inspect: where the data came from, which model was called, who made the decision, and what happened.
+
+00:06:31.688 --> 00:06:37.888
+Start with a concrete use case, evaluate quality, and observe operations before expanding.
