@@ -39,14 +39,14 @@ def decorate(page, language, path):
     ) + '</div>'
     page = page.replace('@social@', social_links)
     label = 'Language' if language == 'en' else 'Ngôn ngữ'
-    switcher = f'<div class="language-switch"><select aria-label="{label}" data-language-select>'
+    switcher = f'<div class="language-switch"><svg class="language-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg><select aria-label="{label}" data-language-select>'
     fallback = ''
     for lang, name in LANGUAGES:
         target = relative(current, route(lang, path))
         selected = ' selected' if lang == language else ''
         switcher += f'<option value="{target}" lang="{lang}"{selected}>{name}</option>'
         fallback += f'<a href="{target}" lang="{lang}" hreflang="{lang}">{name}</a>'
-    switcher += f'</select><noscript><style>[data-language-select]{{display:none}}</style>{fallback}</noscript></div>'
+    switcher += f'</select><noscript><style>[data-language-select]{{display:none!important}}</style>{fallback}</noscript></div>'
     page = page.replace('</body>', f'<script src="{prefix}assets/language-switch.js" defer></script></body>')
     page = page.replace('</nav>', '</nav>' + switcher, 1)
     canonical = ORIGIN + '/' + current
