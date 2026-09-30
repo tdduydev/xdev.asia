@@ -19,3 +19,10 @@ Ngày ghi nhận: 2026-09-23.
 - Bộ chữ phía sau X là đường vector; X vẫn là phần tử chữ như tài sản gốc. Khi cần bản xuất in ấn độc lập với font, chuyển X thành outline bằng đúng font đã duyệt.
 
 Trang thương hiệu ghi lại ý tưởng, màu sắc, biến thể và hướng dẫn sử dụng. Giữ nguyên tỷ lệ logo, dùng đúng biến thể theo nền và dành khoảng trống quanh logo. Không kéo giãn hoặc tự vẽ lại chữ X khi thêm tên sản phẩm.
+
+## xDev Hive — 2026-09-30
+
+- Chọn **X + HIVE** trên một dòng. HIVE dùng cùng nét SVG 2.1, chữ hoa cao 24 đơn vị và góc bo của DEV.
+- Giữ nguyên X gốc của từng bản nền sáng/tối, gồm gradient và hiệu ứng sáng.
+- Tên trong nội dung là **xDev Hive**. Bản DEV / HIVE hai dòng và ý tưởng tổ ong hổ phách chỉ là thử nghiệm.
+- File được chọn: `src/assets/brand/wordmark-v2/hive-{light,dark}.svg`. Cả hai có nền trong suốt, được giới thiệu và tải từ trang brand EN/VI.

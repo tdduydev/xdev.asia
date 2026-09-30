@@ -152,7 +152,7 @@ motion, no-JavaScript/canvas fallbacks, and product navigation.
 
 ## Brand guide
 
-`/brand/` and `/vi/brand/` present the selected X + DEV / AI Studio logo family,
+`/brand/` and `/vi/brand/` present the selected X + DEV / AI Studio / HIVE logo family,
 light and dark variants, palette, usage guidance and SVG downloads. Footer links
 make the guide accessible from the homepage and product documentation.
 

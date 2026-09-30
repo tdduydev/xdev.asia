@@ -9,7 +9,7 @@
   "story_title": "Keep the signature.<br>Extend the expression.",
   "story": "The blue X is the consistent point of recognition. Lighter lettering, gently rounded joins, and open spacing balance the mark. Each product has its own name within the same visual structure.",
   "family_title": "One family of identities.",
-  "family_text": "DEV is the master identity. AI Studio uses a two-line AI / STUDIO name aligned within the height of the X.",
+  "family_text": "DEV is the master identity. AI Studio uses a two-line AI / STUDIO name aligned within the height of the X. xDev Hive uses X + HIVE on one line, keeping its product name clear at small sizes.",
   "master": "Master identity",
   "product": "AI Studio product",
   "light": "Light background",
@@ -18,7 +18,7 @@
   "notes_text": "NOTES explores how the identity could extend to writing and the blog. It shares the X and the same lettering rules. This is an extension study, not a newly launched product.",
   "notes_label": "Extension study / NOTES",
   "type_title": "Lighter lettering.<br>A clear structure.",
-  "type_text": "DEV and AI use uppercase letters with an even stroke and gently rounded joins. The smaller STUDIO line sits beneath AI, within the height of the X. In written content, the brand name remains xDev.",
+  "type_text": "DEV, AI and HIVE use uppercase letters with an even stroke and gently rounded joins. The smaller STUDIO line sits beneath AI, within the height of the X. HIVE sits beside X on one line. In written content, use xDev, AI Studio and xDev Hive.",
   "palette_title": "Blue is the signature.",
   "palette_text": "The gradient stays inside the X. Neutral lettering and backgrounds keep the logo clear and legible.",
   "colors": [
@@ -67,7 +67,7 @@
     ],
     [
       "Check the actual size",
-      "DEV and STUDIO must remain readable on the intended device. Use the standalone X when space is too small."
+      "DEV, STUDIO and HIVE must remain readable on the intended device. Use the standalone X when space is too small."
     ],
     [
       "Extend the system",
@@ -77,5 +77,6 @@
   "files_title": "Logos ready to use.",
   "files_text": "Light and dark SVG versions of the selected identity.",
   "file_label": "Download SVG",
-  "ending": "Built by Duy. Keep learning. Keep making useful things."
+  "ending": "Built by Duy. Keep learning. Keep making useful things.",
+  "hive": "xDev Hive product"
 }
