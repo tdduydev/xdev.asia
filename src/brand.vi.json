@@ -9,7 +9,7 @@
   "story_title": "Giữ dấu ấn.<br>Mở rộng cách thể hiện.",
   "story": "Chữ X xanh là điểm nhận diện xuyên suốt. Phần tên bên cạnh dùng nét thanh, góc bo nhẹ và khoảng cách thoáng để tạo sự cân bằng. Mỗi sản phẩm có tên riêng, cùng chia sẻ một cấu trúc thiết kế.",
   "family_title": "Cùng một họ nhận diện.",
-  "family_text": "DEV là thương hiệu chính. AI Studio dùng phần chữ AI / STUDIO nằm gọn trong chiều cao chữ X. xDev Hive dùng X + HIVE trên một dòng để tên sản phẩm dễ đọc khi thu nhỏ.",
+  "family_text": "DEV là thương hiệu chính. AI Studio dùng phần chữ AI / STUDIO nằm gọn trong chiều cao chữ X. xDev Hive dùng cùng bố cục: HIVE phía trên, DEV HUB phía dưới để thể hiện trọng tâm phát triển phần mềm.",
   "master": "Thương hiệu chính",
   "product": "Sản phẩm AI Studio",
   "light": "Nền sáng",
@@ -18,7 +18,7 @@
   "notes_text": "NOTES là một hướng mở rộng dành cho nội dung và blog. Cùng một chữ X, phần tên được dựng theo cùng quy tắc. Đây là mẫu mở rộng, chưa phải tên sản phẩm mới.",
   "notes_label": "Mẫu mở rộng / NOTES",
   "type_title": "Nét chữ thanh.<br>Cấu trúc rõ ràng.",
-  "type_text": "DEV, AI và HIVE dùng chữ hoa với nét đều, góc nối bo nhẹ. STUDIO là dòng phụ nhỏ hơn, đặt dưới AI và nằm trong chiều cao chữ X. HIVE đặt cạnh X trên một dòng. Tên khi viết trong nội dung là xDev, AI Studio và xDev Hive.",
+  "type_text": "DEV, AI và HIVE dùng chữ hoa với nét đều, góc nối bo nhẹ. STUDIO và DEV HUB là các dòng phụ nhỏ hơn bên dưới AI và HIVE, cùng nằm trong chiều cao chữ X. Tên khi viết trong nội dung là xDev, AI Studio và xDev Hive.",
   "palette_title": "Sắc xanh làm điểm nhấn.",
   "palette_text": "Chuyển sắc được giữ trong chữ X. Phần chữ và nền dùng màu trung tính để logo luôn dễ đọc.",
   "colors": [
@@ -67,7 +67,7 @@
     ],
     [
       "Kiểm tra ở kích thước thật",
-      "Chữ DEV, STUDIO và HIVE cần đọc được trên thiết bị sử dụng. Khi quá nhỏ, dùng biểu tượng X riêng."
+      "Chữ DEV, STUDIO, HIVE và DEV HUB cần đọc được trên thiết bị sử dụng. Khi quá nhỏ, dùng biểu tượng X riêng."
     ],
     [
       "Mở rộng có quy tắc",

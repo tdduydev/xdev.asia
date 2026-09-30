@@ -22,7 +22,13 @@ Trang thương hiệu ghi lại ý tưởng, màu sắc, biến thể và hướ
 
 ## xDev Hive — 2026-09-30
 
-- Chọn **X + HIVE** trên một dòng. HIVE dùng cùng nét SVG 2.1, chữ hoa cao 24 đơn vị và góc bo của DEV.
+- Ban đầu chọn **X + HIVE** trên một dòng; được thay bằng bố cục HIVE / DEV HUB bên dưới. HIVE dùng cùng nét SVG 2.1, chữ hoa cao 24 đơn vị và góc bo của DEV.
 - Giữ nguyên X gốc của từng bản nền sáng/tối, gồm gradient và hiệu ứng sáng.
 - Tên trong nội dung là **xDev Hive**. Bản DEV / HIVE hai dòng và ý tưởng tổ ong hổ phách chỉ là thử nghiệm.
 - File được chọn: `src/assets/brand/wordmark-v2/hive-{light,dark}.svg`. Cả hai có nền trong suốt, được giới thiệu và tải từ trang brand EN/VI.
+
+## Bố cục HIVE / DEV HUB — 2026-09-30
+
+- Người dùng chốt **HIVE / DEV HUB** theo cấu trúc AI / STUDIO: HIVE ở y=12, DEV HUB ở y=43, scale .31 và nét 2.4 như dòng STUDIO.
+- DEV HUB thể hiện trọng tâm phát triển phần mềm. Tên trong nội dung vẫn là **xDev Hive**.
+- Giữ nguyên X, gradient và hiệu ứng của bản nền sáng/tối. File `hive-{light,dark}.svg` là tài sản chính đã cập nhật; bản HIVE một dòng và DEV / HIVE chỉ là lịch sử thử nghiệm.
