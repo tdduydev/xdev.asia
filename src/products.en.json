@@ -2,12 +2,12 @@
   "title": "Products",
   "headline": "Tools for building useful things.",
   "home_title": "One product family. More ways to build.",
-  "intro": "Build AI applications and coordinate software development. Explore xDev products for the work you need to do.",
+  "intro": "Build AI applications, coordinate software development and map your ideas. Explore xDev products for the work you need to do.",
   "capabilities": "Core capabilities",
   "all": "View all products",
   "connection_label": "The xDev product family",
   "connection_title": "Each product serves a part of the work.",
-  "connection_text": "AI Studio helps build AI applications. Hive coordinates teams and coding agents across AI SDLC. Choose the tool that fits your needs and deployment environment.",
+  "connection_text": "AI Studio helps build AI applications. Hive coordinates teams and coding agents across AI SDLC. MindMap AI turns ideas into maps on Mac, iPhone and iPad. Choose the tool that fits your needs and deployment environment.",
   "products": [
     {
       "id": "ai-studio",
@@ -36,6 +36,21 @@
       ],
       "href": "@hive@",
       "action": "Explore Hive"
+    },
+    {
+      "id": "mindmap",
+      "name": "MindMap AI by xDev",
+      "category": "Mind mapping",
+      "status": "Coming soon",
+      "logo": "mindmap-ai-light.svg",
+      "description": "A native mind map app for Mac, iPhone and iPad, with on-device AI, iCloud sync and no data collected.",
+      "tags": [
+        "On-device AI",
+        "Canvas & outline",
+        "iCloud sync"
+      ],
+      "href": "@route:mindmap/@",
+      "action": "Explore MindMap AI"
     }
   ]
 }

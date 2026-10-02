@@ -1,6 +1,6 @@
 # xDev Asia
 
-Static English/Vietnamese product website for XDev AI Studio and xDev Hive, with AI Studio user guides. English is the default. Forge is not included in the generated site.
+Static English/Vietnamese product website for XDev AI Studio, xDev Hive and MindMap AI, with AI Studio user guides and app legal/support pages. English is the default. Forge is not included in the generated site.
 
 ## Routes
 
@@ -8,8 +8,12 @@ Static English/Vietnamese product website for XDev AI Studio and xDev Hive, with
 | --- | --- | --- |
 | `/` | `/vi/` | xDev home; product links lead to the local overview |
 | `/brand/` | `/vi/brand/` | Brand story, selected logos and SVG downloads |
-| `/products/` | `/vi/products/` | Product directory: AI Studio and Hive |
+| `/products/` | `/vi/products/` | Product directory: AI Studio, Hive and MindMap AI |
 | `/hive/` | `/vi/hive/` | xDev Hive AI SDLC introduction, showcase and setup links |
+| `/mindmap/` | `/vi/mindmap/` | MindMap AI overview: features, privacy summary, pricing, platforms |
+| `/mindmap/privacy/` | `/vi/mindmap/privacy/` | MindMap AI Privacy Policy (linked from the app and App Store Connect) |
+| `/mindmap/terms/` | `/vi/mindmap/terms/` | MindMap AI Terms of Use |
+| `/mindmap/support/` | `/vi/mindmap/support/` | MindMap AI Support (App Store support URL) |
 | `/ai-studio/` | `/vi/ai-studio/` | Product introduction; all actions stay on this site |
 | `/ai-studio/docs/` | `/vi/ai-studio/docs/` | Documentation index |
 | `/ai-studio/docs/quickstart/` | `/vi/ai-studio/docs/quickstart/` | First application |
@@ -36,6 +40,7 @@ Open http://127.0.0.1:4321/. `dist/` is exclusively generated and is replaced on
 - `src/products.en.json`, `src/products.vi.json`: product directory and shared homepage summary, rendered by `scripts/products_page.py`.
 - `src/hive.en.json`, `src/hive.vi.json`: Hive product copy, rendered by `scripts/hive_page.py` and styled by `src/assets/hive-page.css`.
   The full introduction includes six real UI showcase panels, a feature catalog, use cases, setup choices, FAQ, and a narrated EN/VI film with captions and chapters. Capture and rebuild instructions are in [docs/hive/README.md](docs/hive/README.md).
+- `src/apps/<slug>.en.json`, `src/apps/<slug>.vi.json`: one xDev app each, rendered by `scripts/app_pages.py` and styled by `src/assets/app-pages.css`. See *App pages* below.
 - `src/studio.en.json`, `src/studio.vi.json`: localized overview and documentation. Add matching guide slugs in both files to generate `/ai-studio/docs/<slug>/`.
 - `src/styles.css`, `src/assets/`: shared styles and assets.
 - `scripts/build.py`: page layouts and route generation.
@@ -99,6 +104,30 @@ PLAYWRIGHT_MODULE=/path/to/node_modules/playwright node scripts/check_browser.cj
 The browser check loads all 36 articles and their images, switches languages, follows the table of contents and full-size images, and checks desktop/tablet/mobile layouts with JavaScript disabled. `check_site.py` checks image language, PNG dimensions, local links, and absence of application-domain links as well as the original site checks.
 
 The complete generated website is in `dist/`. Keep its `assets/`, `ai-studio/` and `vi/` directories together when copying or hosting it. Open `dist/ai-studio/index.html` for the product overview or serve the whole `dist/` directory. No deployment is performed by these commands.
+
+## App pages
+
+`scripts/app_pages.py` generates an overview plus legal and support pages for each
+xDev app, in English and Vietnamese, from `src/apps/<slug>.en.json` and
+`src/apps/<slug>.vi.json`. MindMap AI (`mindmap`) is the first. To add another app:
+
+1. Copy both MindMap AI files to `src/apps/<new-slug>.en.json` / `.vi.json` and change the
+   copy. Keep `slug`, section `id`s, links and dates identical in both files;
+   `check_site.py` rejects locales whose structure, links or dates differ.
+2. Put the icon (PNG, 256 px) and favicon under `src/assets/apps/<new-slug>/`.
+3. Add the app to `src/products.*.json` with `"href": "@route:<new-slug>/@"`, and
+   `"status"` (for example "Coming soon") while it is unreleased.
+
+Routes are `/<slug>/` and `/<slug>/<document-slug>/` for every entry in `documents`
+(MindMap AI: `privacy`, `terms`, `support`). Copy accepts `**bold**` and
+`[label](link)`; `app:support` links to a page of the same app, `app:` to its overview.
+In any template, `@route:<path>@` resolves to that path in the current language.
+Leave `store_url` null until the app is on the App Store; the checks then forbid
+App Store links. A document's `effective_date` (ISO) is shown in the local format.
+
+The MindMap AI privacy and support wording comes from `docs/web/privacy-policy.md` and
+`docs/web/support.md` in the xdev-mindmap-ai repository; change it there first.
+The pages work without JavaScript.
 
 ## AI Studio product overview
 

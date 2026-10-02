@@ -4,7 +4,9 @@ from html import escape
 import json
 import os
 import posixpath
+import re
 import shutil
+from app_pages import load_apps, render_app_pages
 from studio_page import render_studio
 from brand_page import render_brand
 from docs_page import render_docs
@@ -36,6 +38,8 @@ def decorate(page, language, path):
     page = page.replace('@brand@', relative(current, route(language, 'brand/')))
     page = page.replace('@products@', relative(current, route(language, 'products/')))
     page = page.replace('@hive@', relative(current, route(language, 'hive/')))
+    # Generic form for data-driven pages: @route:mindmap/privacy/@ links to that path in this page's language.
+    page = re.sub(r'@route:([^@"\s]*)@', lambda match: relative(current, route(language, match.group(1))), page)
     social_label = 'Connect with Duy' if language == 'en' else 'Kết nối với Duy'
     social_links = '<div class="social-links" role="group" aria-label="' + social_label + '">' + ''.join(
         f'<a href="{url}">{label}<span aria-hidden="true"> ↗</span></a>'
@@ -132,6 +136,18 @@ def build():
         page = page.replace('<a href="@docs@">' + ('Docs' if language == 'en' else 'Tài liệu') + '</a>', '<a href="#features">' + ('Features' if language == 'en' else 'Tính năng') + '</a>')
         page = page.replace('</head>', '<link rel="stylesheet" href="assets/hive-page.css"></head>')
         decorate(page, language, 'hive/')
+    for app in load_apps():
+        for language in ['en', 'vi']:
+            content = app[language]
+            support = 'support/' if any(document['slug'] == 'support' for document in content['documents']) else ''
+            for path, title, description, body in render_app_pages(language, content):
+                page = shell(language, title, description, body)
+                page = page.replace('<link rel="icon" href="assets/favicon.png">', f'<link rel="icon" href="{content["favicon"]}">')
+                page = page.replace('</head>', f'<meta property="og:image" content="{ORIGIN}/{content["icon"]}"><link rel="stylesheet" href="assets/app-pages.css"></head>')
+                # An app has no manual: the header's Docs slot leads to its own support page instead.
+                page = page.replace('<a href="@docs@">' + ('Docs' if language == 'en' else 'Tài liệu') + '</a>', f'<a href="@route:{content["slug"]}/{support}@">{escape(content["labels"]["support"])}</a>')
+                page = page.replace('>Hướng dẫn sử dụng</a>', '>Tài liệu AI Studio</a>').replace('>Documentation</a>', '>AI Studio docs</a>')
+                decorate(page, language, path)
     for language in ['en', 'vi']:
         brand = json.loads((ROOT / f'src/brand.{language}.json').read_text())
         page = shell(language, brand['title'], brand['description'], render_brand(brand))

@@ -2,12 +2,12 @@
   "title": "Sản phẩm",
   "headline": "Những công cụ để xây điều hữu ích.",
   "home_title": "Một hệ sản phẩm. Nhiều cách để xây.",
-  "intro": "Xây ứng dụng AI và điều phối vòng đời phát triển phần mềm. Khám phá các sản phẩm xDev theo công việc bạn cần giải quyết.",
+  "intro": "Xây ứng dụng AI, điều phối vòng đời phát triển phần mềm và vẽ sơ đồ ý tưởng. Khám phá các sản phẩm xDev theo công việc bạn cần giải quyết.",
   "capabilities": "Khả năng chính",
   "all": "Xem tất cả sản phẩm",
   "connection_label": "Trong hệ sản phẩm xDev",
   "connection_title": "Mỗi sản phẩm giải quyết một phần công việc.",
-  "connection_text": "AI Studio giúp xây ứng dụng AI. Hive điều phối team và coding agent trong AI SDLC. Chọn công cụ phù hợp với nhu cầu và môi trường triển khai.",
+  "connection_text": "AI Studio giúp xây ứng dụng AI. Hive điều phối team và coding agent trong AI SDLC. MindMap AI biến ý tưởng thành sơ đồ trên Mac, iPhone và iPad. Chọn công cụ phù hợp với nhu cầu và môi trường triển khai.",
   "products": [
     {
       "id": "ai-studio",
@@ -36,6 +36,21 @@
       ],
       "href": "@hive@",
       "action": "Khám phá Hive"
+    },
+    {
+      "id": "mindmap",
+      "name": "MindMap AI by xDev",
+      "category": "Sơ đồ tư duy",
+      "status": "Sắp ra mắt",
+      "logo": "mindmap-ai-light.svg",
+      "description": "Ứng dụng sơ đồ tư duy native cho Mac, iPhone và iPad, có AI chạy trên thiết bị, đồng bộ iCloud và không thu thập dữ liệu.",
+      "tags": [
+        "AI trên thiết bị",
+        "Khung vẽ & dàn ý",
+        "Đồng bộ iCloud"
+      ],
+      "href": "@route:mindmap/@",
+      "action": "Khám phá MindMap AI"
     }
   ]
 }

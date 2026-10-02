@@ -4,6 +4,7 @@ from pathlib import Path
 from urllib.parse import urlsplit, unquote
 import json
 import re
+from app_pages import load_apps, app_routes
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'dist'
@@ -51,12 +52,38 @@ class Page(HTMLParser):
         self.stack.pop()
 
 
+# Values that must be identical in both locales; everything else is translated copy.
+SHARED_KEYS = {'slug', 'id', 'href', 'icon', 'favicon', 'email', 'provider', 'store_url', 'effective_date', 'primary', 'callout', 'short_name'}
+
+
+def same_shape(english, vietnamese, where):
+    """Both locales of an app must have the same pages, sections, links and dates."""
+    assert type(english) is type(vietnamese), f'{where}: type differs'
+    if isinstance(english, dict):
+        assert english.keys() == vietnamese.keys(), f'{where}: keys differ {set(english) ^ set(vietnamese)}'
+        for key in english:
+            if key in SHARED_KEYS and not isinstance(english[key], (dict, list)):
+                assert english[key] == vietnamese[key], f'{where}.{key}: must match across locales'
+            same_shape(english[key], vietnamese[key], f'{where}.{key}')
+    elif isinstance(english, list):
+        assert len(english) == len(vietnamese), f'{where}: length differs'
+        for index, (a, b) in enumerate(zip(english, vietnamese)):
+            same_shape(a, b, f'{where}[{index}]')
+    elif isinstance(english, str):
+        links = r'\]\(([^)\s]+)\)'
+        assert re.findall(links, english) == re.findall(links, vietnamese), f'{where}: links differ'
+
+
 def check():
     en = json.loads((ROOT / 'src/studio.en.json').read_text())
     vi = json.loads((ROOT / 'src/studio.vi.json').read_text())
     slugs = [p['slug'] for p in en['pages']]
     assert slugs == [p['slug'] for p in vi['pages']], 'Locale routes differ'
-    paths = ['', 'brand/', 'products/', 'hive/', 'ai-studio/', 'ai-studio/docs/'] + [f'ai-studio/docs/{slug}/' for slug in slugs]
+    apps = load_apps()
+    for app in apps:
+        same_shape(app['en'], app['vi'], app['en']['slug'])
+    app_paths = [path for app in apps for path in app_routes(app['en'])]
+    paths = ['', 'brand/', 'products/', 'hive/', 'ai-studio/', 'ai-studio/docs/'] + [f'ai-studio/docs/{slug}/' for slug in slugs] + app_paths
     expected = {prefix + path + 'index.html' for prefix in ['', 'vi/'] for path in paths}
     actual = {str(p.relative_to(OUT)) for p in OUT.rglob('*.html') if 'assets' not in p.relative_to(OUT).parts}
     assert actual == expected, f'Missing or stale pages: {actual ^ expected}'
@@ -64,7 +91,7 @@ def check():
     for name in sorted(expected):
         file = OUT / name
         text = file.read_text()
-        assert not re.search(r'forge|@(?:home|studio|docs|quickstart|brand|hive|products|catalog|social)@', text, re.I), f'Hidden product or unresolved placeholder: {name}'
+        assert not re.search(r'forge|@(?:home|studio|docs|quickstart|brand|hive|products|catalog|social|route:[^@\s]*)@', text, re.I), f'Hidden product or unresolved placeholder: {name}'
         page = Page(text)
         assert page.language == ('vi' if name.startswith('vi/') else 'en'), name
         assert page.headings == 1, name
@@ -138,7 +165,27 @@ def check():
             previous = end
         assert all(f'id="hive-panel-{i}" class="hive-panel"' in hive for i in range(6)), 'No-JS panels must remain visible'
         assert f'srclang="{locale}"' in hive and 'id="hive-film"' in hive
-    print(f'PASS: {len(pages)} pages; local links, anchors, locale pairs, metadata, English default, no Forge.')
+    for app in apps:
+        for locale, prefix in [('en', ''), ('vi', 'vi/')]:
+            content = app[locale]
+            icon = (OUT / content['icon']).read_bytes()
+            assert icon[:8] == b'\x89PNG\r\n\x1a\n', f'App icon must be a PNG: {content["icon"]}'
+            for path in app_routes(content):
+                name = prefix + path + 'index.html'
+                text = (OUT / name).read_text()
+                # Source copy marks undecided contact details with CONTACT; never publish one.
+                assert not re.search(r'\bCONTACT\b', text), f'Unresolved contact marker: {name}'
+                assert f'href="mailto:{content["email"]}"' in text, f'App page must show the contact email: {name}'
+                if not content.get('store_url'):
+                    assert 'apps.apple.com' not in text, f'Unreleased app must not link to the App Store: {name}'
+            for document in content['documents']:
+                text = (OUT / prefix / content['slug'] / document['slug'] / 'index.html').read_text()
+                if document.get('effective_date'):
+                    assert f'<time datetime="{document["effective_date"]}">' in text, f'Missing effective date: {document["slug"]}'
+            for page_prefix in ['', 'products/']:
+                listing = Page((OUT / prefix / page_prefix / 'index.html').read_text())
+                assert any(href.rstrip('/').endswith(content['slug']) for href in listing.anchors), f'{prefix}{page_prefix}: product directory must link to {content["slug"]}/'
+    print(f'PASS: {len(pages)} pages; local links, anchors, locale pairs, metadata, English default, no Forge; {len(app_paths)} app pages per locale.')
 
 if __name__ == '__main__':
     check()
