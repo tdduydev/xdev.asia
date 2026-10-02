@@ -1,6 +1,6 @@
 # xDev Asia
 
-Static English/Vietnamese product website and user guides for XDev AI Studio. English is the default. Forge is not included in the generated site.
+Static English/Vietnamese product website for XDev AI Studio and xDev Hive, with AI Studio user guides. English is the default. Forge is not included in the generated site.
 
 ## Routes
 
@@ -8,6 +8,8 @@ Static English/Vietnamese product website and user guides for XDev AI Studio. En
 | --- | --- | --- |
 | `/` | `/vi/` | xDev home; product links lead to the local overview |
 | `/brand/` | `/vi/brand/` | Brand story, selected logos and SVG downloads |
+| `/products/` | `/vi/products/` | Product directory: AI Studio and Hive |
+| `/hive/` | `/vi/hive/` | xDev Hive AI SDLC introduction, showcase and setup links |
 | `/ai-studio/` | `/vi/ai-studio/` | Product introduction; all actions stay on this site |
 | `/ai-studio/docs/` | `/vi/ai-studio/docs/` | Documentation index |
 | `/ai-studio/docs/quickstart/` | `/vi/ai-studio/docs/quickstart/` | First application |
@@ -31,6 +33,9 @@ Open http://127.0.0.1:4321/. `dist/` is exclusively generated and is replaced on
 
 - `src/index.vi.html`: Vietnamese home template.
 - `src/home.en.json`: English home translations.
+- `src/products.en.json`, `src/products.vi.json`: product directory and shared homepage summary, rendered by `scripts/products_page.py`.
+- `src/hive.en.json`, `src/hive.vi.json`: Hive product copy, rendered by `scripts/hive_page.py` and styled by `src/assets/hive-page.css`.
+  The full introduction includes six real UI showcase panels, a feature catalog, use cases, setup choices, FAQ, and a narrated EN/VI film with captions and chapters. Capture and rebuild instructions are in [docs/hive/README.md](docs/hive/README.md).
 - `src/studio.en.json`, `src/studio.vi.json`: localized overview and documentation. Add matching guide slugs in both files to generate `/ai-studio/docs/<slug>/`.
 - `src/styles.css`, `src/assets/`: shared styles and assets.
 - `scripts/build.py`: page layouts and route generation.
