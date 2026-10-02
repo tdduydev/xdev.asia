@@ -1,0 +1,41 @@
+{
+  "title": "Sản phẩm",
+  "headline": "Những công cụ để xây điều hữu ích.",
+  "home_title": "Một hệ sản phẩm. Nhiều cách để xây.",
+  "intro": "Xây ứng dụng AI và điều phối vòng đời phát triển phần mềm. Khám phá các sản phẩm xDev theo công việc bạn cần giải quyết.",
+  "capabilities": "Khả năng chính",
+  "all": "Xem tất cả sản phẩm",
+  "connection_label": "Trong hệ sản phẩm xDev",
+  "connection_title": "Mỗi sản phẩm giải quyết một phần công việc.",
+  "connection_text": "AI Studio giúp xây ứng dụng AI. Hive điều phối team và coding agent trong AI SDLC. Chọn công cụ phù hợp với nhu cầu và môi trường triển khai.",
+  "products": [
+    {
+      "id": "ai-studio",
+      "name": "XDev AI Studio",
+      "category": "Ứng dụng AI",
+      "logo": "ai-studio-light.svg",
+      "description": "Kết nối mô hình, tri thức và công cụ để xây trợ lý AI và workflow phục vụ công việc.",
+      "tags": [
+        "Trợ lý AI",
+        "Knowledge base",
+        "Workflow"
+      ],
+      "href": "@studio@",
+      "action": "Khám phá AI Studio"
+    },
+    {
+      "id": "hive",
+      "name": "xDev Hive",
+      "category": "AI SDLC",
+      "logo": "hive-light.svg",
+      "description": "Kết nối team, coding agent và repo: điều phối task, theo dõi lượt chạy, review và tích lũy bài học.",
+      "tags": [
+        "Coding agent",
+        "Task & review",
+        "Memory & skill"
+      ],
+      "href": "@hive@",
+      "action": "Khám phá Hive"
+    }
+  ]
+}

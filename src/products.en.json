@@ -1,0 +1,41 @@
+{
+  "title": "Products",
+  "headline": "Tools for building useful things.",
+  "home_title": "One product family. More ways to build.",
+  "intro": "Build AI applications and coordinate software development. Explore xDev products for the work you need to do.",
+  "capabilities": "Core capabilities",
+  "all": "View all products",
+  "connection_label": "The xDev product family",
+  "connection_title": "Each product serves a part of the work.",
+  "connection_text": "AI Studio helps build AI applications. Hive coordinates teams and coding agents across AI SDLC. Choose the tool that fits your needs and deployment environment.",
+  "products": [
+    {
+      "id": "ai-studio",
+      "name": "XDev AI Studio",
+      "category": "AI applications",
+      "logo": "ai-studio-light.svg",
+      "description": "Connect models, knowledge, and tools to build AI assistants and workflows for your work.",
+      "tags": [
+        "AI assistants",
+        "Knowledge bases",
+        "Workflows"
+      ],
+      "href": "@studio@",
+      "action": "Explore AI Studio"
+    },
+    {
+      "id": "hive",
+      "name": "xDev Hive",
+      "category": "AI SDLC",
+      "logo": "hive-light.svg",
+      "description": "Connect teams, coding agents, and repositories: coordinate tasks, track runs, review results, and preserve lessons.",
+      "tags": [
+        "Coding agents",
+        "Tasks & review",
+        "Memory & skills"
+      ],
+      "href": "@hive@",
+      "action": "Explore Hive"
+    }
+  ]
+}

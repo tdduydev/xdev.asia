@@ -1,0 +1,110 @@
+[
+  {
+    "slug": "intro",
+    "chapter": 1,
+    "chapter_title": "Vì sao có Hive",
+    "title": "AI SDLC. Từ task đến review.",
+    "description": "Nhận việc → Xây dựng → Review → Học hỏi",
+    "narration": "AI SDLC là vòng đời phát triển phần mềm cùng AI. Viết code là một phần của quy trình: team còn cần giao task, chuẩn bị ngữ cảnh, theo dõi agent, review kết quả và giữ lại bài học. xDev Hive là nền tảng điều phối các bước này, kết nối team, coding agent và repo để công việc tiến lên với trách nhiệm rõ ràng.",
+    "image": null
+  },
+  {
+    "slug": "problem",
+    "chapter": 1,
+    "chapter_title": "Vì sao có Hive",
+    "title": "Kết nối cả quy trình phát triển.",
+    "description": "Task, agent và kết quả cần đi cùng nhau.",
+    "narration": "Một agent viết code, một agent khác review, nhưng ai đang nhận task và kết quả nằm ở đâu? Nếu hướng dẫn ở một nơi, quyết định ở trong chat và trạng thái công việc ở nơi khác, team khó tiếp nối. Hive kết nối task, lượt chạy và kiến thức dự án. Tài liệu, memory và skill cung cấp ngữ cảnh để agent thực hiện công việc và giúp team đánh giá kết quả.",
+    "image": null
+  },
+  {
+    "slug": "docs",
+    "chapter": 2,
+    "chapter_title": "Tài liệu & ngữ cảnh",
+    "title": "Quy chuẩn có nguồn gốc.",
+    "description": "Tài liệu chung, riêng theo dự án và có phiên bản.",
+    "narration": "Trong Hive, tài liệu được sắp xếp theo phạm vi chung, hệ thống và dự án. Team có thể soạn hướng dẫn, quy chuẩn và quyết định kỹ thuật, rồi xem lại lịch sử hoặc diff của từng phiên bản. Màn hình này là giao diện Hive thật, với dữ liệu demo của dự án Atlas. Tài liệu dùng làm ngữ cảnh có thể được đồng bộ về repo.",
+    "image": "docs"
+  },
+  {
+    "slug": "context",
+    "chapter": 2,
+    "chapter_title": "Tài liệu & ngữ cảnh",
+    "title": "Đúng hướng dẫn. Đúng phạm vi.",
+    "description": "AGENTS.md và chỉ dẫn theo đường dẫn.",
+    "narration": "Không phải mọi hướng dẫn đều cần nằm trong một file dài. Hive hỗ trợ tài liệu theo phạm vi và đường dẫn, để quy chuẩn phù hợp được đưa vào repo. Trang ngữ cảnh giúp người quản trị kiểm tra những gì agent sẽ đọc. Cấu hình agent và bước đồng bộ trên desktop quyết định cách tài liệu được phân phối xuống máy.",
+    "image": "context"
+  },
+  {
+    "slug": "memory",
+    "chapter": 3,
+    "chapter_title": "Memory & skill",
+    "title": "Bài học không nằm lại trong chat.",
+    "description": "Quyết định, convention và gotcha được tìm lại.",
+    "narration": "Memory giữ những điều đáng nhớ sau một task: một quyết định, một convention, hoặc một điểm dễ gây lỗi. Agent tìm kiến thức theo dự án, và có thể dùng những mục được chia sẻ cho cả team. Trên hub, memory mới từ agent đi qua bước duyệt trước khi agent khác sử dụng. Các mục cũ hoặc liên quan đến file đã thay đổi có thể được xem lại.",
+    "image": "memory"
+  },
+  {
+    "slug": "skills",
+    "chapter": 3,
+    "chapter_title": "Memory & skill",
+    "title": "Cách làm tốt, dùng lại được.",
+    "description": "Skill chung và skill riêng cho từng dự án.",
+    "narration": "Một quy trình review tốt không nên phải viết lại cho từng agent. Hive quản lý skill chung của team và skill riêng theo dự án. Khi trùng tên, skill của dự án thay thế skill chung. Claude Code có thể nạp skill đã đồng bộ trong repo. Những agent khác tìm và đọc skill qua MCP. Thay đổi skill cũng có thể được gửi thành đề xuất để người quản trị duyệt.",
+    "image": "skills"
+  },
+  {
+    "slug": "tasks",
+    "chapter": 4,
+    "chapter_title": "Task & lượt chạy",
+    "title": "Một task cần một người nhận.",
+    "description": "Trạng thái, phụ thuộc và quyền nhận việc.",
+    "narration": "Khi nhiều agent cùng tham gia, công việc cần có trạng thái và người chịu trách nhiệm. Hive hỗ trợ task với phụ thuộc, trạng thái từ cần làm đến hoàn tất, và cơ chế nhận việc có thời hạn. Agent đọc ngữ cảnh rồi nhận task trước khi bắt đầu. Kết quả được cập nhật để team biết việc nào đang làm, việc nào đã sẵn sàng cho review.",
+    "image": "tasks"
+  },
+  {
+    "slug": "execution",
+    "chapter": 4,
+    "chapter_title": "Task & lượt chạy",
+    "title": "Agent chạy trên môi trường bạn chọn.",
+    "description": "Desktop runner, worktree và kết quả code.",
+    "narration": "Ứng dụng desktop chạy coding agent qua những CLI và hồ sơ đã được cấu hình trên máy. Team theo dõi lượt chạy, log và kết quả từ hub. Tùy cấu hình, runner sử dụng worktree riêng, xoay sang hồ sơ khác khi gặp giới hạn quota, hoặc chạy nhiều ứng viên để chọn kết quả. Chi phí và giới hạn sử dụng vẫn phụ thuộc vào từng nhà cung cấp agent.",
+    "image": "tasks"
+  },
+  {
+    "slug": "review",
+    "chapter": 5,
+    "chapter_title": "Người duyệt & kiểm soát",
+    "title": "Agent đề xuất. Team quyết định.",
+    "description": "Lý do, diff và phát hiện xung đột.",
+    "narration": "Agent có thể đề xuất sửa tài liệu hoặc skill, thay vì ghi đè trực tiếp vào quy chuẩn chung. Người có quyền xem lý do và diff trước khi duyệt. Nếu tài liệu gốc đã thay đổi, Hive đánh dấu xung đột để tránh áp dụng một đề xuất cũ lên kiến thức mới. Đây là cách giữ người quản trị trong vòng quyết định khi kiến thức được cập nhật.",
+    "image": "review"
+  },
+  {
+    "slug": "team",
+    "chapter": 6,
+    "chapter_title": "Local & team hub",
+    "title": "Một máy hôm nay. Một team ngày mai.",
+    "description": "Desktop local hoặc hub dùng chung.",
+    "narration": "Bạn có thể bắt đầu với dữ liệu local trong ứng dụng desktop. Khi cần làm việc cùng team, hub web tập trung tài khoản, quyền theo dự án, tài liệu, memory và thông tin từ nhiều máy. SSO, webhook Teams hoặc Slack, tìm memory theo nghĩa và lưu tệp ngoài cơ sở dữ liệu là các tích hợp cần được cấu hình phù hợp với hệ thống của bạn.",
+    "image": "context"
+  },
+  {
+    "slug": "usecases",
+    "chapter": 7,
+    "chapter_title": "Bắt đầu với Hive",
+    "title": "AI SDLC từ một repo, một task.",
+    "description": "Developer · Tech lead · Nhiều agent · Nhiều máy.",
+    "narration": "Bắt đầu AI SDLC từ công việc thật của team: một repo, một task rõ ràng và coding agent đã cấu hình. Hive điều phối task, ngữ cảnh và lượt chạy; team review kết quả code qua PR hoặc MR và duyệt những đề xuất cập nhật kiến thức. Bài học được giữ lại cho vòng phát triển tiếp theo. Bạn có thể bắt đầu trên một máy, rồi mở rộng sang hub cho nhiều người và nhiều agent.",
+    "image": "skills"
+  },
+  {
+    "slug": "closing",
+    "chapter": 7,
+    "chapter_title": "Bắt đầu với Hive",
+    "title": "Nhận việc. Xây dựng. Review. Học hỏi.",
+    "description": "xdev.asia / hive",
+    "narration": "Xem README của xDev Hive để cài đặt desktop hoặc hub. Thêm repo, chuẩn bị quy chuẩn và skill, kết nối agent qua MCP, rồi thử một task với quy trình review rõ ràng. Giao diện trong clip dùng dữ liệu demo, lời dẫn là giọng tổng hợp. xDev Hive: nền tảng điều phối AI SDLC, từ task đến review, với kiến thức được tích lũy sau mỗi vòng phát triển.",
+    "image": null
+  }
+]

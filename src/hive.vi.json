@@ -1,0 +1,254 @@
+{
+  "eyebrow": "xDev Hive / AI SDLC",
+  "headline": [
+    "AI SDLC.",
+    "Từ task đến review."
+  ],
+  "description": "Nền tảng điều phối vòng đời phát triển phần mềm cùng AI. xDev Hive kết nối team, coding agent và repo: nhận task, chuẩn bị ngữ cảnh, theo dõi lượt chạy, review kết quả và giữ lại bài học cho công việc tiếp theo.",
+  "explore": "Khám phá tính năng",
+  "source": "Xem trên GitHub",
+  "map_label": "Điều phối team và agent trong AI SDLC",
+  "hub": "Hub web · Ứng dụng desktop",
+  "context": [
+    "Nhận task",
+    "Xây dựng",
+    "Review",
+    "Học hỏi"
+  ],
+  "map_caption": "Task dẫn dắt công việc. Ngữ cảnh hỗ trợ agent. Kết quả được review, bài học được lưu lại để vòng phát triển tiếp theo tốt hơn.",
+  "features_label": "Trong một không gian làm việc",
+  "features_title": "Giữ kiến thức. Kết nối công việc.",
+  "features": [
+    {
+      "title": "Tài liệu dùng chung",
+      "text": "Quản lý quy chuẩn, hướng dẫn dự án và quyết định kỹ thuật với phiên bản, lịch sử và diff. Đồng bộ tài liệu về AGENTS.md trong repo."
+    },
+    {
+      "title": "Memory giữa các phiên",
+      "text": "Lưu những quyết định và bài học để agent tiếp theo tìm lại. Tìm kiếm tiếng Việt có dấu hoặc không dấu, theo dự án hoặc dùng chung cả team."
+    },
+    {
+      "title": "Skill cho cả team",
+      "text": "Giữ quy trình làm việc ở một nơi. Dùng skill chung hoặc riêng theo dự án; Claude Code nạp từ repo, các agent khác đọc qua MCP."
+    },
+    {
+      "title": "Task và lượt chạy",
+      "text": "Theo dõi task, agent nhận việc và kết quả trong cùng dự án. App desktop chạy coding agent trên máy và báo trạng thái lên hub."
+    },
+    {
+      "title": "Đề xuất có người duyệt",
+      "text": "Agent gửi đề xuất sửa tài liệu và skill; người quản trị xem diff rồi duyệt. Memory mới trên hub cũng được duyệt trước khi chia sẻ cho agent khác."
+    },
+    {
+      "title": "Hub web và desktop",
+      "text": "Dùng desktop với dữ liệu local hoặc kết nối hub dùng chung. Quản lý tài khoản, quyền truy cập và token cho agent trên hub."
+    }
+  ],
+  "workflow_label": "Vòng phát triển cùng AI",
+  "workflow_title": "Nhận việc. Xây dựng. Review. Học hỏi.",
+  "workflow_description": "Bắt đầu từ một repo và một task rõ ràng. Kết nối agent với quy chuẩn, theo dõi công việc và đưa bài học đã duyệt trở lại ngữ cảnh dự án.",
+  "steps": [
+    {
+      "title": "Chuẩn bị task và ngữ cảnh",
+      "text": "Kết nối repo, làm rõ việc cần làm và đưa quy chuẩn, skill, memory phù hợp cho agent."
+    },
+    {
+      "title": "Chạy agent, theo dõi kết quả",
+      "text": "Agent nhận task; desktop runner thực hiện công việc trong môi trường đã cấu hình. Team theo dõi trạng thái, log và kết quả gắn với repo."
+    },
+    {
+      "title": "Review và đưa bài học trở lại",
+      "text": "Xem kết quả code qua PR/MR và duyệt đề xuất cập nhật kiến thức. Quyết định, skill và memory đã duyệt hỗ trợ task tiếp theo."
+    }
+  ],
+  "start_label": "Bắt đầu với xDev Hive",
+  "start_title": "Bắt đầu AI SDLC từ repo của bạn.",
+  "start_description": "Xem mã nguồn, yêu cầu cài đặt và hướng dẫn chạy hub hoặc desktop trong README của dự án.",
+  "start_action": "Xem hướng dẫn cài đặt",
+  "hero_note": "AI SDLC — vòng đời phát triển phần mềm cùng AI, với team giữ quyền quyết định.",
+  "watch": "Xem clip giới thiệu",
+  "showcase_link": "Xem giao diện",
+  "story_label": "Từ AI coding đến AI SDLC",
+  "story_title": "Một task xong. Một vòng phát triển tiến lên.",
+  "story_intro": "Viết code là một phần của công việc. Team còn cần phân công task, đưa đúng ngữ cảnh cho agent, theo dõi kết quả và review trước khi tiếp tục. Hive kết nối các bước này với kiến thức dự án, để nhiều agent cùng làm trong một quy trình có người chịu trách nhiệm.",
+  "problems": [
+    [
+      "Nhiều agent, công việc rời rạc",
+      "Task cần có người nhận, trạng thái và phụ thuộc rõ ràng để team theo dõi việc đang làm và kết quả chờ review."
+    ],
+    [
+      "Code thiếu ngữ cảnh dự án",
+      "Agent cần đúng quy chuẩn, skill và quyết định kỹ thuật trước khi bắt đầu; team cần kiểm tra được bộ ngữ cảnh đó."
+    ],
+    [
+      "Bài học chưa quay lại quy trình",
+      "Review xong một task, quyết định và gotcha cần được lưu, duyệt và tìm lại để task tiếp theo kế thừa điều team đã học."
+    ]
+  ],
+  "showcase_label": "Bên trong xDev Hive",
+  "showcase_title": "Bên trong quy trình AI SDLC.",
+  "showcase_intro": "Giao diện thật của Hive trên một hub demo riêng. Dự án Atlas và nội dung trong ảnh là dữ liệu minh họa.",
+  "image_note": "Giao diện thật · dữ liệu demo Atlas",
+  "zoom": "Xem ảnh đầy đủ",
+  "panels": [
+    {
+      "image": "tasks",
+      "label": "Task",
+      "title": "Một việc, một người nhận, một kết quả.",
+      "text": "Tạo task, khai báo phụ thuộc và theo dõi trạng thái từ cần làm đến hoàn tất. Cơ chế nhận việc có thời hạn giúp điều phối khi nhiều agent tham gia."
+    },
+    {
+      "image": "context",
+      "label": "Ngữ cảnh",
+      "title": "Biết agent sẽ nhận được điều gì.",
+      "text": "Kiểm tra bộ tài liệu dùng làm ngữ cảnh, phân biệt quy chuẩn chung và chỉ dẫn riêng cho dự án trước khi đưa xuống các repo."
+    },
+    {
+      "image": "skills",
+      "label": "Skill",
+      "title": "Cách làm tốt trở thành quy trình chung.",
+      "text": "Quản lý skill cho cả team, thêm phiên bản riêng theo dự án. Claude Code nạp skill đã đồng bộ trong repo; agent khác tìm và đọc skill qua MCP."
+    },
+    {
+      "image": "review",
+      "label": "Đề xuất",
+      "title": "Agent đề xuất. Team giữ quyền quyết định.",
+      "text": "Xem lý do và diff trước khi duyệt tài liệu hoặc skill. Nếu tài liệu gốc đã thay đổi, đề xuất được đánh dấu xung đột để tránh ghi đè kiến thức mới."
+    },
+    {
+      "image": "memory",
+      "label": "Memory",
+      "title": "Không bắt đầu lại từ trí nhớ trống.",
+      "text": "Giữ lại quyết định, convention và gotcha. Agent tìm memory theo dự án; người quản trị duyệt, xem lại các mục cũ và đánh dấu lại khi file liên quan đã thay đổi."
+    },
+    {
+      "image": "docs",
+      "label": "Tài liệu",
+      "title": "Quy chuẩn mà cả team cùng đọc.",
+      "text": "Sắp xếp tài liệu theo team và dự án. Đọc, soạn thảo, lưu phiên bản và theo dõi thay đổi; đồng bộ những chỉ dẫn phù hợp về repo để agent đọc đúng lúc."
+    }
+  ],
+  "catalog_label": "Khả năng của sản phẩm",
+  "catalog_title": "Điều phối công việc. Kiểm soát kết quả.",
+  "catalog_intro": "Các nhóm tính năng hiện có trong mã nguồn Hive. Tính năng chạy agent và tích hợp bên ngoài cần cấu hình tương ứng trên desktop hoặc hub.",
+  "catalog": [
+    {
+      "title": "Task & coding agent",
+      "items": [
+        "Nhận task có lease, trạng thái và phụ thuộc",
+        "Board, lượt chạy, log và kết quả theo dự án",
+        "Runner desktop, hồ sơ CLI và xoay gói khi hết quota",
+        "Worktree riêng; chọn best-of-n hoặc container khi cấu hình"
+      ]
+    },
+    {
+      "title": "Repo & kết quả code",
+      "items": [
+        "Kết nối GitLab và GitHub",
+        "Tạo MR/PR từ kết quả chạy và theo dõi trạng thái",
+        "Review, pipeline và thao tác merge theo quyền",
+        "Liên kết task với lượt chạy, nhánh và kết quả"
+      ]
+    },
+    {
+      "title": "Tài liệu & ngữ cảnh",
+      "items": [
+        "Tài liệu chung, theo hệ thống và theo dự án",
+        "Version, lịch sử, diff và nhật ký quyết định",
+        "Đồng bộ AGENTS.md, chỉ dẫn theo đường dẫn và skill",
+        "Soạn nội dung, sơ đồ Mermaid, ảnh và tệp đính kèm"
+      ]
+    },
+    {
+      "title": "Memory & skill",
+      "items": [
+        "Tìm memory bằng FTS5; hỗ trợ tiếng Việt có/không dấu",
+        "Tìm theo ngữ nghĩa khi cấu hình dịch vụ embedding",
+        "Memory chung, thay thế, mâu thuẫn và mục cần xem lại",
+        "Skill chung và riêng; đề xuất thay đổi có người duyệt"
+      ]
+    },
+    {
+      "title": "Team & nhiều máy",
+      "items": [
+        "Tài khoản, quyền theo dự án và token cho agent",
+        "Theo dõi máy, hàng đợi và trạng thái gói",
+        "SSO qua OpenID Connect khi có nhà cung cấp",
+        "Webhook Teams/Slack theo sự kiện đã chọn"
+      ]
+    },
+    {
+      "title": "Vận hành & quản trị",
+      "items": [
+        "Admin portal và nhật ký nguồn thay đổi",
+        "Backup, khôi phục và nâng cấp hub",
+        "Dữ liệu local hoặc hub dùng chung; SQLite",
+        "Lưu tệp qua SeaweedFS khi được cấu hình"
+      ]
+    }
+  ],
+  "use_label": "Những tình huống phù hợp",
+  "use_title": "Bắt đầu từ công việc của team bạn.",
+  "use_cases": [
+    [
+      "Developer dùng nhiều agent",
+      "Dùng Claude Code cho một task, Codex cho review và Gemini CLI cho task khác — cùng đọc tài liệu, memory và skill của dự án."
+    ],
+    [
+      "Tech lead quản lý quy chuẩn",
+      "Đưa coding convention vào tài liệu chung, xem diff agent đề xuất và giữ lại các quyết định kỹ thuật có lý do."
+    ],
+    [
+      "Team làm việc trên nhiều máy",
+      "Tập trung task và kiến thức trên hub, theo dõi lượt chạy từ các máy desktop đã kết nối."
+    ],
+    [
+      "Dự án cần kiến thức lâu dài",
+      "Ghi lại gotcha, liên kết với file và xem lại khi code thay đổi, để bài học còn hữu ích ở phiên tiếp theo."
+    ]
+  ],
+  "boundary_title": "Người quản trị vẫn ở trong vòng quyết định.",
+  "boundary_text": "Hive kiểm soát việc chia sẻ tài liệu, skill và memory bằng quyền truy cập và quy trình duyệt. Coding agent chạy theo CLI, tài khoản và môi trường bạn cấu hình. Quota, sandbox và tích hợp repo phụ thuộc vào hệ thống tương ứng.",
+  "setup_label": "Chọn cách bắt đầu",
+  "setup_title": "Chạy trên máy. Mở rộng cho team.",
+  "setup_options": [
+    [
+      "Desktop / local",
+      "Dùng ứng dụng desktop, thêm repo và cấu hình coding agent. Phù hợp khi bạn muốn giữ dữ liệu và lượt chạy trên máy của mình."
+    ],
+    [
+      "Hub / team",
+      "Chạy hub web, tạo tài khoản và quyền, rồi kết nối các máy desktop và agent bằng MCP. Dùng Docker theo hướng dẫn trong README."
+    ]
+  ],
+  "faq_title": "Trước khi bắt đầu",
+  "faq": [
+    [
+      "Hive có thay thế coding agent không?",
+      "Hive là lớp kiến thức và điều phối. Công việc code vẫn do các coding agent như Claude Code, Codex hoặc Gemini CLI thực hiện."
+    ],
+    [
+      "Có phải mua thêm API key cho mọi lượt chạy?",
+      "Runner dùng các CLI và hồ sơ bạn đã cấu hình. Việc dùng subscription hoặc API, giới hạn quota và chi phí phụ thuộc vào nhà cung cấp của từng agent."
+    ],
+    [
+      "Có thể dùng mà không có hub chung không?",
+      "Có. Desktop có chế độ dữ liệu local. Hub dành cho việc dùng chung tài khoản, tài liệu, memory và điều phối giữa nhiều máy."
+    ],
+    [
+      "Agent có tự sửa quy chuẩn chung không?",
+      "Theo quy trình Hive, agent gửi đề xuất. Người có quyền xem diff rồi duyệt; đề xuất dựa trên phiên bản cũ bị báo xung đột."
+    ],
+    [
+      "Ảnh và clip có phải demo hệ thống đang chạy thật?",
+      "Ảnh được chụp từ frontend Hive thật trên hub tạm với dữ liệu demo Atlas. Clip minh họa sản phẩm, có giọng đọc tổng hợp; các lượt chạy agent và tích hợp bên ngoài trong lời dẫn không phải benchmark."
+    ]
+  ],
+  "video_title": "xDev Hive: AI SDLC trong thực tế.",
+  "video_intro": "Theo dõi cách Hive kết nối task, ngữ cảnh, coding agent và bước review qua giao diện demo thật.",
+  "chapters": "Các chương",
+  "download_video": "Tải clip",
+  "download_captions": "Tải phụ đề",
+  "transcript": "Đọc lời dẫn",
+  "video_note": "Giao diện thật với dữ liệu demo · Giọng đọc tổng hợp"
+}

@@ -1,0 +1,385 @@
+WEBVTT
+
+00:00:00.112 --> 00:00:02.575
+AI SDLC là vòng đời phát triển
+
+00:00:02.575 --> 00:00:05.125
+phần mềm cùng AI Viết code là
+
+00:00:05.125 --> 00:00:06.875
+một phần của quy trình team còn
+
+00:00:06.875 --> 00:00:08.725
+cần giao task chuẩn bị ngữ cảnh
+
+00:00:08.888 --> 00:00:11.312
+theo dõi agent review kết quả và
+
+00:00:11.312 --> 00:00:13.638
+giữ lại bài học xDev Hive là
+
+00:00:13.638 --> 00:00:15.175
+nền tảng điều phối các bước này
+
+00:00:15.362 --> 00:00:17.838
+kết nối team coding agent và repo
+
+00:00:17.838 --> 00:00:19.300
+để công việc tiến lên với trách
+
+00:00:19.300 --> 00:00:20.062
+nhiệm rõ ràng
+
+00:00:21.958 --> 00:00:24.196
+Một agent viết code một agent khác
+
+00:00:24.196 --> 00:00:26.246
+review nhưng ai đang nhận task và
+
+00:00:26.246 --> 00:00:28.583
+kết quả nằm ở đâu Nếu hướng
+
+00:00:28.583 --> 00:00:30.358
+dẫn ở một nơi quyết định ở
+
+00:00:30.358 --> 00:00:31.971
+trong chat và trạng thái công việc
+
+00:00:31.971 --> 00:00:33.833
+ở nơi khác team khó tiếp nối
+
+00:00:34.683 --> 00:00:36.633
+Hive kết nối task lượt chạy và
+
+00:00:36.633 --> 00:00:39.921
+kiến thức dự án Tài liệu memory
+
+00:00:39.921 --> 00:00:41.458
+và skill cung cấp ngữ cảnh để
+
+00:00:41.458 --> 00:00:43.071
+agent thực hiện công việc và giúp
+
+00:00:43.071 --> 00:00:44.283
+team đánh giá kết quả
+
+00:00:46.167 --> 00:00:47.929
+Trong Hive tài liệu được sắp xếp
+
+00:00:47.929 --> 00:00:49.804
+theo phạm vi chung hệ thống và
+
+00:00:49.804 --> 00:00:52.229
+dự án Team có thể soạn hướng
+
+00:00:52.229 --> 00:00:53.992
+dẫn quy chuẩn và quyết định kỹ
+
+00:00:53.992 --> 00:00:55.717
+thuật rồi xem lại lịch sử hoặc
+
+00:00:55.717 --> 00:00:58.104
+diff của từng phiên bản Màn hình
+
+00:00:58.104 --> 00:00:59.867
+này là giao diện Hive thật với
+
+00:00:59.867 --> 00:01:01.892
+dữ liệu demo của dự án Atlas
+
+00:01:02.779 --> 00:01:04.192
+Tài liệu dùng làm ngữ cảnh có
+
+00:01:04.192 --> 00:01:05.904
+thể được đồng bộ về repo
+
+00:01:07.792 --> 00:01:09.367
+Không phải mọi hướng dẫn đều cần
+
+00:01:09.367 --> 00:01:11.742
+nằm trong một file dài Hive hỗ
+
+00:01:11.742 --> 00:01:13.292
+trợ tài liệu theo phạm vi và
+
+00:01:13.292 --> 00:01:15.054
+đường dẫn để quy chuẩn phù hợp
+
+00:01:15.054 --> 00:01:17.717
+được đưa vào repo Trang ngữ cảnh
+
+00:01:17.717 --> 00:01:19.204
+giúp người quản trị kiểm tra những
+
+00:01:19.204 --> 00:01:22.054
+gì agent sẽ đọc Cấu hình agent
+
+00:01:22.054 --> 00:01:23.792
+và bước đồng bộ trên desktop quyết
+
+00:01:23.792 --> 00:01:25.229
+định cách tài liệu được phân phối
+
+00:01:25.229 --> 00:01:25.779
+xuống máy
+
+00:01:27.667 --> 00:01:29.517
+Memory giữ những điều đáng nhớ sau
+
+00:01:29.517 --> 00:01:32.142
+một task một quyết định một convention
+
+00:01:32.317 --> 00:01:34.954
+hoặc một điểm dễ gây lỗi Agent
+
+00:01:34.954 --> 00:01:36.704
+tìm kiến thức theo dự án và
+
+00:01:36.704 --> 00:01:37.967
+có thể dùng những mục được chia
+
+00:01:37.967 --> 00:01:41.054
+sẻ cho cả team Trên hub memory
+
+00:01:41.054 --> 00:01:42.792
+mới từ agent đi qua bước duyệt
+
+00:01:42.792 --> 00:01:45.242
+trước khi agent khác sử dụng Các
+
+00:01:45.242 --> 00:01:46.729
+mục cũ hoặc liên quan đến file
+
+00:01:46.729 --> 00:01:48.142
+đã thay đổi có thể được xem
+
+00:01:48.142 --> 00:01:48.454
+lại
+
+00:01:50.375 --> 00:01:51.975
+Một quy trình review tốt không nên
+
+00:01:51.975 --> 00:01:54.687
+phải viết lại cho từng agent Hive
+
+00:01:54.687 --> 00:01:56.337
+quản lý skill chung của team và
+
+00:01:56.337 --> 00:01:58.962
+skill riêng theo dự án Khi trùng
+
+00:01:58.962 --> 00:02:01.075
+tên skill của dự án thay thế
+
+00:02:01.075 --> 00:02:03.687
+skill chung Claude Code có thể nạp
+
+00:02:03.687 --> 00:02:06.675
+skill đã đồng bộ trong repo Những
+
+00:02:06.675 --> 00:02:08.562
+agent khác tìm và đọc skill qua
+
+00:02:08.562 --> 00:02:11.688
+MCP Thay đổi skill cũng có thể
+
+00:02:11.688 --> 00:02:13.112
+được gửi thành đề xuất để người
+
+00:02:13.112 --> 00:02:13.862
+quản trị duyệt
+
+00:02:15.750 --> 00:02:17.725
+Khi nhiều agent cùng tham gia công
+
+00:02:17.725 --> 00:02:19.250
+việc cần có trạng thái và người
+
+00:02:19.250 --> 00:02:21.725
+chịu trách nhiệm Hive hỗ trợ task
+
+00:02:21.725 --> 00:02:23.500
+với phụ thuộc trạng thái từ cần
+
+00:02:23.500 --> 00:02:25.188
+làm đến hoàn tất và cơ chế
+
+00:02:25.188 --> 00:02:27.850
+nhận việc có thời hạn Agent đọc
+
+00:02:27.850 --> 00:02:29.450
+ngữ cảnh rồi nhận task trước khi
+
+00:02:29.450 --> 00:02:31.788
+bắt đầu Kết quả được cập nhật
+
+00:02:31.788 --> 00:02:33.350
+để team biết việc nào đang làm
+
+00:02:33.588 --> 00:02:35.388
+việc nào đã sẵn sàng cho review
+
+00:02:37.292 --> 00:02:39.504
+Ứng dụng desktop chạy coding agent qua
+
+00:02:39.504 --> 00:02:41.379
+những CLI và hồ sơ đã được
+
+00:02:41.379 --> 00:02:43.754
+cấu hình trên máy Team theo dõi
+
+00:02:43.754 --> 00:02:45.929
+lượt chạy log và kết quả từ
+
+00:02:45.929 --> 00:02:48.867
+hub Tùy cấu hình runner sử dụng
+
+00:02:48.867 --> 00:02:50.867
+worktree riêng xoay sang hồ sơ khác
+
+00:02:50.867 --> 00:02:52.717
+khi gặp giới hạn quota hoặc chạy
+
+00:02:52.717 --> 00:02:54.392
+nhiều ứng viên để chọn kết quả
+
+00:02:55.254 --> 00:02:56.754
+Chi phí và giới hạn sử dụng
+
+00:02:56.754 --> 00:02:58.229
+vẫn phụ thuộc vào từng nhà cung
+
+00:02:58.229 --> 00:02:58.992
+cấp agent
+
+00:03:00.875 --> 00:03:02.412
+Agent có thể đề xuất sửa tài
+
+00:03:02.412 --> 00:03:04.312
+liệu hoặc skill thay vì ghi đè
+
+00:03:04.312 --> 00:03:06.762
+trực tiếp vào quy chuẩn chung Người
+
+00:03:06.762 --> 00:03:08.425
+có quyền xem lý do và diff
+
+00:03:08.425 --> 00:03:10.812
+trước khi duyệt Nếu tài liệu gốc
+
+00:03:10.812 --> 00:03:12.625
+đã thay đổi Hive đánh dấu xung
+
+00:03:12.625 --> 00:03:13.912
+đột để tránh áp dụng một đề
+
+00:03:13.912 --> 00:03:16.300
+xuất cũ lên kiến thức mới Đây
+
+00:03:16.300 --> 00:03:17.800
+là cách giữ người quản trị trong
+
+00:03:17.800 --> 00:03:19.212
+vòng quyết định khi kiến thức được
+
+00:03:19.212 --> 00:03:19.625
+cập nhật
+
+00:03:21.554 --> 00:03:22.992
+Bạn có thể bắt đầu với dữ
+
+00:03:22.992 --> 00:03:25.979
+liệu local trong ứng dụng desktop Khi
+
+00:03:25.979 --> 00:03:27.667
+cần làm việc cùng team hub web
+
+00:03:27.667 --> 00:03:29.504
+tập trung tài khoản quyền theo dự
+
+00:03:29.504 --> 00:03:32.129
+án tài liệu memory và thông tin
+
+00:03:32.129 --> 00:03:35.454
+từ nhiều máy SSO webhook Teams hoặc
+
+00:03:35.454 --> 00:03:37.617
+Slack tìm memory theo nghĩa và lưu
+
+00:03:37.617 --> 00:03:39.054
+tệp ngoài cơ sở dữ liệu là
+
+00:03:39.054 --> 00:03:40.329
+các tích hợp cần được cấu hình
+
+00:03:40.329 --> 00:03:41.842
+phù hợp với hệ thống của bạn
+
+00:03:43.721 --> 00:03:45.896
+Bắt đầu AI SDLC từ công việc
+
+00:03:45.896 --> 00:03:48.271
+thật của team một repo một task
+
+00:03:48.271 --> 00:03:50.221
+rõ ràng và coding agent đã cấu
+
+00:03:50.221 --> 00:03:52.958
+hình Hive điều phối task ngữ cảnh
+
+00:03:52.958 --> 00:03:54.896
+và lượt chạy team review kết quả
+
+00:03:54.896 --> 00:03:56.846
+code qua PR hoặc MR và duyệt
+
+00:03:56.846 --> 00:03:58.171
+những đề xuất cập nhật kiến thức
+
+00:03:59.046 --> 00:04:00.533
+Bài học được giữ lại cho vòng
+
+00:04:00.533 --> 00:04:02.958
+phát triển tiếp theo Bạn có thể
+
+00:04:02.958 --> 00:04:04.721
+bắt đầu trên một máy rồi mở
+
+00:04:04.721 --> 00:04:06.308
+rộng sang hub cho nhiều người và
+
+00:04:06.308 --> 00:04:07.121
+nhiều agent
+
+00:04:09.000 --> 00:04:11.562
+Xem README của xDev Hive để cài
+
+00:04:11.562 --> 00:04:14.675
+đặt desktop hoặc hub Thêm repo chuẩn
+
+00:04:14.675 --> 00:04:16.562
+bị quy chuẩn và skill kết nối
+
+00:04:16.562 --> 00:04:19.037
+agent qua MCP rồi thử một task
+
+00:04:19.037 --> 00:04:21.700
+với quy trình review rõ ràng Giao
+
+00:04:21.700 --> 00:04:23.700
+diện trong clip dùng dữ liệu demo
+
+00:04:23.925 --> 00:04:26.362
+lời dẫn là giọng tổng hợp xDev
+
+00:04:26.362 --> 00:04:29.200
+Hive nền tảng điều phối AI SDLC
+
+00:04:29.412 --> 00:04:31.375
+từ task đến review với kiến thức
+
+00:04:31.375 --> 00:04:32.775
+được tích lũy sau mỗi vòng phát
+
+00:04:32.775 --> 00:04:33.112
+triển

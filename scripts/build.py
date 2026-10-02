@@ -8,6 +8,8 @@ import shutil
 from studio_page import render_studio
 from brand_page import render_brand
 from docs_page import render_docs
+from hive_page import render_hive
+from products_page import render_products
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'dist'
@@ -32,6 +34,8 @@ def decorate(page, language, path):
     page = page.replace('@docs@', relative(current, route(language, 'ai-studio/docs/')))
     page = page.replace('@quickstart@', relative(current, route(language, 'ai-studio/docs/quickstart/')))
     page = page.replace('@brand@', relative(current, route(language, 'brand/')))
+    page = page.replace('@products@', relative(current, route(language, 'products/')))
+    page = page.replace('@hive@', relative(current, route(language, 'hive/')))
     social_label = 'Connect with Duy' if language == 'en' else 'Kết nối với Duy'
     social_links = '<div class="social-links" role="group" aria-label="' + social_label + '">' + ''.join(
         f'<a href="{url}">{label}<span aria-hidden="true"> ↗</span></a>'
@@ -67,8 +71,8 @@ def shell(language, title, description, body, product=False):
     return f'''<!doctype html><html lang="{language}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{escape(title)} — xDev Asia</title><meta name="description" content="{escape(description, quote=True)}"><meta property="og:title" content="{escape(title, quote=True)}"><meta property="og:description" content="{escape(description, quote=True)}"><meta property="og:type" content="website"><link rel="icon" href="assets/favicon.png"><link rel="stylesheet" href="styles.css"></head><body>
 <a class="skip" href="#main">{'Skip to content' if en else 'Đến nội dung chính'}</a>
-<header><div class="container header-inner"><a class="brand" href="@home@" aria-label="xDev Asia"><img src="assets/brand/wordmark-v2/{logo}" alt="{brand_name}" width="143" height="70"></a><nav aria-label="{'Main navigation' if en else 'Điều hướng chính'}"><a href="@studio@">AI Studio</a><a href="@docs@">{'Docs' if en else 'Tài liệu'}</a><a href="https://blog.xdev.asia">Blog ↗</a></nav></div></header>
-{body}<footer class="container"><a href="@home@">© 2026 xDev Asia</a><div class="footer-navigation"><div class="footer-links"><a href="@brand@">{'Brand' if en else 'Thương hiệu'}</a><a href="@studio@">AI Studio</a><a href="@docs@">{'Documentation' if en else 'Hướng dẫn sử dụng'}</a></div>@social@</div></footer></body></html>'''
+<header><div class="container header-inner"><a class="brand" href="@home@" aria-label="xDev Asia"><img src="assets/brand/wordmark-v2/{logo}" alt="{brand_name}" width="143" height="70"></a><nav aria-label="{'Main navigation' if en else 'Điều hướng chính'}"><a href="@products@">{'Products' if en else 'Sản phẩm'}</a><a href="@docs@">{'Docs' if en else 'Tài liệu'}</a><a href="https://blog.xdev.asia">Blog ↗</a></nav></div></header>
+{body}<footer class="container"><a href="@home@">© 2026 xDev Asia</a><div class="footer-navigation"><div class="footer-links"><a href="@products@">{'Products' if en else 'Sản phẩm'}</a><a href="@brand@">{'Brand' if en else 'Thương hiệu'}</a><a href="@studio@">AI Studio</a><a href="@docs@">{'Documentation' if en else 'Hướng dẫn sử dụng'}</a></div>@social@</div></footer></body></html>'''
 
 
 def build():
@@ -85,8 +89,13 @@ def build():
             raise ValueError(f'Translation source missing: {vi}')
         english = english.replace(vi, en)
     english = english.replace('lang="vi"', 'lang="en"', 1)
-    decorate(english, 'en', '')
-    decorate(template, 'vi', '')
+    for language, home in [('en', english), ('vi', template)]:
+        products = json.loads((ROOT / f'src/products.{language}.json').read_text())
+        home = home.replace('@catalog@', render_products(language, products, compact=True))
+        decorate(home, language, '')
+        directory = shell(language, products['title'], products['intro'], render_products(language, products))
+        directory = directory.replace('</head>', '<link rel="stylesheet" href="assets/products-page.css"></head>')
+        decorate(directory, language, 'products/')
     for language in ['en', 'vi']:
         content = json.loads((ROOT / f'src/studio.{language}.json').read_text())
         en = language == 'en'
@@ -113,6 +122,16 @@ def build():
             page = shell(language, entry['title'], entry['description'], body, product=True)
             page = page.replace('</head>', '<link rel="stylesheet" href="assets/docs-page.css"></head>')
             decorate(page, language, path)
+    for language in ['en', 'vi']:
+        hive = json.loads((ROOT / f'src/hive.{language}.json').read_text())
+        page = shell(language, 'xDev Hive — AI SDLC', hive['description'], render_hive(language, hive))
+        page = page.replace('wordmark-v2/master-light.svg', 'wordmark-v2/hive-light.svg')
+        page = page.replace('alt="xDev"', 'alt="xDev Hive"')
+        page = page.replace('>Hướng dẫn sử dụng</a>', '>Tài liệu AI Studio</a>').replace('>Documentation</a>', '>AI Studio docs</a>')
+        # Hive's navigation must not present AI Studio's manual as its own docs.
+        page = page.replace('<a href="@docs@">' + ('Docs' if language == 'en' else 'Tài liệu') + '</a>', '<a href="#features">' + ('Features' if language == 'en' else 'Tính năng') + '</a>')
+        page = page.replace('</head>', '<link rel="stylesheet" href="assets/hive-page.css"></head>')
+        decorate(page, language, 'hive/')
     for language in ['en', 'vi']:
         brand = json.loads((ROOT / f'src/brand.{language}.json').read_text())
         page = shell(language, brand['title'], brand['description'], render_brand(brand))

@@ -1,0 +1,301 @@
+WEBVTT
+
+00:00:00.100 --> 00:00:03.275
+AI SDLC means the software development lifecycle
+
+00:00:03.288 --> 00:00:06.088
+with AI Writing code is one part
+
+00:00:06.100 --> 00:00:08.988
+of the process Your team also needs
+
+00:00:09.000 --> 00:00:12.275
+to assign tasks prepare context track agents
+
+00:00:12.450 --> 00:00:16.288
+review results and preserve lessons xDev Hive
+
+00:00:16.300 --> 00:00:19.312
+orchestrates these steps connecting your team coding
+
+00:00:19.325 --> 00:00:22.188
+agents and repositories so work moves forward
+
+00:00:22.200 --> 00:00:23.650
+with clear responsibility
+
+00:00:25.558 --> 00:00:27.658
+One agent writes code and another reviews
+
+00:00:27.671 --> 00:00:30.271
+it But who owns the task and
+
+00:00:30.283 --> 00:00:33.483
+where is the result When instructions chat
+
+00:00:33.496 --> 00:00:36.146
+decisions and work status live apart the
+
+00:00:36.158 --> 00:00:39.871
+team struggles to continue Hive connects tasks
+
+00:00:40.033 --> 00:00:44.346
+runs and project knowledge Documents memory and
+
+00:00:44.358 --> 00:00:46.533
+skills provide context for agents to do
+
+00:00:46.546 --> 00:00:47.921
+the work and for your team to
+
+00:00:47.933 --> 00:00:49.021
+assess the results
+
+00:00:50.892 --> 00:00:53.792
+Hive organizes documents by shared system and
+
+00:00:53.804 --> 00:00:57.304
+project scope Your team can write instructions
+
+00:00:57.467 --> 00:01:00.729
+standards and technical decisions then inspect version
+
+00:01:00.742 --> 00:01:03.454
+history and diffs This is the real
+
+00:01:03.467 --> 00:01:06.392
+Hive interface running with illustrative Atlas project
+
+00:01:06.404 --> 00:01:10.004
+data Documents used as agent context can
+
+00:01:10.017 --> 00:01:13.204
+be synchronized into your repository keeping instructions
+
+00:01:13.217 --> 00:01:14.217
+close to the code
+
+00:01:16.100 --> 00:01:18.225
+Not every instruction belongs in one long
+
+00:01:18.238 --> 00:01:22.175
+file Hive supports scoped documents and path-specific
+
+00:01:22.188 --> 00:01:24.625
+guidance so relevant standards can reach the
+
+00:01:24.638 --> 00:01:27.750
+right part of a repository The context
+
+00:01:27.762 --> 00:01:30.400
+screen lets administrators inspect what agents will
+
+00:01:30.412 --> 00:01:34.862
+read Desktop synchronization and agent configuration determine
+
+00:01:34.875 --> 00:01:36.888
+how those instructions are distributed to each
+
+00:01:36.900 --> 00:01:37.462
+machine
+
+00:01:39.350 --> 00:01:41.650
+Memory preserves what a task teaches a
+
+00:01:41.662 --> 00:01:43.975
+decision a convention or a problem to
+
+00:01:43.988 --> 00:01:47.338
+watch for Agents search within projects and
+
+00:01:47.350 --> 00:01:49.288
+can use knowledge shared across the team
+
+00:01:50.150 --> 00:01:52.000
+On the hub new agent memory is
+
+00:01:52.012 --> 00:01:55.625
+reviewed before other agents use it Administrators
+
+00:01:55.638 --> 00:01:58.125
+can revisit older entries and inspect knowledge
+
+00:01:58.138 --> 00:01:59.900
+linked to files that have changed
+
+00:02:01.808 --> 00:02:03.746
+A useful review procedure should not need
+
+00:02:03.758 --> 00:02:06.558
+to be rewritten for every agent Hive
+
+00:02:06.571 --> 00:02:09.708
+manages shared team skills and project-specific skills
+
+00:02:10.571 --> 00:02:12.721
+A project skill overrides a shared skill
+
+00:02:12.733 --> 00:02:15.308
+with the same name Claude Code can
+
+00:02:15.321 --> 00:02:18.008
+load synchronized skills from the repository while
+
+00:02:18.021 --> 00:02:20.108
+other agents discover and read skills through
+
+00:02:20.121 --> 00:02:23.533
+MCP Proposed changes can be reviewed by
+
+00:02:23.546 --> 00:02:24.496
+an administrator
+
+00:02:26.392 --> 00:02:28.742
+Work across several agents needs clear state
+
+00:02:28.754 --> 00:02:32.929
+and responsibility Hive supports tasks with dependencies
+
+00:02:33.079 --> 00:02:35.742
+progress from todo to completion and time-limited
+
+00:02:35.754 --> 00:02:39.017
+claims Agents read the context and claim
+
+00:02:39.029 --> 00:02:42.429
+a task before starting Updating the result
+
+00:02:42.442 --> 00:02:44.104
+helps the team see what is underway
+
+00:02:44.329 --> 00:02:45.992
+what is blocked and what is ready
+
+00:02:46.004 --> 00:02:46.679
+for review
+
+00:02:48.558 --> 00:02:50.583
+The desktop app runs coding agents through
+
+00:02:50.596 --> 00:02:52.896
+the CLIs and profiles configured on your
+
+00:02:52.908 --> 00:02:56.546
+machine The hub shows reported runs logs
+
+00:02:56.671 --> 00:03:00.508
+and results Depending on configuration the runner
+
+00:03:00.521 --> 00:03:03.358
+can use separate worktrees switch profiles after
+
+00:03:03.371 --> 00:03:07.458
+quota limits or compare several candidates Usage
+
+00:03:07.471 --> 00:03:09.346
+limits and costs still depend on each
+
+00:03:09.358 --> 00:03:11.596
+agent provider and the account you configure
+
+00:03:13.475 --> 00:03:16.025
+Agents can propose document and skill updates
+
+00:03:16.037 --> 00:03:19.425
+rather than overwrite shared standards A permitted
+
+00:03:19.437 --> 00:03:21.775
+reviewer inspects the reason and diff before
+
+00:03:21.787 --> 00:03:24.962
+approving a change When the original document
+
+00:03:24.975 --> 00:03:27.462
+has changed Hive flags a conflict so
+
+00:03:27.475 --> 00:03:29.800
+an older proposal does not silently replace
+
+00:03:29.812 --> 00:03:33.025
+newer knowledge Human reviewers remain part of
+
+00:03:33.037 --> 00:03:34.475
+how team knowledge evolves
+
+00:03:36.392 --> 00:03:38.229
+Start with local data in the desktop
+
+00:03:38.242 --> 00:03:40.679
+app. When your team needs a shared
+
+00:03:40.692 --> 00:03:43.379
+workspace the web hub brings together accounts
+
+00:03:43.517 --> 00:03:46.979
+project permissions documents memory and reports from
+
+00:03:46.992 --> 00:03:51.579
+multiple machines SSO Teams or Slack webhooks
+
+00:03:51.767 --> 00:03:54.642
+semantic memory search and external file storage
+
+00:03:54.654 --> 00:03:57.604
+are optional integrations that require configuration for
+
+00:03:57.617 --> 00:03:58.479
+your environment
+
+00:04:00.392 --> 00:04:02.929
+Start AI SDLC with real work a
+
+00:04:02.942 --> 00:04:05.742
+repository a clear task and a configured
+
+00:04:05.754 --> 00:04:09.917
+coding agent Hive coordinates tasks context and
+
+00:04:09.929 --> 00:04:13.079
+runs Your team reviews code results through
+
+00:04:13.092 --> 00:04:15.442
+pull or merge requests and approves proposed
+
+00:04:15.454 --> 00:04:18.792
+knowledge updates Lessons remain available for the
+
+00:04:18.804 --> 00:04:22.267
+next development cycle Start on one machine
+
+00:04:22.492 --> 00:04:23.904
+then expand to a hub for more
+
+00:04:23.917 --> 00:04:25.054
+people and agents
+
+00:04:26.933 --> 00:04:28.796
+Read the xDev Hive README to set
+
+00:04:28.808 --> 00:04:31.246
+up the desktop app or hub Add
+
+00:04:31.258 --> 00:04:34.521
+a repository prepare standards and skills connect
+
+00:04:34.533 --> 00:04:36.971
+agents through MCP and try a task
+
+00:04:36.983 --> 00:04:39.921
+with a clear review process The screens
+
+00:04:39.933 --> 00:04:41.621
+use demo data and the narration is
+
+00:04:41.633 --> 00:04:46.208
+synthetic xDev Hive orchestrates AI SDLC from
+
+00:04:46.221 --> 00:04:48.521
+task to review with knowledge that grows
+
+00:04:48.533 --> 00:04:50.183
+after each development cycle

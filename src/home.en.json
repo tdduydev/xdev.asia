@@ -56,5 +56,16 @@
   "Ghé thăm blog xDev": "Visit the xDev journal",
   "Được xây bởi Duy. Luôn tiếp tục học hỏi.": "Built by Duy. Always learning.",
   "Xem cấu trúc biểu tượng X": "Show the X structure",
-  "Thương hiệu": "Brand"
+  "Thương hiệu": "Brand",
+  "Claude Code, Codex, Gemini CLI và các coding agent kết nối qua MCP. Dùng hub web cho cả team, hoặc app desktop ngay trên máy của bạn.": "Claude Code, Codex, Gemini CLI, and other coding agents connect through MCP. Use the web hub with your team or the desktop app on your machine.",
+  "Khám phá xDev Hive": "Explore xDev Hive",
+  "Điều phối vòng đời phát triển phần mềm cùng AI": "Orchestrate software development with AI",
+  "AI SDLC.<br>Từ task đến review.": "AI SDLC.<br>From task to review.",
+  "xDev Hive kết nối team, coding agent và repo trong một quy trình: nhận task, xây dựng, review và đưa bài học trở lại công việc tiếp theo.": "xDev Hive connects teams, coding agents, and repositories in one workflow: claim tasks, build, review, and carry lessons into the next task.",
+  "Điều phối agent": "Agent orchestration",
+  "Task rõ ràng, ngữ cảnh đúng, lượt chạy theo dõi được.": "Clear tasks, relevant context, and tracked runs.",
+  "Review kết quả": "Review results",
+  "Kết nối kết quả với repo, PR/MR và người duyệt.": "Connect results to repositories, PRs or MRs, and reviewers.",
+  "Học từ mỗi task": "Learn from each task",
+  "Giữ lại quyết định, memory và skill cho vòng tiếp theo.": "Preserve decisions, memory, and skills for the next cycle."
 }

@@ -1,0 +1,177 @@
+{
+  "language": "en",
+  "duration": 291.958,
+  "duration_label": "4:51",
+  "voice": "en-US-JennyNeural",
+  "chapters": [
+    {
+      "title": "Why Hive",
+      "start": 0,
+      "time": "00:00"
+    },
+    {
+      "title": "Documents & context",
+      "start": 50.792,
+      "time": "00:50"
+    },
+    {
+      "title": "Memory & skills",
+      "start": 99.25,
+      "time": "01:39"
+    },
+    {
+      "title": "Tasks & runs",
+      "start": 146.292,
+      "time": "02:26"
+    },
+    {
+      "title": "Review & control",
+      "start": 193.375,
+      "time": "03:13"
+    },
+    {
+      "title": "Local & team hub",
+      "start": 216.292,
+      "time": "03:36"
+    },
+    {
+      "title": "Start with Hive",
+      "start": 240.292,
+      "time": "04:00"
+    }
+  ],
+  "slides": [
+    {
+      "slug": "intro",
+      "chapter": 1,
+      "chapter_title": "Why Hive",
+      "title": "AI SDLC. From task to review.",
+      "description": "Claim → Build → Review → Learn",
+      "narration": "AI SDLC means the software development lifecycle with AI. Writing code is one part of the process. Your team also needs to assign tasks, prepare context, track agents, review results, and preserve lessons. xDev Hive orchestrates these steps, connecting your team, coding agents, and repositories so work moves forward with clear responsibility.",
+      "image": null,
+      "start": 0,
+      "duration": 25.458333333333332
+    },
+    {
+      "slug": "problem",
+      "chapter": 1,
+      "chapter_title": "Why Hive",
+      "title": "Connect the development workflow.",
+      "description": "Tasks, agents, and results belong together.",
+      "narration": "One agent writes code and another reviews it. But who owns the task, and where is the result? When instructions, chat decisions, and work status live apart, the team struggles to continue. Hive connects tasks, runs, and project knowledge. Documents, memory, and skills provide context for agents to do the work and for your team to assess the results.",
+      "image": null,
+      "start": 25.458,
+      "duration": 25.333333333333332
+    },
+    {
+      "slug": "docs",
+      "chapter": 2,
+      "chapter_title": "Documents & context",
+      "title": "Standards with a history.",
+      "description": "Shared and project documents, with versions.",
+      "narration": "Hive organizes documents by shared, system, and project scope. Your team can write instructions, standards, and technical decisions, then inspect version history and diffs. This is the real Hive interface, running with illustrative Atlas project data. Documents used as agent context can be synchronized into your repository, keeping instructions close to the code.",
+      "image": "docs",
+      "start": 50.792,
+      "duration": 25.208333333333332
+    },
+    {
+      "slug": "context",
+      "chapter": 2,
+      "chapter_title": "Documents & context",
+      "title": "The right instructions, in scope.",
+      "description": "AGENTS.md and path-scoped guidance.",
+      "narration": "Not every instruction belongs in one long file. Hive supports scoped documents and path-specific guidance, so relevant standards can reach the right part of a repository. The context screen lets administrators inspect what agents will read. Desktop synchronization and agent configuration determine how those instructions are distributed to each machine.",
+      "image": "context",
+      "start": 76.0,
+      "duration": 23.25
+    },
+    {
+      "slug": "memory",
+      "chapter": 3,
+      "chapter_title": "Memory & skills",
+      "title": "Lessons beyond the chat.",
+      "description": "Find decisions, conventions, and gotchas.",
+      "narration": "Memory preserves what a task teaches: a decision, a convention, or a problem to watch for. Agents search within projects and can use knowledge shared across the team. On the hub, new agent memory is reviewed before other agents use it. Administrators can revisit older entries and inspect knowledge linked to files that have changed.",
+      "image": "memory",
+      "start": 99.25,
+      "duration": 22.458333333333332
+    },
+    {
+      "slug": "skills",
+      "chapter": 3,
+      "chapter_title": "Memory & skills",
+      "title": "Good practice, ready to reuse.",
+      "description": "Team skills and project-specific procedures.",
+      "narration": "A useful review procedure should not need to be rewritten for every agent. Hive manages shared team skills and project-specific skills. A project skill overrides a shared skill with the same name. Claude Code can load synchronized skills from the repository, while other agents discover and read skills through MCP. Proposed changes can be reviewed by an administrator.",
+      "image": "skills",
+      "start": 121.708,
+      "duration": 24.583333333333332
+    },
+    {
+      "slug": "tasks",
+      "chapter": 4,
+      "chapter_title": "Tasks & runs",
+      "title": "Give every task an owner.",
+      "description": "Status, dependencies, and time-limited claims.",
+      "narration": "Work across several agents needs clear state and responsibility. Hive supports tasks with dependencies, progress from todo to completion, and time-limited claims. Agents read the context and claim a task before starting. Updating the result helps the team see what is underway, what is blocked, and what is ready for review.",
+      "image": "tasks",
+      "start": 146.292,
+      "duration": 22.166666666666668
+    },
+    {
+      "slug": "execution",
+      "chapter": 4,
+      "chapter_title": "Tasks & runs",
+      "title": "Run agents in your environment.",
+      "description": "Desktop runner, worktrees, and code results.",
+      "narration": "The desktop app runs coding agents through the CLIs and profiles configured on your machine. The hub shows reported runs, logs, and results. Depending on configuration, the runner can use separate worktrees, switch profiles after quota limits, or compare several candidates. Usage limits and costs still depend on each agent provider and the account you configure.",
+      "image": "tasks",
+      "start": 168.458,
+      "duration": 24.916666666666668
+    },
+    {
+      "slug": "review",
+      "chapter": 5,
+      "chapter_title": "Review & control",
+      "title": "Agents propose. Your team decides.",
+      "description": "Reasons, diffs, and conflict detection.",
+      "narration": "Agents can propose document and skill updates rather than overwrite shared standards. A permitted reviewer inspects the reason and diff before approving a change. When the original document has changed, Hive flags a conflict so an older proposal does not silently replace newer knowledge. Human reviewers remain part of how team knowledge evolves.",
+      "image": "review",
+      "start": 193.375,
+      "duration": 22.916666666666668
+    },
+    {
+      "slug": "team",
+      "chapter": 6,
+      "chapter_title": "Local & team hub",
+      "title": "One machine today. A team tomorrow.",
+      "description": "Local desktop data or a shared web hub.",
+      "narration": "Start with local data in the desktop app. When your team needs a shared workspace, the web hub brings together accounts, project permissions, documents, memory, and reports from multiple machines. SSO, Teams or Slack webhooks, semantic memory search, and external file storage are optional integrations that require configuration for your environment.",
+      "image": "context",
+      "start": 216.292,
+      "duration": 24.0
+    },
+    {
+      "slug": "usecases",
+      "chapter": 7,
+      "chapter_title": "Start with Hive",
+      "title": "AI SDLC starts with one task.",
+      "description": "Developers · Tech leads · Agents · Machines.",
+      "narration": "Start AI SDLC with real work: a repository, a clear task, and a configured coding agent. Hive coordinates tasks, context, and runs. Your team reviews code results through pull or merge requests and approves proposed knowledge updates. Lessons remain available for the next development cycle. Start on one machine, then expand to a hub for more people and agents.",
+      "image": "skills",
+      "start": 240.292,
+      "duration": 26.541666666666668
+    },
+    {
+      "slug": "closing",
+      "chapter": 7,
+      "chapter_title": "Start with Hive",
+      "title": "Claim. Build. Review. Learn.",
+      "description": "xdev.asia / hive",
+      "narration": "Read the xDev Hive README to set up the desktop app or hub. Add a repository, prepare standards and skills, connect agents through MCP, and try a task with a clear review process. The screens use demo data and the narration is synthetic. xDev Hive orchestrates AI SDLC, from task to review, with knowledge that grows after each development cycle.",
+      "image": null,
+      "start": 266.833,
+      "duration": 25.125
+    }
+  ]
+}

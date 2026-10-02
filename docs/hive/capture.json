@@ -1,0 +1,17 @@
+{
+  "source": "Adjacent xdev-hive working tree",
+  "capturedAt": "2026-10-02T02:53:15.420Z",
+  "dimensions": [
+    1440,
+    1000
+  ],
+  "screens": [
+    "docs",
+    "memory",
+    "skills",
+    "tasks",
+    "review",
+    "context"
+  ],
+  "data": "Synthetic Atlas project in a disposable loopback hub; no customer data or credentials are included."
+}
