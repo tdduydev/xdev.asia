@@ -47,6 +47,13 @@ def inline(text, slug):
     return re.sub(r'\[([^\]]+)\]\(([^)\s]+)\)', lambda m: f'<a href="{escape(target(unescape(m.group(2)), slug), quote=True)}">{m.group(1)}</a>', html)
 
 
+def readable_email(html):
+    # xdev.asia sits behind Cloudflare, whose email obfuscation swaps addresses for
+    # "[email protected]" until a script runs; these comments opt the contact out, so
+    # App Review and visitors without JavaScript still see it.
+    return re.sub(r'<a href="mailto:[^"]*">.*?</a>', lambda m: '<!--email_off-->' + m.group(0) + '<!--/email_off-->', html)
+
+
 def format_date(iso, language):
     year, month, day = (int(part) for part in iso.split('-'))
     return f'{day} tháng {month} năm {year}' if language == 'vi' else f'{day} {MONTHS[month - 1]} {year}'
@@ -176,6 +183,6 @@ def render_document(c, d, language):
 def render_app_pages(language, c):
     """Yield (path, title, description, body) for every page of one app in one language."""
     o = c['overview']
-    yield c['slug'] + '/', o['title'], o['description'], render_overview(c)
+    yield c['slug'] + '/', o['title'], o['description'], readable_email(render_overview(c))
     for d in c['documents']:
-        yield f"{c['slug']}/{d['slug']}/", d['title'], d['description'], render_document(c, d, language)
+        yield f"{c['slug']}/{d['slug']}/", d['title'], d['description'], readable_email(render_document(c, d, language))

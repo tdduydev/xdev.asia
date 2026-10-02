@@ -176,6 +176,8 @@ def check():
                 # Source copy marks undecided contact details with CONTACT; never publish one.
                 assert not re.search(r'\bCONTACT\b', text), f'Unresolved contact marker: {name}'
                 assert f'href="mailto:{content["email"]}"' in text, f'App page must show the contact email: {name}'
+                # Cloudflare hides unwrapped addresses from visitors without JavaScript.
+                assert text.count('href="mailto:') == text.count('<!--email_off--><a href="mailto:'), f'Email outside email_off: {name}'
                 if not content.get('store_url'):
                     assert 'apps.apple.com' not in text, f'Unreleased app must not link to the App Store: {name}'
             for document in content['documents']:
