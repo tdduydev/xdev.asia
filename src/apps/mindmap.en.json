@@ -99,7 +99,7 @@
       "title": "Made for the Mac first.",
       "items": [
         {"name": "Mac", "status": "Coming soon to the Mac App Store", "text": "Built for the Mac first, with every command in the menu bar, keyboard shortcuts and multiple windows. Requires macOS 26 or later. AI features need a Mac with Apple silicon and Apple Intelligence."},
-        {"name": "iPhone and iPad", "status": "Coming later", "text": "Versions for iPhone and iPad come later. One Pro purchase will cover all three."}
+        {"name": "iPhone and iPad", "status": "Coming soon to the App Store", "text": "A touch-friendly canvas and outline, the Share Extension for text and links, and Shortcuts actions. Requires iOS or iPadOS 26 or later. One Pro purchase covers Mac, iPhone and iPad."}
       ]
     },
     "help": {
@@ -123,7 +123,7 @@
       "sections": [
         {"id": "what-we-collect", "title": "What we collect", "paragraphs": ["Nothing. xDev does not run servers for MindMap AI, does not require an account, and does not include analytics, advertising or tracking. Your maps are never sent to xDev."]},
         {"id": "storage", "title": "Where your maps are stored", "paragraphs": ["On your device. When iCloud sync is available in the app and you are signed in to iCloud, your maps are also stored in your own private iCloud account, under [Apple’s privacy policy](https://www.apple.com/legal/privacy/), so they appear on your other devices. xDev cannot read your iCloud data. To stop syncing, turn off iCloud Sync in MindMap AI ▸ Settings ▸ Data on a Mac, or turn off iCloud for MindMap AI in the Settings app on iPhone and iPad; your maps stay on the device."]},
-        {"id": "ai-features", "title": "AI features", "paragraphs": ["AI features use Apple’s on-device model (Apple Intelligence). Your text is processed on your device and is not sent to xDev. On devices without Apple Intelligence, the AI features are not shown."]},
+        {"id": "ai-features", "title": "AI features", "paragraphs": ["AI features use Apple’s on-device model (Apple Intelligence). Your text is processed on your device and is not sent to xDev. Questions and answers in Ask About This Map are saved with the map they are about, stored and synced like the map, and deleted with it or with Clear Chat. On devices without Apple Intelligence, the AI features are not shown."]},
         {"id": "voice-input", "title": "Voice input", "paragraphs": ["When voice input is available, speech is turned into text on your device and is not sent to xDev. The app asks for microphone and speech recognition access the first time you use it."]},
         {"id": "connected-ai-apps", "title": "AI apps you connect (Mac)", "paragraphs": ["You can let AI apps on your Mac, such as Claude Code or ChatGPT, read your maps in MindMap AI ▸ Settings ▸ AI Apps. It is off until you turn it on, and each app needs a token you add there. A connected app can read the titles, notes and structure of your maps while MindMap AI is open, and may send what it reads to its own AI provider under that app’s terms and privacy policy; check those before you connect it. MindMap AI does not send this data to xDev. Turn the switch off to stop every app, or revoke one app in the same place."]},
         {"id": "purchases", "title": "Purchases", "paragraphs": ["Payments are handled by Apple through the App Store. xDev does not receive your payment details."]},
