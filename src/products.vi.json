@@ -43,11 +43,11 @@
       "category": "Sơ đồ tư duy",
       "status": "Sắp ra mắt",
       "logo": "mindmap-ai-light.svg",
-      "description": "Ứng dụng sơ đồ tư duy native cho Mac, iPhone và iPad, có AI chạy trên thiết bị, đồng bộ iCloud và không thu thập dữ liệu.",
+      "description": "Ứng dụng sơ đồ tư duy native cho Mac, iPhone và iPad, có AI chạy trên thiết bị, khung vẽ vô hạn và dàn ý, không thu thập dữ liệu.",
       "tags": [
         "AI trên thiết bị",
         "Khung vẽ & dàn ý",
-        "Đồng bộ iCloud"
+        "Không thu thập dữ liệu"
       ],
       "href": "@route:mindmap/@",
       "action": "Khám phá MindMap AI"

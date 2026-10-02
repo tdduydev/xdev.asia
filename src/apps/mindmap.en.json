@@ -19,7 +19,7 @@
   },
   "overview": {
     "title": "MindMap AI by xDev: Think. Draw. Connect.",
-    "description": "MindMap AI by xDev is a native mind map app for Mac, iPhone and iPad with on-device AI, an infinite canvas and outline, and iCloud sync. Free, with a one-time Pro upgrade.",
+    "description": "MindMap AI by xDev is a native mind map app for Mac, iPhone and iPad with on-device AI, an infinite canvas and outline view, and nothing collected. Free, with a one-time Pro upgrade.",
     "eyebrow": "MindMap AI by xDev",
     "headline": "Think. Draw. Connect.",
     "lead": "AI-native visual thinking for Mac, iPhone and iPad. Type, paste or share an idea and shape it into a map you can edit, on an infinite canvas or as an outline. On-device AI helps you expand it, and your maps stay yours.",
@@ -32,7 +32,7 @@
     "map": {
       "label": "Illustration: a mind map with six branches and one AI suggestion",
       "center": "Your idea",
-      "branches": ["Canvas", "Outline", "On-device AI", "Tags", "iCloud sync", "Export"],
+      "branches": ["Canvas", "Outline", "On-device AI", "Tags", "Links", "Export"],
       "suggestion": "AI suggestion"
     },
     "features": {
@@ -40,14 +40,14 @@
       "title": "Everything a map needs, nothing in the way.",
       "intro": "Spend your time thinking, not formatting diagrams. The map stays useful with or without AI.",
       "items": [
-        {"title": "Infinite canvas and outline", "text": "Lay topics out on a canvas that grows with your ideas, or switch to the outline to write and reorder quickly. Pan, zoom, collapse branches and undo any step."},
-        {"title": "On-device AI", "text": "Apple Intelligence runs on your device to expand a topic, brainstorm, rewrite and summarize. Every suggestion is labelled, and you can edit it before you accept it."},
-        {"title": "Ask About This Map", "text": "Ask a question about the map you have open and get an answer from the on-device model, without leaving your work."},
-        {"title": "Tags, tasks, links and more", "text": "Add tags, tasks, links, images and floating topics, and connect ideas across branches, so a map stays useful as it grows."},
-        {"title": "Import and export", "text": "Bring in Markdown and plain text. Export to Markdown, PNG or PDF, or save a full MindMap AI backup."},
-        {"title": "iCloud sync", "text": "Your maps sync through your own private iCloud account to your other devices. xDev cannot read them, and you can turn sync off at any time."},
-        {"title": "Share Extension and Shortcuts", "text": "Send text, links, images and PDFs to MindMap AI from other apps. Use Shortcuts, Siri and Spotlight to start a map, add an idea or open a recent map."},
-        {"title": "Connect AI apps on your Mac", "text": "Let AI apps such as Claude Code or ChatGPT read your maps through MCP. It stays off until you turn it on, and each app needs its own token."}
+        {"title": "Infinite canvas and outline", "text": "Topics lay themselves out automatically on an infinite canvas, or switch to the outline view to write and reorder quickly. Pan, zoom, and undo or redo any step."},
+        {"title": "On-device AI", "text": "Apple Intelligence runs on your device to generate a map from a short description, suggest subtopics, brainstorm, suggest tags, summarize a branch and rewrite. Every suggestion is labelled, and you can edit it before you accept it."},
+        {"title": "Ask About This Map", "text": "Ask a question about the map you have open and get an answer from the on-device model that cites the topics it used."},
+        {"title": "Notes, links and tags", "text": "Add a note to any topic, attach a web link, and tag topics to group related ideas, so a map stays useful as it grows."},
+        {"title": "Import and export", "text": "Bring in Markdown and plain text. Export to Markdown, plain text, PNG or PDF, or save a MindMap AI Backup file."},
+        {"title": "Search and organize", "text": "Search across all your maps, with or without accents. Keep maps in Favorites and Recent, and restore deleted ones from Recently Deleted."},
+        {"title": "Share menu and Shortcuts", "text": "Send text and links to MindMap AI from the Share menu in other apps. Use Shortcuts actions and Spotlight to start a map, add an idea or open a recent map."},
+        {"title": "Connect AI apps on your Mac", "text": "Let AI apps such as Claude Code or ChatGPT read your maps through MCP. It is off by default; when you turn it on, each app needs its own token."}
       ]
     },
     "privacy": {
@@ -56,7 +56,7 @@
       "text": "MindMap AI has no account, no analytics, no ads and no tracking. xDev runs no servers for it, and your maps are never sent to xDev.",
       "points": [
         "AI runs on your device with Apple Intelligence.",
-        "Maps live on your device and, with iCloud sync, in your own private iCloud account.",
+        "Your maps are stored on your device.",
         "AI apps you connect on a Mac can read your maps only after you turn it on."
       ],
       "action": "Read the privacy policy",
@@ -73,10 +73,10 @@
           "text": "Everything you need to map your ideas.",
           "items": [
             "Maps, topics, canvas, outline and search",
-            "iCloud sync and Recently Deleted",
-            "Markdown and plain text import and export",
+            "Favorites, Recent and Recently Deleted",
+            "Markdown and plain text import and export, PNG and PDF export",
             "The Standard theme",
-            "AI: expand a topic, brainstorm, rewrite, summarize a branch"
+            "On-device AI: suggest subtopics, brainstorm, suggest tags, summarize a branch, rewrite, Ask About This Map"
           ]
         },
         {
@@ -85,10 +85,10 @@
           "price_note": "one-time purchase",
           "text": "For bigger maps and polished output.",
           "items": [
-            "Advanced export: multi-page vector PDF, high-resolution PNG, OPML",
-            "Themes beyond Standard: xDev Blue, Graphite and later ones",
-            "Advanced AI: generate a map from a long description, summarize a whole map, find missing ideas",
-            "Voice input"
+            "High-resolution PNG and multi-page vector PDF export",
+            "The xDev Blue and Graphite themes",
+            "Advanced AI: generate a map from a long description, summarize a whole map, find missing topics",
+            "Voice input in English and Vietnamese, on the device"
           ]
         }
       ],
@@ -98,8 +98,8 @@
       "label": "Platforms",
       "title": "Made for the Mac first.",
       "items": [
-        {"name": "Mac", "status": "Coming soon to the Mac App Store", "text": "Built for the Mac first, with every command in the menu bar and keyboard shortcuts. Requires macOS 26 or later. AI features need a Mac with Apple silicon and Apple Intelligence."},
-        {"name": "iPhone and iPad", "status": "Coming later", "text": "Touch and Apple Pencil on iPad, quick capture and review on iPhone. One Pro purchase covers all three."}
+        {"name": "Mac", "status": "Coming soon to the Mac App Store", "text": "Built for the Mac first, with every command in the menu bar, keyboard shortcuts and multiple windows. Requires macOS 26 or later. AI features need a Mac with Apple silicon and Apple Intelligence."},
+        {"name": "iPhone and iPad", "status": "Coming later", "text": "Versions for iPhone and iPad come later. One Pro purchase will cover all three."}
       ]
     },
     "help": {

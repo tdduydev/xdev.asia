@@ -43,11 +43,11 @@
       "category": "Mind mapping",
       "status": "Coming soon",
       "logo": "mindmap-ai-light.svg",
-      "description": "A native mind map app for Mac, iPhone and iPad, with on-device AI, iCloud sync and no data collected.",
+      "description": "A native mind map app for Mac, iPhone and iPad, with on-device AI, an infinite canvas and outline, and no data collected.",
       "tags": [
         "On-device AI",
         "Canvas & outline",
-        "iCloud sync"
+        "Data Not Collected"
       ],
       "href": "@route:mindmap/@",
       "action": "Explore MindMap AI"

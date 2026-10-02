@@ -19,7 +19,7 @@
   },
   "overview": {
     "title": "MindMap AI by xDev: Think. Draw. Connect.",
-    "description": "MindMap AI by xDev là ứng dụng sơ đồ tư duy native cho Mac, iPhone và iPad, có AI chạy trên thiết bị, khung vẽ vô hạn và dàn ý, đồng bộ iCloud. Miễn phí, nâng cấp Pro một lần.",
+    "description": "MindMap AI by xDev là ứng dụng sơ đồ tư duy native cho Mac, iPhone và iPad, có AI chạy trên thiết bị, khung vẽ vô hạn và dàn ý, không thu thập dữ liệu. Miễn phí, nâng cấp Pro một lần.",
     "eyebrow": "MindMap AI by xDev",
     "headline": "Think. Draw. Connect.",
     "lead": "Tư duy trực quan với AI cho Mac, iPhone và iPad. Gõ, dán hoặc chia sẻ một ý tưởng rồi biến nó thành sơ đồ chỉnh sửa được, trên khung vẽ vô hạn hoặc dạng dàn ý. AI chạy trên thiết bị giúp bạn mở rộng ý tưởng, còn sơ đồ luôn là của bạn.",
@@ -32,7 +32,7 @@
     "map": {
       "label": "Minh hoạ: một sơ đồ tư duy với sáu nhánh và một đề xuất của AI",
       "center": "Ý tưởng của bạn",
-      "branches": ["Khung vẽ", "Dàn ý", "AI trên thiết bị", "Thẻ", "Đồng bộ iCloud", "Xuất file"],
+      "branches": ["Khung vẽ", "Dàn ý", "AI trên thiết bị", "Thẻ", "Liên kết", "Xuất file"],
       "suggestion": "Đề xuất của AI"
     },
     "features": {
@@ -40,14 +40,14 @@
       "title": "Đủ những gì sơ đồ cần, không gì cản đường.",
       "intro": "Dành thời gian để suy nghĩ, không phải để căn chỉnh sơ đồ. Sơ đồ vẫn hữu ích dù có hay không có AI.",
       "items": [
-        {"title": "Khung vẽ vô hạn và dàn ý", "text": "Sắp xếp chủ đề trên khung vẽ lớn dần theo ý tưởng, hoặc chuyển sang dàn ý để viết và sắp xếp lại thật nhanh. Kéo, thu phóng, thu gọn nhánh và hoàn tác từng bước."},
-        {"title": "AI trên thiết bị", "text": "Apple Intelligence chạy trên thiết bị của bạn để mở rộng chủ đề, động não, viết lại và tóm tắt. Mỗi đề xuất đều có nhãn AI, và bạn sửa được trước khi chấp nhận."},
-        {"title": "Hỏi về sơ đồ này", "text": "Đặt câu hỏi về sơ đồ đang mở và nhận câu trả lời từ model chạy trên thiết bị, ngay trong lúc làm việc."},
-        {"title": "Thẻ, việc cần làm, liên kết và hơn thế", "text": "Thêm thẻ, việc cần làm, liên kết, ảnh và chủ đề tự do, và kết nối các ý giữa các nhánh, để sơ đồ vẫn dễ dùng khi lớn dần."},
-        {"title": "Nhập và xuất", "text": "Nhập Markdown và văn bản thuần. Xuất ra Markdown, PNG hoặc PDF, hoặc lưu bản sao lưu MindMap AI đầy đủ."},
-        {"title": "Đồng bộ iCloud", "text": "Sơ đồ đồng bộ qua tài khoản iCloud riêng của bạn tới các thiết bị khác. xDev không đọc được, và bạn có thể tắt đồng bộ bất cứ lúc nào."},
-        {"title": "Chia sẻ và Phím tắt", "text": "Gửi văn bản, liên kết, ảnh và PDF từ ứng dụng khác vào MindMap AI. Dùng Phím tắt, Siri và Spotlight để tạo sơ đồ, thêm ý tưởng hoặc mở sơ đồ gần đây."},
-        {"title": "Kết nối ứng dụng AI trên Mac", "text": "Cho các ứng dụng AI như Claude Code hay ChatGPT đọc sơ đồ của bạn qua MCP. Tính năng tắt cho tới khi bạn bật, và mỗi ứng dụng cần mã truy cập riêng."}
+        {"title": "Khung vẽ vô hạn và dàn ý", "text": "Chủ đề tự sắp xếp trên khung vẽ vô hạn, hoặc chuyển sang chế độ dàn ý để viết và sắp xếp lại thật nhanh. Kéo, thu phóng, hoàn tác và làm lại từng bước."},
+        {"title": "AI trên thiết bị", "text": "Apple Intelligence chạy trên thiết bị của bạn để tạo sơ đồ từ một mô tả ngắn, gợi ý chủ đề con, động não, gợi ý thẻ, tóm tắt nhánh và viết lại. Mỗi đề xuất đều có nhãn AI, và bạn sửa được trước khi chấp nhận."},
+        {"title": "Hỏi về sơ đồ này", "text": "Đặt câu hỏi về sơ đồ đang mở và nhận câu trả lời từ model chạy trên thiết bị, kèm các chủ đề mà câu trả lời dựa vào."},
+        {"title": "Ghi chú, liên kết và thẻ", "text": "Thêm ghi chú cho từng chủ đề, gắn liên kết web, và gắn thẻ để gom các ý liên quan, để sơ đồ vẫn dễ dùng khi lớn dần."},
+        {"title": "Nhập và xuất", "text": "Nhập Markdown và văn bản thuần. Xuất ra Markdown, văn bản thuần, PNG hoặc PDF, hoặc lưu file Bản sao lưu MindMap AI."},
+        {"title": "Tìm kiếm và sắp xếp", "text": "Tìm trên mọi sơ đồ, gõ có dấu hay không dấu đều được. Giữ sơ đồ trong Yêu thích và Gần đây, và khôi phục sơ đồ đã xoá từ Đã xoá gần đây."},
+        {"title": "Menu Chia sẻ và Phím tắt", "text": "Gửi văn bản và liên kết vào MindMap AI từ menu Chia sẻ của ứng dụng khác. Dùng tác vụ Phím tắt và Spotlight để tạo sơ đồ, thêm ý tưởng hoặc mở sơ đồ gần đây."},
+        {"title": "Kết nối ứng dụng AI trên Mac", "text": "Cho các ứng dụng AI như Claude Code hay ChatGPT đọc sơ đồ của bạn qua MCP. Tính năng mặc định tắt; khi bạn bật, mỗi ứng dụng cần mã truy cập riêng."}
       ]
     },
     "privacy": {
@@ -56,7 +56,7 @@
       "text": "MindMap AI không có tài khoản, thống kê, quảng cáo hay theo dõi. xDev không vận hành máy chủ nào cho ứng dụng, và sơ đồ của bạn không bao giờ được gửi tới xDev.",
       "points": [
         "AI chạy trên thiết bị của bạn với Apple Intelligence.",
-        "Sơ đồ nằm trên thiết bị và, khi đồng bộ iCloud, trong tài khoản iCloud riêng của bạn.",
+        "Sơ đồ của bạn được lưu trên thiết bị.",
         "Ứng dụng AI bạn kết nối trên Mac chỉ đọc được sơ đồ sau khi bạn bật tính năng."
       ],
       "action": "Đọc chính sách quyền riêng tư",
@@ -73,10 +73,10 @@
           "text": "Đủ mọi thứ để vẽ sơ đồ ý tưởng.",
           "items": [
             "Sơ đồ, chủ đề, khung vẽ, dàn ý và tìm kiếm",
-            "Đồng bộ iCloud và Đã xoá gần đây",
-            "Nhập và xuất Markdown, văn bản thuần",
+            "Yêu thích, Gần đây và Đã xoá gần đây",
+            "Nhập và xuất Markdown, văn bản thuần; xuất PNG và PDF",
             "Bộ màu Tiêu chuẩn",
-            "AI: mở rộng chủ đề, động não, viết lại, tóm tắt nhánh"
+            "AI trên thiết bị: gợi ý chủ đề con, động não, gợi ý thẻ, tóm tắt nhánh, viết lại, Hỏi về sơ đồ này"
           ]
         },
         {
@@ -85,10 +85,10 @@
           "price_note": "mua một lần",
           "text": "Cho sơ đồ lớn hơn và bản xuất chỉn chu.",
           "items": [
-            "Xuất nâng cao: PDF vector nhiều trang, PNG độ phân giải cao, OPML",
-            "Bộ màu ngoài Tiêu chuẩn: xDev Blue, Graphite và các bộ màu sau này",
-            "AI nâng cao: tạo sơ đồ từ mô tả dài, tóm tắt cả sơ đồ, tìm ý còn thiếu",
-            "Nhập bằng giọng nói"
+            "Xuất PNG độ phân giải cao và PDF vector nhiều trang",
+            "Bộ màu xDev Blue và Graphite",
+            "AI nâng cao: tạo sơ đồ từ mô tả dài, tóm tắt cả sơ đồ, tìm chủ đề còn thiếu",
+            "Nhập bằng giọng nói tiếng Anh và tiếng Việt, ngay trên thiết bị"
           ]
         }
       ],
@@ -98,8 +98,8 @@
       "label": "Nền tảng",
       "title": "Làm cho Mac trước.",
       "items": [
-        {"name": "Mac", "status": "Sắp có trên Mac App Store", "text": "Làm cho Mac trước, với mọi lệnh trên thanh menu và phím tắt. Cần macOS 26 trở lên. Tính năng AI cần máy Mac dùng Apple silicon và có Apple Intelligence."},
-        {"name": "iPhone và iPad", "status": "Sẽ có sau", "text": "Cảm ứng và Apple Pencil trên iPad, ghi nhanh và xem lại trên iPhone. Một lần mua Pro dùng cho cả ba."}
+        {"name": "Mac", "status": "Sắp có trên Mac App Store", "text": "Làm cho Mac trước, với mọi lệnh trên thanh menu, phím tắt và nhiều cửa sổ. Cần macOS 26 trở lên. Tính năng AI cần máy Mac dùng Apple silicon và có Apple Intelligence."},
+        {"name": "iPhone và iPad", "status": "Sẽ có sau", "text": "Bản cho iPhone và iPad sẽ có sau. Một lần mua Pro sẽ dùng cho cả ba."}
       ]
     },
     "help": {
