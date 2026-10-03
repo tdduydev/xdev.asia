@@ -1,6 +1,6 @@
 # xDev Asia
 
-Static English/Vietnamese product website for XDev AI Studio, xDev Hive and MindMap AI, with AI Studio user guides and app legal/support pages. English is the default. Forge is not included in the generated site.
+Static English/Vietnamese product website for XDev AI Studio, xDev Hive and MindMap AI, with AI Studio user guides and app legal/support pages. English is the default. The MindMap AI pages are also in Japanese. Forge is not included in the generated site.
 
 ## Routes
 
@@ -21,7 +21,9 @@ Static English/Vietnamese product website for XDev AI Studio, xDev Hive and Mind
 | `/ai-studio/docs/workflows/` | `/vi/ai-studio/docs/workflows/` | Workflow setup |
 | `/ai-studio/docs/publishing/` | `/vi/ai-studio/docs/publishing/` | Publication and maintenance |
 
-EN/VI switches to the corresponding page. Navigation works without JavaScript. Each route has its own title, description, canonical and alternate-language metadata. Relative links also support a GitHub Pages repository subpath.
+MindMap AI also has `/ja/mindmap/`, `/ja/mindmap/privacy/`, `/ja/mindmap/terms/` and `/ja/mindmap/support/`; only these pages are in Japanese, and their header and footer links to the rest of the site lead to the English pages.
+
+The language switch goes to the corresponding page (EN/VI, plus 日本語 on the MindMap AI pages). Navigation works without JavaScript. Each route has its own title, description, canonical and alternate-language metadata. Relative links also support a GitHub Pages repository subpath.
 
 ## Build, check, preview
 
@@ -40,7 +42,7 @@ Open http://127.0.0.1:4321/. `dist/` is exclusively generated and is replaced on
 - `src/products.en.json`, `src/products.vi.json`: product directory and shared homepage summary, rendered by `scripts/products_page.py`.
 - `src/hive.en.json`, `src/hive.vi.json`: Hive product copy, rendered by `scripts/hive_page.py` and styled by `src/assets/hive-page.css`.
   The full introduction includes six real UI showcase panels, a feature catalog, use cases, setup choices, FAQ, and a narrated EN/VI film with captions and chapters. Capture and rebuild instructions are in [docs/hive/README.md](docs/hive/README.md).
-- `src/apps/<slug>.en.json`, `src/apps/<slug>.vi.json`: one xDev app each, rendered by `scripts/app_pages.py` and styled by `src/assets/app-pages.css`. See *App pages* below.
+- `src/apps/<slug>.en.json`, `src/apps/<slug>.vi.json` (and optionally `<slug>.ja.json`): one xDev app each, rendered by `scripts/app_pages.py` and styled by `src/assets/app-pages.css`. See *App pages* below.
 - `src/studio.en.json`, `src/studio.vi.json`: localized overview and documentation. Add matching guide slugs in both files to generate `/ai-studio/docs/<slug>/`.
 - `src/styles.css`, `src/assets/`: shared styles and assets.
 - `scripts/build.py`: page layouts and route generation.
@@ -124,6 +126,14 @@ Routes are `/<slug>/` and `/<slug>/<document-slug>/` for every entry in `documen
 In any template, `@route:<path>@` resolves to that path in the current language.
 Leave `store_url` null until the app is on the App Store; the checks then forbid
 App Store links. A document's `effective_date` (ISO) is shown in the local format.
+`overview.platforms.languages` is an optional line under the platform cards.
+
+An app can add Japanese with `src/apps/<slug>.ja.json` (the `OPTIONAL_LANGUAGES` in
+`scripts/app_pages.py`). Only that app gets `/ja/<slug>/…`; its pages in every language
+then list `ja` in the language switch and the hreflang alternates. The file has the same
+structure, links and dates as English. Each legal document (one with `effective_date`)
+must add `translation_notice`, a line at the top saying the English version prevails;
+`check_site.py` rejects a Japanese legal page without it.
 
 The MindMap AI privacy and support wording comes from `docs/web/privacy-policy.md` and
 `docs/web/support.md` in the xdev-mindmap-ai repository; change it there first.

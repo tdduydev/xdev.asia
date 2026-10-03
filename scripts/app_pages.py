@@ -2,7 +2,8 @@
 
 Each app is a pair of files, src/apps/<slug>.en.json and src/apps/<slug>.vi.json,
 with the same structure, plus its icon under src/assets/apps/<slug>/. A new app
-needs only those files: build.py and check_site.py discover them.
+needs only those files: build.py and check_site.py discover them. An app may add
+src/apps/<slug>.ja.json; only that app's pages then get a Japanese version.
 """
 from html import escape, unescape
 from pathlib import Path
@@ -12,17 +13,20 @@ import re
 ROOT = Path(__file__).resolve().parents[1]
 APPS = ROOT / 'src/apps'
 LANGUAGES = ['en', 'vi']
+# Languages an app may add on its own; the rest of the site stays in LANGUAGES.
+OPTIONAL_LANGUAGES = ['ja']
 MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 # Branch colours of the hero illustration, taken from the app's topic palette.
 HUES = [('#0759ed', '#e2edff', '#0b3a8c'), ('#c27a1f', '#fbefe0', '#6d430c'), ('#23897b', '#def1ee', '#0f4c44')]
 
 
 def load_apps():
-    """Return one {language: content} mapping per app, sorted by slug."""
+    """Return one {language: content} mapping per app, sorted by slug, English first."""
     apps = []
     for english in sorted(APPS.glob('*.en.json')):
         slug = english.name[:-len('.en.json')]
-        apps.append({language: json.loads((APPS / f'{slug}.{language}.json').read_text()) for language in LANGUAGES})
+        languages = LANGUAGES + [language for language in OPTIONAL_LANGUAGES if (APPS / f'{slug}.{language}.json').exists()]
+        apps.append({language: json.loads((APPS / f'{slug}.{language}.json').read_text()) for language in languages})
     return apps
 
 
@@ -56,6 +60,8 @@ def readable_email(html):
 
 def format_date(iso, language):
     year, month, day = (int(part) for part in iso.split('-'))
+    if language == 'ja':
+        return f'{year}年{month}月{day}日'
     return f'{day} tháng {month} năm {year}' if language == 'vi' else f'{day} {MONTHS[month - 1]} {year}'
 
 
@@ -143,7 +149,8 @@ def render_overview(c):
     if 'platforms' in o:
         p = o['platforms']
         items = ''.join(f'<article><div class="app-platform-top"><h3>{e(item["name"])}</h3><span class="app-pill">{e(item["status"])}</span></div><p>{e(item["text"])}</p></article>' for item in p['items'])
-        sections += f'<section class="container app-section" id="platforms">{heading(p["label"], p["title"])}<div class="app-platforms">{items}</div></section>'
+        languages = f'<p class="app-platform-note">{e(p["languages"])}</p>' if p.get('languages') else ''
+        sections += f'<section class="container app-section" id="platforms">{heading(p["label"], p["title"])}<div class="app-platforms">{items}</div>{languages}</section>'
         jumps.append(('platforms', p['label']))
     help_ = o['help']
     cards = ''.join(f'<a href="{target("app:" + d["slug"], slug)}"><h3>{e(d["heading"])}</h3><p>{e(d["summary"])}</p><span>{e(d["nav"])} <span aria-hidden="true">→</span></span></a>' for d in c['documents'])
@@ -165,6 +172,8 @@ def render_document(c, d, language):
     date = ''
     if d.get('effective_date'):
         date = f'<p class="app-doc-date">{e(labels["effective"])}: <time datetime="{d["effective_date"]}">{format_date(d["effective_date"], language)}</time></p>'
+    # A translated legal page says which version prevails; it opens the page so it is read first.
+    notice = f'<p class="app-doc-notice">{inline(d["translation_notice"], slug)}</p>' if d.get('translation_notice') else ''
     intro = ''.join(f'<p class="app-doc-lead">{inline(text, slug)}</p>' for text in d['intro'])
     sections = ''
     toc = ''
@@ -176,7 +185,7 @@ def render_document(c, d, language):
         toc += f'<li><a href="#{section["id"]}">{e(section.get("toc") or section["title"])}</a></li>'
     aside = (f'<aside class="app-doc-aside"><nav class="app-toc" aria-label="{e(labels["on_this_page"], quote=True)}"><p>{e(labels["on_this_page"])}</p><ol>{toc}</ol></nav>'
              f'<div class="app-doc-provider"><p>{e(labels["provided_by"])}</p><strong>{e(c["provider"])}</strong><a href="mailto:{e(c["email"], quote=True)}">{e(c["email"])}</a></div></aside>')
-    return (f'<main id="main" class="app-page">{app_bar(c, d["slug"])}<div class="container app-doc-layout"><article class="app-doc">'
+    return (f'<main id="main" class="app-page">{app_bar(c, d["slug"])}<div class="container app-doc-layout"><article class="app-doc">{notice}'
             f'<p class="eyebrow">{e(c["name"])}</p><h1>{e(d["heading"])}</h1>{date}{intro}{sections}</article>{aside}</div></main>')
 
 

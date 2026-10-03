@@ -17,3 +17,8 @@
 @media(max-width:800px){.app-hero{grid-template-columns:1fr;padding-top:36px;padding-bottom:48px}.app-icon{width:84px;height:84px;border-radius:19px;margin-bottom:22px}.app-privacy-inner,.app-plans,.app-platforms,.app-doc-cards{grid-template-columns:1fr}.app-privacy-inner{gap:28px;padding-top:44px;padding-bottom:44px}.app-section{padding-top:56px}.app-privacy{margin-top:56px}.app-doc-layout{grid-template-columns:1fr;padding-top:32px}.app-doc-aside{position:static}.app-bar-inner{flex-direction:column;align-items:flex-start;gap:0;padding-top:6px;padding-bottom:4px}.app-bar nav{margin-left:-10px}.app-bar nav a{padding:0 10px}}
 @media(max-width:560px){.app-features{grid-template-columns:1fr}.app-plan,.app-features article,.app-platforms article,.app-doc-cards a{padding:22px}.app-doc-lead{font-size:16px}.app-callout{padding:20px}.app-price strong{font-size:32px}.app-jumps{gap:0 18px}}
 @media(prefers-reduced-motion:reduce){.app-doc-cards a{transition:none}}
+.app-platform-note{font-size:14px;line-height:1.8;color:var(--muted);margin:20px 0 0}.app-doc-notice{margin:0 0 22px;padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:#fff;font-size:14px;line-height:1.7;color:#30415c}
+/* Inter has no kana or kanji. Naming Japanese faces keeps browsers from falling back to a Chinese one, and CJK headings lose the tight Latin tracking, which crowds the glyphs. */
+:root:lang(ja){font-family:Inter,"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic UI","Yu Gothic",Meiryo,"Noto Sans JP",sans-serif}
+:root:lang(ja) :is(h2,h3,.app-doc h1){letter-spacing:0;word-break:auto-phrase}
+:root:lang(ja) p{text-wrap:pretty}

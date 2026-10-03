@@ -100,7 +100,8 @@
       "items": [
         {"name": "Mac", "status": "Sắp có trên Mac App Store", "text": "Làm cho Mac trước, với mọi lệnh trên thanh menu, phím tắt và nhiều cửa sổ. Cần macOS 26 trở lên. Tính năng AI cần máy Mac dùng Apple silicon và có Apple Intelligence."},
         {"name": "iPhone và iPad", "status": "Sắp có trên App Store", "text": "Khung vẽ và dàn ý dễ dùng bằng cảm ứng, tiện ích Chia sẻ cho văn bản và liên kết, và tác vụ Phím tắt. Cần iOS hoặc iPadOS 26 trở lên. Một lần mua Pro dùng cho cả Mac, iPhone và iPad."}
-      ]
+      ],
+      "languages": "MindMap AI hỗ trợ tiếng Anh, tiếng Việt và tiếng Nhật."
     },
     "help": {
       "label": "Trợ giúp và pháp lý",

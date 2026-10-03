@@ -4,7 +4,7 @@ from pathlib import Path
 from urllib.parse import urlsplit, unquote
 import json
 import re
-from app_pages import load_apps, app_routes
+from app_pages import LANGUAGES, OPTIONAL_LANGUAGES, load_apps, app_routes
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'dist'
@@ -21,6 +21,7 @@ class Page(HTMLParser):
         self.headings = 0
         self.images = []
         self.anchors = []
+        self.language_links = {}
         self.feed(text)
         assert not self.stack, f"Unclosed tags: {self.stack}"
 
@@ -35,6 +36,8 @@ class Page(HTMLParser):
             self.images.append(attrs)
         if tag == 'a':
             self.anchors.append(attrs.get('href', ''))
+            if attrs.get('hreflang'):
+                self.language_links[attrs['hreflang']] = attrs.get('href', '')
         if tag == 'html':
             self.language = attrs.get('lang')
         if tag == 'h1':
@@ -52,15 +55,18 @@ class Page(HTMLParser):
         self.stack.pop()
 
 
-# Values that must be identical in both locales; everything else is translated copy.
+# Values that must be identical in every locale; everything else is translated copy.
 SHARED_KEYS = {'slug', 'id', 'href', 'icon', 'favicon', 'email', 'provider', 'store_url', 'effective_date', 'primary', 'callout', 'short_name'}
+# Keys only a translation has: a legal page's note that the English version prevails.
+TRANSLATION_KEYS = {'translation_notice'}
 
 
 def same_shape(english, vietnamese, where):
-    """Both locales of an app must have the same pages, sections, links and dates."""
+    """Every locale of an app must have the same pages, sections, links and dates as English."""
     assert type(english) is type(vietnamese), f'{where}: type differs'
     if isinstance(english, dict):
-        assert english.keys() == vietnamese.keys(), f'{where}: keys differ {set(english) ^ set(vietnamese)}'
+        assert not TRANSLATION_KEYS & english.keys(), f'{where}: English is the original; {TRANSLATION_KEYS & english.keys()} belongs to translations'
+        assert english.keys() == vietnamese.keys() - TRANSLATION_KEYS, f'{where}: keys differ {set(english) ^ (set(vietnamese) - TRANSLATION_KEYS)}'
         for key in english:
             if key in SHARED_KEYS and not isinstance(english[key], (dict, list)):
                 assert english[key] == vietnamese[key], f'{where}.{key}: must match across locales'
@@ -74,17 +80,31 @@ def same_shape(english, vietnamese, where):
         assert re.findall(links, english) == re.findall(links, vietnamese), f'{where}: links differ'
 
 
+def locale_of(name):
+    """Locale of a generated page, from its first path segment; English has none."""
+    first = name.split('/')[0]
+    return first if first in LANGUAGES + OPTIONAL_LANGUAGES else 'en'
+
+
 def check():
     en = json.loads((ROOT / 'src/studio.en.json').read_text())
     vi = json.loads((ROOT / 'src/studio.vi.json').read_text())
     slugs = [p['slug'] for p in en['pages']]
     assert slugs == [p['slug'] for p in vi['pages']], 'Locale routes differ'
     apps = load_apps()
+    # Every page exists in EN and VI; an app's pages also in each extra language the app declares.
+    page_locales = {}
     for app in apps:
-        same_shape(app['en'], app['vi'], app['en']['slug'])
-    app_paths = [path for app in apps for path in app_routes(app['en'])]
+        assert list(app)[:len(LANGUAGES)] == LANGUAGES, f'{app["en"]["slug"]}: needs {LANGUAGES}'
+        for locale in list(app)[1:]:
+            same_shape(app['en'], app[locale], f'{app["en"]["slug"]}.{locale}')
+        for path in app_routes(app['en']):
+            page_locales[path] = list(app)
+    app_paths = list(page_locales)
     paths = ['', 'brand/', 'products/', 'hive/', 'ai-studio/', 'ai-studio/docs/'] + [f'ai-studio/docs/{slug}/' for slug in slugs] + app_paths
-    expected = {prefix + path + 'index.html' for prefix in ['', 'vi/'] for path in paths}
+    for path in paths:
+        page_locales.setdefault(path, LANGUAGES)
+    expected = {(locale + '/' if locale != 'en' else '') + path + 'index.html' for path, locales in page_locales.items() for locale in locales}
     actual = {str(p.relative_to(OUT)) for p in OUT.rglob('*.html') if 'assets' not in p.relative_to(OUT).parts}
     assert actual == expected, f'Missing or stale pages: {actual ^ expected}'
     pages = {}
@@ -93,16 +113,20 @@ def check():
         text = file.read_text()
         assert not re.search(r'forge|@(?:home|studio|docs|quickstart|brand|hive|products|catalog|social|route:[^@\s]*)@', text, re.I), f'Hidden product or unresolved placeholder: {name}'
         page = Page(text)
-        assert page.language == ('vi' if name.startswith('vi/') else 'en'), name
+        language = locale_of(name)
+        path = name.removeprefix(language + '/').removesuffix('index.html')
+        locales = page_locales[path]
+        assert page.language == language, name
         assert page.headings == 1, name
         assert page.canonical and page.canonical.endswith('/' + name.removesuffix('index.html')), name
-        assert set(page.alternates) == {'en', 'vi', 'x-default'}, name
+        assert set(page.alternates) == {*locales, 'x-default'}, f'hreflang alternates must list exactly {locales}: {name}'
         assert page.alternates['en'] == page.alternates['x-default'], name
-        for locale in ['en', 'vi']:
-            target = name.removeprefix('vi/')
-            if locale == 'vi':
-                target = 'vi/' + target
-            assert page.alternates[locale].endswith('/' + target.removesuffix('index.html')), name
+        # The language switch's no-JavaScript links offer the same locales as the alternates.
+        assert set(page.language_links) == set(locales), f'Language switch must offer {locales}: {name}'
+        for locale in locales:
+            target = (locale + '/' if locale != 'en' else '') + path
+            assert page.alternates[locale].endswith('/' + target), name
+            assert (file.parent / page.language_links[locale]).resolve() == (OUT / target / 'index.html').parent.resolve(), f'Language switch link to {locale}: {name}'
         assert not any(urlsplit(link).hostname == 'ai-studio.xdev.asia' for link in page.anchors), f'Guide must stay on the product site: {name}'
         if '/docs/' in name and name.split('/')[-2] != 'docs':
             screenshots = [image for image in page.images if '/ai-studio/' in image.get('src', '')]
@@ -166,7 +190,8 @@ def check():
         assert all(f'id="hive-panel-{i}" class="hive-panel"' in hive for i in range(6)), 'No-JS panels must remain visible'
         assert f'srclang="{locale}"' in hive and 'id="hive-film"' in hive
     for app in apps:
-        for locale, prefix in [('en', ''), ('vi', 'vi/')]:
+        for locale in app:
+            prefix = locale + '/' if locale != 'en' else ''
             content = app[locale]
             icon = (OUT / content['icon']).read_bytes()
             assert icon[:8] == b'\x89PNG\r\n\x1a\n', f'App icon must be a PNG: {content["icon"]}'
@@ -184,10 +209,17 @@ def check():
                 text = (OUT / prefix / content['slug'] / document['slug'] / 'index.html').read_text()
                 if document.get('effective_date'):
                     assert f'<time datetime="{document["effective_date"]}">' in text, f'Missing effective date: {document["slug"]}'
+                    # Legal pages in an app-only language are translations; they must say the English version prevails.
+                    if locale in OPTIONAL_LANGUAGES:
+                        assert document.get('translation_notice') and 'class="app-doc-notice"' in text, f'{prefix}{content["slug"]}/{document["slug"]}: translated legal page needs translation_notice'
+            if locale not in LANGUAGES:
+                continue  # Site pages such as the product directory exist only in EN/VI.
             for page_prefix in ['', 'products/']:
                 listing = Page((OUT / prefix / page_prefix / 'index.html').read_text())
                 assert any(href.rstrip('/').endswith(content['slug']) for href in listing.anchors), f'{prefix}{page_prefix}: product directory must link to {content["slug"]}/'
-    print(f'PASS: {len(pages)} pages; local links, anchors, locale pairs, metadata, English default, no Forge; {len(app_paths)} app pages per locale.')
+    extra = sorted({locale for app in apps for locale in app} - set(LANGUAGES))
+    print(f'PASS: {len(pages)} pages; local links, anchors, locale pairs, metadata, English default, no Forge; {len(app_paths)} app pages per locale'
+          + (f', app pages also in {", ".join(extra)}.' if extra else '.'))
 
 if __name__ == '__main__':
     check()

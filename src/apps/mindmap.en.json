@@ -100,7 +100,8 @@
       "items": [
         {"name": "Mac", "status": "Coming soon to the Mac App Store", "text": "Built for the Mac first, with every command in the menu bar, keyboard shortcuts and multiple windows. Requires macOS 26 or later. AI features need a Mac with Apple silicon and Apple Intelligence."},
         {"name": "iPhone and iPad", "status": "Coming soon to the App Store", "text": "A touch-friendly canvas and outline, the Share Extension for text and links, and Shortcuts actions. Requires iOS or iPadOS 26 or later. One Pro purchase covers Mac, iPhone and iPad."}
-      ]
+      ],
+      "languages": "MindMap AI is available in English, Vietnamese and Japanese."
     },
     "help": {
       "label": "Help and legal",
