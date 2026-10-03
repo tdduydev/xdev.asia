@@ -38,6 +38,8 @@ jobs:
           path: dist/
           include-hidden-files: true
           retention-days: 14
+      # v3 archives dot directories (only .git and .github are excluded), so .well-known/ is published.
+      # v4 drops dotfiles; on v5 or later set include-hidden-files: true, or Apple's app links break.
       - name: Prepare Pages artifact
         if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.deploy))
         uses: actions/upload-pages-artifact@v3

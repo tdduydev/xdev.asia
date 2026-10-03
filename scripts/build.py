@@ -19,6 +19,9 @@ from products_page import render_products
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'dist'
+# Published byte for byte at the same path under dist/, with no site chrome: files whose exact
+# path and content another system depends on (Apple's app site association, MindMap AI's map link page).
+STATIC = ROOT / 'src/static'
 LANGUAGE_NAMES = {'en': 'English', 'vi': 'Tiếng Việt', 'ja': '日本語'}
 # Shared chrome: header, footer, language switch and metadata.
 UI = {
@@ -93,6 +96,17 @@ def shell(language, title, description, body, product=False):
 <a class="skip" href="#main">{ui['skip']}</a>
 <header><div class="container header-inner"><a class="brand" href="@home@" aria-label="xDev Asia"><img src="assets/brand/wordmark-v2/{logo}" alt="{brand_name}" width="143" height="70"></a><nav aria-label="{ui['main_navigation']}"><a href="@products@">{ui['products']}</a><a href="@docs@">{ui['docs']}</a><a href="https://blog.xdev.asia">Blog ↗</a></nav></div></header>
 {body}<footer class="container"><a href="@home@">© 2026 xDev Asia</a><div class="footer-navigation"><div class="footer-links"><a href="@products@">{ui['products']}</a><a href="@brand@">{ui['brand']}</a><a href="@studio@">AI Studio</a><a href="@docs@">{ui['documentation']}</a></div>@social@</div></footer></body></html>'''
+
+
+def copy_static():
+    """Copy src/static into dist/ unchanged, keeping hidden directories such as .well-known."""
+    def copy_new(source, target):
+        # A static file must never silently replace a generated page.
+        if os.path.exists(target):
+            raise FileExistsError(f'src/static would overwrite a generated file: {target}')
+        return shutil.copy2(source, target)
+    # Tests (decode.test.mjs) stay in src/ so they can run there; visitors have no use for them.
+    shutil.copytree(STATIC, OUT, dirs_exist_ok=True, ignore=shutil.ignore_patterns('*.test.mjs'), copy_function=copy_new)
 
 
 def build():
@@ -170,7 +184,9 @@ def build():
         page = page.replace('</head>', '<link rel="stylesheet" href="assets/brand-guide.css"></head>')
         decorate(page, language, 'brand/')
     (OUT / '.nojekyll').touch()
-    print(f'Built {len(list(OUT.rglob("index.html")))} localized pages.')
+    pages = len(list(OUT.rglob('index.html')))
+    copy_static()
+    print(f'Built {pages} localized pages and copied src/static.')
 
 if __name__ == '__main__':
     build()

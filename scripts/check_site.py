@@ -8,6 +8,7 @@ from app_pages import LANGUAGES, OPTIONAL_LANGUAGES, load_apps, app_routes
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'dist'
+STATIC = ROOT / 'src/static'
 
 class Page(HTMLParser):
     def __init__(self, text):
@@ -105,7 +106,10 @@ def check():
     for path in paths:
         page_locales.setdefault(path, LANGUAGES)
     expected = {(locale + '/' if locale != 'en' else '') + path + 'index.html' for path, locales in page_locales.items() for locale in locales}
-    actual = {str(p.relative_to(OUT)) for p in OUT.rglob('*.html') if 'assets' not in p.relative_to(OUT).parts}
+    # src/static is published as is (build.copy_static); its pages carry their own metadata and
+    # language handling, so they are outside the localized page inventory and checked below.
+    static = {str(p.relative_to(STATIC)) for p in STATIC.rglob('*') if p.is_file() and not p.name.endswith('.test.mjs')}
+    actual = {str(p.relative_to(OUT)) for p in OUT.rglob('*.html') if 'assets' not in p.relative_to(OUT).parts} - static
     assert actual == expected, f'Missing or stale pages: {actual ^ expected}'
     pages = {}
     for name in sorted(expected):
@@ -139,6 +143,18 @@ def check():
                 assert png[:8] == b'\x89PNG\r\n\x1a\n', f'Invalid screenshot: {target}'
                 assert int.from_bytes(png[16:20], 'big') == 1440 and int.from_bytes(png[20:24], 'big') == 1000, target
         pages[file.resolve()] = page
+    for name in sorted(static):
+        file = OUT / name
+        assert file.is_file() and file.read_bytes() == (STATIC / name).read_bytes(), f'Static file not published unchanged: {name}'
+        if name.endswith('.html'):
+            text = file.read_text()
+            assert 'forge' not in text.lower(), f'Hidden product: {name}'
+            pages[file.resolve()] = Page(text)  # balanced tags; its local links are checked with the rest
+    assert not list(OUT.rglob('*.test.mjs')), 'Tests must not be published'
+    # Apple reads this exact path; it must stay a JSON object (no extension, no redirect).
+    association = OUT / '.well-known/apple-app-site-association'
+    if association.exists():
+        assert isinstance(json.loads(association.read_text()), dict), 'apple-app-site-association must be a JSON object'
     for file, page in pages.items():
         for link in page.links:
             parsed = urlsplit(link)

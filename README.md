@@ -23,6 +23,8 @@ Static English/Vietnamese product website for XDev AI Studio, xDev Hive and Mind
 
 MindMap AI also has `/ja/mindmap/`, `/ja/mindmap/privacy/`, `/ja/mindmap/terms/` and `/ja/mindmap/support/`; only these pages are in Japanese, and their header and footer links to the rest of the site lead to the English pages.
 
+`/mindmap/m/` (the page a MindMap AI map link opens without the app; the map stays in the URL fragment and is drawn in the browser) and `/.well-known/apple-app-site-association` (universal links and the App Clip) come unchanged from `src/static/`. Their sources are `docs/web/mindmap/m/` and `docs/web/.well-known/` in the xdev-mindmap-ai repository; change them there first. The page picks English, Vietnamese or Japanese from the browser and has no site header, footer or alternates. Test: `node --test src/static/mindmap/m/decode.test.mjs`.
+
 The language switch goes to the corresponding page (EN/VI, plus 日本語 on the MindMap AI pages). Navigation works without JavaScript. Each route has its own title, description, canonical and alternate-language metadata. Relative links also support a GitHub Pages repository subpath.
 
 ## Build, check, preview
@@ -45,6 +47,7 @@ Open http://127.0.0.1:4321/. `dist/` is exclusively generated and is replaced on
 - `src/apps/<slug>.en.json`, `src/apps/<slug>.vi.json` (and optionally `<slug>.ja.json`): one xDev app each, rendered by `scripts/app_pages.py` and styled by `src/assets/app-pages.css`. See *App pages* below.
 - `src/studio.en.json`, `src/studio.vi.json`: localized overview and documentation. Add matching guide slugs in both files to generate `/ai-studio/docs/<slug>/`.
 - `src/styles.css`, `src/assets/`: shared styles and assets.
+- `src/static/`: files published byte for byte at the same path under `dist/`, hidden directories included and `*.test.mjs` left out. The build fails if one would replace a generated page.
 - `scripts/build.py`: page layouts and route generation.
 - `scripts/check_site.py`: page inventory, local links/anchors, metadata, locale parity, default language and product visibility checks.
 
