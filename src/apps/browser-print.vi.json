@@ -1,0 +1,152 @@
+{
+  "slug": "browser-print",
+  "name": "xDev Browser Print",
+  "short_name": "Browser Print",
+  "icon": "assets/apps/browser-print/icon.png",
+  "favicon": "assets/apps/browser-print/favicon.png",
+  "icon_alt": "Biểu tượng tiện ích xDev Browser Print",
+  "provider": "Trần Duy (xDev)",
+  "email": "duy@xdev.asia",
+  "store_url": null,
+  "labels": {
+    "pages": "Các trang xDev Browser Print",
+    "overview": "Tổng quan",
+    "support": "Hỗ trợ",
+    "on_this_page": "Trong trang này",
+    "effective": "Ngày hiệu lực",
+    "provided_by": "Cung cấp bởi",
+    "page_contents": "Nội dung trang"
+  },
+  "overview": {
+    "title": "xDev Browser Print: đúng máy in cho từng chứng từ",
+    "description": "xDev Browser Print là tiện ích Chrome và SDK TypeScript mã nguồn mở, giúp ứng dụng web in đơn thuốc, hoá đơn, phiếu thu và tem nhãn đúng máy in đã gán cho từng loại chứng từ. Không backend, không ứng dụng cài thêm, không in qua đám mây.",
+    "eyebrow": "xDev Browser Print",
+    "headline": "Đúng máy in cho từng chứng từ.",
+    "lead": "Tiện ích Chrome và SDK TypeScript giúp ứng dụng web của phòng khám, nhà thuốc, cửa hàng in đơn thuốc, hoá đơn, phiếu thu và tem nhãn đúng máy in đã gán cho từng loại chứng từ. Không cần backend, không cần ứng dụng cài thêm, không in qua dịch vụ đám mây.",
+    "status": "Sắp có trên Chrome Web Store",
+    "actions": [
+      {"label": "Xem tính năng", "href": "#features", "primary": true},
+      {"label": "Mã nguồn trên GitHub", "href": "https://github.com/tdduydev/xdev-browser-print"}
+    ],
+    "note": "Miễn phí, mã nguồn mở theo giấy phép MIT. Không cần tài khoản. Không theo dõi.",
+    "screenshot": {
+      "src": "assets/apps/browser-print/mappings.vi.png",
+      "alt": "Màn hình Gán chứng từ: INVOICE và RECEIPT in ra máy in hoá đơn K80, PRESCRIPTION ra máy in đơn thuốc A5, SPECIMEN_LABEL ra máy in tem 50x30",
+      "width": 1280,
+      "height": 800
+    },
+    "features": {
+      "label": "Tính năng",
+      "title": "Ứng dụng nêu loại chứng từ. Tiện ích chọn máy in.",
+      "intro": "Ứng dụng web gửi loại chứng từ, ví dụ PRESCRIPTION hoặc RECEIPT. Quản trị viên chỉ cần quyết định một lần máy in nào xử lý loại đó.",
+      "items": [
+        {"title": "Mỗi loại chứng từ một máy in", "text": "Tạo cấu hình máy in cho khổ A4, A5, hoá đơn K80, K58 hoặc máy in mã vạch, tem nhãn, rồi gán từng loại chứng từ cho một cấu hình. Số bản, khổ giấy và hướng giấy có thể ghi đè theo từng lần gán."},
+        {"title": "PDF và HTML qua Chrome", "text": "Chứng từ PDF và HTML mở hộp thoại in của Chrome, đã đặt sẵn khổ giấy và hướng giấy."},
+        {"title": "Máy in hoá đơn, tem nhãn không cần hộp thoại", "text": "Máy in nhận lệnh RAW (ESC/POS, ZPL, TSPL) in trực tiếp qua WebUSB hoặc Web Serial, chỉ với thiết bị bạn đã cấp quyền ở màn hình Thiết bị."},
+        {"title": "Chỉ những website bạn cho phép", "text": "Mỗi ứng dụng web được cho phép theo đúng địa chỉ, không dùng ký tự đại diện, và Chrome hỏi quyền truy cập riêng trang đó. Quyền theo từng trang: đọc cấu hình, in, sửa gán chứng từ. Có thể bật hỏi trước mỗi lần in."},
+        {"title": "Thiết kế an toàn", "text": "HTML của trang được làm sạch và hiển thị trong khung sandbox. Mỗi trang có giới hạn số lệnh in và kích thước, và một yêu cầu lặp lại với cùng khoá không bị in hai lần."},
+        {"title": "SDK TypeScript và hook React", "text": "Ứng dụng web kết nối, in PDF, HTML hoặc lệnh RAW, và theo dõi trạng thái từng lệnh in bằng SDK @tdduydev/browser-print hoặc hook useBrowserPrint."},
+        {"title": "Màn hình quản trị", "text": "Tổng quan, máy in, gán chứng từ, thiết bị, in thử, lịch sử in, website và cài đặt, bằng tiếng Việt và tiếng Anh."},
+        {"title": "Nói rõ giới hạn của Chrome", "text": "Chrome không cho tiện ích liệt kê hay chọn máy in của hệ điều hành, và không báo người dùng đã in hay đã huỷ. PDF và HTML luôn qua hộp thoại in, trừ khi quản trị viên khởi động Chrome với cờ --kiosk-printing."}
+      ]
+    },
+    "privacy": {
+      "label": "Quyền riêng tư",
+      "title": "Chứng từ không rời khỏi máy tính",
+      "text": "Tiện ích không tự gửi yêu cầu mạng nào. Không có máy chủ, không có tài khoản, không phân tích sử dụng, không quảng cáo, không theo dõi. Chứng từ chỉ đi tới máy in của bạn.",
+      "points": [
+        "Chứng từ chỉ được giữ trong lúc lệnh in chạy, sau đó bị xoá.",
+        "Lịch sử in chỉ lưu thông tin về lệnh in, không lưu nội dung chứng từ.",
+        "Không có quyền truy cập website nào cho đến khi bạn cho phép, và khi đó chỉ đúng website đó."
+      ],
+      "action": "Đọc chính sách quyền riêng tư",
+      "href": "app:privacy"
+    },
+    "platforms": {
+      "label": "Bắt đầu",
+      "title": "Tiện ích, SDK và mã nguồn.",
+      "items": [
+        {"name": "Tiện ích Chrome", "status": "Sắp có trên Chrome Web Store", "text": "Manifest V3, cho Google Chrome 118 trở lên trên Windows 10 và 11, macOS và Linux. Trong lúc chờ phát hành, nhà phát triển có thể build từ mã nguồn và tải dạng giải nén (Load unpacked)."},
+        {"name": "SDK cho ứng dụng web", "status": "npm install @tdduydev/browser-print", "text": "TypeScript, ESM và CommonJS, không phụ thuộc backend. Hook useBrowserPrint dùng với React 18 trở lên."},
+        {"name": "Mã nguồn mở", "status": "Giấy phép MIT", "text": "Tiện ích, SDK, ứng dụng React mẫu và tài liệu thiết kế có trên GitHub tại github.com/tdduydev/xdev-browser-print."}
+      ],
+      "languages": "Tiện ích có tiếng Việt và tiếng Anh."
+    },
+    "help": {
+      "label": "Hỗ trợ và pháp lý",
+      "title": "Quyền riêng tư và hỗ trợ",
+      "contact": "Câu hỏi hoặc góp ý? Email"
+    }
+  },
+  "documents": [
+    {
+      "slug": "privacy",
+      "nav": "Quyền riêng tư",
+      "title": "Chính sách quyền riêng tư xDev Browser Print",
+      "description": "Cách tiện ích Chrome xDev Browser Print xử lý dữ liệu: chứng từ được xử lý trên máy tính của bạn và chỉ đi tới máy in của bạn, lịch sử chỉ lưu thông tin về lệnh in, không gửi gì cho xDev.",
+      "heading": "Chính sách quyền riêng tư",
+      "summary": "Tiện ích làm gì với dữ liệu. Tóm lại: chứng từ ở lại trên máy tính của bạn.",
+      "effective_date": "2026-10-08",
+      "intro": [
+        "Chính sách này áp dụng cho tiện ích Chrome xDev Browser Print (“tiện ích”) do Trần Duy (xDev) cung cấp. Chính sách mô tả tiện ích làm gì với dữ liệu, đúng như [mã nguồn](https://github.com/tdduydev/xdev-browser-print)."
+      ],
+      "sections": [
+        {"id": "summary", "title": "Tóm tắt", "paragraphs": [
+          "Chứng từ bạn in được xử lý **chỉ trên máy tính của bạn** và chỉ đi tới máy in của bạn.",
+          "Tiện ích **không tự gửi yêu cầu mạng nào**. Không có máy chủ, không có tài khoản, không phân tích sử dụng, không quảng cáo, không theo dõi.",
+          "Lịch sử in **chỉ lưu thông tin về lệnh in**, không bao giờ lưu nội dung chứng từ.",
+          "Không bán, chia sẻ hay chuyển dữ liệu cho bất kỳ ai."
+        ]},
+        {"id": "documents", "title": "Chứng từ gửi để in", "paragraphs": [
+          "Các ứng dụng web mà bạn hoặc quản trị viên đã cho phép rõ ràng có thể gửi chứng từ tới tiện ích để in: PDF, HTML, hoặc lệnh máy in RAW (ESC/POS, ZPL, TSPL). Chứng từ có thể chứa thông tin cá nhân, sức khoẻ hoặc tài chính, ví dụ đơn thuốc hoặc hoá đơn.",
+          "Chứng từ chỉ được giữ trong cơ sở dữ liệu cục bộ của tiện ích (IndexedDB) trong lúc lệnh in đang chạy, và **bị xoá ngay khi lệnh in kết thúc** (đã gửi, lỗi, bị huỷ, hoặc hộp thoại in đã đóng).",
+          "Chứng từ chỉ được gửi tới máy in bạn đã cấu hình: qua hộp thoại in của Chrome, hoặc trực tiếp tới máy in USB hoặc serial bạn đã cấp quyền cho tiện ích.",
+          "Chứng từ HTML được in đúng như ứng dụng web viết. Nếu HTML đó tham chiếu ảnh hoặc stylesheet trên internet, Chrome tải chúng từ địa chỉ do ứng dụng web chọn, như với mọi trang web. Tiện ích không thêm dữ liệu nào vào các yêu cầu đó."
+        ]},
+        {"id": "configuration", "title": "Cấu hình", "paragraphs": [
+          "Cấu hình được lưu trong bộ nhớ cục bộ của tiện ích (chrome.storage.local) trên máy bạn và không bao giờ đồng bộ lên tài khoản Google. Cấu hình gồm: cấu hình máy in (tên, khổ giấy, lề, hướng giấy, số bản, kiểu kết nối và, với máy in USB hoặc serial, vendor ID, product ID và số serial USB của thiết bị, thông số cổng serial); máy in dùng cho từng loại chứng từ; cài đặt (ngôn ngữ, giới hạn kích thước và tần suất, độ dài lịch sử); và các ứng dụng web bạn đã cho phép, theo đúng địa chỉ, kèm quyền bạn cấp cho từng trang.",
+          "Trong lúc bạn cho phép một website mới, địa chỉ của nó được giữ tối đa 5 phút trong bộ nhớ phiên của Chrome; Chrome xoá bộ nhớ này khi đóng trình duyệt."
+        ]},
+        {"id": "print-history", "title": "Lịch sử in", "paragraphs": [
+          "Với mỗi lệnh in, tiện ích lưu: mã lệnh, địa chỉ website gửi lệnh, loại chứng từ, định dạng, kích thước (byte), số bản, cấu hình máy in, trạng thái, kết quả, mã và thông báo lỗi, số lần thử và thời điểm. Tiện ích **không lưu nội dung chứng từ**.",
+          "Lịch sử được lưu trong cơ sở dữ liệu cục bộ của tiện ích, mặc định giữ 500 lệnh mới nhất (chỉnh được từ 10 đến 5000 trong Cài đặt). Bạn có thể xoá bất cứ lúc nào bằng Xoá lịch sử."
+        ]},
+        {"id": "current-tab", "title": "Địa chỉ tab hiện tại", "paragraphs": [
+          "Khi bạn mở popup của tiện ích trên thanh công cụ, tiện ích đọc địa chỉ tab hiện tại để cho biết website đó đã được phép in chưa. Địa chỉ này không được lưu, trừ khi bạn cho phép website đó."
+        ]},
+        {"id": "devices", "title": "Thiết bị USB và serial", "paragraphs": [
+          "Tiện ích chỉ dùng được thiết bị USB hoặc serial mà bạn tự chọn trong hộp thoại chọn thiết bị của Chrome ở màn hình Thiết bị. Bạn có thể thu hồi quyền đó tại đây bất cứ lúc nào."
+        ]},
+        {"id": "does-not-do", "title": "Tiện ích không làm gì", "paragraphs": [
+          "Tiện ích không gửi dữ liệu nào cho xDev hay bên thứ ba. Không dùng phân tích sử dụng, telemetry, báo lỗi tự động, cookie hay quảng cáo. Không đọc nội dung trang web, lịch sử duyệt web, mật khẩu hay dữ liệu biểu mẫu. Không có quyền truy cập website nào cho đến khi bạn cho phép, và khi đó chỉ với đúng website đó. Không ghi log dữ liệu in."
+        ]},
+        {"id": "deleting-data", "title": "Dữ liệu lưu ở đâu và cách xoá", "paragraphs": [
+          "Mọi dữ liệu nằm trong hồ sơ Chrome trên máy bạn. Xoá website ở màn hình Website của tiện ích, hoặc gỡ quyền truy cập trang của tiện ích trong chrome://extensions. Xoá cấu hình máy in ở màn hình Máy in, và lịch sử bằng Xoá lịch sử.",
+          "Bạn cũng có thể gỡ tiện ích. Khi đó Chrome xoá bộ nhớ cục bộ và cơ sở dữ liệu của tiện ích; đây là hành vi của Chrome, không phải việc do mã của tiện ích thực hiện."
+        ]},
+        {"id": "children", "title": "Trẻ em", "paragraphs": ["Tiện ích là công cụ in chứng từ cho doanh nghiệp, không hướng tới trẻ em."]},
+        {"id": "changes", "title": "Thay đổi", "paragraphs": ["Khi chính sách này thay đổi, chúng tôi cập nhật trang này và ngày ở trên. Chính sách cũng được lưu trong kho mã nguồn của tiện ích, nơi lịch sử thay đổi ghi lại mọi lần sửa."]},
+        {"id": "contact", "title": "Liên hệ", "paragraphs": ["Xem [Hỗ trợ xDev Browser Print](app:support), hoặc email [duy@xdev.asia](mailto:duy@xdev.asia)."]}
+      ]
+    },
+    {
+      "slug": "support",
+      "nav": "Hỗ trợ",
+      "title": "Hỗ trợ xDev Browser Print",
+      "description": "Trợ giúp cho xDev Browser Print: cách liên hệ, cho phép website, vì sao Chrome vẫn mở hộp thoại in, máy in USB và serial, và SDK.",
+      "heading": "Hỗ trợ",
+      "summary": "Liên hệ với chúng tôi và xem câu trả lời cho các câu hỏi thường gặp.",
+      "intro": [],
+      "sections": [
+        {"id": "contact", "toc": "Liên hệ", "callout": true, "paragraphs": ["**Liên hệ:** [duy@xdev.asia](mailto:duy@xdev.asia). Vui lòng cho biết hệ điều hành, phiên bản Chrome, phiên bản tiện ích (hiện ở màn hình Tổng quan), dòng máy in và cách kết nối. Đừng gửi chứng từ có thông tin cá nhân, sức khoẻ hoặc tài chính."]},
+        {"id": "install", "title": "Cài tiện ích ở đâu?", "paragraphs": ["Tiện ích sắp có trên Chrome Web Store. Trong lúc chờ, nhà phát triển có thể build từ [mã nguồn](https://github.com/tdduydev/xdev-browser-print) và tải dạng giải nén ở chrome://extensions khi bật Developer mode."]},
+        {"id": "allow-website", "title": "Ứng dụng web không thấy tiện ích hoặc không in được.", "paragraphs": ["Tiện ích chỉ hoạt động trên website bạn đã cho phép. Thêm đúng địa chỉ ở màn hình Website, hoặc mở ứng dụng web rồi bấm Cho phép website này trong popup trên thanh công cụ; Chrome sẽ hỏi quyền truy cập trang đó. Lần đầu ứng dụng web kết nối, tiện ích có thể mở một cửa sổ để bạn duyệt."]},
+        {"id": "print-dialog", "title": "Vì sao Chrome vẫn mở hộp thoại in?", "paragraphs": ["Chrome không cho tiện ích liệt kê hay chọn máy in của hệ điều hành trên Windows, macOS hay Linux, nên chứng từ PDF và HTML luôn qua hộp thoại in, nơi bạn chọn máy in. Chỉ in được không cần hộp thoại với máy in hoá đơn, tem nhãn nhận lệnh RAW qua WebUSB hoặc Web Serial, hoặc khi quản trị viên khởi động Chrome với cờ --kiosk-printing, khi đó Chrome in ra máy in mặc định của hệ điều hành."]},
+        {"id": "job-unknown", "title": "Vì sao lệnh in PDF hoặc HTML kết thúc ở trạng thái UNKNOWN?", "paragraphs": ["Chrome không báo bạn đã in hay đã huỷ trong hộp thoại in, nên tiện ích không biết được. Lệnh in kết thúc ở UNKNOWN với lý do PRINT_DIALOG_CLOSED."]},
+        {"id": "usb-serial", "title": "Máy in USB hoặc serial không in.", "paragraphs": ["Cấp quyền thiết bị ở màn hình Thiết bị và chọn thiết bị đó trong cấu hình máy in. Máy in phải nhận lệnh RAW (ESC/POS, ZPL hoặc TSPL), và với USB thì driver máy in của hệ điều hành không được chiếm giao diện USB của máy. Dùng In thử để kiểm tra cấu hình."]},
+        {"id": "developers", "title": "Tôi viết ứng dụng web. Tài liệu SDK ở đâu?", "paragraphs": ["Cài SDK bằng npm install @tdduydev/browser-print. API, hook React useBrowserPrint, ứng dụng mẫu và nơi báo lỗi có trên [GitHub](https://github.com/tdduydev/xdev-browser-print)."]},
+        {"id": "delete-data", "title": "Làm sao xoá dữ liệu?", "paragraphs": ["Mọi thứ được lưu trong hồ sơ Chrome của bạn. Xoá website, cấu hình máy in và lịch sử trong tiện ích, hoặc gỡ tiện ích. Xem [chính sách quyền riêng tư](app:privacy)."]}
+      ]
+    }
+  ]
+}

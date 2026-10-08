@@ -2,12 +2,12 @@
   "title": "Sản phẩm",
   "headline": "Những công cụ để xây điều hữu ích.",
   "home_title": "Một hệ sản phẩm. Nhiều cách để xây.",
-  "intro": "Xây ứng dụng AI, điều phối vòng đời phát triển phần mềm và vẽ sơ đồ ý tưởng. Khám phá các sản phẩm xDev theo công việc bạn cần giải quyết.",
+  "intro": "Xây ứng dụng AI, điều phối vòng đời phát triển phần mềm, vẽ sơ đồ ý tưởng và in từ ứng dụng web. Khám phá các sản phẩm xDev theo công việc bạn cần giải quyết.",
   "capabilities": "Khả năng chính",
   "all": "Xem tất cả sản phẩm",
   "connection_label": "Trong hệ sản phẩm xDev",
   "connection_title": "Mỗi sản phẩm giải quyết một phần công việc.",
-  "connection_text": "AI Studio giúp xây ứng dụng AI. Hive điều phối team và coding agent trong AI SDLC. MindMap AI biến ý tưởng thành sơ đồ trên Mac, iPhone và iPad. Chọn công cụ phù hợp với nhu cầu và môi trường triển khai.",
+  "connection_text": "AI Studio giúp xây ứng dụng AI. Hive điều phối team và coding agent trong AI SDLC. MindMap AI biến ý tưởng thành sơ đồ trên Mac, iPhone và iPad. Browser Print giúp ứng dụng web in từng chứng từ đúng máy in. Chọn công cụ phù hợp với nhu cầu và môi trường triển khai.",
   "products": [
     {
       "id": "ai-studio",
@@ -51,6 +51,21 @@
       ],
       "href": "@route:mindmap/@",
       "action": "Khám phá MindMap AI"
+    },
+    {
+      "id": "browser-print",
+      "name": "xDev Browser Print",
+      "category": "In ấn",
+      "status": "Sắp ra mắt",
+      "logo": "browser-print-light.svg",
+      "description": "Tiện ích Chrome và SDK TypeScript giúp ứng dụng web in đơn thuốc, hoá đơn, tem nhãn đúng máy in đã gán cho từng loại chứng từ, không cần backend.",
+      "tags": [
+        "Máy in theo chứng từ",
+        "WebUSB & Web Serial",
+        "Mã nguồn mở (MIT)"
+      ],
+      "href": "@route:browser-print/@",
+      "action": "Khám phá Browser Print"
     }
   ]
 }

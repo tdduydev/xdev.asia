@@ -105,6 +105,13 @@ def hero_map(m):
             f'<title>{e(m["label"])}</title>{shapes}{suggestion}{center}{labels}</svg></figure>')
 
 
+def hero_screenshot(s):
+    """A screenshot of the app in the hero frame, for apps without a map illustration."""
+    e = escape
+    return (f'<figure class="app-hero-visual"><div class="app-window-bar" aria-hidden="true"><span></span><span></span><span></span></div>'
+            f'<img src="{e(s["src"], quote=True)}" alt="{e(s["alt"], quote=True)}" width="{s["width"]}" height="{s["height"]}"></figure>')
+
+
 def heading(label, title, intro=None):
     e = escape
     text = f'<p>{e(intro)}</p>' if intro else ''
@@ -123,7 +130,7 @@ def render_overview(c):
     if c.get('store_url'):
         actions = f'<a class="button black" href="{e(c["store_url"], quote=True)}">{e(o.get("store_action", "App Store"))}<span aria-hidden="true">↗</span></a>' + actions
     status = f'<p class="app-status"><span aria-hidden="true"></span>{e(o["status"])}</p>' if o.get('status') else ''
-    visual = hero_map(o['map']) if o.get('map') else ''
+    visual = hero_map(o['map']) if o.get('map') else hero_screenshot(o['screenshot']) if o.get('screenshot') else ''
     sections = ''
     jumps = []
     if 'features' in o:

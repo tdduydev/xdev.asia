@@ -1,0 +1,152 @@
+{
+  "slug": "browser-print",
+  "name": "xDev Browser Print",
+  "short_name": "Browser Print",
+  "icon": "assets/apps/browser-print/icon.png",
+  "favicon": "assets/apps/browser-print/favicon.png",
+  "icon_alt": "xDev Browser Print extension icon",
+  "provider": "Trần Duy (xDev)",
+  "email": "duy@xdev.asia",
+  "store_url": null,
+  "labels": {
+    "pages": "xDev Browser Print pages",
+    "overview": "Overview",
+    "support": "Support",
+    "on_this_page": "On this page",
+    "effective": "Effective date",
+    "provided_by": "Provided by",
+    "page_contents": "Page contents"
+  },
+  "overview": {
+    "title": "xDev Browser Print: the right printer for every document",
+    "description": "xDev Browser Print is an open-source Chrome extension and TypeScript SDK that lets web apps print prescriptions, invoices, receipts and labels on the printer set for each document type. No backend, no native app, no cloud print.",
+    "eyebrow": "xDev Browser Print",
+    "headline": "The right printer for every document.",
+    "lead": "A Chrome extension and a TypeScript SDK that let web apps for clinics, pharmacies and shops print prescriptions, invoices, receipts and labels on the printer set for each document type. No backend, no native app and no cloud print service.",
+    "status": "Coming soon to the Chrome Web Store",
+    "actions": [
+      {"label": "See the features", "href": "#features", "primary": true},
+      {"label": "Source on GitHub", "href": "https://github.com/tdduydev/xdev-browser-print"}
+    ],
+    "note": "Free and open source under the MIT licence. No account. No tracking.",
+    "screenshot": {
+      "src": "assets/apps/browser-print/mappings.en.png",
+      "alt": "The Document mapping screen: INVOICE and RECEIPT go to a K80 receipt printer, PRESCRIPTION to an A5 printer and SPECIMEN_LABEL to a 50x30 label printer",
+      "width": 1280,
+      "height": 800
+    },
+    "features": {
+      "label": "Features",
+      "title": "Name the document. The extension picks the printer.",
+      "intro": "The web app sends a document type such as PRESCRIPTION or RECEIPT. An administrator decides once which printer handles it.",
+      "items": [
+        {"title": "A printer for each document type", "text": "Create printer profiles for A4, A5, K80 and K58 receipts or barcode and label printers, then map each document type to one. Copies, paper size and orientation can be overridden per mapping."},
+        {"title": "PDF and HTML through Chrome", "text": "PDF and HTML documents open Chrome’s print dialog, already set to the right paper size and orientation."},
+        {"title": "Receipt and label printers without a dialog", "text": "Printers that accept raw commands (ESC/POS, ZPL, TSPL) print directly over WebUSB or Web Serial, only on devices you granted on the Devices screen."},
+        {"title": "Only the websites you allow", "text": "Each web app is allowed by its exact address, with no wildcards, and Chrome asks for access to that one site. Permissions are per site: read the configuration, print, change mappings. You can also ask before every print."},
+        {"title": "Built to be safe", "text": "Site HTML is sanitised and rendered in a sandboxed frame. Each site has a rate limit and a size limit, and a repeated request with the same key does not print twice."},
+        {"title": "TypeScript SDK and React hook", "text": "The web app connects, prints a PDF, HTML or raw commands, and follows each job’s state with the @tdduydev/browser-print SDK or its useBrowserPrint hook."},
+        {"title": "Admin screens", "text": "Dashboard, printers, document mapping, devices, test print, print history, websites and settings, in English and Vietnamese."},
+        {"title": "Honest about Chrome’s limits", "text": "Chrome does not let extensions list or choose system printers, or report whether the user printed or cancelled. PDF and HTML always use the dialog unless an administrator starts Chrome with --kiosk-printing."}
+      ]
+    },
+    "privacy": {
+      "label": "Privacy",
+      "title": "Documents stay on the computer",
+      "text": "The extension makes no network requests of its own. It has no server, no account, no analytics, no ads and no tracking. A document goes only to your printer.",
+      "points": [
+        "A document is kept only while its print job runs, then deleted.",
+        "Print history keeps metadata only, never document content.",
+        "No access to any website until you allow it, and then only that one."
+      ],
+      "action": "Read the privacy policy",
+      "href": "app:privacy"
+    },
+    "platforms": {
+      "label": "Get started",
+      "title": "An extension, an SDK and the source.",
+      "items": [
+        {"name": "Chrome extension", "status": "Coming soon to the Chrome Web Store", "text": "Manifest V3, for Google Chrome 118 or later on Windows 10 and 11, macOS and Linux. Until it is published, developers can build it from source and load it unpacked."},
+        {"name": "SDK for web apps", "status": "npm install @tdduydev/browser-print", "text": "TypeScript, ESM and CommonJS, with no backend dependency. The useBrowserPrint hook works with React 18 or later."},
+        {"name": "Open source", "status": "MIT licence", "text": "The extension, the SDK, an example React app and the design documents are on GitHub at github.com/tdduydev/xdev-browser-print."}
+      ],
+      "languages": "The extension is available in English and Vietnamese."
+    },
+    "help": {
+      "label": "Help and legal",
+      "title": "Privacy and support",
+      "contact": "Questions or feedback? Email"
+    }
+  },
+  "documents": [
+    {
+      "slug": "privacy",
+      "nav": "Privacy",
+      "title": "xDev Browser Print Privacy Policy",
+      "description": "How the xDev Browser Print Chrome extension handles data: documents are processed on your computer and go only to your printer, history keeps metadata only, and nothing is sent to xDev.",
+      "heading": "Privacy Policy",
+      "summary": "What the extension does with data. In short: documents stay on your computer.",
+      "effective_date": "2026-10-08",
+      "intro": [
+        "This policy covers the xDev Browser Print Chrome extension (“the extension”), provided by Trần Duy (xDev). It describes what the extension does with data, as implemented in its [source code](https://github.com/tdduydev/xdev-browser-print)."
+      ],
+      "sections": [
+        {"id": "summary", "title": "Summary", "paragraphs": [
+          "Documents you print are processed **on your computer only** and go only to your printer.",
+          "The extension makes **no network requests** of its own. It has no server, no account, no analytics, no advertising and no tracking.",
+          "Print history keeps **metadata only**, never the content of a document.",
+          "Nothing is sold, shared or transferred to anyone."
+        ]},
+        {"id": "documents", "title": "Documents sent for printing", "paragraphs": [
+          "Web applications that you or your administrator have explicitly allowed can send documents to the extension for printing: PDF, HTML, or raw printer commands (ESC/POS, ZPL, TSPL). These documents can contain personal, health or financial information, for example prescriptions or invoices.",
+          "The document is kept in the extension’s local database (IndexedDB) only while the print job is in progress, and is **deleted as soon as the job ends** (sent, failed, cancelled, or the print dialog closed).",
+          "The document is sent only to the printer you configured: through Chrome’s print dialog, or directly to a USB or serial printer that you granted to the extension.",
+          "HTML documents are printed as the web application wrote them. If that HTML refers to images or stylesheets on the internet, Chrome loads them from the addresses the web application chose, as it would for any web page. The extension adds no data to those requests."
+        ]},
+        {"id": "configuration", "title": "Configuration", "paragraphs": [
+          "The configuration is stored in Chrome’s local extension storage (chrome.storage.local) on your computer and is never synchronised to your Google account. It contains: printer profiles (name, paper size, margins, orientation, number of copies, connection type and, for USB or serial printers, the device’s vendor ID, product ID and USB serial number, and serial port settings); which printer is used for each document type; settings (language, size and rate limits, history length); and the web applications you allowed, by exact address, with the permissions you gave each one.",
+          "While you are allowing a new website, its address is kept for up to 5 minutes in Chrome’s session storage, which Chrome clears when the browser closes."
+        ]},
+        {"id": "print-history", "title": "Print history", "paragraphs": [
+          "For each print job the extension keeps: job ID, the requesting website’s address, document type, format, size in bytes, number of copies, printer profile, status, result, error code and message, number of attempts and timestamps. It **does not keep the document content**.",
+          "History is stored in the extension’s local database and limited to the newest 500 jobs by default (adjustable from 10 to 5000 in Settings). You can delete it at any time with Clear history."
+        ]},
+        {"id": "current-tab", "title": "Current tab address", "paragraphs": [
+          "When you open the extension’s toolbar popup, it reads the address of the current tab to show whether that website is allowed to print. The address is not stored unless you then allow that website."
+        ]},
+        {"id": "devices", "title": "USB and serial devices", "paragraphs": [
+          "The extension can use only the USB or serial devices that you select yourself in Chrome’s device chooser on the Devices screen. You can remove that access there at any time."
+        ]},
+        {"id": "does-not-do", "title": "What the extension does not do", "paragraphs": [
+          "It does not send any data to xDev or to any third party. It does not use analytics, telemetry, crash reporting, cookies or advertising. It does not read web pages, browsing history, passwords or form data. It has no access to any website until you allow that website, and then only to that one website. It does not log print data."
+        ]},
+        {"id": "deleting-data", "title": "Where data is kept and how to delete it", "paragraphs": [
+          "All data stays in your Chrome profile on your computer. Remove a website on the extension’s Websites screen, or remove the extension’s site access in chrome://extensions. Delete printer profiles on the Printers screen, and history with Clear history.",
+          "You can also remove the extension. Chrome then removes the extension’s local storage and database; this is Chrome’s behaviour, not something the extension’s own code does."
+        ]},
+        {"id": "children", "title": "Children", "paragraphs": ["The extension is a business tool for printing documents and is not directed at children."]},
+        {"id": "changes", "title": "Changes", "paragraphs": ["If this policy changes, we update this page and the date above. The policy is also kept in the extension’s source repository, whose history shows every change."]},
+        {"id": "contact", "title": "Contact", "paragraphs": ["See [xDev Browser Print Support](app:support), or email [duy@xdev.asia](mailto:duy@xdev.asia)."]}
+      ]
+    },
+    {
+      "slug": "support",
+      "nav": "Support",
+      "title": "xDev Browser Print Support",
+      "description": "Get help with xDev Browser Print: how to contact us, allowing a website, why Chrome still shows the print dialog, USB and serial printers, and the SDK.",
+      "heading": "Support",
+      "summary": "Contact us and find answers to common questions.",
+      "intro": [],
+      "sections": [
+        {"id": "contact", "toc": "Contact us", "callout": true, "paragraphs": ["**Contact us:** [duy@xdev.asia](mailto:duy@xdev.asia). Please tell us your operating system, Chrome version, the extension version (shown on the Dashboard), and the printer model and how it is connected. Do not send documents that contain personal, health or financial information."]},
+        {"id": "install", "title": "Where can I install the extension?", "paragraphs": ["It is coming soon to the Chrome Web Store. Until then, developers can build it from the [source code](https://github.com/tdduydev/xdev-browser-print) and load it unpacked from chrome://extensions with Developer mode on."]},
+        {"id": "allow-website", "title": "A web app cannot find the extension or cannot print.", "paragraphs": ["The extension works only on websites you allowed. Add the exact address on the Websites screen, or open the web app and click Allow this website in the toolbar popup; Chrome then asks for access to that site. When the web app connects for the first time, the extension may open a window asking you to approve it."]},
+        {"id": "print-dialog", "title": "Why does Chrome still show the print dialog?", "paragraphs": ["Chrome does not let extensions list or choose system printers on Windows, macOS or Linux, so PDF and HTML documents always go through the print dialog, where you pick the printer. Printing without the dialog is possible only for receipt and label printers that accept raw commands over WebUSB or Web Serial, or when an administrator starts Chrome with --kiosk-printing, which prints to the system default printer."]},
+        {"id": "job-unknown", "title": "Why does a PDF or HTML job end as UNKNOWN?", "paragraphs": ["Chrome does not report whether you printed or cancelled in the print dialog, so the extension cannot know. The job ends as UNKNOWN with the reason PRINT_DIALOG_CLOSED."]},
+        {"id": "usb-serial", "title": "My USB or serial printer does not print.", "paragraphs": ["Grant the device on the Devices screen and choose it in a printer profile. The printer must accept raw commands (ESC/POS, ZPL or TSPL), and for USB the operating system’s printer driver must not own its USB interface. Use Test print to check the profile."]},
+        {"id": "developers", "title": "I build web apps. Where is the SDK documentation?", "paragraphs": ["Install the SDK with npm install @tdduydev/browser-print. The API, the useBrowserPrint React hook, an example app and the issue tracker are on [GitHub](https://github.com/tdduydev/xdev-browser-print)."]},
+        {"id": "delete-data", "title": "How do I delete my data?", "paragraphs": ["Everything is stored in your Chrome profile. Remove websites, printer profiles and history in the extension, or remove the extension. See the [privacy policy](app:privacy)."]}
+      ]
+    }
+  ]
+}
