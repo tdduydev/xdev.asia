@@ -23,9 +23,10 @@
     "eyebrow": "xDev Browser Print",
     "headline": "The right printer for every document.",
     "lead": "A Chrome extension and a TypeScript SDK that let web apps for clinics, pharmacies and shops print prescriptions, invoices, receipts and labels on the printer set for each document type. No backend, no native app and no cloud print service.",
-    "status": "Coming soon to the Chrome Web Store",
+    "status": "Available on the Chrome Web Store",
     "actions": [
-      {"label": "See the features", "href": "#features", "primary": true},
+      {"label": "Add to Chrome", "href": "https://chromewebstore.google.com/detail/agiepmbohjdngcdnkgjhkojcnjjlfbmn", "primary": true},
+      {"label": "See the features", "href": "#features"},
       {"label": "Source on GitHub", "href": "https://github.com/tdduydev/xdev-browser-print"}
     ],
     "note": "Free and open source under the MIT licence. No account. No tracking.",
@@ -66,7 +67,7 @@
       "label": "Get started",
       "title": "An extension, an SDK and the source.",
       "items": [
-        {"name": "Chrome extension", "status": "Coming soon to the Chrome Web Store", "text": "Manifest V3, for Google Chrome 118 or later on Windows 10 and 11, macOS and Linux. Until it is published, developers can build it from source and load it unpacked."},
+        {"name": "Chrome extension", "status": "On the Chrome Web Store", "text": "Manifest V3, for Google Chrome 118 or later on Windows 10 and 11, macOS and Linux. Install it from the Chrome Web Store; developers can also build it from source and load it unpacked."},
         {"name": "SDK for web apps", "status": "npm install @tdduydev/browser-print", "text": "TypeScript, ESM and CommonJS, with no backend dependency. The useBrowserPrint hook works with React 18 or later."},
         {"name": "Open source", "status": "MIT licence", "text": "The extension, the SDK, an example React app and the design documents are on GitHub at github.com/tdduydev/xdev-browser-print."}
       ],
@@ -139,7 +140,7 @@
       "intro": [],
       "sections": [
         {"id": "contact", "toc": "Contact us", "callout": true, "paragraphs": ["**Contact us:** [duy@xdev.asia](mailto:duy@xdev.asia). Please tell us your operating system, Chrome version, the extension version (shown on the Dashboard), and the printer model and how it is connected. Do not send documents that contain personal, health or financial information."]},
-        {"id": "install", "title": "Where can I install the extension?", "paragraphs": ["It is coming soon to the Chrome Web Store. Until then, developers can build it from the [source code](https://github.com/tdduydev/xdev-browser-print) and load it unpacked from chrome://extensions with Developer mode on."]},
+        {"id": "install", "title": "Where can I install the extension?", "paragraphs": ["From the [Chrome Web Store](https://chromewebstore.google.com/detail/agiepmbohjdngcdnkgjhkojcnjjlfbmn). Developers can also build it from the [source code](https://github.com/tdduydev/xdev-browser-print) and load it unpacked from chrome://extensions with Developer mode on."]},
         {"id": "allow-website", "title": "A web app cannot find the extension or cannot print.", "paragraphs": ["The extension works only on websites you allowed. Add the exact address on the Websites screen, or open the web app and click Allow this website in the toolbar popup; Chrome then asks for access to that site. When the web app connects for the first time, the extension may open a window asking you to approve it."]},
         {"id": "print-dialog", "title": "Why does Chrome still show the print dialog?", "paragraphs": ["Chrome does not let extensions list or choose system printers on Windows, macOS or Linux, so PDF and HTML documents always go through the print dialog, where you pick the printer. Printing without the dialog is possible only for receipt and label printers that accept raw commands over WebUSB or Web Serial, or when an administrator starts Chrome with --kiosk-printing, which prints to the system default printer."]},
         {"id": "job-unknown", "title": "Why does a PDF or HTML job end as UNKNOWN?", "paragraphs": ["Chrome does not report whether you printed or cancelled in the print dialog, so the extension cannot know. The job ends as UNKNOWN with the reason PRINT_DIALOG_CLOSED."]},
