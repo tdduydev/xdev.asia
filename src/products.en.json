@@ -2,12 +2,12 @@
   "title": "Products",
   "headline": "Tools for building useful things.",
   "home_title": "One product family. More ways to build.",
-  "intro": "Build AI applications, coordinate software development and map your ideas. Explore xDev products for the work you need to do.",
+  "intro": "Build AI applications, coordinate software development, map your ideas and print from web apps. Explore xDev products for the work you need to do.",
   "capabilities": "Core capabilities",
   "all": "View all products",
   "connection_label": "The xDev product family",
   "connection_title": "Each product serves a part of the work.",
-  "connection_text": "AI Studio helps build AI applications. Hive coordinates teams and coding agents across AI SDLC. MindMap AI turns ideas into maps on Mac, iPhone and iPad. Choose the tool that fits your needs and deployment environment.",
+  "connection_text": "AI Studio helps build AI applications. Hive coordinates teams and coding agents across AI SDLC. MindMap AI turns ideas into maps on Mac, iPhone and iPad. Browser Print lets web apps print each document on the right printer. Choose the tool that fits your needs and deployment environment.",
   "products": [
     {
       "id": "ai-studio",
@@ -51,6 +51,21 @@
       ],
       "href": "@route:mindmap/@",
       "action": "Explore MindMap AI"
+    },
+    {
+      "id": "browser-print",
+      "name": "xDev Browser Print",
+      "category": "Printing",
+      "status": "Coming soon",
+      "logo": "browser-print-light.svg",
+      "description": "A Chrome extension and TypeScript SDK that let web apps print prescriptions, invoices and labels on the printer set for each document type, with no backend.",
+      "tags": [
+        "Printer per document",
+        "WebUSB & Web Serial",
+        "Open source (MIT)"
+      ],
+      "href": "@route:browser-print/@",
+      "action": "Explore Browser Print"
     }
   ]
 }

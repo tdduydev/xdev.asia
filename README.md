@@ -114,7 +114,8 @@ The complete generated website is in `dist/`. Keep its `assets/`, `ai-studio/` a
 
 `scripts/app_pages.py` generates an overview plus legal and support pages for each
 xDev app, in English and Vietnamese, from `src/apps/<slug>.en.json` and
-`src/apps/<slug>.vi.json`. MindMap AI (`mindmap`) is the first. To add another app:
+`src/apps/<slug>.vi.json`. MindMap AI (`mindmap`) was the first; xDev Browser Print
+(`browser-print`) is the second. To add another app:
 
 1. Copy both MindMap AI files to `src/apps/<new-slug>.en.json` / `.vi.json` and change the
    copy. Keep `slug`, section `id`s, links and dates identical in both files;
@@ -130,6 +131,8 @@ In any template, `@route:<path>@` resolves to that path in the current language.
 Leave `store_url` null until the app is on the App Store; the checks then forbid
 App Store links. A document's `effective_date` (ISO) is shown in the local format.
 `overview.platforms.languages` is an optional line under the platform cards.
+The hero shows `overview.map` (MindMap AI's drawing) or, instead, `overview.screenshot`
+(`src`, `alt`, `width`, `height`; the path may differ per language, e.g. `mappings.en.png`).
 
 An app can add Japanese with `src/apps/<slug>.ja.json` (the `OPTIONAL_LANGUAGES` in
 `scripts/app_pages.py`). Only that app gets `/ja/<slug>/…`; its pages in every language
@@ -140,6 +143,11 @@ must add `translation_notice`, a line at the top saying the English version prev
 
 The MindMap AI privacy and support wording comes from `docs/web/privacy-policy.md` and
 `docs/web/support.md` in the xdev-mindmap-ai repository; change it there first.
+The xDev Browser Print privacy and support wording comes from `docs/PRIVACY.md` /
+`docs/vi/PRIVACY.md` and `docs/CHROME_WEB_STORE.md` in the xdev-browser-print repository;
+its privacy page is the extension's Chrome Web Store privacy policy URL. Its icon is
+rendered at 256/64 px by that repository's `scripts/generate-icons.mjs` geometry, and the
+hero screenshots are its `docs/images/cws/{en,vi}-03-mappings.png`.
 The pages work without JavaScript.
 
 ## AI Studio product overview
