@@ -56,6 +56,7 @@
       "id": "browser-print",
       "name": "xDev Browser Print",
       "category": "Printing",
+      "status": "In review",
       "logo": "browser-print-light.svg",
       "description": "A Chrome extension and TypeScript SDK that let web apps print prescriptions, invoices and labels on the printer set for each document type, with no backend.",
       "tags": [

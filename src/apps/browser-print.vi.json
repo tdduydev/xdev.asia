@@ -23,10 +23,9 @@
     "eyebrow": "xDev Browser Print",
     "headline": "Đúng máy in cho từng chứng từ.",
     "lead": "Tiện ích Chrome và SDK TypeScript giúp ứng dụng web của phòng khám, nhà thuốc, cửa hàng in đơn thuốc, hoá đơn, phiếu thu và tem nhãn đúng máy in đã gán cho từng loại chứng từ. Không cần backend, không cần ứng dụng cài thêm, không in qua dịch vụ đám mây.",
-    "status": "Đã có trên Chrome Web Store",
+    "status": "Đang chờ Chrome Web Store duyệt",
     "actions": [
-      {"label": "Thêm vào Chrome", "href": "https://chromewebstore.google.com/detail/agiepmbohjdngcdnkgjhkojcnjjlfbmn", "primary": true},
-      {"label": "Xem tính năng", "href": "#features"},
+      {"label": "Xem tính năng", "href": "#features", "primary": true},
       {"label": "Mã nguồn trên GitHub", "href": "https://github.com/tdduydev/xdev-browser-print"}
     ],
     "note": "Miễn phí, mã nguồn mở theo giấy phép MIT. Không cần tài khoản. Không theo dõi.",
@@ -67,7 +66,7 @@
       "label": "Bắt đầu",
       "title": "Tiện ích, SDK và mã nguồn.",
       "items": [
-        {"name": "Tiện ích Chrome", "status": "Trên Chrome Web Store", "text": "Manifest V3, cho Google Chrome 118 trở lên trên Windows 10 và 11, macOS và Linux. Cài từ Chrome Web Store; nhà phát triển cũng có thể build từ mã nguồn và tải dạng giải nén (Load unpacked)."},
+        {"name": "Tiện ích Chrome", "status": "Đang chờ Chrome Web Store duyệt", "text": "Manifest V3, cho Google Chrome 118 trở lên trên Windows 10 và 11, macOS và Linux. Tiện ích đã gửi lên Chrome Web Store và đang chờ Google duyệt; trong lúc chờ, nhà phát triển có thể build từ mã nguồn và tải dạng giải nén (Load unpacked)."},
         {"name": "SDK cho ứng dụng web", "status": "npm install @tdduydev/browser-print", "text": "TypeScript, ESM và CommonJS, không phụ thuộc backend. Hook useBrowserPrint dùng với React 18 trở lên."},
         {"name": "Mã nguồn mở", "status": "Giấy phép MIT", "text": "Tiện ích, SDK, ứng dụng React mẫu và tài liệu thiết kế có trên GitHub tại github.com/tdduydev/xdev-browser-print."}
       ],
@@ -140,7 +139,7 @@
       "intro": [],
       "sections": [
         {"id": "contact", "toc": "Liên hệ", "callout": true, "paragraphs": ["**Liên hệ:** [duy@xdev.asia](mailto:duy@xdev.asia). Vui lòng cho biết hệ điều hành, phiên bản Chrome, phiên bản tiện ích (hiện ở màn hình Tổng quan), dòng máy in và cách kết nối. Đừng gửi chứng từ có thông tin cá nhân, sức khoẻ hoặc tài chính."]},
-        {"id": "install", "title": "Cài tiện ích ở đâu?", "paragraphs": ["Từ [Chrome Web Store](https://chromewebstore.google.com/detail/agiepmbohjdngcdnkgjhkojcnjjlfbmn). Nhà phát triển cũng có thể build từ [mã nguồn](https://github.com/tdduydev/xdev-browser-print) và tải dạng giải nén ở chrome://extensions khi bật Developer mode."]},
+        {"id": "install", "title": "Cài tiện ích ở đâu?", "paragraphs": ["Tiện ích đã gửi lên Chrome Web Store và đang chờ Google duyệt. Trong lúc chờ, nhà phát triển có thể build từ [mã nguồn](https://github.com/tdduydev/xdev-browser-print) và tải dạng giải nén ở chrome://extensions khi bật Developer mode."]},
         {"id": "allow-website", "title": "Ứng dụng web không thấy tiện ích hoặc không in được.", "paragraphs": ["Tiện ích chỉ hoạt động trên website bạn đã cho phép. Thêm đúng địa chỉ ở màn hình Website, hoặc mở ứng dụng web rồi bấm Cho phép website này trong popup trên thanh công cụ; Chrome sẽ hỏi quyền truy cập trang đó. Lần đầu ứng dụng web kết nối, tiện ích có thể mở một cửa sổ để bạn duyệt."]},
         {"id": "print-dialog", "title": "Vì sao Chrome vẫn mở hộp thoại in?", "paragraphs": ["Chrome không cho tiện ích liệt kê hay chọn máy in của hệ điều hành trên Windows, macOS hay Linux, nên chứng từ PDF và HTML luôn qua hộp thoại in, nơi bạn chọn máy in. Chỉ in được không cần hộp thoại với máy in hoá đơn, tem nhãn nhận lệnh RAW qua WebUSB hoặc Web Serial, hoặc khi quản trị viên khởi động Chrome với cờ --kiosk-printing, khi đó Chrome in ra máy in mặc định của hệ điều hành."]},
         {"id": "job-unknown", "title": "Vì sao lệnh in PDF hoặc HTML kết thúc ở trạng thái UNKNOWN?", "paragraphs": ["Chrome không báo bạn đã in hay đã huỷ trong hộp thoại in, nên tiện ích không biết được. Lệnh in kết thúc ở UNKNOWN với lý do PRINT_DIALOG_CLOSED."]},

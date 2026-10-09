@@ -56,6 +56,7 @@
       "id": "browser-print",
       "name": "xDev Browser Print",
       "category": "In ấn",
+      "status": "Chờ duyệt",
       "logo": "browser-print-light.svg",
       "description": "Tiện ích Chrome và SDK TypeScript giúp ứng dụng web in đơn thuốc, hoá đơn, tem nhãn đúng máy in đã gán cho từng loại chứng từ, không cần backend.",
       "tags": [
