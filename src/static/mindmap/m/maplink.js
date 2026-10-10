@@ -1,4 +1,4 @@
-// Reads a MindMap AI map link (ADR 0012, docs/app-clip.md): the fragment
+// Reads an xDraft map link (ADR 0012, docs/app-clip.md): the fragment
 // "<version>.<base64url of raw DEFLATE of JSON>". The same checks as
 // MapLinkCodec in the app, so a link the app refuses is refused here too.
 // Nothing is sent anywhere: the fragment never leaves the browser.
