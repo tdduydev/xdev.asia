@@ -7,7 +7,7 @@ def render_brand(c):
     base = 'assets/brand/wordmark-v2/'
     cards = ''
     files = ''
-    for kind, label in [('master', c['master']), ('ai-studio', c['product']), ('hive', c['hive'])]:
+    for kind, label in [('master', c['master']), ('ai-studio', c['product']), ('hive', c['hive']), ('xdraft', c['xdraft'])]:
         for theme in ['light', 'dark']:
             asset = f'{base}{kind}-{theme}.svg'
             title = f'{label} / {c[theme]}'

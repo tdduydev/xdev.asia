@@ -7,7 +7,7 @@
   "all": "View all products",
   "connection_label": "The xDev product family",
   "connection_title": "Each product serves a part of the work.",
-  "connection_text": "AI Studio helps build AI applications. Hive coordinates teams and coding agents across AI SDLC. MindMap AI turns ideas into maps on Mac, iPhone and iPad. Browser Print lets web apps print each document on the right printer. Choose the tool that fits your needs and deployment environment.",
+  "connection_text": "AI Studio helps build AI applications. Hive coordinates teams and coding agents across AI SDLC. xDraft turns ideas into mind maps, flowcharts and architecture diagrams on Mac, iPhone and iPad. Browser Print lets web apps print each document on the right printer. Choose the tool that fits your needs and deployment environment.",
   "products": [
     {
       "id": "ai-studio",
@@ -38,19 +38,19 @@
       "action": "Explore Hive"
     },
     {
-      "id": "mindmap",
-      "name": "MindMap AI by xDev",
-      "category": "Mind mapping",
+      "id": "xdraft",
+      "name": "xDraft by xDev",
+      "category": "Diagrams",
       "status": "Coming soon",
-      "logo": "mindmap-ai-light.svg",
-      "description": "A native mind map app for Mac, iPhone and iPad, with on-device AI, an infinite canvas and outline, and no data collected.",
+      "logo": "xdraft-light.svg",
+      "description": "A native AI diagram studio for Mac, iPhone and iPad: mind maps, flowcharts and architecture diagrams with C4, deployment and sequence views, on-device AI and no data collected.",
       "tags": [
         "On-device AI",
-        "Canvas & outline",
+        "Six diagram types",
         "Data Not Collected"
       ],
-      "href": "@route:mindmap/@",
-      "action": "Explore MindMap AI"
+      "href": "@route:xdraft/@",
+      "action": "Explore xDraft"
     },
     {
       "id": "browser-print",

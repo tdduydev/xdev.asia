@@ -9,6 +9,7 @@ from app_pages import LANGUAGES, OPTIONAL_LANGUAGES, load_apps, app_routes
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'dist'
 STATIC = ROOT / 'src/static'
+REDIRECTS = ROOT / 'src/redirects.json'
 
 class Page(HTMLParser):
     def __init__(self, text):
@@ -109,8 +110,21 @@ def check():
     # src/static is published as is (build.copy_static); its pages carry their own metadata and
     # language handling, so they are outside the localized page inventory and checked below.
     static = {str(p.relative_to(STATIC)) for p in STATIC.rglob('*') if p.is_file() and not p.name.endswith('.test.mjs')}
-    actual = {str(p.relative_to(OUT)) for p in OUT.rglob('*.html') if 'assets' not in p.relative_to(OUT).parts} - static
+    # Moved pages (build.write_redirect) are checked on their own below.
+    redirects = json.loads(REDIRECTS.read_text())
+    moved = {source + 'index.html' for source in redirects}
+    actual = {str(p.relative_to(OUT)) for p in OUT.rglob('*.html') if 'assets' not in p.relative_to(OUT).parts} - static - moved
     assert actual == expected, f'Missing or stale pages: {actual ^ expected}'
+    assert not moved & expected, f'A page cannot be both moved and published: {moved & expected}'
+    for source, target in redirects.items():
+        assert target + 'index.html' in expected, f'Redirect to a page that does not exist: {source} -> {target}'
+        text = (OUT / source / 'index.html').read_text()
+        page = Page(text)
+        assert page.canonical and page.canonical.endswith('/' + target), f'Redirect canonical: {source}'
+        assert '<meta name="robots" content="noindex">' in text, f'Redirect must not be indexed: {source}'
+        link = re.search(r'http-equiv="refresh" content="0; url=([^"]+)"', text)
+        assert link and (OUT / source / link.group(1) / 'index.html').resolve() == (OUT / target / 'index.html').resolve(), f'Redirect target: {source}'
+        assert 'location.search + location.hash' in text, f'Redirect must keep the query and the fragment: {source}'
     pages = {}
     for name in sorted(expected):
         file = OUT / name
@@ -234,7 +248,7 @@ def check():
                 listing = Page((OUT / prefix / page_prefix / 'index.html').read_text())
                 assert any(href.rstrip('/').endswith(content['slug']) for href in listing.anchors), f'{prefix}{page_prefix}: product directory must link to {content["slug"]}/'
     extra = sorted({locale for app in apps for locale in app} - set(LANGUAGES))
-    print(f'PASS: {len(pages)} pages; local links, anchors, locale pairs, metadata, English default, no Forge; {len(app_paths)} app pages per locale'
+    print(f'PASS: {len(pages)} pages and {len(redirects)} redirects; local links, anchors, locale pairs, metadata, English default, no Forge; {len(app_paths)} app pages per locale'
           + (f', app pages also in {", ".join(extra)}.' if extra else '.'))
 
 if __name__ == '__main__':

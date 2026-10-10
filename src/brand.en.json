@@ -9,7 +9,7 @@
   "story_title": "Keep the signature.<br>Extend the expression.",
   "story": "The blue X is the consistent point of recognition. Lighter lettering, gently rounded joins, and open spacing balance the mark. Each product has its own name within the same visual structure.",
   "family_title": "One family of identities.",
-  "family_text": "DEV is the master identity. AI Studio uses a two-line AI / STUDIO name aligned within the height of the X. xDev Hive follows the same structure: HIVE above DEV HUB, expressing its focus on software development.",
+  "family_text": "DEV is the master identity. AI Studio uses a two-line AI / STUDIO name aligned within the height of the X. xDev Hive follows the same structure: HIVE above DEV HUB, expressing its focus on software development. xDraft places DRAFT above AI DIAGRAM STUDIO.",
   "master": "Master identity",
   "product": "AI Studio product",
   "light": "Light background",
@@ -78,5 +78,6 @@
   "files_text": "Light and dark SVG versions of the selected identity.",
   "file_label": "Download SVG",
   "ending": "Built by Duy. Keep learning. Keep making useful things.",
-  "hive": "xDev Hive product"
+  "hive": "xDev Hive product",
+  "xdraft": "xDraft product"
 }

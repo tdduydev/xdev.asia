@@ -9,7 +9,7 @@
   "story_title": "Giữ dấu ấn.<br>Mở rộng cách thể hiện.",
   "story": "Chữ X xanh là điểm nhận diện xuyên suốt. Phần tên bên cạnh dùng nét thanh, góc bo nhẹ và khoảng cách thoáng để tạo sự cân bằng. Mỗi sản phẩm có tên riêng, cùng chia sẻ một cấu trúc thiết kế.",
   "family_title": "Cùng một họ nhận diện.",
-  "family_text": "DEV là thương hiệu chính. AI Studio dùng phần chữ AI / STUDIO nằm gọn trong chiều cao chữ X. xDev Hive dùng cùng bố cục: HIVE phía trên, DEV HUB phía dưới để thể hiện trọng tâm phát triển phần mềm.",
+  "family_text": "DEV là thương hiệu chính. AI Studio dùng phần chữ AI / STUDIO nằm gọn trong chiều cao chữ X. xDev Hive dùng cùng bố cục: HIVE phía trên, DEV HUB phía dưới để thể hiện trọng tâm phát triển phần mềm. xDraft đặt DRAFT phía trên, AI DIAGRAM STUDIO phía dưới.",
   "master": "Thương hiệu chính",
   "product": "Sản phẩm AI Studio",
   "light": "Nền sáng",
@@ -78,5 +78,6 @@
   "files_text": "Các phiên bản SVG nền sáng và nền tối của bộ nhận diện đã chốt.",
   "file_label": "Tải SVG",
   "ending": "Được xây bởi Duy. Tiếp tục học hỏi, tiếp tục tạo ra điều hữu ích.",
-  "hive": "Sản phẩm xDev Hive"
+  "hive": "Sản phẩm xDev Hive",
+  "xdraft": "Sản phẩm xDraft"
 }
