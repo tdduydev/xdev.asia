@@ -20,8 +20,11 @@ from products_page import render_products
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'dist'
 # Published byte for byte at the same path under dist/, with no site chrome: files whose exact
-# path and content another system depends on (Apple's app site association, MindMap AI's map link page).
+# path and content another system depends on (Apple's app site association, the xDraft map link page under /mindmap/m/).
 STATIC = ROOT / 'src/static'
+# Old path → new path of pages that moved (MindMap AI became xDraft). GitHub Pages cannot answer
+# with a 301, so each old path keeps a small page that sends visitors on; Cloudflare may redirect first.
+REDIRECTS = ROOT / 'src/redirects.json'
 LANGUAGE_NAMES = {'en': 'English', 'vi': 'Tiếng Việt', 'ja': '日本語'}
 # Shared chrome: header, footer, language switch and metadata.
 UI = {
@@ -58,7 +61,7 @@ def decorate(page, language, path, languages=SITE_LANGUAGES):
     page = page.replace('@brand@', relative(current, route(site, 'brand/')))
     page = page.replace('@products@', relative(current, route(site, 'products/')))
     page = page.replace('@hive@', relative(current, route(site, 'hive/')))
-    # Generic form for data-driven pages: @route:mindmap/privacy/@ links to that path in this page's language.
+    # Generic form for data-driven pages: @route:xdraft/privacy/@ links to that path in this page's language.
     page = re.sub(r'@route:([^@"\s]*)@', lambda match: relative(current, route(language, match.group(1))), page)
     social_links = '<div class="social-links" role="group" aria-label="' + ui['social'] + '">' + ''.join(
         f'<a href="{url}">{label}<span aria-hidden="true"> ↗</span></a>'
@@ -96,6 +99,23 @@ def shell(language, title, description, body, product=False):
 <a class="skip" href="#main">{ui['skip']}</a>
 <header><div class="container header-inner"><a class="brand" href="@home@" aria-label="xDev Asia"><img src="assets/brand/wordmark-v2/{logo}" alt="{brand_name}" width="143" height="70"></a><nav aria-label="{ui['main_navigation']}"><a href="@products@">{ui['products']}</a><a href="@docs@">{ui['docs']}</a><a href="https://blog.xdev.asia">Blog ↗</a></nav></div></header>
 {body}<footer class="container"><a href="@home@">© 2026 xDev Asia</a><div class="footer-navigation"><div class="footer-links"><a href="@products@">{ui['products']}</a><a href="@brand@">{ui['brand']}</a><a href="@studio@">AI Studio</a><a href="@docs@">{ui['documentation']}</a></div>@social@</div></footer></body></html>'''
+
+
+def write_redirect(source, target):
+    """A page at `source` that replaces itself with `target`, keeping the query and the fragment."""
+    link = relative(source, target)
+    first = source.split('/')[0]
+    language = first if first in LANGUAGE_NAMES else 'en'
+    page = (f'<!doctype html><html lang="{language}"><head><meta charset="utf-8"><meta name="robots" content="noindex">'
+            f'<title>{escape(ORIGIN)}/{escape(target)}</title><link rel="canonical" href="{ORIGIN}/{target}">'
+            f'<meta http-equiv="refresh" content="0; url={link}">'
+            f'<script>location.replace({json.dumps(link)} + location.search + location.hash)</script></head>'
+            f'<body><p><a href="{link}">{escape(ORIGIN)}/{escape(target)}</a></p></body></html>')
+    file = OUT / source / 'index.html'
+    if file.exists():
+        raise FileExistsError(f'A redirect would replace a generated page: {source}')
+    file.parent.mkdir(parents=True, exist_ok=True)
+    file.write_text(page)
 
 
 def copy_static():
@@ -185,8 +205,11 @@ def build():
         decorate(page, language, 'brand/')
     (OUT / '.nojekyll').touch()
     pages = len(list(OUT.rglob('index.html')))
+    redirects = json.loads(REDIRECTS.read_text())
+    for source, target in redirects.items():
+        write_redirect(source, target)
     copy_static()
-    print(f'Built {pages} localized pages and copied src/static.')
+    print(f'Built {pages} localized pages and {len(redirects)} redirects, and copied src/static.')
 
 if __name__ == '__main__':
     build()

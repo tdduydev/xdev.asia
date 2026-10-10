@@ -1,0 +1,14 @@
+{
+  "mindmap/": "xdraft/",
+  "mindmap/privacy/": "xdraft/privacy/",
+  "mindmap/terms/": "xdraft/terms/",
+  "mindmap/support/": "xdraft/support/",
+  "vi/mindmap/": "vi/xdraft/",
+  "vi/mindmap/privacy/": "vi/xdraft/privacy/",
+  "vi/mindmap/terms/": "vi/xdraft/terms/",
+  "vi/mindmap/support/": "vi/xdraft/support/",
+  "ja/mindmap/": "ja/xdraft/",
+  "ja/mindmap/privacy/": "ja/xdraft/privacy/",
+  "ja/mindmap/terms/": "ja/xdraft/terms/",
+  "ja/mindmap/support/": "ja/xdraft/support/"
+}
