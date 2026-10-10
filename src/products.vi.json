@@ -7,7 +7,7 @@
   "all": "Xem tất cả sản phẩm",
   "connection_label": "Trong hệ sản phẩm xDev",
   "connection_title": "Mỗi sản phẩm giải quyết một phần công việc.",
-  "connection_text": "AI Studio giúp xây ứng dụng AI. Hive điều phối team và coding agent trong AI SDLC. MindMap AI biến ý tưởng thành sơ đồ trên Mac, iPhone và iPad. Chọn công cụ phù hợp với nhu cầu và môi trường triển khai.",
+  "connection_text": "AI Studio giúp xây ứng dụng AI. Hive điều phối team và coding agent trong AI SDLC. xDraft biến ý tưởng thành sơ đồ tư duy, lưu đồ và sơ đồ kiến trúc trên Mac, iPhone và iPad. Chọn công cụ phù hợp với nhu cầu và môi trường triển khai.",
   "products": [
     {
       "id": "ai-studio",
@@ -38,19 +38,19 @@
       "action": "Khám phá Hive"
     },
     {
-      "id": "mindmap",
-      "name": "MindMap AI by xDev",
-      "category": "Sơ đồ tư duy",
+      "id": "xdraft",
+      "name": "xDraft by xDev",
+      "category": "Sơ đồ",
       "status": "Sắp ra mắt",
-      "logo": "mindmap-ai-light.svg",
-      "description": "Ứng dụng sơ đồ tư duy native cho Mac, iPhone và iPad, có AI chạy trên thiết bị, khung vẽ vô hạn và dàn ý, không thu thập dữ liệu.",
+      "logo": "xdraft-light.svg",
+      "description": "Studio sơ đồ AI native cho Mac, iPhone và iPad: sơ đồ tư duy, lưu đồ và sơ đồ kiến trúc với các góc nhìn C4, triển khai và trình tự, AI chạy trên máy, không thu thập dữ liệu.",
       "tags": [
-        "AI trên thiết bị",
-        "Khung vẽ & dàn ý",
+        "AI trên máy",
+        "Sáu loại sơ đồ",
         "Không thu thập dữ liệu"
       ],
-      "href": "@route:mindmap/@",
-      "action": "Khám phá MindMap AI"
+      "href": "@route:xdraft/@",
+      "action": "Khám phá xDraft"
     }
   ]
 }

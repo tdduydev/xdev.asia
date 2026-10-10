@@ -57,7 +57,7 @@ class Page(HTMLParser):
 
 
 # Values that must be identical in every locale; everything else is translated copy.
-SHARED_KEYS = {'slug', 'id', 'href', 'icon', 'favicon', 'email', 'provider', 'store_url', 'effective_date', 'primary', 'callout', 'short_name'}
+SHARED_KEYS = {'slug', 'id', 'href', 'icon', 'favicon', 'email', 'provider', 'store_url', 'effective_date', 'primary', 'callout', 'short_name', 'superseded_by'}
 # Keys only a translation has: a legal page's note that the English version prevails.
 TRANSLATION_KEYS = {'translation_notice'}
 
@@ -230,6 +230,10 @@ def check():
                         assert document.get('translation_notice') and 'class="app-doc-notice"' in text, f'{prefix}{content["slug"]}/{document["slug"]}: translated legal page needs translation_notice'
             if locale not in LANGUAGES:
                 continue  # Site pages such as the product directory exist only in EN/VI.
+            if content.get('superseded_by'):
+                # A renamed app keeps its old pages until the host redirects them; the directory lists the new name.
+                assert any(other['en']['slug'] == content['superseded_by'] for other in apps), f'{content["slug"]}: superseded by an unknown app'
+                continue
             for page_prefix in ['', 'products/']:
                 listing = Page((OUT / prefix / page_prefix / 'index.html').read_text())
                 assert any(href.rstrip('/').endswith(content['slug']) for href in listing.anchors), f'{prefix}{page_prefix}: product directory must link to {content["slug"]}/'

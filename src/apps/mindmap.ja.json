@@ -1,5 +1,6 @@
 {
   "slug": "mindmap",
+  "superseded_by": "xdraft",
   "name": "MindMap AI by xDev",
   "short_name": "MindMap AI",
   "icon": "assets/apps/mindmap/icon.png",
