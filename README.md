@@ -1,6 +1,6 @@
 # xDev Asia
 
-Static English/Vietnamese product website for XDev AI Studio, xDev Hive and MindMap AI, with AI Studio user guides and app legal/support pages. English is the default. The MindMap AI pages are also in Japanese. Forge is not included in the generated site.
+Static English/Vietnamese product website for XDev AI Studio, xDev Hive and xDraft (formerly MindMap AI), with AI Studio user guides and app legal/support pages. English is the default. The xDraft and MindMap AI pages are also in Japanese. Forge is not included in the generated site.
 
 ## Routes
 
@@ -8,12 +8,16 @@ Static English/Vietnamese product website for XDev AI Studio, xDev Hive and Mind
 | --- | --- | --- |
 | `/` | `/vi/` | xDev home; product links lead to the local overview |
 | `/brand/` | `/vi/brand/` | Brand story, selected logos and SVG downloads |
-| `/products/` | `/vi/products/` | Product directory: AI Studio, Hive and MindMap AI |
+| `/products/` | `/vi/products/` | Product directory: AI Studio, Hive and xDraft |
 | `/hive/` | `/vi/hive/` | xDev Hive AI SDLC introduction, showcase and setup links |
-| `/mindmap/` | `/vi/mindmap/` | MindMap AI overview: features, privacy summary, pricing, platforms |
-| `/mindmap/privacy/` | `/vi/mindmap/privacy/` | MindMap AI Privacy Policy (linked from the app and App Store Connect) |
+| `/xdraft/` | `/vi/xdraft/` | xDraft overview: diagram types, privacy summary, pricing, platforms |
+| `/xdraft/privacy/` | `/vi/xdraft/privacy/` | xDraft Privacy Policy (linked from the app and App Store Connect from 2.0.0) |
+| `/xdraft/terms/` | `/vi/xdraft/terms/` | xDraft Terms of Use |
+| `/xdraft/support/` | `/vi/xdraft/support/` | xDraft Support (App Store support URL from 2.0.0) |
+| `/mindmap/` | `/vi/mindmap/` | MindMap AI overview, kept until the redirects to `/xdraft/` are on |
+| `/mindmap/privacy/` | `/vi/mindmap/privacy/` | MindMap AI Privacy Policy (linked from MindMap AI 1.x and App Store Connect) |
 | `/mindmap/terms/` | `/vi/mindmap/terms/` | MindMap AI Terms of Use |
-| `/mindmap/support/` | `/vi/mindmap/support/` | MindMap AI Support (App Store support URL) |
+| `/mindmap/support/` | `/vi/mindmap/support/` | MindMap AI Support (App Store support URL for 1.x) |
 | `/ai-studio/` | `/vi/ai-studio/` | Product introduction; all actions stay on this site |
 | `/ai-studio/docs/` | `/vi/ai-studio/docs/` | Documentation index |
 | `/ai-studio/docs/quickstart/` | `/vi/ai-studio/docs/quickstart/` | First application |
@@ -21,11 +25,13 @@ Static English/Vietnamese product website for XDev AI Studio, xDev Hive and Mind
 | `/ai-studio/docs/workflows/` | `/vi/ai-studio/docs/workflows/` | Workflow setup |
 | `/ai-studio/docs/publishing/` | `/vi/ai-studio/docs/publishing/` | Publication and maintenance |
 
-MindMap AI also has `/ja/mindmap/`, `/ja/mindmap/privacy/`, `/ja/mindmap/terms/` and `/ja/mindmap/support/`; only these pages are in Japanese, and their header and footer links to the rest of the site lead to the English pages.
+xDraft also has `/ja/xdraft/`, `/ja/xdraft/privacy/`, `/ja/xdraft/terms/` and `/ja/xdraft/support/`, and MindMap AI the same four under `/ja/mindmap/`. Only these pages are in Japanese, and their header and footer links to the rest of the site lead to the English pages.
+
+MindMap AI becomes xDraft with app version 2.0.0. The `/mindmap/` app pages stay until Cloudflare redirects them to `/xdraft/`; the redirect list and the release order are in [docs/xdraft-launch.md](docs/xdraft-launch.md). `/mindmap/m/` and the AASA below are never redirected.
 
 `/mindmap/m/` (the page a MindMap AI map link opens without the app; the map stays in the URL fragment and is drawn in the browser) and `/.well-known/apple-app-site-association` (universal links and the App Clip) come unchanged from `src/static/`. Their sources are `docs/web/mindmap/m/` and `docs/web/.well-known/` in the xdev-mindmap-ai repository; change them there first. The page picks English, Vietnamese or Japanese from the browser and has no site header, footer or alternates. Test: `node --test src/static/mindmap/m/decode.test.mjs`.
 
-The language switch goes to the corresponding page (EN/VI, plus 日本語 on the MindMap AI pages). Navigation works without JavaScript. Each route has its own title, description, canonical and alternate-language metadata. Relative links also support a GitHub Pages repository subpath.
+The language switch goes to the corresponding page (EN/VI, plus 日本語 on the xDraft and MindMap AI pages). Navigation works without JavaScript. Each route has its own title, description, canonical and alternate-language metadata. Relative links also support a GitHub Pages repository subpath.
 
 ## Build, check, preview
 
@@ -114,7 +120,7 @@ The complete generated website is in `dist/`. Keep its `assets/`, `ai-studio/` a
 
 `scripts/app_pages.py` generates an overview plus legal and support pages for each
 xDev app, in English and Vietnamese, from `src/apps/<slug>.en.json` and
-`src/apps/<slug>.vi.json`. MindMap AI (`mindmap`) is the first. To add another app:
+`src/apps/<slug>.vi.json`. MindMap AI (`mindmap`) was the first; xDraft (`xdraft`) replaces it. To add another app:
 
 1. Copy both MindMap AI files to `src/apps/<new-slug>.en.json` / `.vi.json` and change the
    copy. Keep `slug`, section `id`s, links and dates identical in both files;
@@ -130,6 +136,8 @@ In any template, `@route:<path>@` resolves to that path in the current language.
 Leave `store_url` null until the app is on the App Store; the checks then forbid
 App Store links. A document's `effective_date` (ISO) is shown in the local format.
 `overview.platforms.languages` is an optional line under the platform cards.
+
+A renamed app keeps its old pages until the host redirects them: add `"superseded_by": "<new-slug>"` to each of its files, and `check_site.py` no longer requires the product directory to link to it.
 
 An app can add Japanese with `src/apps/<slug>.ja.json` (the `OPTIONAL_LANGUAGES` in
 `scripts/app_pages.py`). Only that app gets `/ja/<slug>/…`; its pages in every language
