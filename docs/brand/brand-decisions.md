@@ -32,3 +32,12 @@ Trang thương hiệu ghi lại ý tưởng, màu sắc, biến thể và hướ
 - Người dùng chốt **HIVE / DEV HUB** theo cấu trúc AI / STUDIO: HIVE ở y=12, DEV HUB ở y=43, scale .31 và nét 2.4 như dòng STUDIO.
 - DEV HUB thể hiện trọng tâm phát triển phần mềm. Tên trong nội dung vẫn là **xDev Hive**.
 - Giữ nguyên X, gradient và hiệu ứng của bản nền sáng/tối. File `hive-{light,dark}.svg` là tài sản chính đã cập nhật; bản HIVE một dòng và DEV / HIVE chỉ là lịch sử thử nghiệm.
+
+## xDraft — 2026-10-10
+
+- MindMap AI đổi tên thành **xDraft** từ bản 2.0.0 (ADR 0017 trong repo `tdduydev/xdev-xdraft`). Tên trong nội dung là **xDraft**, tên đầy đủ **xDraft by xDev**, subtitle **AI Diagram Studio**.
+- Icon app: product owner chọn **hướng A (Flow)** ngày 2026-10-10. Chữ X nối bằng connector vuông góc tới ba hình: hộp bo góc, hình thoi, hình trụ. Hướng B (Architecture) và C (Draft line) chỉ là thử nghiệm. Icon web `src/assets/apps/xdraft/{icon,favicon}.png` được render từ các layer SVG của `AppIcon.icon` trên nhánh MM-177.
+- Lockup **X + DRAFT / AI DIAGRAM STUDIO** theo cấu trúc HIVE / DEV HUB: DRAFT ở y=12, AI DIAGRAM STUDIO ở y=43, scale .31, nét 2.4. Chữ D-R-A-F-T là đường vector, nét 2.1, chữ hoa cao 24 đơn vị. Light suffix #344568, dark #E8ECF8. viewBox 224 × 78.
+- Giữ nguyên X, gradient và hiệu ứng sáng của từng bản nền sáng/tối, chép từ `hive-{light,dark}.svg`.
+- File được chọn: `src/assets/brand/wordmark-v2/xdraft-{light,dark}.svg` (lockup hai dòng). Dùng ở trang sản phẩm và trang brand EN/VI. Bản X + DRAFT một dòng nằm ở `docs/brand/xdraft/` của repo app, dành cho chỗ quá hẹp; site chưa dùng.
+- Chưa tra nhãn hiệu trong sổ đăng ký chính thức. Phải tra trước khi đổi tên trên App Store (ADR 0017).
