@@ -133,6 +133,11 @@ def render_overview(c):
     visual = hero_map(o['map']) if o.get('map') else hero_screenshot(o['screenshot']) if o.get('screenshot') else ''
     sections = ''
     jumps = []
+    if 'whats_new' in o:
+        w = o['whats_new']
+        items = ''.join(f'<li>{inline(item, slug)}</li>' for item in w['items'])
+        sections += f'<section class="container app-section" id="whats-new">{heading(w["label"], w["title"], w.get("intro"))}<ul class="app-new">{items}</ul></section>'
+        jumps.append(('whats-new', w['label']))
     if 'features' in o:
         f = o['features']
         items = ''.join(f'<article><span class="app-number">{i:02d}</span><h3>{e(item["title"])}</h3><p>{e(item["text"])}</p></article>' for i, item in enumerate(f['items'], 1))
@@ -151,7 +156,11 @@ def render_overview(c):
             note = f'<span>{e(plan["price_note"])}</span>' if plan.get('price_note') else ''
             items = ''.join(f'<li>{e(item)}</li>' for item in plan['items'])
             plans += f'<article class="app-plan"><h3>{e(plan["name"])}</h3><p class="app-price"><strong>{e(plan["price"])}</strong>{note}</p><p class="app-plan-text">{e(plan["text"])}</p><ul>{items}</ul></article>'
-        sections += f'<section class="container app-section" id="pricing">{heading(p["label"], p["title"], p.get("intro"))}<div class="app-plans">{plans}</div><p class="app-plan-note">{e(p["note"])}</p></section>'
+        # Optional price list under the plan cards, one entry per App Store product.
+        prices = ''.join(f'<li><h3>{e(item["name"])}</h3><p class="app-price"><strong>{e(item["price"])}</strong></p><p>{e(item["text"])}</p></li>' for item in p.get('prices', []))
+        prices = f'<ul class="app-prices">{prices}</ul>' if prices else ''
+        notes = ''.join(f'<p class="app-plan-note">{inline(text, slug)}</p>' for text in ([p['note']] if isinstance(p['note'], str) else p['note']))
+        sections += f'<section class="container app-section" id="pricing">{heading(p["label"], p["title"], p.get("intro"))}<div class="app-plans">{plans}</div>{prices}{notes}</section>'
         jumps.append(('pricing', p['label']))
     if 'platforms' in o:
         p = o['platforms']

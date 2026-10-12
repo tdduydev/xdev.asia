@@ -134,6 +134,9 @@ In any template, `@route:<path>@` resolves to that path in the current language.
 Leave `store_url` null until the app is on the App Store; the checks then forbid
 App Store links. A document's `effective_date` (ISO) is shown in the local format.
 `overview.platforms.languages` is an optional line under the platform cards.
+`overview.whats_new` (`label`, `title`, `items`) is an optional list before the features.
+`overview.pricing.prices` (`name`, `price`, `text`) is an optional row of prices under the plan cards, and
+`overview.pricing.note` may be a list of paragraphs; notes and what's new items accept links.
 The hero shows `overview.map` (xDraft's drawing) or, instead, `overview.screenshot`
 (`src`, `alt`, `width`, `height`; the path may differ per language, e.g. `mappings.en.png`).
 

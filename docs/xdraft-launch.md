@@ -13,7 +13,7 @@ MindMap AI becomes **xDraft** with app version 2.0.0 (ADR 0017 in the `tdduydev/
 ## What stays
 
 - The path `/mindmap/m/`: the map link page that also opens the App Clip. It is never redirected, because builds 1.0 to 1.2 and links already sent use it (ADR 0017).
-- `/.well-known/apple-app-site-association`: never redirected and not changed.
+- `/.well-known/apple-app-site-association`: never redirected. Since 2.0.0 it lists the new app `M6C7NX9MUZ.asia.xdev.xdraft` and the App Clip `M6C7NX9MUZ.asia.xdev.xdraft.Clip` (ADR 0023 in the app repository), with the same `/mindmap/m` paths.
 
 ## Redirects to create in Cloudflare
 
@@ -86,3 +86,12 @@ ADR 0017 requires that the new pages work before a build that links to them is s
 - Native review of the VI and JA overview copy. The legal pages reuse the MindMap AI translations already published, with only the name changed. The JA legal pages keep their notice that the English version prevails.
 - Cloudflare access to create the optional 301 redirects; this repository cannot do it.
 - xDraft is public on the site before the App Store shows the new name; the product owner accepted this on 2026-10-10.
+
+## 2.0.0 content update
+
+The xDraft pages follow the app repository on branch `ai/XD-247`: privacy and support text from `docs/web/privacy-policy.md` and `docs/web/support.md` (effective date 12 October 2026), and the overview (what's new, features, Pro plans and prices) from `docs/app-store/metadata.json` and `docs/app-store/whats-new.json`. The vi and ja texts there are AI translations that still need a native reviewer.
+
+Still open:
+
+- **Terms of Use** (`documents[terms]` in `src/apps/xdraft.*.json`) still call Pro a one-time purchase available through Family Sharing. The app repository has no terms source; the product owner must supply the new wording for the subscriptions in en, vi and ja.
+- **App Store app ID.** The new app record (bundle ID `asia.xdev.xdraft`) gets a new numeric ID; 6818476277 belongs to the old record. The ID appears only in `src/static/mindmap/m/index.html` (the `apple-itunes-app` meta tag and the `#store` link), which is a byte-for-byte copy of `docs/web/mindmap/m/index.html` in the app repository: change it there first, then copy. When the app is live, also set `store_url` in all three `src/apps/xdraft.*.json` files (the checks forbid App Store links while it is null).

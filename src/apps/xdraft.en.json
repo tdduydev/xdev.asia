@@ -19,7 +19,7 @@
   },
   "overview": {
     "title": "xDraft by xDev: AI Diagram Studio",
-    "description": "xDraft by xDev is a native diagram app for Mac, iPhone and iPad: mind maps, flowcharts and architecture diagrams with C4, deployment and sequence views, on-device AI and nothing collected. Free, with a one-time Pro upgrade.",
+    "description": "xDraft by xDev is a diagram studio for Mac, iPhone and iPad: mind maps, flowcharts and software architecture in one library, with AI that runs on your device. No account, no ads.",
     "eyebrow": "xDraft by xDev",
     "headline": "From idea to diagram.",
     "lead": "An AI diagram studio for Mac, iPhone and iPad. Start with a mind map, turn it into a flowchart or an architecture diagram, and keep C4, deployment and sequence views of the same system in one document. On-device AI suggests; you decide.",
@@ -49,6 +49,20 @@
       ],
       "suggestion": "Convert to Flowchart"
     },
+    "whats_new": {
+      "label": "What’s new",
+      "title": "MindMap AI is now xDraft by xDev: one studio for mind maps, flowcharts and software architecture.",
+      "items": [
+        "Five kinds of diagram: Mind Map, Flowchart, Architecture, C4 and Deployment views, and Sequence. Start from a template, or convert a map into a flowchart or an architecture diagram.",
+        "A new look on Mac, iPad and iPhone: Home, the library, the editor, Settings and the sheets are redesigned.",
+        "Context menus on the canvas and on what you select: right-click on the Mac, or touch and hold on iPad.",
+        "Check Diagram finds open ends, such as a decision with one branch or a step that leads nowhere, and offers fixes you apply in one undo step.",
+        "Architecture Document: a twelve-section document built from your architecture model, exported as PDF or Markdown, plus a Design Review Deck.",
+        "Sketch to Diagram on iPad: draw boxes, diamonds and arrows with Apple Pencil, check what xDraft read, and keep it as a flowchart you can edit.",
+        "AI on your device with Apple Intelligence: Ask xDraft, one command bar for AI actions that also translates topics into English, Vietnamese or Japanese; Draw from a Folder on the Mac; and suggestions inside diagrams. Nothing is sent to xDev.",
+        "xDraft Pro adds Architecture with its C4, Deployment and Sequence views, the Architecture Document and Design Review Deck, conversions, high-resolution and multi-page export, more themes, voice input and advanced AI. It is now also available as a weekly, monthly or yearly subscription, with a 7-day free trial on the yearly plan; Lifetime stays a one-time purchase. Mind maps, flowcharts and Check Diagram stay free."
+      ]
+    },
     "features": {
       "label": "Features",
       "title": "Six ways to draw an idea, one place to keep it.",
@@ -60,31 +74,31 @@
         },
         {
           "title": "Flowcharts",
-          "text": "Start and end, process, input and output, and decision steps with Yes and No branches, laid out for you as you add them."
+          "text": "Start, process, decision and end steps with Yes and No branches; Play a Path walks it step by step. Start from a template, or turn a map into a flowchart or architecture diagram."
         },
         {
-          "title": "Architecture and C4",
-          "text": "Model people, systems, services, data stores and queues with their relationships and nested boundaries, then read the same model as C4 context, container and component views."
+          "title": "Architecture, C4, Deployment and Sequence (Pro)",
+          "text": "Architecture: systems, services, data stores, queues and actors, with their relationships. C4 and Deployment: the same model as C4 Context, Container and Component views, and per environment. Sequence: messages between the parts of your architecture, row by row."
         },
         {
-          "title": "Deployment and sequence",
-          "text": "Place instances of your services in environments and deployment nodes, and draw sequence diagrams with sync, async and reply messages between the same participants."
+          "title": "Check and document",
+          "text": "Check Diagram finds gaps, such as a decision with one branch or a dead-end step, and offers fixes you undo in one step. Architecture Document (Pro): twelve sections with figures and tables from your architecture model, as PDF or Markdown, plus a Design Review Deck."
         },
         {
-          "title": "On-device AI",
-          "text": "Apple Intelligence runs on your device to generate a map, turn a mind map into a flowchart or an architecture diagram, and suggest the messages of a sequence. Every suggestion is labelled, and you can edit it before you accept it."
+          "title": "Sketch on iPad",
+          "text": "Sketch to Diagram: draw boxes, diamonds, arrows and words with Apple Pencil, and get a flowchart you can edit before you keep it. Recognized on your iPad, nothing is sent anywhere."
         },
         {
-          "title": "Undo, sync and search",
-          "text": "Undo or redo any step. Your documents sync through your own private iCloud account, and you can search them, keep them in Favorites and restore them from Recently Deleted."
+          "title": "AI on your device, with Apple Intelligence",
+          "text": "Ask xDraft: one command bar for AI on the selection or the whole map, including translation into English, Vietnamese or Japanese. Generate a map from a short description, or on the Mac from the file names in a folder you choose (never their contents). AI results are labeled suggestions you edit, accept or discard, and undo in one step."
         },
         {
-          "title": "Export",
-          "text": "Export every diagram as PNG or PDF. Mind maps also export to Markdown and plain text, or to an xDraft Backup file."
+          "title": "Import, export and share",
+          "text": "Import Markdown, text, OPML and other mind map files; export Markdown, text, PNG, PDF and backups. Share Link: someone without the app opens the map in the App Clip. iCloud sync; the Apple Watch app adds ideas to your Inbox map. Shortcuts and Spotlight."
         },
         {
-          "title": "Connect AI apps on your Mac",
-          "text": "Let AI apps such as Claude Code or ChatGPT read your maps through MCP. It is off by default; when you turn it on, each app needs its own token."
+          "title": "Made for the Mac",
+          "text": "A full menu bar with a shortcut for every command; each map in its own window. AI Apps: let AI apps on your Mac read your maps over MCP. Off by default and local to this Mac; topics an app proposes wait for your Accept."
         }
       ]
     },
@@ -102,8 +116,8 @@
     },
     "pricing": {
       "label": "Pricing",
-      "title": "Free, with a one-time Pro upgrade.",
-      "intro": "Mind maps and flowcharts are never locked, and there are no ads. No subscription.",
+      "title": "Mind maps and flowcharts are free.",
+      "intro": "Pro is a weekly, monthly or yearly subscription (yearly starts with a 7-day free trial) or a one-time Lifetime purchase.",
       "plans": [
         {
           "name": "xDraft",
@@ -111,6 +125,7 @@
           "text": "Everything you need to map ideas and draw flows.",
           "items": [
             "Mind maps and flowcharts: canvas, outline, search and templates",
+            "Check Diagram finds gaps and offers fixes you undo in one step",
             "PNG and one-page PDF export of every diagram type",
             "Open, view, export, move and delete any document, Architecture ones included",
             "Markdown and plain text import and export for mind maps",
@@ -119,19 +134,46 @@
         },
         {
           "name": "xDraft Pro",
-          "price": "USD 19.99",
-          "price_note": "one-time purchase",
+          "price": "USD 39.99",
+          "price_note": "yearly starts with a 7-day free trial",
           "text": "For software teams and polished output.",
           "items": [
-            "Architecture documents with C4, Deployment and Sequence views",
-            "AI: Convert to Flowchart, Convert to Architecture and Suggest Messages",
-            "Architecture, C4 and Sequence templates",
-            "High-resolution PNG and multi-page vector PDF export, the xDev Blue and Graphite themes",
-            "Advanced AI for mind maps, and voice input in English and Vietnamese on the device"
+            "Architecture, C4, Deployment and Sequence diagrams, the Architecture Document and the Design Review Deck",
+            "Convert to Flowchart or Architecture, and Suggest Messages",
+            "High-resolution PNG, multi-page vector PDF and OPML export",
+            "More themes",
+            "Voice input in English, Vietnamese or Japanese, recognized on your device",
+            "Advanced AI: generate a map from a long description, summarize a whole map, find missing topics, and ask about your whole library"
           ]
         }
       ],
-      "note": "One purchase unlocks Pro on Mac, iPhone and iPad, and Family Sharing is on. If you bought MindMap AI Pro, you keep everything. The App Store shows the price in your currency."
+      "note": [
+        "Without Pro, architecture documents still open and export. Every plan unlocks Pro on Mac, iPad and iPhone with the same Apple Account, and Lifetime works with Family Sharing.",
+        "Subscriptions renew automatically unless cancelled at least 24 hours before the end of the current period. Payment is charged to your Apple Account when you confirm the purchase, or when the free trial ends. Manage or cancel subscriptions in your App Store account settings.",
+        "Terms of Use: [Apple’s standard license agreement](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/). Privacy Policy: [xDraft Privacy Policy](app:privacy)."
+      ],
+      "prices": [
+        {
+          "name": "xDraft Pro Weekly",
+          "price": "USD 2.99",
+          "text": "Every Pro feature, billed weekly."
+        },
+        {
+          "name": "xDraft Pro Monthly",
+          "price": "USD 5.99",
+          "text": "Every Pro feature, billed monthly."
+        },
+        {
+          "name": "xDraft Pro Yearly",
+          "price": "USD 39.99",
+          "text": "Every Pro feature, billed yearly."
+        },
+        {
+          "name": "xDraft Pro Lifetime",
+          "price": "USD 79.99",
+          "text": "Every Pro feature, paid once, on all devices."
+        }
+      ]
     },
     "platforms": {
       "label": "Platforms",
@@ -145,7 +187,7 @@
         {
           "name": "iPhone and iPad",
           "status": "Coming soon to the App Store",
-          "text": "A touch-friendly canvas and outline, the Share Extension for text and links, and Shortcuts actions. Requires iOS or iPadOS 26 or later. One Pro purchase covers Mac, iPhone and iPad."
+          "text": "A touch-friendly canvas and outline, the Share Extension for text and links, and Shortcuts actions. On iPad, sketch a flowchart with Apple Pencil and edit what xDraft reads. Share Link: someone without the app opens the map in the App Clip; the Apple Watch app adds ideas to your Inbox map. Requires iOS or iPadOS 26 or later. Every plan also unlocks Pro on the Mac."
         }
       ],
       "languages": "xDraft is available in English, Vietnamese and Japanese."
@@ -164,65 +206,121 @@
       "description": "How xDraft by xDev handles your data: nothing is collected, maps stay on your devices and in your own iCloud account, and AI runs on your device.",
       "heading": "Privacy Policy",
       "summary": "What the app does with your data. In short: nothing is collected.",
-      "effective_date": "2026-10-03",
+      "effective_date": "2026-10-12",
       "intro": [
-        "xDraft is built so that your maps stay yours. This policy explains what the app does with your data."
+        "xDraft is built so that your maps and diagrams stay yours. This policy explains what the app, its App Clip and its Apple Watch app do with your data."
       ],
       "sections": [
         {
           "id": "what-we-collect",
           "title": "What we collect",
           "paragraphs": [
-            "Nothing. xDev does not run servers for xDraft, does not require an account, and does not include analytics, advertising or tracking. Your maps are never sent to xDev."
+            "Nothing. xDev does not run servers for xDraft, does not require an account, and does not include analytics, advertising or tracking. Your maps and diagrams are never sent to xDev."
           ]
         },
         {
           "id": "storage",
-          "title": "Where your maps are stored",
+          "title": "Where your documents are stored",
           "paragraphs": [
-            "On your device. When iCloud sync is available in the app and you are signed in to iCloud, your maps are also stored in your own private iCloud account, under [Apple’s privacy policy](https://www.apple.com/legal/privacy/), so they appear on your other devices. xDev cannot read your iCloud data. To stop syncing, turn off iCloud Sync in xDraft ▸ Settings ▸ Data on a Mac, or turn off iCloud for xDraft in the Settings app on iPhone and iPad; your maps stay on the device."
+            "On your device. While you are signed in to iCloud, your mind maps, flowcharts, architecture and sequence diagrams (with their notes, images, sketches and chats) are also stored in your own private iCloud account, under [Apple's privacy policy](https://www.apple.com/legal/privacy/), so they appear on your other devices. Only you can read them there: xDev cannot read your iCloud data and receives nothing from it. To stop syncing, turn off iCloud Sync in xDraft ▸ Settings ▸ Data on a Mac, or turn off iCloud for xDraft in the Settings app on iPhone and iPad; your documents stay on the device."
           ]
         },
         {
           "id": "ai-features",
           "title": "AI features",
           "paragraphs": [
-            "AI features use Apple’s on-device model (Apple Intelligence). Your text is processed on your device and is not sent to xDev. Questions and answers in Ask About This Map are saved with the map they are about, stored and synced like the map, and deleted with it or with Clear Chat. On devices without Apple Intelligence, the AI features are not shown."
+            "AI features use Apple's on-device model (Apple Intelligence). xDraft 2.0.0 does not offer downloading any other AI model. Your text is processed on your device and is not sent to xDev. This covers every AI feature: Ask xDraft (including Translate), suggestions on topics, Suggest Fixes in Check Diagram, suggestions in architecture and sequence diagrams, and Draft with AI in the Architecture Document. Questions and answers in Ask About This Map, and questions typed in Ask xDraft that become a chat, are saved with the map they are about, stored and synced like the map, and deleted with it or with Clear Chat. Devices that cannot run Apple Intelligence do not show AI features."
+          ]
+        },
+        {
+          "id": "check-and-document",
+          "title": "Check Diagram and Architecture Document",
+          "paragraphs": [
+            "Check Diagram looks for open ends in a diagram on your device; its findings are not saved. The Architecture Document and the Design Review Deck are built on your device from your architecture model. Their text stays in the window until you export it, and the PDF or Markdown file goes only where you save it."
+          ]
+        },
+        {
+          "id": "draw-from-folder",
+          "title": "Draw from a Folder",
+          "paragraphs": [
+            "When you choose a folder for Draw from a Folder, xDraft reads the names of its files and subfolders (at most 150, three levels deep), never their contents, and skips hidden items. The names go to the on-device model to suggest a map. Access to the folder ends when the names are read; xDraft keeps no access for later, and the names are not stored unless you accept the map."
+          ]
+        },
+        {
+          "id": "sketches",
+          "title": "Sketches and Apple Pencil (iPad)",
+          "paragraphs": [
+            "Sketches you draw with Apple Pencil are saved with the map. Sketch to Diagram and Convert to Topic read your strokes only when you tap Read Sketch or Convert to Topic: shapes and arrows are recognized by xDraft, handwriting by Apple's on-device recognition. Nothing is sent anywhere, and the result is only a suggestion until you make the flowchart or add the topic."
+          ]
+        },
+        {
+          "id": "ai-feedback",
+          "title": "AI feedback",
+          "paragraphs": [
+            "Thumbs-up and thumbs-down ratings stay on this device. Only the feature, rating and date are saved, never map content or prompts. Ratings are not synced or sent to xDev. Remove them with Clear AI Feedback in Settings ▸ Privacy."
           ]
         },
         {
           "id": "voice-input",
           "title": "Voice input",
           "paragraphs": [
-            "When voice input is available, speech is turned into text on your device and is not sent to xDev. The app asks for microphone and speech recognition access the first time you use it."
+            "Speech is turned into text on your device and is not stored or sent to xDev. The app asks for microphone and speech recognition access the first time you use it."
+          ]
+        },
+        {
+          "id": "sharing",
+          "title": "Sharing into xDraft",
+          "paragraphs": [
+            "Text, links, images and PDFs you share to xDraft from other apps are stored on your device until you add them to a map or discard them. Text in images and PDFs is recognized on your device."
           ]
         },
         {
           "id": "connected-ai-apps",
           "title": "AI apps you connect (Mac)",
           "paragraphs": [
-            "You can let AI apps on your Mac, such as Claude Code or ChatGPT, read your maps in xDraft ▸ Settings ▸ AI Apps. It is off until you turn it on, and each app needs a token you add there. A connected app can read the titles, notes and structure of your maps while xDraft is open, and may send what it reads to its own AI provider under that app’s terms and privacy policy; check those before you connect it. xDraft does not send this data to xDev. Turn the switch off to stop every app, or revoke one app in the same place."
+            "You can let AI apps on your Mac, such as Claude, Claude Code or ChatGPT, read your maps in xDraft ▸ Settings ▸ AI Apps. It is off until you turn it on, and each AI app has to be set up with the setup shown there. The AI app then starts a small helper inside xDraft that passes its requests to xDraft on your Mac; nothing goes over the network. A connected app can read the titles, notes and structure of your maps while xDraft is open, and may send what it reads to its own AI provider under that app's terms and privacy policy; check those before you connect it. xDraft does not send this data to xDev. If you also turn on Allow Suggestions, a connected app can propose new topics for a map; they appear labelled with the app's name and nothing is added until you accept them. Connected apps can't edit or delete anything in your maps. Turn the switch off to stop every app, or remove xDraft from one app's settings to stop that app."
+          ]
+        },
+        {
+          "id": "map-links",
+          "title": "Map links and the App Clip",
+          "paragraphs": [
+            "Share Link turns a map, or one branch of it, into a link with the map inside it. The map is in the part of the link after `#`, which browsers do not send to any server, so xDev never receives it, not even when the link opens our web page; the page draws the map in your browser. The link goes only where you send it, and anyone who has it can read the map, as the app says before you share. On iPhone and iPad, a link can open in the xDraft App Clip without installing the app. The App Clip shows the map, can make a quick map with on-device AI, and keeps the last maps it opened or made (at most 10) in storage that only the xDraft app can read; if you install the app, it adds them to your library. Opening a link in the app adds a new map and changes nothing else."
+          ]
+        },
+        {
+          "id": "apple-watch",
+          "title": "Apple Watch",
+          "paragraphs": [
+            "Ideas you add on Apple Watch go to your Inbox map, which is stored and synced through your private iCloud account like your other maps. To find that map on your devices, xDraft keeps its identifier (not its content) in iCloud key-value storage."
+          ]
+        },
+        {
+          "id": "spotlight-shortcuts",
+          "title": "Spotlight and Shortcuts",
+          "paragraphs": [
+            "Map titles are added to your device's own Spotlight index so you can find them; maps you delete are removed from it. Shortcuts actions run on your device."
           ]
         },
         {
           "id": "purchases",
           "title": "Purchases",
           "paragraphs": [
-            "Payments are handled by Apple through the App Store. xDev does not receive your payment details."
+            "Payments are handled by Apple through the App Store. xDraft Pro subscriptions are billed, renewed and cancelled by Apple; you manage them in your App Store account settings. xDev does not receive your payment details."
           ]
         },
         {
           "id": "crash-reports",
           "title": "Crash reports from Apple",
           "paragraphs": [
-            "If you choose to share analytics with app developers in your device settings, Apple may share crash reports and usage statistics with xDev. You control this in your device’s privacy settings."
+            "If you choose to share analytics with app developers in your device settings, Apple may share crash reports and usage statistics with xDev. You control this in your device's privacy settings."
           ]
         },
         {
           "id": "deleting-data",
           "title": "Deleting your data",
           "paragraphs": [
-            "Delete a map in the app to move it to Recently Deleted. It stays there for 30 days so you can restore it, then it is deleted permanently; Delete Permanently removes it straight away. Deleting the app removes the maps stored on that device. Maps in iCloud can be removed in your device’s iCloud storage settings."
+            "Delete a map or diagram in the app to move it to Recently Deleted. It stays there for 30 days so you can restore it, then it is deleted permanently; Delete Permanently removes it straight away. Deleting the app removes the documents stored on that device. Documents in iCloud can be removed in your device's iCloud storage settings."
           ]
         },
         {
@@ -243,7 +341,7 @@
           "id": "contact",
           "title": "Contact",
           "paragraphs": [
-            "See [xDraft Support](app:support), or email [duy@xdev.asia](mailto:duy@xdev.asia)."
+            "[duy@xdev.asia](mailto:duy@xdev.asia), or see [xDraft Support](app:support)."
           ]
         }
       ]
@@ -373,30 +471,58 @@
         },
         {
           "id": "where-are-my-maps",
-          "title": "Where are my maps?",
+          "title": "Where are my maps and diagrams?",
           "paragraphs": [
-            "On your device. xDraft has no account and no xDev servers. See the [privacy policy](app:privacy)."
+            "On your device, and in your private iCloud account while you are signed in to iCloud. xDraft has no account and no xDev servers. See the [privacy policy](app:privacy)."
+          ]
+        },
+        {
+          "id": "what-can-i-make",
+          "title": "What can I make?",
+          "paragraphs": [
+            "Mind maps, flowcharts, architecture diagrams with C4 and Deployment views, and sequence diagrams. Choose New from Template to start from a finished example. Check Diagram lists what a flowchart or an architecture diagram leaves open and offers fixes; the Architecture Document turns an architecture model into a document you export as PDF or Markdown. On iPad, Sketch to Diagram turns a flowchart drawn with Apple Pencil into one you can edit; it needs Apple Pencil."
+          ]
+        },
+        {
+          "id": "sync",
+          "title": "My maps don't appear on my other device.",
+          "paragraphs": [
+            "Sign in to the same Apple Account on both devices. On a Mac, check that iCloud Sync is on in xDraft ▸ Settings ▸ Data; on iPhone and iPad, check that iCloud is on for xDraft in the Settings app. Use the same version of xDraft on every device: diagrams made in version 2.0 or later may not appear in older versions. Sync can take a few minutes after a change, and needs a network connection."
+          ]
+        },
+        {
+          "id": "pro",
+          "title": "What does xDraft Pro add?",
+          "paragraphs": [
+            "Pro is available as a weekly, monthly or yearly subscription (the yearly plan starts with a 7-day free trial) or as a one-time Lifetime purchase. Every plan adds architecture diagrams with their C4, Deployment and Sequence views, the Architecture Document and Design Review Deck, conversions, high-resolution and multi-page export, more themes, voice input and advanced AI. Mind maps and flowcharts are free. Without Pro, architecture documents still open and export. Every plan unlocks Pro on Mac, iPad and iPhone with the same Apple Account, and Lifetime works with Family Sharing. Subscriptions renew automatically until you cancel them; manage or cancel them in your App Store account settings, or with Manage Subscription in Settings ▸ Pro."
+          ]
+        },
+        {
+          "id": "restore",
+          "title": "I bought Pro but it is locked.",
+          "paragraphs": [
+            "Open Settings ▸ Pro and choose Restore Purchases, signed in to the Apple Account you bought it with. For a family member, Family Sharing covers Lifetime only, and sharing purchases must be on."
           ]
         },
         {
           "id": "ai-features",
-          "title": "Why don’t I see AI features?",
+          "title": "Why don't I see AI features?",
           "paragraphs": [
             "AI features need Apple Intelligence, which runs on the device. They appear only on devices that support Apple Intelligence, with Apple Intelligence turned on in system settings, and in a language it supports. On other devices the AI features are hidden; everything else works."
           ]
         },
         {
           "id": "cannot-open-maps",
-          "title": "The app says it can’t open my maps.",
+          "title": "The app says it can't open my maps.",
           "paragraphs": [
-            "Quit and reopen the app. If the message comes back, [contact us](#contact) and mention that message; do not delete the app, because deleting it removes the maps stored on the device."
+            "Quit and reopen the app. If the message comes back, contact us and mention that message; do not delete the app, because deleting it removes the maps stored on the device."
           ]
         },
         {
           "id": "delete-data",
           "title": "How do I delete my data?",
           "paragraphs": [
-            "Delete maps in the app; they wait in Recently Deleted for 30 days, or use Delete Permanently there to remove them now. Deleting the app removes the maps stored on that device."
+            "Delete maps and diagrams in the app; they wait in Recently Deleted for 30 days, or use Delete Permanently there to remove them now. Deleting the app removes the documents stored on that device; documents in iCloud can be removed in your device's iCloud storage settings."
           ]
         }
       ]
