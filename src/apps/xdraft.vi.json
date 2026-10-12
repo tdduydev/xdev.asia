@@ -353,7 +353,7 @@
       "description": "Các điều khoản khi dùng xDraft by xDev, bổ sung cho thoả thuận cấp phép chuẩn của Apple dành cho ứng dụng trên App Store.",
       "heading": "Điều khoản sử dụng",
       "summary": "Quy định khi dùng ứng dụng, đi cùng giấy phép chuẩn của Apple.",
-      "effective_date": "2026-10-03",
+      "effective_date": "2026-10-13",
       "intro": [
         "Các điều khoản này áp dụng khi bạn dùng xDraft by xDev (“ứng dụng”) trên Mac, iPhone hoặc iPad. Hãy đọc chúng cùng với thoả thuận cấp phép chuẩn của Apple nêu bên dưới. Khi dùng ứng dụng, bạn đồng ý với các điều khoản này."
       ],
@@ -383,8 +383,9 @@
           "id": "price-and-pro",
           "title": "Giá và xDraft Pro",
           "paragraphs": [
-            "Ứng dụng miễn phí. xDraft Pro là gói mua trong ứng dụng không bắt buộc, trả một lần, để mở thêm tính năng, được mô tả trong ứng dụng và trên [trang xDraft](app:).",
-            "Apple xử lý việc mua. Giá hiện trong App Store trước khi bạn mua, và Apple thu tiền. Yêu cầu hoàn tiền gửi tới Apple theo chính sách của Apple. Pro dùng được với Chia sẻ trong gia đình. Nếu bạn cài lại ứng dụng hoặc dùng thiết bị khác với cùng Tài khoản Apple, hãy chọn Khôi phục giao dịch mua trong phần cài đặt của ứng dụng để mở lại Pro."
+            "Ứng dụng miễn phí. xDraft Pro không bắt buộc và mở thêm tính năng, được mô tả trong ứng dụng và trên [trang xDraft](app:). Bạn có thể dùng Pro theo bốn cách: gói đăng ký theo tuần, tháng hoặc năm, tự động gia hạn, hoặc gói Trọn đời, mua một lần. Gói nào cũng mở cùng các tính năng. Gói năm bắt đầu bằng 7 ngày dùng thử miễn phí nếu Tài khoản Apple của bạn vẫn còn được dùng thử.",
+            "Apple xử lý mọi giao dịch mua. Giá hiện trong ứng dụng và trong App Store trước khi bạn mua, và Apple thu tiền. Yêu cầu hoàn tiền gửi tới Apple theo chính sách của Apple. Gói nào cũng mở khoá Pro trên Mac, iPad và iPhone dùng cùng Tài khoản Apple. Gói Trọn đời dùng được với Chia sẻ trong gia đình; các gói đăng ký thì không. Nếu bạn cài lại ứng dụng hoặc dùng thiết bị khác với cùng Tài khoản Apple, hãy chọn Khôi phục giao dịch mua trong phần cài đặt của ứng dụng để mở lại Pro.",
+            "Gói đăng ký tự động gia hạn, trừ khi bạn huỷ ít nhất 24 giờ trước khi kỳ hiện tại kết thúc. Khoản thanh toán được tính vào Tài khoản Apple khi bạn xác nhận giao dịch, hoặc khi hết thời gian dùng thử. Phần dùng thử miễn phí chưa dùng hết sẽ mất khi bạn mua một gói đăng ký. Quản lý hoặc huỷ gói đăng ký trong phần cài đặt tài khoản App Store, hoặc bằng Quản lý gói đăng ký trong phần cài đặt của ứng dụng. Mua gói Trọn đời không huỷ gói đăng ký; hãy huỷ gói đăng ký để nó không gia hạn. Khi gói đăng ký kết thúc, các tính năng Pro bị khoá lại; sơ đồ của bạn vẫn là của bạn, và tài liệu kiến trúc vẫn mở và xuất được."
           ]
         },
         {
@@ -412,7 +413,7 @@
           "id": "connected-ai-apps",
           "title": "Ứng dụng AI bạn kết nối (Mac)",
           "paragraphs": [
-            "Trên Mac, bạn có thể cho các ứng dụng AI khác, như Claude Code hay ChatGPT, đọc sơ đồ của bạn. Đó là dịch vụ của bên thứ ba, không do xDev cung cấp, và việc bạn dùng chúng tuân theo điều khoản và chính sách quyền riêng tư của chính chúng. xDev không chịu trách nhiệm về việc các ứng dụng đó làm gì với nội dung chúng đọc."
+            "Trên Mac, bạn có thể cho các ứng dụng AI khác, như Claude Code hay ChatGPT, đọc sơ đồ của bạn và, nếu bạn cho phép, đề xuất chủ đề để bạn chấp nhận hoặc bỏ qua. Đó là dịch vụ của bên thứ ba, không do xDev cung cấp, và việc bạn dùng chúng tuân theo điều khoản và chính sách quyền riêng tư của chính chúng. xDev không chịu trách nhiệm về việc các ứng dụng đó làm gì với nội dung chúng đọc."
           ]
         },
         {

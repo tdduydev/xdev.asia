@@ -353,7 +353,7 @@
       "description": "The terms for using xDraft by xDev, which add to Apple’s standard license agreement for apps from the App Store.",
       "heading": "Terms of Use",
       "summary": "The rules for using the app, alongside Apple’s standard license.",
-      "effective_date": "2026-10-03",
+      "effective_date": "2026-10-13",
       "intro": [
         "These terms apply when you use xDraft by xDev (“the app”) on Mac, iPhone or iPad. Read them together with Apple’s standard license agreement, described below. By using the app, you agree to these terms."
       ],
@@ -383,8 +383,9 @@
           "id": "price-and-pro",
           "title": "Price and xDraft Pro",
           "paragraphs": [
-            "The app is free. xDraft Pro is an optional one-time in-app purchase that unlocks extra features, described in the app and on the [xDraft page](app:).",
-            "Apple handles the purchase. The price is shown in the App Store before you buy, and Apple takes the payment. Refunds are requested from Apple under Apple’s policies. Pro is available through Family Sharing. If you reinstall the app or use another device with the same Apple Account, use Restore Purchases in the app’s settings to unlock Pro again."
+            "The app is free. xDraft Pro is optional and unlocks extra features, described in the app and on the [xDraft page](app:). You can get Pro in four ways: a weekly, monthly or yearly subscription, which renews automatically, or Lifetime, a one-time purchase. Every plan unlocks the same features. The yearly plan starts with a 7-day free trial if your Apple Account can still use it.",
+            "Apple handles every purchase. Prices are shown in the app and in the App Store before you buy, and Apple takes the payment. Refunds are requested from Apple under Apple’s policies. Every plan unlocks Pro on Mac, iPad and iPhone with the same Apple Account. Lifetime is available through Family Sharing; the subscriptions are not. If you reinstall the app or use another device with the same Apple Account, use Restore Purchases in the app’s settings to unlock Pro again.",
+            "Subscriptions renew automatically unless cancelled at least 24 hours before the end of the current period. Payment is charged to your Apple Account when you confirm the purchase, or when the free trial ends. Any unused part of a free trial is forfeited when you buy a subscription. Manage or cancel subscriptions in your App Store account settings, or with Manage Subscription in the app’s settings. Buying Lifetime does not cancel a subscription; cancel it so that it does not renew. When a subscription ends, Pro features lock again; your maps and diagrams stay yours, and architecture documents still open and export."
           ]
         },
         {
@@ -412,7 +413,7 @@
           "id": "connected-ai-apps",
           "title": "AI apps you connect (Mac)",
           "paragraphs": [
-            "On a Mac you can let other AI apps, such as Claude Code or ChatGPT, read your maps. Those apps are third-party services. They are not provided by xDev, and your use of them is governed by their own terms and privacy policies. xDev is not responsible for what they do with the content they read."
+            "On a Mac you can let other AI apps, such as Claude Code or ChatGPT, read your maps and, if you allow it, suggest topics that you accept or reject. Those apps are third-party services. They are not provided by xDev, and your use of them is governed by their own terms and privacy policies. xDev is not responsible for what they do with the content they read."
           ]
         },
         {
