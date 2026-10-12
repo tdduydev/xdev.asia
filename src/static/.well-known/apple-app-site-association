@@ -2,7 +2,7 @@
   "applinks": {
     "details": [
       {
-        "appIDs": ["M6C7NX9MUZ.asia.xdev.mindmapai"],
+        "appIDs": ["M6C7NX9MUZ.asia.xdev.xdraft"],
         "components": [
           { "/": "/mindmap/m", "comment": "Map links; the map is in the fragment" },
           { "/": "/mindmap/m/", "comment": "Same page with a trailing slash" }
@@ -10,5 +10,5 @@
       }
     ]
   },
-  "appclips": { "apps": ["M6C7NX9MUZ.asia.xdev.mindmapai.Clip"] }
+  "appclips": { "apps": ["M6C7NX9MUZ.asia.xdev.xdraft.Clip"] }
 }
