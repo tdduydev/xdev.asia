@@ -8,12 +8,11 @@ MindMap AI becomes **xDraft** with app version 2.0.0 (ADR 0017 in the `tdduydev/
 - Privacy, terms and support are the MindMap AI text with only the product name and links changed (`MindMap AI` → `xDraft`, `MindMap AI Pro` → `xDraft Pro`, `MindMap AI Backup` → `xDraft Backup`). Effective dates stay the same. No data commitment was added or removed.
 - `/products/`, `/vi/products/` and the home page list xDraft instead of MindMap AI. `/brand/` and `/vi/brand/` show the xDraft lockup (X + DRAFT / AI DIAGRAM STUDIO).
 - The MindMap AI app pages are gone (`src/apps/mindmap.*.json` and its icon). Each of their twelve paths now holds a page generated from `src/redirects.json` that replaces itself with the matching xDraft page. It keeps the query and the fragment, is `noindex`, and names the xDraft page as canonical. MindMap AI 1.x and the current App Store Connect URLs therefore still reach the right page, through the browser instead of a 301.
-- `/mindmap/m/` says xDraft instead of MindMap AI, copied from `docs/web/mindmap/m/` of the app repository.
+- The map link page moved to `/xdraft/m/` (XD-249 in the app repository), copied from `docs/web/xdraft/m/` there. `/mindmap/m/` is now a redirect page from `src/redirects.json`, like the app pages: it keeps the fragment, where the map is, so links that TestFlight builds shared still show the map.
 
 ## What stays
 
-- The path `/mindmap/m/`: the map link page that also opens the App Clip. It is never redirected, because builds 1.0 to 1.2 and links already sent use it (ADR 0017).
-- `/.well-known/apple-app-site-association`: never redirected. Since 2.0.0 it lists the new app `M6C7NX9MUZ.asia.xdev.xdraft` and the App Clip `M6C7NX9MUZ.asia.xdev.xdraft.Clip` (ADR 0023 in the app repository), with the same `/mindmap/m` paths.
+- `/.well-known/apple-app-site-association`: never redirected. Since 2.0.0 it lists the new app `M6C7NX9MUZ.asia.xdev.xdraft` and the App Clip `M6C7NX9MUZ.asia.xdev.xdraft.Clip` (ADR 0023 in the app repository), and the paths `/xdraft/m` and, for links TestFlight builds shared, `/mindmap/m` (the app still reads both).
 
 ## Redirects to create in Cloudflare
 
@@ -43,8 +42,10 @@ Keep `src/redirects.json` and this list the same.
 
 Never redirect:
 
-- `/mindmap/m`, `/mindmap/m/` or any path below it;
+- `/xdraft/m`, `/xdraft/m/` or any path below it;
 - `/.well-known/apple-app-site-association`.
+
+`/mindmap/m/` stays a redirect page and is not in the Cloudflare list: the page keeps the fragment with JavaScript, and the app opens such a link itself through the AASA before any request is made.
 
 [Unverified] The Cloudflare feature that fits an exact list of 15 paths is **Bulk Redirects**: one list with the entries above, *Preserve query string* on, *Subpath matching* and *Preserve path suffix* off. Check how many entries the zone's plan allows in the dashboard before you start. Single Redirect rules also work, with one rule for each row.
 
@@ -57,7 +58,7 @@ ADR 0017 requires that the new pages work before a build that links to them is s
 
    ```sh
    # Each line: HTTP/2 200.
-   for p in xdraft/ xdraft/privacy/ xdraft/terms/ xdraft/support/ vi/xdraft/ vi/xdraft/privacy/ ja/xdraft/ ja/xdraft/privacy/ mindmap/m/ .well-known/apple-app-site-association; do
+   for p in xdraft/ xdraft/privacy/ xdraft/terms/ xdraft/support/ vi/xdraft/ vi/xdraft/privacy/ ja/xdraft/ ja/xdraft/privacy/ xdraft/m/ .well-known/apple-app-site-association; do
      printf '%s ' "$p"; curl -sI "https://xdev.asia/$p" | head -1
    done
    # Each old page names its xDraft page as canonical.
@@ -72,13 +73,13 @@ ADR 0017 requires that the new pages work before a build that links to them is s
      printf '%s ' "$p"; curl -sI "https://xdev.asia/$p?from=check" | grep -i -E '^(HTTP|location)' | tr '\n' ' '; echo
    done
    # Must still answer 200 without a location header.
-   curl -sI https://xdev.asia/mindmap/m/ | head -1
+   curl -sI https://xdev.asia/xdraft/m/ | head -1
    curl -sI https://xdev.asia/.well-known/apple-app-site-association | head -1
    ```
 
 4. **App Store Connect:** change the Privacy Policy URL, the Support URL and the Marketing URL to the `/xdraft/` pages.
 5. **App:** change `AppLinks.swift` to `https://xdev.asia/xdraft`, `/xdraft/privacy` and `/xdraft/support` in the 2.0.0 build, then submit it.
-6. **Later:** the redirect pages stay for as long as a supported build or an old link may point at `/mindmap/…`. `/mindmap/m/` and the AASA stay for as long as the App Clip and old links exist.
+6. **Later:** the redirect pages stay for as long as a supported build or an old link may point at `/mindmap/…`. The `/mindmap/m/` redirect page and its AASA paths stay for as long as links shared by TestFlight builds may be opened.
 
 ## Open for people
 
@@ -94,4 +95,4 @@ The xDraft pages follow the app repository on branch `ai/XD-247`: privacy and su
 Still open:
 
 - **Terms of Use** (`documents[terms]` in `src/apps/xdraft.*.json`) still call Pro a one-time purchase available through Family Sharing. The app repository has no terms source; the product owner must supply the new wording for the subscriptions in en, vi and ja.
-- **App Store app ID.** The new app record (bundle ID `asia.xdev.xdraft`) gets a new numeric ID; 6818476277 belongs to the old record. The ID appears only in `src/static/mindmap/m/index.html` (the `apple-itunes-app` meta tag and the `#store` link), which is a byte-for-byte copy of `docs/web/mindmap/m/index.html` in the app repository: change it there first, then copy. When the app is live, also set `store_url` in all three `src/apps/xdraft.*.json` files (the checks forbid App Store links while it is null).
+- **App Store app ID.** The new app record (bundle ID `asia.xdev.xdraft`) gets a new numeric ID; 6818476277 belongs to the old record. The ID appears only in `src/static/xdraft/m/index.html` (the `apple-itunes-app` meta tag and the `#store` link), which is a byte-for-byte copy of `docs/web/xdraft/m/index.html` in the app repository: change it there first, then copy. When the app is live, also set `store_url` in all three `src/apps/xdraft.*.json` files (the checks forbid App Store links while it is null).

@@ -1,4 +1,4 @@
-// node --test docs/web/mindmap/m/decode.test.mjs
+// node --test docs/web/xdraft/m/decode.test.mjs
 // The same golden link as MapLinkCodecTests in the app, so both readers agree.
 import assert from "node:assert/strict";
 import { test } from "node:test";

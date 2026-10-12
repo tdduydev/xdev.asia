@@ -10,5 +10,6 @@
   "ja/mindmap/": "ja/xdraft/",
   "ja/mindmap/privacy/": "ja/xdraft/privacy/",
   "ja/mindmap/terms/": "ja/xdraft/terms/",
-  "ja/mindmap/support/": "ja/xdraft/support/"
+  "ja/mindmap/support/": "ja/xdraft/support/",
+  "mindmap/m/": "xdraft/m/"
 }

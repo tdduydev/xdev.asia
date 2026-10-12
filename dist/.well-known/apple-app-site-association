@@ -4,8 +4,10 @@
       {
         "appIDs": ["M6C7NX9MUZ.asia.xdev.xdraft"],
         "components": [
-          { "/": "/mindmap/m", "comment": "Map links; the map is in the fragment" },
-          { "/": "/mindmap/m/", "comment": "Same page with a trailing slash" }
+          { "/": "/xdraft/m", "comment": "Map links; the map is in the fragment" },
+          { "/": "/xdraft/m/", "comment": "Same page with a trailing slash" },
+          { "/": "/mindmap/m", "comment": "Links shared by TestFlight builds before 2.0.0 (XD-249)" },
+          { "/": "/mindmap/m/", "comment": "Same, with a trailing slash" }
         ]
       }
     ]

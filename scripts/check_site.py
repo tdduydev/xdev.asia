@@ -117,7 +117,8 @@ def check():
     assert actual == expected, f'Missing or stale pages: {actual ^ expected}'
     assert not moved & expected, f'A page cannot be both moved and published: {moved & expected}'
     for source, target in redirects.items():
-        assert target + 'index.html' in expected, f'Redirect to a page that does not exist: {source} -> {target}'
+        # A target may be a static page too: /mindmap/m/ moved to the static /xdraft/m/ (xDraft 2.0.0).
+        assert target + 'index.html' in expected | static, f'Redirect to a page that does not exist: {source} -> {target}'
         text = (OUT / source / 'index.html').read_text()
         page = Page(text)
         assert page.canonical and page.canonical.endswith('/' + target), f'Redirect canonical: {source}'

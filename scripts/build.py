@@ -20,7 +20,7 @@ from products_page import render_products
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'dist'
 # Published byte for byte at the same path under dist/, with no site chrome: files whose exact
-# path and content another system depends on (Apple's app site association, the xDraft map link page under /mindmap/m/).
+# path and content another system depends on (Apple's app site association, the xDraft map link page under /xdraft/m/).
 STATIC = ROOT / 'src/static'
 # Old path → new path of pages that moved (MindMap AI became xDraft). GitHub Pages cannot answer
 # with a 301, so each old path keeps a small page that sends visitors on; Cloudflare may redirect first.
