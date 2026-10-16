@@ -67,5 +67,11 @@
   "Review kết quả": "Review results",
   "Kết nối kết quả với repo, PR/MR và người duyệt.": "Connect results to repositories, PRs or MRs, and reviewers.",
   "Học từ mỗi task": "Learn from each task",
-  "Giữ lại quyết định, memory và skill cho vòng tiếp theo.": "Preserve decisions, memory, and skills for the next cycle."
+  "Giữ lại quyết định, memory và skill cho vòng tiếp theo.": "Preserve decisions, memory, and skills for the next cycle.",
+  "KIẾN TRÚC PHẦN MỀM / OPEN BOOK": "SOFTWARE ARCHITECTURE / OPEN BOOK",
+  "Thư viện kiến thức xDev": "From the xDev knowledge library",
+  "Kiến trúc phức tạp.<br>Tư duy rõ ràng.": "Complex architecture.<br>Clear thinking.",
+  "Khám phá C4 Model qua một cuốn sách mở bằng tiếng Việt và tiếng Anh: lý thuyết, bốn cấp độ, sơ đồ bổ trợ và ví dụ minh họa.": "Explore C4 Model in a free bilingual open book: theory, four zoom levels, supporting diagrams and original examples.",
+  "Khám phá sách C4 Model": "Explore the C4 Model book",
+  "PHÓNG ĐẠI KIẾN TRÚC": "ZOOM INTO ARCHITECTURE"
 }
