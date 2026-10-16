@@ -27,3 +27,12 @@
 .app-prices{margin:20px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.app-prices li{padding:22px;border:1px solid var(--line);border-radius:14px;background:#fff}.app-prices h3{font-size:14px;margin:0;color:var(--muted);font-weight:600;letter-spacing:0}.app-prices .app-price{margin:8px 0 6px}.app-prices .app-price strong{font-size:26px}.app-prices p{margin:0;font-size:14px;line-height:1.7;color:var(--muted)}
 @media(max-width:1100px){.app-prices{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.app-prices{grid-template-columns:1fr}.app-new li{font-size:15px}}
+
+/* C4 Model learning journal promo on xDraft product pages */
+.app-c4-feature{margin-top:48px;margin-bottom:80px;display:grid;grid-template-columns:1fr .8fr;gap:8%;align-items:center;padding-top:55px;padding-bottom:55px;border-top:1px solid #e0e6ee;border-bottom:1px solid #e0e6ee}
+.app-c4-feature h2{font-size:clamp(29px,3vw,43px);line-height:1.16;letter-spacing:-.05em;margin:18px 0}
+.app-c4-feature p:not(.eyebrow){font-size:15px;color:#60738c;line-height:1.8;max-width:530px;margin:0 0 28px}
+.app-c4-feature-mark{background:#102647;border-radius:14px;padding:28px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.app-c4-feature-mark span{font-size:11px;font-weight:750;letter-spacing:.06em;color:#d5e8ff;background:#20518b;border:1px solid #4980be;border-radius:8px;min-height:78px;display:flex;align-items:center;justify-content:center;padding:10px;text-align:center}
+.app-c4-feature-mark span:nth-child(2){background:#175cba}
+@media(max-width:720px){.app-c4-feature{grid-template-columns:1fr;gap:26px;padding-top:35px;padding-bottom:35px}.app-c4-feature-mark{padding:18px}.app-c4-feature-mark span{min-height:57px;font-size:10px}}
