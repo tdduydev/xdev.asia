@@ -98,7 +98,7 @@ def check():
     assert len(c4_en['levels']) == len(c4_vi['levels']) == 4, 'C4 must explain four levels'
     assert len(c4_en['chapters']) == len(c4_vi['chapters']) == 15, 'C4 chapter outline must match'
     assert [(ch['slug'], bool(ch['sections'])) for ch in c4_en['chapters']] == [(ch['slug'], bool(ch['sections'])) for ch in c4_vi['chapters']], 'C4 localized chapter routes differ'
-    c4_paths = ['c4-model/'] + [f'c4-model/chapters/{ch["slug"]}/' for ch in c4_en['chapters'] if ch['sections']]
+    c4_paths = ['xdraft/c4-model/'] + [f'xdraft/c4-model/{ch["slug"]}/' for ch in c4_en['chapters'] if ch['sections']]
     apps = load_apps()
     # Every page exists in EN and VI; an app's pages also in each extra language the app declares.
     page_locales = {}
@@ -195,12 +195,12 @@ def check():
     for locale in ['en', 'vi']:
         prefix = '' if locale == 'en' else 'vi/'
         book = c4_en if locale == 'en' else c4_vi
-        landing = (OUT / prefix / 'c4-model/index.html').read_text()
-        assert 'data-c4-tab="0"' in landing and 'data-c4-search' in landing, 'C4 explorer or search missing'
+        landing = (OUT / prefix / 'xdraft/c4-model/index.html').read_text()
+        assert 'data-c4-tab="0"' in landing and 'data-c4-search' in landing and 'data-c4-filter' in landing, 'C4 blog explorer or filters missing'
         for chapter in book['chapters']:
             if not chapter['sections']:
                 continue
-            path = OUT / prefix / 'c4-model/chapters' / chapter['slug'] / 'index.html'
+            path = OUT / prefix / 'xdraft/c4-model' / chapter['slug'] / 'index.html'
             article = path.read_text()
             assert chapter['title'] in article, f'Missing C4 chapter heading: {path}'
             assert 'class="c4-reading-section"' in article, f'Empty C4 chapter: {path}'
@@ -209,6 +209,7 @@ def check():
         assert 'hive/' in home_page.anchors, 'Home must link to the Hive overview'
         hive = (OUT / prefix / 'hive/index.html').read_text()
         assert 'xDev Hive' in hive and 'MCP' in hive, 'Hive overview missing product content'
+        assert any('xdraft/c4-model/' in href for href in home_page.anchors), 'Home must link to C4 blog'
         locale = 'vi' if prefix else 'en'
         content = json.loads((ROOT / f'src/hive.{locale}.json').read_text())
         assert len(content['panels']) == 6 and len(content['catalog']) == 6
