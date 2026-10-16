@@ -16,6 +16,7 @@ from brand_page import render_brand
 from docs_page import render_docs
 from hive_page import render_hive
 from products_page import render_products
+from c4_page import render_index as render_c4_index, render_chapter as render_c4_chapter
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'dist'
@@ -61,6 +62,7 @@ def decorate(page, language, path, languages=SITE_LANGUAGES):
     page = page.replace('@brand@', relative(current, route(site, 'brand/')))
     page = page.replace('@products@', relative(current, route(site, 'products/')))
     page = page.replace('@hive@', relative(current, route(site, 'hive/')))
+    page = page.replace('@c4@', relative(current, route(site, 'c4-model/')))
     # Generic form for data-driven pages: @route:xdraft/privacy/@ links to that path in this page's language.
     page = re.sub(r'@route:([^@"\s]*)@', lambda match: relative(current, route(language, match.group(1))), page)
     social_links = '<div class="social-links" role="group" aria-label="' + ui['social'] + '">' + ''.join(
@@ -97,8 +99,8 @@ def shell(language, title, description, body, product=False):
     return f'''<!doctype html><html lang="{language}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{escape(title)} — xDev Asia</title><meta name="description" content="{escape(description, quote=True)}"><meta property="og:title" content="{escape(title, quote=True)}"><meta property="og:description" content="{escape(description, quote=True)}"><meta property="og:type" content="website"><link rel="icon" href="assets/favicon.png"><link rel="stylesheet" href="styles.css"></head><body>
 <a class="skip" href="#main">{ui['skip']}</a>
-<header><div class="container header-inner"><a class="brand" href="@home@" aria-label="xDev Asia"><img src="assets/brand/wordmark-v2/{logo}" alt="{brand_name}" width="143" height="70"></a><nav aria-label="{ui['main_navigation']}"><a href="@products@">{ui['products']}</a><a href="@docs@">{ui['docs']}</a><a href="https://blog.xdev.asia">Blog ↗</a></nav></div></header>
-{body}<footer class="container"><a href="@home@">© 2026 xDev Asia</a><div class="footer-navigation"><div class="footer-links"><a href="@products@">{ui['products']}</a><a href="@brand@">{ui['brand']}</a><a href="@studio@">AI Studio</a><a href="@docs@">{ui['documentation']}</a></div>@social@</div></footer></body></html>'''
+<header><div class="container header-inner"><a class="brand" href="@home@" aria-label="xDev Asia"><img src="assets/brand/wordmark-v2/{logo}" alt="{brand_name}" width="143" height="70"></a><nav aria-label="{ui['main_navigation']}"><a href="@products@">{ui['products']}</a><a href="@c4@">C4 Model</a><a href="@docs@">{ui['docs']}</a><a href="https://blog.xdev.asia">Blog ↗</a></nav></div></header>
+{body}<footer class="container"><a href="@home@">© 2026 xDev Asia</a><div class="footer-navigation"><div class="footer-links"><a href="@products@">{ui['products']}</a><a href="@brand@">{ui['brand']}</a><a href="@c4@">C4 Model</a><a href="@studio@">AI Studio</a><a href="@docs@">{ui['documentation']}</a></div>@social@</div></footer></body></html>'''
 
 
 def write_redirect(source, target):
@@ -198,6 +200,18 @@ def build():
                 page = page.replace(f'<a href="@docs@">{UI[language]["docs"]}</a>', f'<a href="@route:{content["slug"]}/{support}@">{escape(content["labels"]["support"])}</a>', 1)
                 page = page.replace(f'<a href="@docs@">{UI[language]["documentation"]}</a>', f'<a href="@docs@">{UI[language]["studio_docs"]}</a>')
                 decorate(page, language, path, list(app))
+    for language in ['en', 'vi']:
+        book = json.loads((ROOT / f'src/c4.{language}.json').read_text())
+        page = shell(language, 'C4 Model — ' + book['subtitle'], book['metaDescription'], render_c4_index(book))
+        page = page.replace('</head>', '<link rel="stylesheet" href="assets/c4-page.css"></head>')
+        page = page.replace('</body>', '<script src="assets/c4-page.js" defer></script></body>')
+        decorate(page, language, 'c4-model/')
+        for chapter in book['chapters']:
+            if not chapter['sections']:
+                continue
+            page = shell(language, chapter['title'] + ' | C4 Model', chapter['summary'], render_c4_chapter(book, chapter))
+            page = page.replace('</head>', '<link rel="stylesheet" href="assets/c4-page.css"></head>')
+            decorate(page, language, 'c4-model/chapters/' + chapter['slug'] + '/')
     for language in ['en', 'vi']:
         brand = json.loads((ROOT / f'src/brand.{language}.json').read_text())
         page = shell(language, brand['title'], brand['description'], render_brand(brand))
