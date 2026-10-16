@@ -1,0 +1,466 @@
+{
+  "language": "en",
+  "eyebrow": "xDev / Software architecture / Open book",
+  "title": "C4 Model",
+  "subtitle": "Understand the architecture. Draw what matters.",
+  "description": "An open book on visualising software architecture: from the system boundary to source code, from principles to clearer communication.",
+  "metaDescription": "Free C4 Model open book on xDev Asia: foundations, Context, Container, Component, Code and supporting diagrams.",
+  "ui": {
+    "start": "Start reading",
+    "toc": "Table of contents",
+    "overview": "Explore the four levels",
+    "levels": "Four views, one system",
+    "levelsIntro": "C4 does not ask you to document everything. Choose the zoom level that answers the question your audience has.",
+    "chapters": "Inside the book",
+    "chaptersIntro": "Published drafts are available to read. Upcoming chapters are clearly marked.",
+    "all": "All chapters",
+    "read": "Read chapter",
+    "planned": "In progress",
+    "published": "Draft available",
+    "part": "Part",
+    "reading": "Book reader",
+    "back": "Back to contents",
+    "previous": "Previous chapter",
+    "next": "Next chapter",
+    "resources": "Further reading",
+    "search": "Search chapters or topics…",
+    "empty": "No matching chapters.",
+    "question": "Think about it",
+    "labelContext": "Scope",
+    "labelExample": "Illustration",
+    "noteTitle": "One principle to remember",
+    "note": "You do not need all four levels in every project. One useful, accurate diagram beats a large stack of diagrams made to tick boxes.",
+    "disclaimer": "An independent learning manuscript by xDev. The C4 Model was created by Simon Brown; this is not an official C4 publication.",
+    "review": "Content is cross-checked against c4model.com; example diagrams are original illustrations, not representations of live systems.",
+    "reference": "Official references",
+    "readTime": "min read",
+    "contents": "On this page",
+    "keyboard": "Choose a level to change the illustrated viewpoint",
+    "footer": "Learn architecture to communicate it better."
+  },
+  "levels": [
+    {
+      "code": "01",
+      "name": "System Context",
+      "title": "Outside-in view",
+      "description": "Who uses the system? Which other systems does it interact with? Suitable for technical and non-technical audiences.",
+      "scope": "One software system and its surroundings",
+      "example": "User → National Data Portal → Domain Data Systems"
+    },
+    {
+      "code": "02",
+      "name": "Container",
+      "title": "Applications and data stores",
+      "description": "What applications, services and data stores exist within the boundary, and how do they communicate?",
+      "scope": "One software system",
+      "example": "Web App → API → Database"
+    },
+    {
+      "code": "03",
+      "name": "Component",
+      "title": "Responsibilities within an app",
+      "description": "How is one application structured internally, and which components depend on others?",
+      "scope": "One selected container",
+      "example": "Controller → Domain Service → Repository"
+    },
+    {
+      "code": "04",
+      "name": "Code",
+      "title": "Implementation structures",
+      "description": "Which classes, interfaces and modules implement a component? Show them only where useful.",
+      "scope": "One selected component",
+      "example": "Interface → Class → Strategy"
+    }
+  ],
+  "chapters": [
+    {
+      "slug": "vi-sao-can-c4",
+      "number": 1,
+      "part": 1,
+      "title": "Why visualise software architecture?",
+      "summary": "From boxes and lines to a shared language for teams.",
+      "sections": [
+        {
+          "heading": "Architecture is more than code",
+          "paragraphs": [
+            "A system can work correctly while remaining difficult to explain. Source code contains implementation detail; an architecture view exposes boundaries, consequential decisions, and the relationships between important parts.",
+            "Different stakeholders ask different questions. Operations teams ask where a service runs; developers ask about internal structure; decision makers ask which external systems are involved. A single overloaded diagram rarely serves them all."
+          ],
+          "points": [
+            "Start with the audience and their questions.",
+            "Use a diagram to support discussion, not merely to document.",
+            "Name relationships as meaningful actions."
+          ]
+        },
+        {
+          "heading": "Where free-form diagrams fail",
+          "paragraphs": [
+            "Boxes and arrows are useful, but only when they carry consistent meaning. If a box represents an application in one picture and a physical server in another, readers cannot reliably navigate between them.",
+            "C4 supplies a consistent hierarchy of abstractions while remaining notation-agnostic. Clarity matters more than a mandated colour scheme or editor."
+          ]
+        },
+        {
+          "heading": "A communication tool",
+          "paragraphs": [
+            "Useful diagrams accelerate reviews, onboarding, threat modelling and conversations about change. Evaluate a diagram by asking whether a newcomer can read it, an implementer can challenge it, and a future maintainer can keep it accurate."
+          ]
+        }
+      ],
+      "questions": [
+        "Which existing diagram in your project can be interpreted in more than one way?"
+      ]
+    },
+    {
+      "slug": "truu-tuong-hoa",
+      "number": 2,
+      "part": 1,
+      "title": "Abstraction and system boundaries",
+      "summary": "Understanding software systems, containers, components and ownership.",
+      "sections": [
+        {
+          "heading": "Abstraction is a deliberate choice",
+          "paragraphs": [
+            "To abstract is to retain information needed for a question while hiding unrelated detail. Maps of countries, cities and buildings can all be accurate but are not interchangeable. The same applies to architectural views.",
+            "Each C4 zoom level has a scope. More detailed views should preserve the context of the higher level they elaborate."
+          ],
+          "points": [
+            "State what the diagram is about.",
+            "Do not confuse level of detail with importance.",
+            "Use a consistent vocabulary across diagrams."
+          ]
+        },
+        {
+          "heading": "Three structural boundaries",
+          "paragraphs": [
+            "A software system delivers capabilities to users or other systems. A C4 container is an application or data store required by that software system—not necessarily a Docker container. A component groups related functionality within a container.",
+            "Boundaries of software responsibility may differ from network zones, Kubernetes namespaces, physical machines or reporting lines. These are separate architectural viewpoints."
+          ]
+        },
+        {
+          "heading": "Meaningful relationships",
+          "paragraphs": [
+            "An arrow should explain whether an element requests a service, publishes an event, reads records or sends a batch. At System Context level, business meaning is often enough; Container diagrams can also name protocols and technologies."
+          ]
+        }
+      ],
+      "questions": [
+        "What is a software boundary and what is an infrastructure boundary in your project?"
+      ]
+    },
+    {
+      "slug": "triet-ly-c4",
+      "number": 3,
+      "part": 1,
+      "title": "C4 philosophy and principles",
+      "summary": "Zoom levels, tooling independence and just-enough documentation.",
+      "sections": [
+        {
+          "heading": "Maps of software",
+          "paragraphs": [
+            "The C4 Model, developed by Simon Brown, describes static software structures through four levels: Context, Container, Component and Code. Like a map that zooms from a region to a street, each level tells a different story.",
+            "C4 is not a development process, deployment pattern or recommendation for microservices. It helps you communicate a chosen design; it does not choose the design for you."
+          ]
+        },
+        {
+          "heading": "Notation and tooling independent",
+          "paragraphs": [
+            "A C4 model can be drawn with ordinary boxes and arrows, so long as its elements and relationships are explicit and consistent. Structurizr, PlantUML, Mermaid or diagrams.net can all be part of the workflow.",
+            "The best tool is the one your team can collaboratively maintain and keep aligned with reality."
+          ]
+        },
+        {
+          "heading": "Use only what adds value",
+          "paragraphs": [
+            "Many teams get most value from System Context and Container diagrams. Component diagrams are optional, and Code diagrams may be generated on demand. Before drawing anything, write down the question it needs to answer."
+          ]
+        }
+      ],
+      "questions": [
+        "What two views would you keep for onboarding a developer to your system?"
+      ]
+    },
+    {
+      "slug": "system-context",
+      "number": 4,
+      "part": 2,
+      "title": "Level 1 — System Context",
+      "summary": "Users, the system of interest and external dependencies.",
+      "sections": [
+        {
+          "heading": "The central question",
+          "paragraphs": [
+            "A System Context diagram explains who interacts with the software system of interest and which external software systems it depends on. It is about scope and relationships rather than internal applications and frameworks.",
+            "Place the system at the centre and surround it with directly related people, roles and software systems. Label each relationship with what it does."
+          ]
+        },
+        {
+          "heading": "What belongs in this view",
+          "paragraphs": [
+            "Focus on users, outside systems and the exchange of meaningful information. Controllers, database tables, CPU allocations and load balancers are not appropriate at this zoom level.",
+            "In a hypothetical national healthcare data platform, the centralised healthcare treatment database managed by the ministry may be an integration source. Do not invent direct interfaces to hospital HIS/LIS/EMR products if they are not part of the agreed integration scope."
+          ]
+        },
+        {
+          "heading": "How to review it",
+          "paragraphs": [
+            "A non-technical stakeholder should be able to identify the system boundary, its key users and significant dependencies without needing a tour of API endpoints."
+          ]
+        }
+      ],
+      "questions": [
+        "Can your readers separate systems you own from systems managed by others?"
+      ]
+    },
+    {
+      "slug": "container",
+      "number": 5,
+      "part": 2,
+      "title": "Level 2 — Container",
+      "summary": "Applications and data stores; not the same thing as Docker.",
+      "sections": [
+        {
+          "heading": "What container means in C4",
+          "paragraphs": [
+            "A C4 container represents an application or a data store needed for the overall software system: a frontend, API, mobile app, database, queue or batch processor. It is not synonymous with a Docker image, pod, or virtual machine.",
+            "One application running in Docker can still be one C4 container; multiple applications on the same server can be separate C4 containers."
+          ]
+        },
+        {
+          "heading": "The first technology-focused view",
+          "paragraphs": [
+            "A Container diagram shows the main applications and data stores inside the software-system boundary, their responsibilities, technologies and communication paths.",
+            "A data platform might include a Portal, Integration API, Data Processing Worker, Data Store and Message Broker. These are logical runtime building blocks; not every library deserves its own box."
+          ],
+          "points": [
+            "Label responsibilities and useful technology decisions.",
+            "Keep connected external systems visible where relevant.",
+            "Put hosts, clusters and replicas on Deployment diagrams."
+          ]
+        },
+        {
+          "heading": "Logical versus physical structure",
+          "paragraphs": [
+            "Scaling, load balancing and failover are deployment concerns that vary by environment. Treat the container structure as a separate, stable logical view and map it onto infrastructure when needed."
+          ]
+        }
+      ],
+      "questions": [
+        "Is a PostgreSQL database always the same thing as a PostgreSQL server?"
+      ]
+    },
+    {
+      "slug": "component",
+      "number": 6,
+      "part": 2,
+      "title": "Level 3 — Component",
+      "summary": "Responsibilities and dependencies within one application.",
+      "sections": [
+        {
+          "heading": "Zoom inside a selected container",
+          "paragraphs": [
+            "A Component diagram decomposes one C4 container into coherent functional elements with identifiable responsibilities and interfaces. A component is not required to be a single class or a separately deployed microservice.",
+            "Only use this level when the internal decomposition is useful to a technical reader. More diagrams mean more work to keep them current."
+          ]
+        },
+        {
+          "heading": "An integration API example",
+          "paragraphs": [
+            "An illustrative API might contain an Ingestion Controller, Validation Component, Identity Matching Component, Mapping Component and Repository. Actual boundaries depend on the system's design, not on a prescribed C4 architecture.",
+            "Relationships should show important dependencies and data flows. A component that depends on everything else can indicate an unclear responsibility boundary."
+          ]
+        },
+        {
+          "heading": "Not a class diagram",
+          "paragraphs": [
+            "The goal is not to enumerate methods, DTOs and constructors. That level of detail belongs in a Code diagram or an IDE when it helps answer a specific implementation question."
+          ]
+        }
+      ],
+      "questions": [
+        "Can you describe each component's responsibility without naming a class?"
+      ]
+    },
+    {
+      "slug": "code",
+      "number": 7,
+      "part": 2,
+      "title": "Level 4 — Code",
+      "summary": "Use class, interface and module diagrams when useful.",
+      "sections": [
+        {
+          "heading": "The deepest zoom",
+          "paragraphs": [
+            "A Code diagram reveals how one component is implemented using classes, interfaces, modules or other language-appropriate constructs. A UML class diagram is one option, but not a requirement.",
+            "The point is to explain hard-to-see relationships and significant design patterns—not to redraw an entire repository."
+          ]
+        },
+        {
+          "heading": "Keeping code views current",
+          "paragraphs": [
+            "Code changes much faster than a system boundary. Hand-maintained diagrams may become stale after routine refactoring. Generating a diagram on demand or documenting a durable architectural decision is often more effective.",
+            "For instance, show a MatchingStrategy interface and the concrete strategies implementing it, rather than every getter and setter."
+          ]
+        },
+        {
+          "heading": "Preserve context",
+          "paragraphs": [
+            "Always make it possible to trace a code view back to its component, containing application and software system. Deep detail without a navigable context is hard to use."
+          ]
+        }
+      ],
+      "questions": [
+        "Which relationship in your codebase is worth a diagram rather than an IDE search?"
+      ]
+    },
+    {
+      "slug": "system-landscape",
+      "number": 8,
+      "part": 3,
+      "title": "System Landscape",
+      "summary": "The map of multiple systems in an organisation.",
+      "sections": [
+        {
+          "heading": "Beyond one system",
+          "paragraphs": [
+            "A System Landscape diagram looks across a portfolio of software systems. It helps describe how systems coexist within a department, organisation or ecosystem rather than focusing on one system of interest.",
+            "It is a supporting diagram, not a mandatory Level 0. An organisation with many shared platforms may find it particularly useful."
+          ]
+        },
+        {
+          "heading": "An enterprise architecture bridge",
+          "paragraphs": [
+            "A landscape can reveal common dependencies, overlapping responsibilities and integration hubs. Avoid squeezing an entire organisation into an unreadable image; split by domain or ownership when appropriate.",
+            "From a landscape, choose a system and zoom into its System Context view."
+          ]
+        }
+      ],
+      "questions": [
+        "What scope would keep your system landscape readable?"
+      ]
+    },
+    {
+      "slug": "dynamic",
+      "number": 9,
+      "part": 3,
+      "title": "Dynamic Diagram",
+      "summary": "Describe a meaningful collaboration scenario in order.",
+      "sections": [
+        {
+          "heading": "Add an ordering to structure",
+          "paragraphs": [
+            "The core C4 diagrams depict static structure. A Dynamic diagram is a supporting view that explains how existing model elements collaborate during a specific scenario, often by numbering interactions.",
+            "This is useful for tracing a request, a data-import batch or a distributed failure path."
+          ]
+        },
+        {
+          "heading": "Choose scenarios intentionally",
+          "paragraphs": [
+            "For example: 1) a source submits records; 2) the API authenticates; 3) a worker validates; 4) matching detects duplicates; 5) a data store records the outcome. These steps should reference elements already introduced in structural diagrams.",
+            "If branches, states and timing details become complex, supplement C4 with UML sequence or activity diagrams."
+          ]
+        }
+      ],
+      "questions": [
+        "Which failure-path scenario deserves its own dynamic view?"
+      ]
+    },
+    {
+      "slug": "deployment",
+      "number": 10,
+      "part": 3,
+      "title": "Deployment Diagram",
+      "summary": "Map logical software onto actual environments.",
+      "sections": [
+        {
+          "heading": "Two different architectural stories",
+          "paragraphs": [
+            "A Container diagram shows applications and data stores as logical structures. A Deployment diagram shows where instances of those applications and stores run in a particular environment.",
+            "Deployment nodes may represent physical machines, virtual machines, containers, cloud regions or execution environments. Nodes can be nested."
+          ]
+        },
+        {
+          "heading": "Multiple environments and reliability",
+          "paragraphs": [
+            "Development, staging and production often have different arrangements. Separate views can capture replication, traffic balancing, network topology and disaster recovery without overloading the stable logical model.",
+            "Two C4 containers do not automatically require two dedicated servers. Deployment is a separate design choice."
+          ]
+        },
+        {
+          "heading": "Keep the software in the infrastructure story",
+          "paragraphs": [
+            "A network drawing filled with VM names and CPU counts still leaves people wondering what application runs where. A C4-style Deployment diagram links actual infrastructure nodes to the software architecture they host."
+          ]
+        }
+      ],
+      "questions": [
+        "Would production and disaster recovery benefit from separate deployment views?"
+      ]
+    },
+    {
+      "slug": "c4-va-uml",
+      "number": 11,
+      "part": 4,
+      "title": "C4, UML, ArchiMate and 4+1",
+      "summary": "Compare communication goals, notation and complementary roles.",
+      "sections": [],
+      "questions": []
+    },
+    {
+      "slug": "nguyen-tac-ve",
+      "number": 12,
+      "part": 4,
+      "title": "Diagram readability and review",
+      "summary": "Naming, relationship labels, legends and clear visual hierarchy.",
+      "sections": [],
+      "questions": []
+    },
+    {
+      "slug": "documentation-as-code",
+      "number": 13,
+      "part": 4,
+      "title": "Architecture documentation as code",
+      "summary": "Version models, diagrams and documentation alongside code.",
+      "sections": [],
+      "questions": []
+    },
+    {
+      "slug": "quy-trinh-ap-dung",
+      "number": 14,
+      "part": 5,
+      "title": "C4 in ADD/SDD documents",
+      "summary": "Create a just-enough set of architecture views.",
+      "sections": [],
+      "questions": []
+    },
+    {
+      "slug": "case-study-y-te",
+      "number": 15,
+      "part": 5,
+      "title": "Case study — Health data platform",
+      "summary": "A running example of system boundaries and data integration.",
+      "sections": [],
+      "questions": []
+    }
+  ],
+  "parts": [
+    "Foundational thinking",
+    "The four core levels",
+    "Supporting diagrams",
+    "Comparison and quality",
+    "Putting it into practice"
+  ],
+  "resources": [
+    {
+      "title": "C4 Model — Official website",
+      "url": "https://c4model.com/"
+    },
+    {
+      "title": "C4 Model — Diagram types",
+      "url": "https://c4model.com/diagrams"
+    },
+    {
+      "title": "C4 Model — FAQ",
+      "url": "https://c4model.com/faq"
+    }
+  ]
+}
