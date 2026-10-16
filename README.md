@@ -11,6 +11,8 @@ Static English/Vietnamese product website for XDev AI Studio, xDev Hive, xDraft 
 | `/products/` | `/vi/products/` | Product directory: AI Studio, Hive, xDraft and Browser Print |
 | `/hive/` | `/vi/hive/` | xDev Hive AI SDLC introduction, showcase and setup links |
 | `/xdraft/` | `/vi/xdraft/` | xDraft overview: diagram types, privacy summary, pricing, platforms |
+| `/xdraft/c4-model/` | `/vi/xdraft/c4-model/` | C4 Model architecture blog linked to xDraft; bilingual topic filters, featured story and articles |
+| `/xdraft/c4-model/<slug>/` | `/vi/xdraft/c4-model/<slug>/` | C4 Model article pages: 10 published drafts; 15 topics planned |
 | `/xdraft/privacy/` | `/vi/xdraft/privacy/` | xDraft Privacy Policy (linked from the app and App Store Connect from 2.0.0) |
 | `/xdraft/terms/` | `/vi/xdraft/terms/` | xDraft Terms of Use |
 | `/xdraft/support/` | `/vi/xdraft/support/` | xDraft Support (App Store support URL from 2.0.0) |
@@ -29,6 +31,18 @@ MindMap AI became xDraft with app version 2.0.0. The old app pages under `/mindm
 `/xdraft/m/` (the page an xDraft map link opens without the app; the map stays in the URL fragment and is drawn in the browser) and `/.well-known/apple-app-site-association` (universal links and the App Clip) come unchanged from `src/static/`. Their sources are `docs/web/xdraft/m/` and `docs/web/.well-known/` in the xdev-xdraft repository; change them there first. The page picks English, Vietnamese or Japanese from the browser and has no site header, footer or alternates. Test: `node --test src/static/xdraft/m/decode.test.mjs`.
 
 The language switch goes to the corresponding page (EN/VI, plus 日本語 on the xDraft pages). Navigation works without JavaScript. Each route has its own title, description, canonical and alternate-language metadata. Relative links also support a GitHub Pages repository subpath.
+
+## C4 Model editorial blog
+
+The C4 Model section is nested under the xDraft product because xDraft supports C4, deployment and other architecture diagrams. Canonical blog routes are `/xdraft/c4-model/` and `/vi/xdraft/c4-model/`, with individual articles one segment below them.
+
+The older top-level `/c4-model/` and `/vi/c4-model/` paths, including `/chapters/<slug>/` routes, are retained as client-side redirects (with canonical tags) to avoid broken bookmarks. Do not publish two canonical copies.
+
+- Article data: `src/c4.en.json`, `src/c4.vi.json`. Existing entries have 15 planned themes and 10 articles with reading content.
+- Renderer: `scripts/c4_page.py`, built by `scripts/build.py` into `dist/xdraft/c4-model/`.
+- Styles and interaction: `src/assets/c4-page.css` and `src/assets/c4-page.js`.
+- The xDraft overview features a C4 journal panel, and the site navigation and homepage link into the same nested route.
+- The journal is an independent learning resource. The C4 Model was created by Simon Brown; references point to the official site, while diagrams and prose here are original examples.
 
 ## Build, check, preview
 
