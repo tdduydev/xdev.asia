@@ -132,7 +132,7 @@ def render_index(content):
 <div class="c4-blog-breadcrumb"><a href="@route:xdraft/@">xDraft</a><span>/</span><span>C4 Model</span><span class="c4-blog-pulse" aria-hidden="true">●</span></div>
 <p class="c4-eyebrow">{e(labels["kicker"])}</p>
 <div class="c4-blog-hero-grid"><div class="c4-blog-hero-copy">
-<h1><span>C4 Model.</span><br>{e(ui["chapters"])}</h1>
+<h1><span>C4 Model.</span><br>{e(labels["heroTitle"])}</h1>
 <p class="c4-blog-tagline">{e(content["subtitle"])}</p>
 <p class="c4-blog-introduction">{e(content["description"])}</p>
 <div class="c4-blog-hero-actions"><a class="c4-action-primary" href="{chapter_route(lead["slug"])}">{e(ui["start"])} ↗</a>
