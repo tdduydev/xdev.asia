@@ -1,0 +1,482 @@
+{
+  "language": "vi",
+  "eyebrow": "xDev / Kiến trúc phần mềm / Sách mở",
+  "title": "C4 Model",
+  "subtitle": "Hiểu kiến trúc. Vẽ đúng điều quan trọng.",
+  "description": "Một cuốn sách mở bằng tiếng Việt về tư duy mô hình hóa kiến trúc phần mềm: từ ngữ cảnh hệ thống đến mã nguồn, từ lý thuyết đến khả năng truyền đạt.",
+  "metaDescription": "Sách mở C4 Model bằng tiếng Việt: nguyên lý, Context, Container, Component, Code và sơ đồ bổ trợ. Đọc miễn phí trên xDev Asia.",
+  "ui": {
+    "start": "Bắt đầu đọc",
+    "toc": "Mục lục sách",
+    "overview": "Khám phá bốn cấp độ",
+    "levels": "Bốn góc nhìn, một hệ thống",
+    "levelsIntro": "C4 không yêu cầu bạn vẽ mọi chi tiết; hãy chọn mức phóng đại giúp người đọc trả lời câu hỏi hiện tại.",
+    "chapters": "Nội dung sách",
+    "chaptersIntro": "Các chương đã biên soạn có thể đọc ngay. Những chương tiếp theo được đánh dấu rõ trạng thái.",
+    "all": "Tất cả chương",
+    "read": "Đọc chương",
+    "planned": "Đang biên soạn",
+    "published": "Đã có nội dung",
+    "part": "Phần",
+    "reading": "Góc đọc sách",
+    "back": "Về mục lục",
+    "previous": "Chương trước",
+    "next": "Chương tiếp",
+    "resources": "Tài liệu đối chiếu",
+    "search": "Tìm theo tên chương hoặc chủ đề…",
+    "empty": "Không tìm thấy chương phù hợp.",
+    "question": "Câu hỏi suy ngẫm",
+    "labelContext": "Phạm vi",
+    "labelExample": "Minh họa",
+    "noteTitle": "Một nguyên tắc đáng nhớ",
+    "note": "Không có quy tắc phải vẽ đủ cả bốn cấp độ. Một sơ đồ có ích luôn tốt hơn nhiều sơ đồ chỉ để hoàn thiện hình thức.",
+    "disclaimer": "Bản thảo học tập do xDev biên soạn độc lập. C4 Model do Simon Brown tạo ra; tài liệu này không phải ấn phẩm chính thức.",
+    "review": "Nội dung được đối chiếu với c4model.com; sơ đồ minh họa là ví dụ tự dựng, không đại diện cho hệ thống thực tế.",
+    "reference": "Nguồn chính thức",
+    "readTime": "phút đọc",
+    "contents": "Trong chương",
+    "keyboard": "Chọn một cấp độ để đổi góc nhìn minh họa",
+    "footer": "Học kiến trúc để truyền đạt tốt hơn."
+  },
+  "levels": [
+    {
+      "code": "01",
+      "name": "System Context",
+      "title": "Bức tranh bên ngoài",
+      "description": "Ai dùng hệ thống? Nó tương tác với các hệ thống nào? Đây là góc nhìn cho cả người kỹ thuật và phi kỹ thuật.",
+      "scope": "Một hệ thống phần mềm và môi trường xung quanh",
+      "example": "Người dùng → Cổng dữ liệu quốc gia → CSDL chuyên ngành"
+    },
+    {
+      "code": "02",
+      "name": "Container",
+      "title": "Các ứng dụng và kho dữ liệu",
+      "description": "Bên trong hệ thống có những ứng dụng, dịch vụ, kho dữ liệu nào? Chúng giao tiếp bằng gì?",
+      "scope": "Một hệ thống phần mềm",
+      "example": "Web App → API → Cơ sở dữ liệu"
+    },
+    {
+      "code": "03",
+      "name": "Component",
+      "title": "Các khối trách nhiệm",
+      "description": "Một ứng dụng cụ thể được chia thành những thành phần nào? Chức năng và quan hệ phụ thuộc ra sao?",
+      "scope": "Một container được chọn",
+      "example": "Controller → Domain Service → Repository"
+    },
+    {
+      "code": "04",
+      "name": "Code",
+      "title": "Cấu trúc hiện thực",
+      "description": "Những lớp, giao diện và module nào hiện thực một thành phần? Chỉ mô tả khi giúp ra quyết định.",
+      "scope": "Một component được chọn",
+      "example": "Interface → Class → Strategy"
+    }
+  ],
+  "chapters": [
+    {
+      "slug": "vi-sao-can-c4",
+      "number": 1,
+      "part": 1,
+      "title": "Vì sao kiến trúc cần được trực quan hóa?",
+      "summary": "Từ sơ đồ hộp và mũi tên đến nhu cầu xây dựng ngôn ngữ chung.",
+      "sections": [
+        {
+          "heading": "Kiến trúc không chỉ là mã nguồn",
+          "paragraphs": [
+            "Một hệ thống phần mềm có thể hoạt động chính xác nhưng vẫn rất khó để người khác hiểu. Mã nguồn mô tả các chi tiết triển khai; tài liệu kiến trúc giúp chúng ta nhìn thấy ranh giới, các quyết định quan trọng và mối quan hệ giữa các phần của hệ thống.",
+            "Khi nhóm phát triển thiếu một bức tranh chung, mỗi người có thể tưởng tượng một kiến trúc khác nhau. Người vận hành quan tâm nơi phần mềm chạy, người lập trình quan tâm cấu trúc mô-đun, còn người quản lý muốn biết hệ thống kết nối với đơn vị nào. Không một sơ đồ duy nhất có thể trả lời tốt tất cả các câu hỏi ấy."
+          ],
+          "points": [
+            "Đối tượng đọc quyết định mức chi tiết cần trình bày.",
+            "Một sơ đồ tốt giúp người đọc đặt câu hỏi, không chỉ mô tả hiện trạng.",
+            "Tên gọi và đường liên kết cần mang ý nghĩa rõ ràng."
+          ]
+        },
+        {
+          "heading": "Vấn đề của sơ đồ tự do",
+          "paragraphs": [
+            "Những hình chữ nhật có mũi tên nối nhau không sai. Vấn đề xuất hiện khi mỗi sơ đồ dùng một quy ước khác nhau: lúc một hộp là phần mềm, lúc lại là máy chủ; mũi tên lúc biểu diễn HTTP, lúc chỉ diễn đạt một quan hệ rất mơ hồ.",
+            "C4 giúp nhóm dùng một hệ thống cấp độ trừu tượng nhất quán. Nó không áp đặt màu sắc, công cụ hay định dạng duy nhất; thay vào đó, nó yêu cầu người vẽ xác định rõ mình đang nói về loại cấu trúc nào."
+          ],
+          "points": [
+            "Đừng trộn cấp độ logic và triển khai vào cùng một hình nếu điều đó tạo ra nhập nhằng.",
+            "Đặt tên hộp theo trách nhiệm; mô tả mối quan hệ bằng động từ."
+          ]
+        },
+        {
+          "heading": "Sơ đồ là công cụ giao tiếp",
+          "paragraphs": [
+            "Sơ đồ kiến trúc không phải thành phẩm để treo tường. Giá trị của nó nằm ở các cuộc thảo luận thiết kế, đánh giá rủi ro, hướng dẫn thành viên mới và hỗ trợ bảo trì.",
+            "Hãy thử kiểm tra một sơ đồ bằng ba câu hỏi: người chưa biết hệ thống có đọc được không; người đang triển khai có phát hiện thiếu sót không; và sơ đồ có còn đúng sau một lần thay đổi quan trọng hay không?"
+          ]
+        }
+      ],
+      "questions": [
+        "Bạn đang có những sơ đồ mà hai người đọc ra hai ý nghĩa khác nhau không?",
+        "Sơ đồ hiện tại phục vụ ai và giúp họ quyết định điều gì?"
+      ]
+    },
+    {
+      "slug": "truu-tuong-hoa",
+      "number": 2,
+      "part": 1,
+      "title": "Trừu tượng hóa và ranh giới hệ thống",
+      "summary": "Phân biệt software system, container, component và phạm vi sở hữu.",
+      "sections": [
+        {
+          "heading": "Trừu tượng hóa là có chủ đích",
+          "paragraphs": [
+            "Trừu tượng hóa là chọn giữ lại những đặc điểm cần thiết cho một câu hỏi và tạm ẩn chi tiết không liên quan. Giống bản đồ: bản đồ quốc gia, thành phố và tòa nhà đều đúng, nhưng không thể dùng thay thế nhau cho mọi mục tiêu.",
+            "C4 mô tả một hệ thống ở nhiều mức phóng đại. Mỗi lần phóng vào bên trong, ranh giới của cấp trước tạo ngữ cảnh cho cấp tiếp theo. Vì vậy tính nhất quán giữa các sơ đồ quan trọng không kém độ chính xác của từng hình."
+          ],
+          "points": [
+            "Cấp cao không đồng nghĩa với ít quan trọng hơn.",
+            "Mọi cấp độ đều cần xác định đối tượng trung tâm.",
+            "Không đưa chi tiết của một cấp thấp hơn lên hình tổng quan khi chưa thực sự cần."
+          ]
+        },
+        {
+          "heading": "System, Container và Component",
+          "paragraphs": [
+            "Software system là tập hợp các chức năng phần mềm mang lại giá trị cho người dùng hoặc hệ thống khác. Container theo nghĩa C4 là một ứng dụng hoặc kho dữ liệu cần tồn tại để hệ thống hoạt động, không mặc định là Docker container. Component là nhóm chức năng có ranh giới và giao diện được xác định bên trong một container.",
+            "Ranh giới không nhất thiết trùng với biên giới mạng, namespace Kubernetes hay sơ đồ tổ chức. Đây là những góc nhìn khác nhau về một thực tại. Khi nhận ra chúng khác nhau, bạn tránh được lỗi vẽ mỗi máy chủ như một container của C4."
+          ],
+          "points": [
+            "Tên gọi nên bền vững hơn công nghệ triển khai.",
+            "Ranh giới sở hữu giúp phân biệt nội bộ và hệ thống ngoài."
+          ]
+        },
+        {
+          "heading": "Mối quan hệ phải trả lời được câu hỏi",
+          "paragraphs": [
+            "Một đường nối giữa hai thành phần phải nói rõ điều gì đang xảy ra: gửi yêu cầu, cung cấp dữ liệu, phát sự kiện, hay sử dụng dịch vụ. Chỉ dùng từ “kết nối” thường chưa đủ để đọc hiểu.",
+            "Không cần liệt kê toàn bộ giao thức và trường dữ liệu trên System Context. Ở Container, những lựa chọn như HTTP/JSON, AMQP hay JDBC có thể hữu ích hơn vì người đọc bắt đầu quan tâm đến thiết kế kỹ thuật."
+          ]
+        }
+      ],
+      "questions": [
+        "Đâu là ranh giới phần mềm, đâu là ranh giới hạ tầng trong hệ thống bạn đang thiết kế?"
+      ]
+    },
+    {
+      "slug": "triet-ly-c4",
+      "number": 3,
+      "part": 1,
+      "title": "Triết lý và các nguyên tắc C4 Model",
+      "summary": "Phân cấp, tính độc lập công cụ, đối tượng đọc và sự vừa đủ.",
+      "sections": [
+        {
+          "heading": "C4 là mô hình giao tiếp kiến trúc",
+          "paragraphs": [
+            "Simon Brown phát triển C4 nhằm cung cấp những “bản đồ mã nguồn” ở các mức chi tiết khác nhau. Bốn chữ C là Context, Container, Component và Code. Các mức này mô tả cấu trúc tĩnh của phần mềm theo thứ bậc.",
+            "C4 không thay thế quy trình phát triển phần mềm, không chỉ định tổ chức nhóm và không yêu cầu bạn áp dụng microservices. Nó cũng không tự động quyết định thiết kế nào là tốt; đó vẫn là công việc phân tích kiến trúc."
+          ]
+        },
+        {
+          "heading": "Độc lập ký pháp và công cụ",
+          "paragraphs": [
+            "Bạn có thể dùng hình chữ nhật đơn giản, màu sắc tự chọn và phần mềm vẽ quen thuộc, miễn các loại phần tử được định nghĩa rõ, nhất quán và đọc được. Không có yêu cầu dùng một biểu tượng cố định để đạt “chuẩn C4”.",
+            "Trong thực tế có thể dùng Structurizr, PlantUML, Mermaid, diagrams.net hoặc giải pháp nội bộ. Chọn công cụ dựa trên khả năng cộng tác, quản lý phiên bản và duy trì độ chính xác, thay vì hình ảnh đẹp nhất."
+          ]
+        },
+        {
+          "heading": "Chỉ vẽ cấp độ đem lại giá trị",
+          "paragraphs": [
+            "Một nhóm nhỏ có thể chỉ cần Context và Container. Component hữu ích khi cấu trúc bên trong phức tạp, còn Code Diagram nhiều khi tốt hơn nếu sinh tự động từ IDE. Thêm hình chỉ vì dự án có bốn cấp độ thường gây tốn chi phí bảo trì.",
+            "Nguyên tắc thực hành: trước mỗi sơ đồ hãy viết một câu hỏi mà hình cần trả lời, chọn cấp độ tương ứng và loại bỏ chi tiết không giúp trả lời câu hỏi đó."
+          ]
+        }
+      ],
+      "questions": [
+        "Nếu chỉ giữ lại hai sơ đồ để giới thiệu kiến trúc cho người mới, bạn sẽ chọn sơ đồ nào và vì sao?"
+      ]
+    },
+    {
+      "slug": "system-context",
+      "number": 4,
+      "part": 2,
+      "title": "Level 1 — System Context",
+      "summary": "Mô tả người dùng, hệ thống trung tâm và các phụ thuộc bên ngoài.",
+      "sections": [
+        {
+          "heading": "Câu hỏi trọng tâm",
+          "paragraphs": [
+            "System Context trả lời: ai tương tác với hệ thống phần mềm đang xét và các hệ thống bên ngoài nào trao đổi thông tin với nó? Đây là góc nhìn bên ngoài, chủ yếu nói về phạm vi và quan hệ, chưa phải danh sách công nghệ.",
+            "Hãy đặt hệ thống mục tiêu ở vị trí dễ thấy và bao quanh bằng người dùng, vai trò hoặc hệ thống liên quan trực tiếp. Mỗi hộp có tên, mô tả ngắn; mỗi quan hệ có hướng và mô tả ý nghĩa."
+          ]
+        },
+        {
+          "heading": "Nên và không nên thể hiện",
+          "paragraphs": [
+            "Nên tập trung vào người dùng, tổ chức sử dụng, hệ thống phụ thuộc và dòng thông tin ở mức nghiệp vụ. Tránh liệt kê controller, bảng dữ liệu, địa chỉ IP, CPU, load balancer hoặc các thành phần nội bộ nhỏ.",
+            "Với CSDL quốc gia về Y tế ở ví dụ minh họa, dữ liệu khám chữa bệnh được tích hợp từ CSDL KCB tập trung của Bộ Y tế. System Context không nên vẽ từng HIS/LIS/EMR bệnh viện như nguồn dữ liệu trực tiếp khi chúng không nằm trong phạm vi kết nối dự kiến."
+          ],
+          "points": [
+            "Đặt tên hệ thống ngoài theo đơn vị hoặc khả năng mà nó cung cấp.",
+            "Không giả định chi tiết tích hợp chưa được xác nhận."
+          ]
+        },
+        {
+          "heading": "Kiểm tra chất lượng",
+          "paragraphs": [
+            "Đưa sơ đồ cho một người không viết code xem. Nếu họ giải thích được giá trị hệ thống, nhóm người tương tác và những phụ thuộc quan trọng mà không phải hỏi “API này nằm đâu”, sơ đồ đã đáp ứng phần lớn mục tiêu."
+          ]
+        }
+      ],
+      "questions": [
+        "Người đọc có phân biệt được đâu là hệ thống trong phạm vi kiểm soát và đâu là phụ thuộc ngoài không?"
+      ]
+    },
+    {
+      "slug": "container",
+      "number": 5,
+      "part": 2,
+      "title": "Level 2 — Container",
+      "summary": "Phân rã hệ thống thành ứng dụng và kho dữ liệu, không đồng nhất với Docker.",
+      "sections": [
+        {
+          "heading": "Container trong C4 là gì?",
+          "paragraphs": [
+            "Container trong C4 là một ứng dụng hoặc nơi lưu trữ dữ liệu, vận hành như một đơn vị để hệ thống hoạt động: web app, SPA, mobile app, API, database hay queue. Đó không phải thuật ngữ đồng nghĩa với Docker image, pod Kubernetes hoặc máy chủ vật lý.",
+            "Ví dụ, một ứng dụng web chạy trong một Docker container vẫn có thể chỉ là một C4 Container. Ngược lại, nhiều ứng dụng có thể cùng chạy trên một máy chủ nhưng là những C4 Container khác nhau."
+          ]
+        },
+        {
+          "heading": "Bức tranh công nghệ đầu tiên",
+          "paragraphs": [
+            "Container Diagram đặt các ứng dụng và kho dữ liệu bên trong ranh giới system. Người đọc thấy mỗi khối đảm nhiệm việc gì, công nghệ chủ đạo và cách các khối tương tác.",
+            "Một hệ thống dữ liệu mẫu có thể gồm Portal (frontend), Integration API (backend), Data Processing Worker (xử lý bất đồng bộ), Data Store và Message Broker. Mỗi khối cần mô tả đúng trách nhiệm, không biến danh sách thư viện thành container."
+          ],
+          "points": [
+            "Chú thích vai trò và công nghệ nếu công nghệ là thông tin hữu ích.",
+            "Giữ các hệ thống ngoài ở rìa để làm rõ kết nối.",
+            "Những máy chủ, cluster, vùng mạng thuộc Deployment Diagram."
+          ]
+        },
+        {
+          "heading": "Phân biệt kiến trúc logic và vật lý",
+          "paragraphs": [
+            "Số lượng bản sao của API, cơ chế cân bằng tải hay failover là chi tiết vận hành theo môi trường. Container Diagram có thể nhắc ràng buộc chính nhưng không nên trở thành Deployment Diagram. Đưa việc ánh xạ các instance lên node triển khai vào hình riêng."
+          ]
+        }
+      ],
+      "questions": [
+        "Một PostgreSQL database và một máy chủ PostgreSQL có phải luôn là cùng một khối trong Container Diagram không?"
+      ]
+    },
+    {
+      "slug": "component",
+      "number": 6,
+      "part": 2,
+      "title": "Level 3 — Component",
+      "summary": "Mô tả trách nhiệm, giao diện và quan hệ phụ thuộc bên trong một ứng dụng.",
+      "sections": [
+        {
+          "heading": "Phóng đại một container",
+          "paragraphs": [
+            "Component Diagram nhìn vào bên trong một C4 Container được chọn. Các component thường tương ứng nhóm chức năng liên kết chặt, có trách nhiệm rõ ràng và hợp đồng giao tiếp; chúng không bắt buộc là từng class hay từng microservice.",
+            "Đừng vẽ component cho tất cả ứng dụng theo thói quen. Chỉ làm khi ranh giới nghiệp vụ, trách nhiệm hoặc phụ thuộc bên trong cần được làm rõ cho thiết kế và review."
+          ]
+        },
+        {
+          "heading": "Ví dụ phân rã API tích hợp dữ liệu",
+          "paragraphs": [
+            "Trong một Integration API minh họa có thể có Ingestion Controller nhận yêu cầu, Validation Component kiểm tra cấu trúc, Identity Matching Component nhận diện trùng lặp, Mapping Component chuẩn hóa và Repository lưu dữ liệu. Những thành phần này là khái niệm logic; thực tế phải điều chỉnh theo thiết kế đã được phê duyệt.",
+            "Các mối quan hệ nên cho thấy hướng phụ thuộc, lời gọi quan trọng và dữ liệu trao đổi. Nếu một component phụ thuộc trực tiếp vào mọi component khác, đó có thể là dấu hiệu ranh giới cần xem lại."
+          ]
+        },
+        {
+          "heading": "Phân biệt với sơ đồ class",
+          "paragraphs": [
+            "Component Diagram chưa cần chỉ ra tất cả public method, constructor hoặc class kế thừa. Khi nhóm cần xem cấu trúc mã nguồn của một component đặc biệt phức tạp, hãy chuyển đến Code Diagram hoặc công cụ IDE."
+          ]
+        }
+      ],
+      "questions": [
+        "Bạn có thể giải thích trách nhiệm riêng của từng component mà không kể tên class không?"
+      ]
+    },
+    {
+      "slug": "code",
+      "number": 7,
+      "part": 2,
+      "title": "Level 4 — Code",
+      "summary": "Khi nào thực sự cần cấu trúc class, interface và mô-đun.",
+      "sections": [
+        {
+          "heading": "Mức phóng đại sâu nhất",
+          "paragraphs": [
+            "Code Diagram cho thấy cách một component được hiện thực bằng các phần tử mã nguồn: class, interface, module, hàm hoặc các cấu trúc phù hợp với ngôn ngữ. Nó có thể sử dụng UML Class Diagram nhưng không bị giới hạn vào UML.",
+            "Mục tiêu không phải chuyển mọi dòng code thành hộp. Sơ đồ chỉ nên ghi lại các quan hệ khó hiểu, pattern quan trọng và quyết định thiết kế cần truyền đạt."
+          ]
+        },
+        {
+          "heading": "Tính tươi mới của tài liệu",
+          "paragraphs": [
+            "Sơ đồ ở cấp code thường thay đổi nhanh hơn sơ đồ cấp hệ thống. Một class diagram vẽ thủ công dễ lạc hậu sau vài đợt refactor. Vì thế có thể ưu tiên tài liệu sống, sinh từ mã nguồn hoặc chỉ lưu các sơ đồ phản ánh quyết định kiến trúc có tuổi thọ dài.",
+            "Một ví dụ hữu ích là mô tả hợp đồng MatchingStrategy, các hiện thực tương ứng và quy tắc lựa chọn chiến lược. Việc liệt kê toàn bộ DTO và getter/setter hiếm khi tạo thêm giá trị kiến trúc."
+          ]
+        },
+        {
+          "heading": "Đừng đánh mất đường đi từ tổng quan",
+          "paragraphs": [
+            "Khi đọc Code Diagram, người xem cần biết nó thuộc component nào, component nằm trong container nào và container phục vụ system nào. Mỗi cấp độ nên có đường quay lại cấp cha để tránh mất ngữ cảnh."
+          ]
+        }
+      ],
+      "questions": [
+        "Những quan hệ nào trong mã nguồn cần giải thích bằng hình mà đọc IDE không thấy ngay?"
+      ]
+    },
+    {
+      "slug": "system-landscape",
+      "number": 8,
+      "part": 3,
+      "title": "System Landscape",
+      "summary": "Bản đồ nhiều hệ thống ở phạm vi tổ chức hoặc hệ sinh thái.",
+      "sections": [
+        {
+          "heading": "Nhìn rộng hơn một hệ thống",
+          "paragraphs": [
+            "System Landscape Diagram đặt trọng tâm vào nhiều hệ thống phần mềm trong một tổ chức hay miền nghiệp vụ. Nó giúp trả lời “những hệ thống này nằm cạnh nhau như thế nào?” thay vì tập trung vào một hệ thống trung tâm duy nhất.",
+            "Đây là sơ đồ hỗ trợ, không phải “Level 0” bắt buộc của C4. Một tổ chức quản lý nhiều nền tảng dữ liệu hoặc dịch vụ dùng chung thường được lợi từ góc nhìn này."
+          ]
+        },
+        {
+          "heading": "Giá trị cho kiến trúc doanh nghiệp",
+          "paragraphs": [
+            "Landscape giúp phát hiện điểm kết nối chung, vùng chồng chéo, hệ thống lõi và phạm vi phụ thuộc. Cần chú ý không nhồi mọi ứng dụng vào một ảnh quá nhỏ; có thể chia theo domain, phạm vi tổ chức hay nhóm đối tượng.",
+            "Khi một dự án được chọn để thiết kế sâu hơn, bạn có thể chuyển từ Landscape sang System Context của riêng dự án ấy."
+          ]
+        }
+      ],
+      "questions": [
+        "Bao nhiêu hệ thống là đủ trong một Landscape để nó vẫn dễ đọc?"
+      ]
+    },
+    {
+      "slug": "dynamic",
+      "number": 9,
+      "part": 3,
+      "title": "Dynamic Diagram",
+      "summary": "Theo dõi một kịch bản tương tác quan trọng theo trình tự.",
+      "sections": [
+        {
+          "heading": "Thêm thời gian vào cấu trúc",
+          "paragraphs": [
+            "C4 chú trọng cấu trúc tĩnh, nhưng có các sơ đồ hỗ trợ mô tả cách những phần tử cộng tác trong một kịch bản. Dynamic Diagram gắn số thứ tự hoặc trật tự diễn tiến lên các quan hệ giữa những phần tử của mô hình.",
+            "Nó đặc biệt hữu ích để giải thích đường đi của một giao dịch, quy trình đồng bộ dữ liệu hoặc chuỗi gọi dịch vụ trong tình huống lỗi."
+          ]
+        },
+        {
+          "heading": "Chọn kịch bản thay vì liệt kê mọi luồng",
+          "paragraphs": [
+            "Một ví dụ có thể là: 1) nguồn dữ liệu gửi lô hồ sơ; 2) API xác thực yêu cầu; 3) worker kiểm tra; 4) dịch vụ đối soát phát hiện trùng; 5) kho dữ liệu ghi nhận kết quả. Từng bước nên bám phần tử đã được định nghĩa ở sơ đồ cấu trúc.",
+            "Nếu cần điều kiện phức tạp, nhánh rẽ và trạng thái chi tiết, hãy bổ sung UML Sequence hoặc Activity Diagram. C4 không cấm phối hợp với các ký pháp khác."
+          ]
+        }
+      ],
+      "questions": [
+        "Đường đi ngoại lệ nào cần được trình bày riêng thay vì chỉ mô tả luồng thành công?"
+      ]
+    },
+    {
+      "slug": "deployment",
+      "number": 10,
+      "part": 3,
+      "title": "Deployment Diagram",
+      "summary": "Ánh xạ hệ thống logic lên môi trường vận hành thực tế.",
+      "sections": [
+        {
+          "heading": "Logic và triển khai là hai câu chuyện",
+          "paragraphs": [
+            "Một Container Diagram giải thích hệ thống gồm những ứng dụng, kho dữ liệu và quan hệ nào. Deployment Diagram giải thích các instance của những container hoặc hệ thống ấy được chạy ở đâu trong một môi trường cụ thể.",
+            "Một node triển khai có thể là máy vật lý, VM, container runtime, vùng cloud hoặc môi trường thực thi. Các node có thể được lồng nhau để thể hiện cấu trúc hạ tầng."
+          ]
+        },
+        {
+          "heading": "Đa môi trường và độ tin cậy",
+          "paragraphs": [
+            "Các môi trường development, staging và production thường không giống nhau. Thay vì cố gộp tất cả vào một hình, hãy tách deployment theo môi trường và làm rõ nhân bản, cân bằng tải, mạng, cơ chế dự phòng nếu chúng là chủ đề quan trọng.",
+            "Đừng cho rằng vì hai C4 Container khác nhau nên bắt buộc chạy trên hai máy chủ riêng. Đó là một quyết định triển khai độc lập."
+          ]
+        },
+        {
+          "heading": "Đọc hạ tầng không quên phần mềm",
+          "paragraphs": [
+            "Sơ đồ chỉ gồm firewall, VM, CPU và địa chỉ IP nhưng thiếu ứng dụng thực sự đang chạy sẽ không cho người đọc biết chức năng nào nằm ở đâu. Điểm mạnh của Deployment Diagram theo C4 chính là liên kết bức tranh hạ tầng với cấu trúc phần mềm đã xác định."
+          ]
+        }
+      ],
+      "questions": [
+        "Kiến trúc HA/DR có cần một Deployment Diagram riêng cho production và disaster recovery không?"
+      ]
+    },
+    {
+      "slug": "c4-va-uml",
+      "number": 11,
+      "part": 4,
+      "title": "C4, UML, ArchiMate và 4+1",
+      "summary": "So sánh mục tiêu truyền đạt, ký pháp và khả năng bổ trợ.",
+      "sections": [],
+      "questions": []
+    },
+    {
+      "slug": "nguyen-tac-ve",
+      "number": 12,
+      "part": 4,
+      "title": "Nguyên tắc vẽ và đánh giá sơ đồ",
+      "summary": "Đặt tên, mô tả quan hệ, chú giải và kiểm tra khả năng đọc.",
+      "sections": [],
+      "questions": []
+    },
+    {
+      "slug": "documentation-as-code",
+      "number": 13,
+      "part": 4,
+      "title": "Architecture Documentation as Code",
+      "summary": "Quản lý mô hình và tài liệu kiến trúc theo phiên bản.",
+      "sections": [],
+      "questions": []
+    },
+    {
+      "slug": "quy-trinh-ap-dung",
+      "number": 14,
+      "part": 5,
+      "title": "Áp dụng C4 vào ADD/SDD",
+      "summary": "Xây dựng bộ sơ đồ vừa đủ cho thiết kế kiến trúc chuyên nghiệp.",
+      "sections": [],
+      "questions": []
+    },
+    {
+      "slug": "case-study-y-te",
+      "number": 15,
+      "part": 5,
+      "title": "Case Study — Hệ thống dữ liệu y tế",
+      "summary": "Ví dụ xuyên suốt về kiến trúc và ranh giới tích hợp dữ liệu.",
+      "sections": [],
+      "questions": []
+    }
+  ],
+  "parts": [
+    "Tư duy nền tảng",
+    "Bốn cấp độ cốt lõi",
+    "Sơ đồ bổ trợ",
+    "So sánh và kiểm định",
+    "Vận dụng thực tế"
+  ],
+  "resources": [
+    {
+      "title": "C4 Model — Website chính thức",
+      "url": "https://c4model.com/"
+    },
+    {
+      "title": "C4 Model — Các loại sơ đồ",
+      "url": "https://c4model.com/diagrams"
+    },
+    {
+      "title": "C4 Model — FAQ",
+      "url": "https://c4model.com/faq"
+    }
+  ]
+}
