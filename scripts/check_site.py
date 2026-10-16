@@ -93,6 +93,12 @@ def check():
     vi = json.loads((ROOT / 'src/studio.vi.json').read_text())
     slugs = [p['slug'] for p in en['pages']]
     assert slugs == [p['slug'] for p in vi['pages']], 'Locale routes differ'
+    c4_en = json.loads((ROOT / 'src/c4.en.json').read_text())
+    c4_vi = json.loads((ROOT / 'src/c4.vi.json').read_text())
+    assert len(c4_en['levels']) == len(c4_vi['levels']) == 4, 'C4 must explain four levels'
+    assert len(c4_en['chapters']) == len(c4_vi['chapters']) == 15, 'C4 chapter outline must match'
+    assert [(ch['slug'], bool(ch['sections'])) for ch in c4_en['chapters']] == [(ch['slug'], bool(ch['sections'])) for ch in c4_vi['chapters']], 'C4 localized chapter routes differ'
+    c4_paths = ['c4-model/'] + [f'c4-model/chapters/{ch["slug"]}/' for ch in c4_en['chapters'] if ch['sections']]
     apps = load_apps()
     # Every page exists in EN and VI; an app's pages also in each extra language the app declares.
     page_locales = {}
@@ -103,7 +109,7 @@ def check():
         for path in app_routes(app['en']):
             page_locales[path] = list(app)
     app_paths = list(page_locales)
-    paths = ['', 'brand/', 'products/', 'hive/', 'ai-studio/', 'ai-studio/docs/'] + [f'ai-studio/docs/{slug}/' for slug in slugs] + app_paths
+    paths = ['', 'brand/', 'products/', 'hive/', 'ai-studio/', 'ai-studio/docs/'] + c4_paths + [f'ai-studio/docs/{slug}/' for slug in slugs] + app_paths
     for path in paths:
         page_locales.setdefault(path, LANGUAGES)
     expected = {(locale + '/' if locale != 'en' else '') + path + 'index.html' for path, locales in page_locales.items() for locale in locales}
@@ -130,7 +136,7 @@ def check():
     for name in sorted(expected):
         file = OUT / name
         text = file.read_text()
-        assert not re.search(r'forge|@(?:home|studio|docs|quickstart|brand|hive|products|catalog|social|route:[^@\s]*)@', text, re.I), f'Hidden product or unresolved placeholder: {name}'
+        assert not re.search(r'forge|@(?:home|studio|docs|quickstart|brand|hive|products|c4|catalog|social|route:[^@\s]*)@', text, re.I), f'Hidden product or unresolved placeholder: {name}'
         page = Page(text)
         language = locale_of(name)
         path = name.removeprefix(language + '/').removesuffix('index.html')
@@ -186,6 +192,18 @@ def check():
     assert 'href="ai-studio/"' in home, 'Home must link to local product overview'
     assert 'https://ai-studio.xdev.asia' not in home, 'Home must not launch the app directly'
     assert 'From idea' in home, 'English must be the default'
+    for locale in ['en', 'vi']:
+        prefix = '' if locale == 'en' else 'vi/'
+        book = c4_en if locale == 'en' else c4_vi
+        landing = (OUT / prefix / 'c4-model/index.html').read_text()
+        assert 'data-c4-tab="0"' in landing and 'data-c4-search' in landing, 'C4 explorer or search missing'
+        for chapter in book['chapters']:
+            if not chapter['sections']:
+                continue
+            path = OUT / prefix / 'c4-model/chapters' / chapter['slug'] / 'index.html'
+            article = path.read_text()
+            assert chapter['title'] in article, f'Missing C4 chapter heading: {path}'
+            assert 'class="c4-reading-section"' in article, f'Empty C4 chapter: {path}'
     for prefix in ['', 'vi/']:
         home_page = Page((OUT / prefix / 'index.html').read_text())
         assert 'hive/' in home_page.anchors, 'Home must link to the Hive overview'
