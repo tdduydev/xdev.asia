@@ -27,17 +27,25 @@
   const chapters = [...root.querySelectorAll('[data-c4-chapter]')];
   const groups = [...root.querySelectorAll('[data-c4-group]')];
   const empty = root.querySelector('[data-c4-empty]');
-  if (search) {
-    search.addEventListener('input', () => {
+  const filters = [...root.querySelectorAll('[data-c4-filter]')];
+  let activeTopic = '0';
+  function filterPosts() {
       const term = search.value.trim().toLocaleLowerCase();
       let visible = 0;
       chapters.forEach(card => {
-        const matched = card.dataset.search?.includes(term) ?? false;
+        const matchesText = card.dataset.search?.includes(term) ?? false;
+        const matchesTopic = activeTopic === '0' || card.dataset.c4Topic === activeTopic;
+        const matched = matchesText && matchesTopic;
         card.hidden = !matched;
         if (matched) visible++;
       });
       groups.forEach(group => { group.hidden = !group.querySelector('[data-c4-chapter]:not([hidden])'); });
       if (empty) empty.hidden = visible !== 0;
-    });
   }
+  if (search) search.addEventListener('input', filterPosts);
+  filters.forEach(button => button.addEventListener('click', () => {
+    activeTopic = button.dataset.c4Filter;
+    filters.forEach(filter => filter.setAttribute('aria-pressed', String(filter === button)));
+    filterPosts();
+  }));
 })();

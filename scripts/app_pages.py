@@ -118,7 +118,7 @@ def heading(label, title, intro=None):
     return f'<div class="app-section-heading"><p class="eyebrow">{e(label)}</p><h2>{e(title)}</h2>{text}</div>'
 
 
-def render_overview(c):
+def render_overview(c, language='en'):
     e = escape
     o = c['overview']
     slug = c['slug']
@@ -168,6 +168,29 @@ def render_overview(c):
         languages = f'<p class="app-platform-note">{e(p["languages"])}</p>' if p.get('languages') else ''
         sections += f'<section class="container app-section" id="platforms">{heading(p["label"], p["title"])}<div class="app-platforms">{items}</div>{languages}</section>'
         jumps.append(('platforms', p['label']))
+    # Link the architecture learning journal to the product feature it teaches.
+    # JA xDraft users are intentionally linked to the English C4 blog fallback via @c4@.
+    if slug == 'xdraft':
+        c4_copy = {
+            'en': ('EXPLORE C4 MODEL', 'Learn the architecture behind the diagrams.',
+                   'Read practical articles about Context, Container, Component, Code, and supporting views. Then apply them in xDraft.',
+                   'Explore C4 Model articles'),
+            'vi': ('CHUYÊN MỤC C4 MODEL', 'Hiểu kiến trúc trước khi vẽ sơ đồ.',
+                   'Đọc bài viết về Context, Container, Component, Code và các góc nhìn bổ trợ. Sau đó thực hành ngay với xDraft.',
+                   'Khám phá blog C4 Model'),
+            'ja': ('C4 MODEL ガイド', '図を描く前に、構造を理解する。',
+                   'Context、Container、Component、Code について英語の記事を読み、xDraft の図で実践できます。',
+                   'C4 Model の記事を見る'),
+        }
+        eyebrow, title, description, action = c4_copy[language]
+        sections += (f'<section class="container app-c4-feature" id="c4-model">'
+                     f'<div><p class="eyebrow">{e(eyebrow)}</p><h2>{e(title)}</h2>'
+                     f'<p>{e(description)}</p><a class="button primary" href="@c4@">'
+                     f'{e(action)}<span aria-hidden="true">→</span></a></div>'
+                     f'<div class="app-c4-feature-mark" aria-hidden="true">'
+                     f'<span>01 — CONTEXT</span><span>02 — CONTAINER</span>'
+                     f'<span>03 — COMPONENT</span><span>04 — CODE</span></div></section>')
+        jumps.append(('c4-model', 'C4 Model'))
     help_ = o['help']
     cards = ''.join(f'<a href="{target("app:" + d["slug"], slug)}"><h3>{e(d["heading"])}</h3><p>{e(d["summary"])}</p><span>{e(d["nav"])} <span aria-hidden="true">→</span></span></a>' for d in c['documents'])
     contact = f'<p class="app-help-contact">{e(help_["contact"])} <a href="mailto:{e(c["email"], quote=True)}">{e(c["email"])}</a></p>'
@@ -208,6 +231,6 @@ def render_document(c, d, language):
 def render_app_pages(language, c):
     """Yield (path, title, description, body) for every page of one app in one language."""
     o = c['overview']
-    yield c['slug'] + '/', o['title'], o['description'], readable_email(render_overview(c))
+    yield c['slug'] + '/', o['title'], o['description'], readable_email(render_overview(c, language))
     for d in c['documents']:
         yield f"{c['slug']}/{d['slug']}/", d['title'], d['description'], readable_email(render_document(c, d, language))

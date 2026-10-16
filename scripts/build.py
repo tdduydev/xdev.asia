@@ -62,7 +62,7 @@ def decorate(page, language, path, languages=SITE_LANGUAGES):
     page = page.replace('@brand@', relative(current, route(site, 'brand/')))
     page = page.replace('@products@', relative(current, route(site, 'products/')))
     page = page.replace('@hive@', relative(current, route(site, 'hive/')))
-    page = page.replace('@c4@', relative(current, route(site, 'c4-model/')))
+    page = page.replace('@c4@', relative(current, route(site, 'xdraft/c4-model/')))
     # Generic form for data-driven pages: @route:xdraft/privacy/@ links to that path in this page's language.
     page = re.sub(r'@route:([^@"\s]*)@', lambda match: relative(current, route(language, match.group(1))), page)
     social_links = '<div class="social-links" role="group" aria-label="' + ui['social'] + '">' + ''.join(
@@ -205,13 +205,13 @@ def build():
         page = shell(language, 'C4 Model — ' + book['subtitle'], book['metaDescription'], render_c4_index(book))
         page = page.replace('</head>', '<link rel="stylesheet" href="assets/c4-page.css"></head>')
         page = page.replace('</body>', '<script src="assets/c4-page.js" defer></script></body>')
-        decorate(page, language, 'c4-model/')
+        decorate(page, language, 'xdraft/c4-model/')
         for chapter in book['chapters']:
             if not chapter['sections']:
                 continue
             page = shell(language, chapter['title'] + ' | C4 Model', chapter['summary'], render_c4_chapter(book, chapter))
             page = page.replace('</head>', '<link rel="stylesheet" href="assets/c4-page.css"></head>')
-            decorate(page, language, 'c4-model/chapters/' + chapter['slug'] + '/')
+            decorate(page, language, 'xdraft/c4-model/' + chapter['slug'] + '/')
     for language in ['en', 'vi']:
         brand = json.loads((ROOT / f'src/brand.{language}.json').read_text())
         page = shell(language, brand['title'], brand['description'], render_brand(brand))
